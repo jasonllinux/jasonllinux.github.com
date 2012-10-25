@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: python | Jasonllinux's Blog]]></title>
+  <link href="http://jasonllinux.github.com/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.com/"/>
+  <updated>2012-10-25T20:07:29+08:00</updated>
+  <id>http://jasonllinux.github.com/</id>
+  <author>
+    <name><![CDATA[jasonllinux]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[有一次给64bit跪了]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/10/25/64Bit-Again/"/>
+    <updated>2012-10-25T20:00:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/10/25/64Bit-Again</id>
+    <content type="html"><![CDATA[<p>最近几天在Windows平台搭建 OpenCV 的python开发平台</p>
+
+<p>但是，当横子横子编译完OpenCV后</p>
+
+<p>把相应的pyd导入到python的site-packages中</p>
+
+<p>import cv2居然说不是32位应用程序</p>
+
+<p>于是之，我知道又是64bit的缘故</p>
+
+<p>果断的</p>
+
+<p>换32位的python，一切OK</p>
+
+<p>eclipse中pydev一切OK</p>
+]]></content>
+  </entry>
+  
+</feed>

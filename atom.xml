@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-10-25T12:29:04+08:00</updated>
+  <updated>2012-10-25T20:07:29+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[有一次给64bit跪了]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/10/25/64Bit-Again/"/>
+    <updated>2012-10-25T20:00:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/10/25/64Bit-Again</id>
+    <content type="html"><![CDATA[<p>最近几天在Windows平台搭建 OpenCV 的python开发平台</p>
+
+<p>但是，当横子横子编译完OpenCV后</p>
+
+<p>把相应的pyd导入到python的site-packages中</p>
+
+<p>import cv2居然说不是32位应用程序</p>
+
+<p>于是之，我知道又是64bit的缘故</p>
+
+<p>果断的</p>
+
+<p>换32位的python，一切OK</p>
+
+<p>eclipse中pydev一切OK</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hello World_2]]></title>
@@ -476,29 +499,6 @@ could not update iceauthority file /var/lib/gdm/.ICEauthority<br />
 sudo chown -R gdm:gdm /var/lib/gdm<br />
 sudo chmod 600 /var/lib/gdm/.ICEauthority<br />
 [/bash]</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[《控制与决策》Latex模板问题(1)]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/08/26/%E3%80%8A%E6%8E%A7%E5%88%B6%E4%B8%8E%E5%86%B3%E7%AD%96%E3%80%8Blatex%E6%A8%A1%E6%9D%BF%E9%97%AE%E9%A2%98/"/>
-    <updated>2012-08-26T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/08/26/《控制与决策》latex模板问题</id>
-    <content type="html"><![CDATA[<p>拿到《控制于决策》的模板，第一次编译的时候出现如下错误：<br />
-[latex]<br />
-! LaTeX Error: \bibname undefined.<br />
-See the LaTeX manual or LaTeX Companion for explanation.<br />
-Type <wbr> H &lt;return&gt; <wbr> for immediate help.
-<wbr> <wbr> <wbr> &#8230;
-<wbr> <wbr> l.43 <wbr> <wbr> {\renewcommand\bibname{?196?215}}
-<wbr> <wbr> ?<br />
-[/latex]</wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></p>
-
-<p>解决方法：<br />
-由于GB.cpx乱码造成，因此重新下载这个<a href="https://bitbucket.org/aloft/ctex-faq/src/ba3f763c9380/GB.cpx" target="_blank">文件</a></p>
-
-<p>然后复制到文章目录，<br />
-compile。。。。done。。。。</p>
 ]]></content>
   </entry>
   
