@@ -1,0 +1,44 @@
+---
+layout: post
+title: 黑苹果之修复linux引导
+categories:
+- IT
+- linux
+tags: []
+published: true
+comments: true
+---
+<p><strong>型号: thinkpad X61 </strong>
+<strong>OS : win7 &amp;&amp; mac &amp;&amp;lion archlinux</strong></p>
+
+<p>装完mac x lion之后，linux引导是一个问题<br />
+引导程序由Grub2变成了bootthink，让我这个长期的linuxer很不适应，头可断血可流，Linux不能丢，又不能把好不容装好的99完美的mac给卸载了</p>
+
+<p>天不亡我：
+<strong>step1</strong>
+C盘根目录新建boot_linux 文件夹
+<strong>step2</strong>
+从linux系统的/boot/目录下,把initramfs-linux.img 和vmlinuz-linux拷贝进去
+<strong>step3
+</strong>在C盘根目录下新建<br />
+menu.lst<br />
+内容为:</p>
+
+<p>[bash]<br />
+# general configuration:<br />
+timeout 5<br />
+default 0<br />
+color light-blue/black light-cyan/blue</p>
+
+<p># (0) Arch Linux<br />
+title Arch Linux<br />
+set root='(hd0,10)'<br />
+kernel (hd0,0)/boot_linux/vmlinuz-linux root=/dev/sda10<br />
+initrd (hd0,0)/boot_linux/initramfs-linux.img</p>
+
+<p># (2) Windows<br />
+title Windows<br />
+rootnoverify (hd0,0)<br />
+makeactive<br />
+chainloader +1<br />
+[/bash]</p>

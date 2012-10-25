@@ -1,0 +1,62 @@
+---
+layout: post
+title: Debian Squeeze 安装PPTP服务
+categories:
+- IT
+tags: []
+published: true
+comments: true
+---
+<p>入了VPS之后的第一件事情就是安装一个PPTP服务</p>
+
+<p>1.安装pptpd</p>
+
+<p>[bash]<br />
+sudo apt-get install pptpd<br />
+[/bash]</p>
+
+<p>2.配置/etc/pptpd.conf</p>
+
+<p>[bash]<br />
+##设置服务器 IP 地址与客服端 DHCP 分配地址范围<br />
+localip 192.168.0.1<br />
+remoteip 192.168.0.2-245<br />
+[/bash]</p>
+
+<p>3.编辑 /etc/ppp/pptpd-options</p>
+
+<p>[bash]<br />
+#为客户端提供DNS<br />
+ms-dns 8.8.8.8<br />
+ms-dns 8.8.4.4<br />
+[/bash]</p>
+
+<p>4.编辑 /etc/ppp/chap-secrets</p>
+
+<p>[bash]<br />
+#添加用户和密码<br />
+username   servername   password    *<br />
+[/bash]</p>
+
+<p>5.编辑 /etc/sysctl.conf</p>
+
+<p>[bash]<br />
+#开启IPV4转发<br />
+uncomment net.ipv4.ip_forward=1<br />
+sysctl -p<br />
+[/bash]</p>
+
+<p>6.设置Iptables</p>
+
+<p>[bash]iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE</p>
+
+<p>#设置MTU大小，解决部分网站无法访问的情况（MTU=MSS+20+20)<br />
+iptables -A FORWARD -p tcp --syn -s 192.168.0.0/24 -j TCPMSS --set-mss 1356<br />
+[/bash]</p>
+
+<p>7.启动服务<br />
+[bash]<br />
+/etc/init.d/pptpd restart<br />
+[/bash]</p>
+
+<p>&nbsp;</p>

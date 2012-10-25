@@ -1,0 +1,55 @@
+---
+layout: post
+title: Hadoop碎碎念
+categories:
+- linux
+- Study
+tags:
+- hadoop
+- linux
+published: true
+comments: true
+---
+<p><strong>Hadoop configure 碎碎念，非教程！！！</strong></p>
+
+<p>1. SSH配置<br />
+免密钥</p>
+
+<p>2. Host配置<br />
+User和HostName匹配</p>
+
+<p>3. x.xml相关<br />
+dir配置<br />
+端口配置<br />
+java路径设置 hadoop-env.sh</p>
+
+<p>4.常用操作</p>
+
+<p>[bash]<br />
+#格式化<br />
+hadoop namenode -format<br />
+#启动<br />
+start-all.sh<br />
+#终止<br />
+stop-all.sh<br />
+#进程<br />
+jps<br />
+hadoop dfsadmin -report<br />
+#离开安全模式<br />
+hadoop dfsadmin -safemode leave<br />
+[/bash]</p>
+
+<p><strong>测试</strong>
+启动Hadoop，<br />
+cd Hadoop目录，输入以下命令执行Pi Estimator程序：</p>
+
+<p>[bash]hadoop jar hadoop-examples.jar pi 2 10<br />
+[/bash]</p>
+
+<p><strong>运行结果：</strong></p>
+
+<p><strong>Hadoop Eclipse插件设置</strong>
+Location name（取个名字）<br />
+Map/Reduce Master（Job Tracker的IP和端口，根据mapred-site.xml中配置的mapred.job.tracker来填写）<br />
+DFS Master（Name Node的IP和端口，根据core-site.xml中配置的fs.default.name来填写）<br />
+最后，切换到Project 视图，就可以看到文件目录了</p>

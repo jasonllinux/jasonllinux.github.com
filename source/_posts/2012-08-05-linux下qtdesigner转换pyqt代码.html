@@ -1,0 +1,23 @@
+---
+layout: post
+title: Linux下QtDesigner转换Pyqt代码
+categories:
+- IT
+tags: []
+published: true
+comments: true
+---
+<p>当用Qt Designer设计Qt 界面之后，如果想使用pyqt code，就会用到 <strong>pyuic4</strong>这个命令<br />
+要使用这个命令需要先安装</p>
+
+<p>[bash]<br />
+sudo pacman -S pyqt<br />
+[/bash]</p>
+
+<p>装完之后，如果在你系统中有python 3.x 和python2.x共存且默认3.x的情况下，就会出错<br />
+解决方案就是<strong>切换默认python版本</strong>
+最后</p>
+
+<p>[bash]<br />
+pyuic4 gui.ui -o gui.py<br />
+[/bash]</p>

@@ -1,0 +1,23 @@
+---
+layout: post
+title: git push 错误
+categories:
+- IT
+tags: []
+published: true
+comments: true
+---
+<p>今天，上传代码到github上的时候 莫名其妙出现：</p>
+
+<p>[bash]<br />
+Unable to rewind rpc post data - try increasing http.postBuffer<br />
+error: RPC failed; result=65, HTTP code = 401<br />
+fatal: The remote end hung up unexpectedly<br />
+fatal: The remote end hung up unexpectedly<br />
+[/bash]</p>
+
+<p>解决方案：</p>
+
+<p>[bash]<br />
+git config http.postBuffer 209715200<br />
+[/bash]</p>

@@ -1,0 +1,26 @@
+---
+layout: post
+title: Archlinux 配置Grub2简便方法
+categories:
+- linux
+tags:
+- archlinux
+- config
+- grub2
+published: true
+comments: true
+---
+<p>Archer都知道的</p>
+
+<p>配置Grub不像Ubuntu那么Easy，可以自动检测到其他盘符的系统</p>
+
+<p>但是神器来了</p>
+
+<p><strong>os-prober</strong></p>
+
+<p>在安装玩Grub2之后iou</p>
+
+<p>[bash]<br />
+pacman -S os-prober<br />
+grub-mkconfig -o /boot/grub/grub.cfg<br />
+[/bash]</p>

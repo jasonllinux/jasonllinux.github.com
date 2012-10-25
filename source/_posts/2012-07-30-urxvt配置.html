@@ -1,0 +1,72 @@
+---
+layout: post
+title: URxvt配置
+categories:
+- 未分类
+tags: []
+published: true
+comments: true
+---
+<p>配置文件 .Xdefaults</p>
+
+<p>[bash]<br />
+!!title<br />
+URxvt.title:URxvrt-Jason<br />
+!! 设置 Xftp.dpi(字体分辨率）<br />
+Xft.dpi: 96<br />
+Xft.hinting: 1<br />
+Xft.hintstyle: hintslight<br />
+Xft.antialias: 1<br />
+Xft.rgba: rgb<br />
+!!URxvt.geometry: 90x25+180+200<br />
+!!Rxvt.menu: /etc/X11/rxvt.menu<br />
+!! coding<br />
+Rxvt.multichar_encoding: utf-8<br />
+Rxvt.imLocale: zh_CN.UTF-8<br />
+URxvt.preeditType: Root !!使urxvt启动速度加快<br />
+URxvt.depth: 32 !!透明必须<br />
+URxvt.background: [60]Black !!中括号中为透明度<br />
+URxvt.foreground: White</p>
+
+<p>URxvt.colorBD:Gray95<br />
+URxvt.colorUL:Green<br />
+URxvt.color1:Red2<br />
+URxvt.color4:RoyalBlue<br />
+URxvt.color5:Magenta2<br />
+URxvt.color8:Gray50<br />
+URxvt.color10:Green2<br />
+URxvt.color12:DodgerBlue<br />
+URxvt.color14:Cyan2<br />
+URxvt.color15:Gray95</p>
+
+<p>!!URxvt.font: xft:DejaVu Sans Mono:pixelsize=16<br />
+URxvt.font: xft:Ubuntu Mono:pixelsize=16:antialias=True,\<br />
+xft:WenQuanYi Zen Hei Mono:size=20:antialias=True</p>
+
+<p>!!滚动条设置<br />
+URxvt.scrollBar:True<br />
+URxvt.scrollBar_right:True<br />
+URxvt.scrollBar_floating:False<br />
+URxvt.scrollstyle:plain<br />
+!!滚屏设置<br />
+URxvt.mouseWheelScrollPage:True<br />
+URxvt.scrollTtyOutput: False<br />
+URxvt.scrollWithBuffer: True<br />
+URxvt.scrollTtyKeypress: True<br />
+!!光标闪烁<br />
+URxvt.cursorBlink:True<br />
+URxvt.saveLines:3000<br />
+!!边框<br />
+URxvt.borderLess: False<br />
+!!开启标签功能<br />
+!!URxvt.perl-ext-common: default,tabbed<br />
+!! Tab set<br />
+URxvt.perl-ext-common: default,tabbed<br />
+URxvt.tabbed.tab-fg: 12<br />
+URxvt.tabbed.tab-bg: 0<br />
+URxvt.tabbed.tabbar-fg: 4<br />
+[/bash]</p>
+
+<p><strong>Features:</strong>
+字体设置<br />
+Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>

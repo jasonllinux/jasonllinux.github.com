@@ -1,0 +1,22 @@
+---
+layout: post
+title: archlinux之could not update iceauthority file /var/lib/gdm/.iceauthority解决
+categories:
+- linux
+tags:
+- archlinux
+published: true
+comments: true
+---
+<p>早上更新了一些包之后，重启发现：</p>
+
+<p>[bash]<br />
+could not update iceauthority file /var/lib/gdm/.ICEauthority<br />
+[/bash]</p>
+
+<p>解决方法：</p>
+
+<p>[bash]<br />
+sudo chown -R gdm:gdm /var/lib/gdm<br />
+sudo chmod 600 /var/lib/gdm/.ICEauthority<br />
+[/bash]</p>

@@ -1,0 +1,25 @@
+---
+layout: post
+title: SVN服务器迁移
+categories:
+- IT
+tags: []
+published: true
+comments: true
+---
+<p>前段时间把托管比赛项目的svn服务器从自己的笔记本迁移到台式机上了，可以把所有历史记录版本信息都转走，实在是很方便：</p>
+
+<p>[bash]<br />
+#备份<br />
+svnadmin dump path/to/old-repo &gt; dumpfile</p>
+
+<p>#在新的服务器上新建svn ...不再赘述<br />
+#还原<br />
+svnadmin load path/to/new-repo &lt; dumpfile<br />
+[/bash]</p>
+
+<p>参考：</p>
+
+<p><a href="http://eastviking.iteye.com/blog/32899" target="_blank">如何做svn迁移</a></p>
+
+<p>&nbsp;</p>

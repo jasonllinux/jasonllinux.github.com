@@ -1,0 +1,46 @@
+---
+layout: post
+title: Archlinux 编译 OpenCV支援Python
+categories:
+- linux
+- Study
+tags:
+- compile
+- opencv
+- python
+published: true
+comments: true
+---
+<p><strong>
+Step1</strong>
+DownLoad <em>OpenCV-2.4.2.tar.bz2</em></p>
+
+<p><strong>Step2</strong></p>
+
+<p>[bash]<br />
+ cd OpenCV-2.4.2/<br />
+ mkdir release<br />
+ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_PYTHON_SUPPORT=ON ..<br />
+ sudo make<br />
+ sudo make install<br />
+[/bash]</p>
+
+<p><strong>Step3</strong>
+安装完成之后会把cv的库安装到/usr/local/lib/python2.7/site-packages目录中<br />
+复制到你的python2.7所在的路径，或者加个.pth文件</p>
+
+<p>或者直接修改环境变量</p>
+
+<p>[bash]<br />
+export PYTHONPATH=&quot;/usr/local/lib/python2.7/site-packages/:$PYTHONPATH&quot;<br />
+vim /etc/ld.so.conf<br />
+add &quot;/usr/local/lib&quot;<br />
+[/bash]</p>
+
+<p><strong>Result</strong>
+进入OpenCV目录</p>
+
+<p>[bash]<br />
+ cd OpenCV-2.4.2/samples/python<br />
+ python2.7  delaunay.py<br />
+[/bash]</p>

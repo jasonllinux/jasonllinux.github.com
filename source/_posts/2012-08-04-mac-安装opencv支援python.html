@@ -1,0 +1,35 @@
+---
+layout: post
+title: Mac 安装OpenCV支援Python
+categories:
+- IT
+- Study
+tags: []
+published: true
+comments: true
+---
+<p>Mac上的OpenCV安装和Linux平台下略有不同，在这里我们不采用下载源码包手动编译的方式，因为可能有些依赖问题，我们使用Port包管理，自动安装。</p>
+
+<p><strong>Step1</strong>
+安装MacPort<br />
+安装完成之后</p>
+
+<p>[bash]<br />
+sudo port selfupdate<br />
+[/bash]</p>
+
+<p><strong>Step2</strong>
+安装OpenCv，并且支援Python</p>
+
+<p>[bash]<br />
+sudo port install py27-numpy<br />
+sudo port install opencv +python27<br />
+[/bash]</p>
+
+<p><strong>Step3</strong>
+至此可能会发现python下还是不能用opencv,import 会出现错误<br />
+解决方案<br />
+切换Pyhon版本，默认使用/opt/local/bin/python27</p>
+
+<p><strong>Result</strong>
+至此，应该大功告成了</p>

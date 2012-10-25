@@ -1,0 +1,22 @@
+---
+layout: post
+title: Archlinux 安装 virtualbox
+categories:
+- IT
+tags: []
+published: true
+comments: true
+---
+<p>通过源安装完virtualbox之后，如果立马新建虚拟机的话会报错，</p>
+
+<p>解决的方法呢？</p>
+
+<p>[bash]<br />
+#查看内核版本<br />
+uname -a<br />
+#然后<br />
+sudo dkms install vboxhost/4.1.18 -k  3.4.7-1-ARCH/x86_64<br />
+modprobe vboxdrv<br />
+[/bash]</p>
+
+<p><strong>注意:</strong>根据实际情况替换版本号</p>

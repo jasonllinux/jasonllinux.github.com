@@ -1,0 +1,40 @@
+---
+layout: post
+title: Tomcat简单配置
+categories:
+- IT
+- linux
+tags:
+- arch
+- config
+- tomcat
+published: true
+comments: true
+---
+<p>在Archlinux下简单配置tomat7：</p>
+
+<p>[bash]<br />
+#Install<br />
+sudo pacman -S tomcat7<br />
+#cofigure<br />
+#修改/etc/tomcat7/context.xml<br />
+&lt;Context   reloadable=&quot;true&quot;&gt;<br />
+#修改/etc/tomcat7/tomcat-users.xml</p>
+
+<p>&lt;!-- Tomcat运行必备的角色 --&gt;<br />
+ &lt;role rolename=&quot;tomcat&quot;/&gt;</p>
+
+<p>&lt;!-- 进行Tomcat管理的角色 --&gt;<br />
+ &lt;role rolename=&quot;manager-gui&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-script&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-jmx&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-status&quot;/&gt;<br />
+ &lt;role rolename=&quot;admin-gui&quot;/&gt;<br />
+ &lt;role rolename=&quot;admin-script&quot;/&gt;</p>
+
+<p>&lt;!-- 进行Tomcat管理的用户，具有Tomcat管理的全部角色 --&gt;<br />
+ &lt;user username=&quot;admin&quot; password=&quot;apollo&quot; roles=&quot;tomcat, manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script&quot;/&gt;<br />
+[/bash]</p>
+
+<p><strong>查看：</strong>
+<strong><a href="http://localhost:8080" target="_blank">http://localhost:8080</a> </strong></p>

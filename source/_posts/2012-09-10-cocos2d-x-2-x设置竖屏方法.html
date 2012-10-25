@@ -1,0 +1,28 @@
+---
+layout: post
+title: Cocos2d-x 2.x设置竖屏方法
+categories:
+- linux
+- Study
+tags:
+- cocos2d-x
+published: true
+comments: true
+---
+<p>cocos2d-x从1.x到2.x的api转变还是有点大的，<br />
+找了半天没找到orientation的方法；<br />
+于是放狗<br />
+找到的方法貌似也不是很OK，先凑合着用<br />
+如果是ios平台<br />
+修改RootViewController.mm<br />
+[c]<br />
+(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {<br />
+    return UIInterfaceOrientationIsPortrait(interfaceOrientation);</p>
+
+<p>}<br />
+[/c]<br />
+如果是android平台<br />
+在AndroidManifest.xml中设置<br />
+[bash]<br />
+android:screenOrientation=&quot;portrait&quot;<br />
+[/bash]</p>
