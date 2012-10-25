@@ -5,12 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello World - Jasonllinux's Blog</title>
+  <title>Archlinux 配置Grub2简便方法 - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="Archer都知道的 配置Grub不像Ubuntu那么Easy，可以自动检测到其他盘符的系统 但是神器来了 os-prober 在安装玩Grub2之后iou [bash]
+pacman -S os-prober
+grub-mkconfig -o /boot/grub/grub.cfg
+[/bash &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/10/25/hello-world/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/09/23/archlinux-%E9%85%8D%E7%BD%AEgrub2%E7%AE%80%E4%BE%BF%E6%96%B9%E6%B3%95/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +70,7 @@
   
   <header>
     
-      <h1 class="entry-title">Hello World</h1>
+      <h1 class="entry-title">Archlinux 配置Grub2简便方法</h1>
     
     
       <p class="meta">
@@ -84,14 +86,27 @@
   
 
 
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2012-09-23T00:00:00+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content">
+<div class="entry-content"><p>Archer都知道的</p>
+
+<p>配置Grub不像Ubuntu那么Easy，可以自动检测到其他盘符的系统</p>
+
+<p>但是神器来了</p>
+
+<p><strong>os-prober</strong></p>
+
+<p>在安装玩Grub2之后iou</p>
+
+<p>[bash]<br />
+pacman -S os-prober<br />
+grub-mkconfig -o /boot/grub/grub.cfg<br />
+[/bash]</p>
 </div>
 
 
@@ -114,15 +129,21 @@
   
 
 
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2012-09-23T00:00:00+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/linux/'>linux</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/10/25/hello-world/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/10/25/hello-world/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/09/23/archlinux-%E9%85%8D%E7%BD%AEgrub2%E7%AE%80%E4%BE%BF%E6%96%B9%E6%B3%95/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/09/23/archlinux-%E9%85%8D%E7%BD%AEgrub2%E7%AE%80%E4%BE%BF%E6%96%B9%E6%B3%95/" >Tweet</a>
   
   
   
@@ -131,10 +152,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/" title="Previous Post: Linux终端下翻墙">&laquo; Linux终端下翻墙</a>
+        <a class="basic-alignment left" href="/blog/2012/09/21/%E8%AE%B02013%E5%88%9B%E6%96%B0%E5%B7%A5%E5%8E%82%E5%8D%97%E5%A4%A7%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98%E5%AE%A3%E8%AE%B2%E4%BC%9A/" title="Previous Post: 记2013创新工厂南大校园招聘宣讲会">&laquo; 记2013创新工厂南大校园招聘宣讲会</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/10/25/hello-world-2/" title="Next Post: Hello World_2">Hello World_2 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/09/26/debian-squeeze-%E5%AE%89%E8%A3%85pptp%E6%9C%8D%E5%8A%A1/" title="Next Post: Debian Squeeze 安装PPTP服务">Debian Squeeze 安装PPTP服务 &raquo;</a>
       
     </p>
   </footer>

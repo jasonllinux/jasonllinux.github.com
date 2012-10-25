@@ -5,12 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello World - Jasonllinux's Blog</title>
+  <title>Linux下QtDesigner转换Pyqt代码 - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="当用Qt Designer设计Qt 界面之后，如果想使用pyqt code，就会用到 pyuic4这个命令
+要使用这个命令需要先安装 [bash]
+sudo pacman -S pyqt
+[/bash] 装完之后，如果在你系统中有python 3.x 和python2.x共存且默认3.x的情况下， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/10/25/hello-world/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/08/05/linux%E4%B8%8Bqtdesigner%E8%BD%AC%E6%8D%A2pyqt%E4%BB%A3%E7%A0%81/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +70,7 @@
   
   <header>
     
-      <h1 class="entry-title">Hello World</h1>
+      <h1 class="entry-title">Linux下QtDesigner转换Pyqt代码</h1>
     
     
       <p class="meta">
@@ -84,14 +86,27 @@
   
 
 
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2012-08-05T00:00:00+08:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content">
+<div class="entry-content"><p>当用Qt Designer设计Qt 界面之后，如果想使用pyqt code，就会用到 <strong>pyuic4</strong>这个命令<br />
+要使用这个命令需要先安装</p>
+
+<p>[bash]<br />
+sudo pacman -S pyqt<br />
+[/bash]</p>
+
+<p>装完之后，如果在你系统中有python 3.x 和python2.x共存且默认3.x的情况下，就会出错<br />
+解决方案就是<strong>切换默认python版本</strong>
+最后</p>
+
+<p>[bash]<br />
+pyuic4 gui.ui -o gui.py<br />
+[/bash]</p>
 </div>
 
 
@@ -114,15 +129,21 @@
   
 
 
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2012-08-05T00:00:00+08:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/it/'>IT</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/10/25/hello-world/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/10/25/hello-world/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/08/05/linux%E4%B8%8Bqtdesigner%E8%BD%AC%E6%8D%A2pyqt%E4%BB%A3%E7%A0%81/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/08/05/linux%E4%B8%8Bqtdesigner%E8%BD%AC%E6%8D%A2pyqt%E4%BB%A3%E7%A0%81/" >Tweet</a>
   
   
   
@@ -131,10 +152,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/" title="Previous Post: Linux终端下翻墙">&laquo; Linux终端下翻墙</a>
+        <a class="basic-alignment left" href="/blog/2012/08/04/mac-%E5%AE%89%E8%A3%85opencv%E6%94%AF%E6%8F%B4python/" title="Previous Post: Mac 安装OpenCV支援Python">&laquo; Mac 安装OpenCV支援Python</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/10/25/hello-world-2/" title="Next Post: Hello World_2">Hello World_2 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/08/16/gentoo%E5%AE%89%E8%A3%85/" title="Next Post: Gentoo安装">Gentoo安装 &raquo;</a>
       
     </p>
   </footer>

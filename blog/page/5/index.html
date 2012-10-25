@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Jasonllinux's Blog</title>
+  <meta name="author" content="jasonllinux">
+
+  
+  <meta name="description" content="Mac上的OpenCV安装和Linux平台下略有不同，在这里我们不采用下载源码包手动编译的方式，因为可能有些依赖问题，我们使用Port包管理，自动安装。 Step1
+安装MacPort
+安装完成之后 [bash]
+sudo port selfupdate
+[/bash] Step2 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/page/5/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Jasonllinux's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jasonllinux's Blog</a></h1>
+  
+    <h2>Happy Hacking!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:jasonllinux.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/04/mac-%E5%AE%89%E8%A3%85opencv%E6%94%AF%E6%8F%B4python/">Mac 安装OpenCV支援Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-04T00:00:00+08:00" pubdate data-updated="true">Aug 4<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Mac上的OpenCV安装和Linux平台下略有不同，在这里我们不采用下载源码包手动编译的方式，因为可能有些依赖问题，我们使用Port包管理，自动安装。</p>
+
+<p><strong>Step1</strong>
+安装MacPort<br />
+安装完成之后</p>
+
+<p>[bash]<br />
+sudo port selfupdate<br />
+[/bash]</p>
+
+<p><strong>Step2</strong>
+安装OpenCv，并且支援Python</p>
+
+<p>[bash]<br />
+sudo port install py27-numpy<br />
+sudo port install opencv +python27<br />
+[/bash]</p>
+
+<p><strong>Step3</strong>
+至此可能会发现python下还是不能用opencv,import 会出现错误<br />
+解决方案<br />
+切换Pyhon版本，默认使用/opt/local/bin/python27</p>
+
+<p><strong>Result</strong>
+至此，应该大功告成了</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/02/%E9%BB%91%E8%8B%B9%E6%9E%9C%E4%B9%8B%E4%BF%AE%E5%A4%8Dlinux%E5%BC%95%E5%AF%BC/">黑苹果之修复linux引导</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-02T00:00:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>型号: thinkpad X61 </strong>
+<strong>OS : win7 &amp;&amp; mac &amp;&amp;lion archlinux</strong></p>
+
+<p>装完mac x lion之后，linux引导是一个问题<br />
+引导程序由Grub2变成了bootthink，让我这个长期的linuxer很不适应，头可断血可流，Linux不能丢，又不能把好不容装好的99完美的mac给卸载了</p>
+
+<p>天不亡我：
+<strong>step1</strong>
+C盘根目录新建boot_linux 文件夹
+<strong>step2</strong>
+从linux系统的/boot/目录下,把initramfs-linux.img 和vmlinuz-linux拷贝进去
+<strong>step3
+</strong>在C盘根目录下新建<br />
+menu.lst<br />
+内容为:</p>
+
+<p>[bash]<br />
+# general configuration:<br />
+timeout 5<br />
+default 0<br />
+color light-blue/black light-cyan/blue</p>
+
+<p># (0) Arch Linux<br />
+title Arch Linux<br />
+set root=&#8217;(hd0,10)&#8217;<br />
+kernel (hd0,0)/boot_linux/vmlinuz-linux root=/dev/sda10<br />
+initrd (hd0,0)/boot_linux/initramfs-linux.img</p>
+
+<p># (2) Windows<br />
+title Windows<br />
+rootnoverify (hd0,0)<br />
+makeactive<br />
+chainloader +1<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/02/archlinux-%E7%BC%96%E8%AF%91-opencv%E6%94%AF%E6%8F%B4python/">Archlinux 编译 OpenCV支援Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-02T00:00:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>
+Step1</strong>
+DownLoad <em>OpenCV-2.4.2.tar.bz2</em></p>
+
+<p><strong>Step2</strong></p>
+
+<p>[bash]<br />
+ cd OpenCV-2.4.2/<br />
+ mkdir release<br />
+ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_PYTHON_SUPPORT=ON ..<br />
+ sudo make<br />
+ sudo make install<br />
+[/bash]</p>
+
+<p><strong>Step3</strong>
+安装完成之后会把cv的库安装到/usr/local/lib/python2.7/site-packages目录中<br />
+复制到你的python2.7所在的路径，或者加个.pth文件</p>
+
+<p>或者直接修改环境变量</p>
+
+<p>[bash]<br />
+export PYTHONPATH=&quot;/usr/local/lib/python2.7/site-packages/:$PYTHONPATH&quot;<br />
+vim /etc/ld.so.conf<br />
+add &quot;/usr/local/lib&quot;<br />
+[/bash]</p>
+
+<p><strong>Result</strong>
+进入OpenCV目录</p>
+
+<p>[bash]<br />
+ cd OpenCV-2.4.2/samples/python<br />
+ python2.7  delaunay.py<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/30/urxvt%E9%85%8D%E7%BD%AE/">URxvt配置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-30T00:00:00+08:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>配置文件 .Xdefaults</p>
+
+<p>[bash]<br />
+!!title<br />
+URxvt.title:URxvrt-Jason<br />
+!! 设置 Xftp.dpi(字体分辨率）<br />
+Xft.dpi: 96<br />
+Xft.hinting: 1<br />
+Xft.hintstyle: hintslight<br />
+Xft.antialias: 1<br />
+Xft.rgba: rgb<br />
+!!URxvt.geometry: 90x25+180+200<br />
+!!Rxvt.menu: /etc/X11/rxvt.menu<br />
+!! coding<br />
+Rxvt.multichar_encoding: utf-8<br />
+Rxvt.imLocale: zh_CN.UTF-8<br />
+URxvt.preeditType: Root !!使urxvt启动速度加快<br />
+URxvt.depth: 32 !!透明必须<br />
+URxvt.background: [60]Black !!中括号中为透明度<br />
+URxvt.foreground: White</p>
+
+<p>URxvt.colorBD:Gray95<br />
+URxvt.colorUL:Green<br />
+URxvt.color1:Red2<br />
+URxvt.color4:RoyalBlue<br />
+URxvt.color5:Magenta2<br />
+URxvt.color8:Gray50<br />
+URxvt.color10:Green2<br />
+URxvt.color12:DodgerBlue<br />
+URxvt.color14:Cyan2<br />
+URxvt.color15:Gray95</p>
+
+<p>!!URxvt.font: xft:DejaVu Sans Mono:pixelsize=16<br />
+URxvt.font: xft:Ubuntu Mono:pixelsize=16:antialias=True,\<br />
+xft:WenQuanYi Zen Hei Mono:size=20:antialias=True</p>
+
+<p>!!滚动条设置<br />
+URxvt.scrollBar:True<br />
+URxvt.scrollBar_right:True<br />
+URxvt.scrollBar_floating:False<br />
+URxvt.scrollstyle:plain<br />
+!!滚屏设置<br />
+URxvt.mouseWheelScrollPage:True<br />
+URxvt.scrollTtyOutput: False<br />
+URxvt.scrollWithBuffer: True<br />
+URxvt.scrollTtyKeypress: True<br />
+!!光标闪烁<br />
+URxvt.cursorBlink:True<br />
+URxvt.saveLines:3000<br />
+!!边框<br />
+URxvt.borderLess: False<br />
+!!开启标签功能<br />
+!!URxvt.perl-ext-common: default,tabbed<br />
+!! Tab set<br />
+URxvt.perl-ext-common: default,tabbed<br />
+URxvt.tabbed.tab-fg: 12<br />
+URxvt.tabbed.tab-bg: 0<br />
+URxvt.tabbed.tabbar-fg: 4<br />
+[/bash]</p>
+
+<p><strong>Features:</strong>
+字体设置<br />
+Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/02/archlinux-memo/">Archlinux Memo</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-02T00:00:00+08:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>中文及渲染<br />
+采用Ubunut的LCD补丁，避免字体发虚</p>
+
+<p>[bash]<br />
+yaourt -S cairo-ubuntu<br />
+[/bash]</p>
+
+<p>中文字体配置</p>
+
+<p>[bash]<br />
+yaourt -S fontconfig-ubuntu-zh-cn<br />
+[/bash]</p>
+
+<p>最后一步</p>
+
+<p>[bash]<br />
+gnome-tweak-tool<br />
+[/bash]</p>
+
+<p>调整如下：
+<a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/gtt.png"><img class="aligncenter size-medium wp-image-211" title="gtt" src="http://www.jasonllinux.com/wp-content/uploads/2012/07/gtt-300x239.png" alt="" width="300" height="239" /></a>OK 收工！</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/01/linux%E4%B8%8Btexlive%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE/">Linux下TexLive中文配置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-01T00:00:00+08:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/225px-LaTeX_logo.png">
+</a>在Linux环境使用$$\LaTeX$$一般使用TexLive套装，而作为天朝子民，使用中文是件头等大事。</p>
+
+<p>在网上大致浏览到两类方式：<br />
+第一种是盗版windows字体，修改ctex配置文件，要用中文的时候就用ctex宏包；<br />
+第二种方式就是使用XeLatex，直接调用系统中文字体。</p>
+
+<p>下面直接介绍第二种方式，为了方便每次调用，我们把配置做成一个<strong>package</strong>
+在该目录下新建文件</p>
+
+<p>[bash]<br />
+cd /usr/local/texlive/2011/texmf-dist/tex/xelatex/fontspec<br />
+sudo touch zhfontcfg.sty<br />
+[/bash]</p>
+
+<p>在该文件中写入：</p>
+
+<p>[tex]<br />
+% xetex/xelatex 字体设定宏包<br />
+\ProvidesPackage{zhfontcfg}<br />
+%[cm-default]选项主要用来解决使用数学环境时数学符号不能正常显示的问题<br />
+\usepackage[cm-default]{fontspec}<br />
+\usepackage{xunicode,xltxtra}<br />
+\usepackage[BoldFont,SlantFont,CJKnumber,fallback]{xeCJK}%使用TexLive自带的xeCJK宏包，并启用加粗、斜体、CJK数字和备用字体选项<br />
+%如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。<br />
+\defaultfontfeatures{Mapping=tex-text}<br />
+% 中文断行<br />
+%\XeTeXlinebreaklocale &amp;quot;zh&amp;quot;<br />
+%\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt<br />
+%将系统字体名映射为逻辑字体名称，主要是为了维护的方便<br />
+\usepackage{indentfirst}%段落首行缩进<br />
+\setlength{\parindent}{2em}%缩进两个字符<br />
+\newcommand\fontnamehei{文泉驿正黑}<br />
+\newcommand\fontnamesong{SimSun}<br />
+\newcommand\fontnamekai{楷体}<br />
+\newcommand\fontnamemono{FreeMono}<br />
+\newcommand\fontnameroman{Times New Roman}<br />
+%%设置常用中文字号，方便调用<br />
+\newcommand{\erhao}{\fontsize{22pt}{\baselineskip}\selectfont}<br />
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}<br />
+\newcommand{\sanhao}{\fontsize{16pt}{\baselineskip}\selectfont}<br />
+\newcommand{\xiaosanhao}{\fontsize{15pt}{\baselineskip}\selectfont}<br />
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}<br />
+\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}<br />
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}<br />
+\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}<br />
+\newcommand{\liuhao}{\fontsize{7.5pt}{\baselineskip}\selectfont}<br />
+%设置正文<br />
+\setCJKmainfont{WenQuanYi Micro Hei}<br />
+[/tex]</p>
+
+<p>使用命令 生成</p>
+
+<p>[bash]<br />
+sudo mktexlsr<br />
+[/bash]</p>
+
+<p>测试：test.tex</p>
+
+<p>[tex]<br />
+%test.tex<br />
+\documentclass{article}<br />
+\usepackage{zhfontcfg}<br />
+\begin{document}<br />
+Hello, I am jasonllinux.&#92;<br />
+你好，我是jasonllinux<br />
+\end{document}<br />
+[/tex]</p>
+
+<p>输出结果：
+<a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/latex.png"><img class="alignleft size-medium wp-image-177" title="latex" src="http://www.jasonllinux.com/wp-content/uploads/2012/07/latex-300x113.png" alt="" width="300" height="113" /></a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>参考：</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/6/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/4/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/10/25/hello-world-2/">Hello World_2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/25/hello-world/">Hello World</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/">Linux终端下翻墙</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/21/win8-%E4%B8%8B%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%EF%BC%8C%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95%E6%8D%9F%E5%9D%8F%E4%B8%94%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96/">win8 下无法删除文件，文件或目录损坏且无法读取</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/">git push 错误</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - jasonllinux -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

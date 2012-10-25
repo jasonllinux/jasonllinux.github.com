@@ -5,12 +5,15 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello World - Jasonllinux's Blog</title>
+  <title>Gentoo安装 - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="受不了Gentoo的诱惑，前端时间花了大概三天时间折腾了下Gentoo，简单记录下安装过程 [bash]
+分区&amp;&amp;格式化
+mkfs.ext4 /dev/sdaXX
+mkswap /dev/sdaXX 挂载分区
+sudo mount /dev/sdaXX /mnt/gentoo &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +22,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/10/25/hello-world/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/08/16/gentoo%E5%AE%89%E8%A3%85/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +71,7 @@
   
   <header>
     
-      <h1 class="entry-title">Hello World</h1>
+      <h1 class="entry-title">Gentoo安装</h1>
     
     
       <p class="meta">
@@ -84,14 +87,89 @@
   
 
 
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2012-08-16T00:00:00+08:00" pubdate data-updated="true">Aug 16<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content">
+<div class="entry-content"><p>受不了Gentoo的诱惑，前端时间花了大概三天时间折腾了下Gentoo，简单记录下安装过程</p>
+
+<p>[bash]<br />
+分区&amp;&amp;格式化<br />
+mkfs.ext4 /dev/sdaXX<br />
+mkswap /dev/sdaXX</p>
+
+<p>挂载分区<br />
+sudo mount /dev/sdaXX /mnt/gentoo<br />
+mkdir /mnt/gentoo/boot<br />
+mkdir /mnt/gentoo/home<br />
+swapon /dev/sdaXX</p>
+
+<p>把下载好的stageXX和portageXX解压<br />
+tar xvjpf stagexx /mnt/gentoo/<br />
+tar xvjf portageX -C /mnt/gentoo/usr</p>
+
+<p>cp -L /etc/resolve.conf /mnt/gentoo/etc/</p>
+
+<p>mount -t proc none /mnt/gentoo/proc<br />
+mount -o rbind /dev /mnt/gentoo/dev</p>
+
+<p>chroot /mnt/gentoo /bin/bash</p>
+
+<p>env-update<br />
+source /etc/profile<br />
+export PS1=&quot;(chroot)$PS1&quot;<br />
+编辑 /etc/make.conf<br />
++MAKEOPTS=&quot;-j5&quot;<br />
+ACCEPT_KEYWORDS=&quot;amd64&quot;<br />
+GENTOO_MIRRORS=&quot;http://mirrors.xmu.edu.cn/gentoo&quot;<br />
+SYNC=&quot;rsync://mirrors.xmu.edu.cn/gentoo-portage&quot;<br />
+VIDEO_CARDS=&quot;nvidia&quot;<br />
+INPUT_DEVICES=&quot;evdev synapitcs&quot;<br />
+emerge &#8211;sync<br />
+emerge gentoo-sources<br />
+emerge genkernel<br />
+zcat /proc/config.gz &gt; /usr/share/genkernel/arch/x86_64/kernel-config<br />
+genkernel &#8211;menuconfig all</p>
+
+<p>修改 /etc/fstab</p>
+
+<p>修改 /etc/hostname</p>
+
+<p>passwd</p>
+
+<p>安装一些程序<br />
+syslog-ng mlocate dhcpcd dbus openssh alsa-utils twm xclock xterm<br />
+增加开机启动<br />
+rc-update add net.eth0 default<br />
+rc-update add syslog-ng default<br />
+rc-update add dbus default<br />
+rc-update add sshd default</p>
+
+<p>安装Grub并配置<br />
+emerge grub</p>
+
+<p>grep -v rootfs /proc/mounts &gt; /etc/mtab</p>
+
+<p>umount xxx &amp;&amp; xxx &amp;&amp; xxx</p>
+
+<p>重启 应该OK了</p>
+
+<p>配置桌面环境<br />
+emerge xorg-server<br />
+emerge nvidia-drivers<br />
+modprobe nvidia<br />
+update-modules<br />
+安装gdm gnome。。。。。。</p>
+
+<p>添加用户<br />
+useradd -m -G uers,wheel,audio -s /bin/bash XXX<br />
+(-d /home/XX)</p>
+
+<p>[/bash]
+<strong>写在最后：</strong>多看Wiki，编译的想吐！！！！！！！！！！！！！！！</p>
 </div>
 
 
@@ -114,15 +192,21 @@
   
 
 
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2012-08-16T00:00:00+08:00" pubdate data-updated="true">Aug 16<span>th</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/linux/'>linux</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/10/25/hello-world/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/10/25/hello-world/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/08/16/gentoo%E5%AE%89%E8%A3%85/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/08/16/gentoo%E5%AE%89%E8%A3%85/" >Tweet</a>
   
   
   
@@ -131,10 +215,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/" title="Previous Post: Linux终端下翻墙">&laquo; Linux终端下翻墙</a>
+        <a class="basic-alignment left" href="/blog/2012/08/05/linux%E4%B8%8Bqtdesigner%E8%BD%AC%E6%8D%A2pyqt%E4%BB%A3%E7%A0%81/" title="Previous Post: Linux下QtDesigner转换Pyqt代码">&laquo; Linux下QtDesigner转换Pyqt代码</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/10/25/hello-world-2/" title="Next Post: Hello World_2">Hello World_2 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/08/18/archlinux-%E5%AE%89%E8%A3%85-virtualbox/" title="Next Post: Archlinux 安装 virtualbox">Archlinux 安装 virtualbox &raquo;</a>
       
     </p>
   </footer>

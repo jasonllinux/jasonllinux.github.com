@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Life | Jasonllinux's Blog]]></title>
+  <link href="http://jasonllinux.github.com/blog/categories/life/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.com/"/>
+  <updated>2012-10-25T12:29:04+08:00</updated>
+  <id>http://jasonllinux.github.com/</id>
+  <author>
+    <name><![CDATA[jasonllinux]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[搬家了]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/09/20/%E6%90%AC%E5%AE%B6%E4%BA%86/"/>
+    <updated>2012-09-20T00:00:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/09/20/搬家了</id>
+    <content type="html"><![CDATA[<p>最近琢磨着入手VPS<br />
+偶然间看到了YardVPS打折的消息，对于穷学生，价格才是王道啊，如果能够稳定一点就更完美了<br />
+终身七折<br />
+价格还是非常给力<br />
+选择了<strong>Tree1</strong>
+配置如下：
+<a href="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/vps.png"><img class="size-full wp-image-346 alignnone" title="vps" src="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/vps.png" alt="" width="309" height="670" /></a></p>
+
+
+
+
+<p>搬家是件痛苦的事情</p>
+
+
+
+
+<p>从老薛那边把空间上的数据库还有网站内容 搬到Vps上<br />
+中间很多曲折，不赘述了</p>
+
+
+
+
+<p>最近在想如何利用这Vps<br />
+现在只是在上面搭了个PPTP，测试了下访问速度还算理想<br />
+装了tomcat，写点web app？<br />
+搭个SVN Git服务器？</p>
+
+
+
+
+<p><strong>备份</strong>和<strong>安全</strong>是要重点考虑的事情<br />
+以后慢慢折腾吧!</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cherry G80-3000 换键帽]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/09/12/cherry-g80-3000-%E6%8D%A2%E9%94%AE%E5%B8%BD/"/>
+    <updated>2012-09-12T00:00:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/09/12/cherry-g80-3000-换键帽</id>
+    <content type="html"><![CDATA[<p>X宝上如了RGB键帽<br />
+拆键帽的时候，差点把Shift搞坏了，好惊心</p>
+
+
+
+
+<p>白色的键盘上终于有了点色彩<br />
+唯一的缺陷是比原厂的键帽高了一些<br />
+不过还好，只是几个功能键，不影响使用<br />
+最后，上图：</p>
+
+
+
+
+<p>[gallery link="file"]</p>
+
+
+
+
+<p>&nbsp;</p>
+
+
+
+
+<p>&nbsp;</p>
+
+]]></content>
+  </entry>
+  
+</feed>

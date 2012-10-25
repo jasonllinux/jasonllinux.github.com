@@ -138,7 +138,203 @@
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/">Linux终端下翻墙</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-24T00:00:00+08:00" pubdate data-updated="true">Oct 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>在Arch下有时候更新dropbox软件是件很DT的事情</p>
+
+<p>下载不动</p>
+
+<p>在启用了goagent的情况下</p>
+
+<p>[bash]<br />
+export http_proxy=&quot;http://127.0.0.1:8087&quot;<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/21/win8-%E4%B8%8B%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%EF%BC%8C%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95%E6%8D%9F%E5%9D%8F%E4%B8%94%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96/">Win8 下无法删除文件，文件或目录损坏且无法读取</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-21T00:00:00+08:00" pubdate data-updated="true">Oct 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>悲了个剧</p>
+
+<p>从linux下拷贝一个pdf文件到win8中，重启进入win8发现读不了</p>
+
+<p>就知道坏了，删除，发现也删除不掉</p>
+
+<p>下载了一些文件粉碎机 也没用</p>
+
+<p>最后</p>
+
+<p>[bash]<br />
+CHKDSK C:/F<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/">Git Push 错误</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-18T00:00:00+08:00" pubdate data-updated="true">Oct 18<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今天，上传代码到github上的时候 莫名其妙出现：</p>
+
+<p>[bash]<br />
+Unable to rewind rpc post data - try increasing http.postBuffer<br />
+error: RPC failed; result=65, HTTP code = 401<br />
+fatal: The remote end hung up unexpectedly<br />
+fatal: The remote end hung up unexpectedly<br />
+[/bash]</p>
+
+<p>解决方案：</p>
+
+<p>[bash]<br />
+git config http.postBuffer 209715200<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/17/goagent%E4%BB%8E1-x%E5%8D%87%E7%BA%A7%E5%88%B02-x/">GoAgent从1.x升级到2.x</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-17T00:00:00+08:00" pubdate data-updated="true">Oct 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>好久没升级goagent了</p>
+
+<p>从google code上下载了最新稳定版</p>
+
+<p>shit</p>
+
+<p>居然要安装些其他东西<br />
+[bash]<br />
+sudo curl -k -L http://git.io/I9B7RQ|sh<br />
+[/bash]</p>
+
+<p>装完之后，还是不行，出现 error</p>
+
+<p>原来还得重新upload一下</p>
+
+<p>虽然曲折了一些，但是还是要感谢goagent，让生活更加美好！</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -156,6 +352,18 @@
     
       <li class="post">
         <a href="/blog/2012/10/25/hello-world/">Hello World</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/">Linux终端下翻墙</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/21/win8-%E4%B8%8B%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%EF%BC%8C%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95%E6%8D%9F%E5%9D%8F%E4%B8%94%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96/">win8 下无法删除文件，文件或目录损坏且无法读取</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/">git push 错误</a>
       </li>
     
   </ul>

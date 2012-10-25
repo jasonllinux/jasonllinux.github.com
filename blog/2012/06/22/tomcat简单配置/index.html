@@ -5,12 +5,17 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello World - Jasonllinux's Blog</title>
+  <title>Tomcat简单配置 - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="在Archlinux下简单配置tomat7： [bash]
+#Install
+sudo pacman -S tomcat7
+#cofigure
+#修改/etc/tomcat7/context.xml
+&lt;Context   reloadable=&quot;true&quot;&gt;
+#修改 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/10/25/hello-world/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/06/22/tomcat%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +73,7 @@
   
   <header>
     
-      <h1 class="entry-title">Hello World</h1>
+      <h1 class="entry-title">Tomcat简单配置</h1>
     
     
       <p class="meta">
@@ -84,14 +89,40 @@
   
 
 
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2012-06-22T00:00:00+08:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content">
+<div class="entry-content"><p>在Archlinux下简单配置tomat7：</p>
+
+<p>[bash]<br />
+#Install<br />
+sudo pacman -S tomcat7<br />
+#cofigure<br />
+#修改/etc/tomcat7/context.xml<br />
+&lt;Context   reloadable=&quot;true&quot;&gt;<br />
+#修改/etc/tomcat7/tomcat-users.xml</p>
+
+<p>&lt;!&#8211; Tomcat运行必备的角色 &#8211;&gt;<br />
+ &lt;role rolename=&quot;tomcat&quot;/&gt;</p>
+
+<p>&lt;!&#8211; 进行Tomcat管理的角色 &#8211;&gt;<br />
+ &lt;role rolename=&quot;manager-gui&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-script&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-jmx&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-status&quot;/&gt;<br />
+ &lt;role rolename=&quot;admin-gui&quot;/&gt;<br />
+ &lt;role rolename=&quot;admin-script&quot;/&gt;</p>
+
+<p>&lt;!&#8211; 进行Tomcat管理的用户，具有Tomcat管理的全部角色 &#8211;&gt;<br />
+ &lt;user username=&quot;admin&quot; password=&quot;apollo&quot; roles=&quot;tomcat, manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script&quot;/&gt;<br />
+[/bash]</p>
+
+<p><strong>查看：</strong>
+<strong><a href="http://localhost:8080" target="_blank">http://localhost:8080</a> </strong></p>
 </div>
 
 
@@ -114,15 +145,21 @@
   
 
 
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2012-06-22T00:00:00+08:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/it/'>IT</a>, <a class='category' href='/blog/categories/linux/'>linux</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/10/25/hello-world/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/10/25/hello-world/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/06/22/tomcat%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/06/22/tomcat%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/" >Tweet</a>
   
   
   
@@ -131,10 +168,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/" title="Previous Post: Linux终端下翻墙">&laquo; Linux终端下翻墙</a>
+        <a class="basic-alignment left" href="/blog/2012/06/20/archlinux%E4%B9%8Bsvn%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" title="Previous Post: Archlinux之SVN服务器搭建">&laquo; Archlinux之SVN服务器搭建</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/10/25/hello-world-2/" title="Next Post: Hello World_2">Hello World_2 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/07/01/linux%E4%B8%8Btexlive%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE/" title="Next Post: Linux下TexLive中文配置">Linux下TexLive中文配置 &raquo;</a>
       
     </p>
   </footer>

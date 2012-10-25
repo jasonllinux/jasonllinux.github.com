@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Jasonllinux's Blog</title>
+  <meta name="author" content="jasonllinux">
+
+  
+  <meta name="description" content="早上更新了一些包之后，重启发现： [bash]
+could not update iceauthority file /var/lib/gdm/.ICEauthority
+[/bash] 解决方法： [bash]
+sudo chown -R gdm:gdm /var/lib/gdm
+sudo &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/page/4/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Jasonllinux's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jasonllinux's Blog</a></h1>
+  
+    <h2>Happy Hacking!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:jasonllinux.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/31/archlinux%E4%B9%8Bcould-not-update-iceauthority-file-varlibgdm-iceauthority%E8%A7%A3%E5%86%B3/">Archlinux之could Not Update Iceauthority File /var/lib/gdm/.iceauthority解决</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-31T00:00:00+08:00" pubdate data-updated="true">Aug 31<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>早上更新了一些包之后，重启发现：</p>
+
+<p>[bash]<br />
+could not update iceauthority file /var/lib/gdm/.ICEauthority<br />
+[/bash]</p>
+
+<p>解决方法：</p>
+
+<p>[bash]<br />
+sudo chown -R gdm:gdm /var/lib/gdm<br />
+sudo chmod 600 /var/lib/gdm/.ICEauthority<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/26/%E3%80%8A%E6%8E%A7%E5%88%B6%E4%B8%8E%E5%86%B3%E7%AD%96%E3%80%8Blatex%E6%A8%A1%E6%9D%BF%E9%97%AE%E9%A2%98/">《控制与决策》Latex模板问题(1)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-26T00:00:00+08:00" pubdate data-updated="true">Aug 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>拿到《控制于决策》的模板，第一次编译的时候出现如下错误：<br />
+[latex]<br />
+! LaTeX Error: \bibname undefined.<br />
+See the LaTeX manual or LaTeX Companion for explanation.<br />
+Type <wbr> H &lt;return&gt; <wbr> for immediate help.
+<wbr> <wbr> <wbr> &#8230;
+<wbr> <wbr> l.43 <wbr> <wbr> {\renewcommand\bibname{?196?215}}
+<wbr> <wbr> ?<br />
+[/latex]</wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></p>
+
+<p>解决方法：<br />
+由于GB.cpx乱码造成，因此重新下载这个<a href="https://bitbucket.org/aloft/ctex-faq/src/ba3f763c9380/GB.cpx" target="_blank">文件</a></p>
+
+<p>然后复制到文章目录，<br />
+compile。。。。done。。。。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/26/svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/">SVN服务器迁移</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-26T00:00:00+08:00" pubdate data-updated="true">Aug 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前段时间把托管比赛项目的svn服务器从自己的笔记本迁移到台式机上了，可以把所有历史记录版本信息都转走，实在是很方便：</p>
+
+<p>[bash]<br />
+#备份<br />
+svnadmin dump path/to/old-repo &gt; dumpfile</p>
+
+<p>#在新的服务器上新建svn &#8230;不再赘述<br />
+#还原<br />
+svnadmin load path/to/new-repo &lt; dumpfile<br />
+[/bash]</p>
+
+<p>参考：</p>
+
+<p><a href="http://eastviking.iteye.com/blog/32899" target="_blank">如何做svn迁移</a></p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/18/archlinux-%E5%AE%89%E8%A3%85-virtualbox/">Archlinux 安装 Virtualbox</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-18T00:00:00+08:00" pubdate data-updated="true">Aug 18<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>通过源安装完virtualbox之后，如果立马新建虚拟机的话会报错，</p>
+
+<p>解决的方法呢？</p>
+
+<p>[bash]<br />
+#查看内核版本<br />
+uname -a<br />
+#然后<br />
+sudo dkms install vboxhost/4.1.18 -k  3.4.7-1-ARCH/x86_64<br />
+modprobe vboxdrv<br />
+[/bash]</p>
+
+<p><strong>注意:</strong>根据实际情况替换版本号</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/16/gentoo%E5%AE%89%E8%A3%85/">Gentoo安装</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-16T00:00:00+08:00" pubdate data-updated="true">Aug 16<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>受不了Gentoo的诱惑，前端时间花了大概三天时间折腾了下Gentoo，简单记录下安装过程</p>
+
+<p>[bash]<br />
+分区&amp;&amp;格式化<br />
+mkfs.ext4 /dev/sdaXX<br />
+mkswap /dev/sdaXX</p>
+
+<p>挂载分区<br />
+sudo mount /dev/sdaXX /mnt/gentoo<br />
+mkdir /mnt/gentoo/boot<br />
+mkdir /mnt/gentoo/home<br />
+swapon /dev/sdaXX</p>
+
+<p>把下载好的stageXX和portageXX解压<br />
+tar xvjpf stagexx /mnt/gentoo/<br />
+tar xvjf portageX -C /mnt/gentoo/usr</p>
+
+<p>cp -L /etc/resolve.conf /mnt/gentoo/etc/</p>
+
+<p>mount -t proc none /mnt/gentoo/proc<br />
+mount -o rbind /dev /mnt/gentoo/dev</p>
+
+<p>chroot /mnt/gentoo /bin/bash</p>
+
+<p>env-update<br />
+source /etc/profile<br />
+export PS1=&quot;(chroot)$PS1&quot;<br />
+编辑 /etc/make.conf<br />
++MAKEOPTS=&quot;-j5&quot;<br />
+ACCEPT_KEYWORDS=&quot;amd64&quot;<br />
+GENTOO_MIRRORS=&quot;http://mirrors.xmu.edu.cn/gentoo&quot;<br />
+SYNC=&quot;rsync://mirrors.xmu.edu.cn/gentoo-portage&quot;<br />
+VIDEO_CARDS=&quot;nvidia&quot;<br />
+INPUT_DEVICES=&quot;evdev synapitcs&quot;<br />
+emerge &#8211;sync<br />
+emerge gentoo-sources<br />
+emerge genkernel<br />
+zcat /proc/config.gz &gt; /usr/share/genkernel/arch/x86_64/kernel-config<br />
+genkernel &#8211;menuconfig all</p>
+
+<p>修改 /etc/fstab</p>
+
+<p>修改 /etc/hostname</p>
+
+<p>passwd</p>
+
+<p>安装一些程序<br />
+syslog-ng mlocate dhcpcd dbus openssh alsa-utils twm xclock xterm<br />
+增加开机启动<br />
+rc-update add net.eth0 default<br />
+rc-update add syslog-ng default<br />
+rc-update add dbus default<br />
+rc-update add sshd default</p>
+
+<p>安装Grub并配置<br />
+emerge grub</p>
+
+<p>grep -v rootfs /proc/mounts &gt; /etc/mtab</p>
+
+<p>umount xxx &amp;&amp; xxx &amp;&amp; xxx</p>
+
+<p>重启 应该OK了</p>
+
+<p>配置桌面环境<br />
+emerge xorg-server<br />
+emerge nvidia-drivers<br />
+modprobe nvidia<br />
+update-modules<br />
+安装gdm gnome。。。。。。</p>
+
+<p>添加用户<br />
+useradd -m -G uers,wheel,audio -s /bin/bash XXX<br />
+(-d /home/XX)</p>
+
+<p>[/bash]
+<strong>写在最后：</strong>多看Wiki，编译的想吐！！！！！！！！！！！！！！！</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/05/linux%E4%B8%8Bqtdesigner%E8%BD%AC%E6%8D%A2pyqt%E4%BB%A3%E7%A0%81/">Linux下QtDesigner转换Pyqt代码</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-05T00:00:00+08:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>当用Qt Designer设计Qt 界面之后，如果想使用pyqt code，就会用到 <strong>pyuic4</strong>这个命令<br />
+要使用这个命令需要先安装</p>
+
+<p>[bash]<br />
+sudo pacman -S pyqt<br />
+[/bash]</p>
+
+<p>装完之后，如果在你系统中有python 3.x 和python2.x共存且默认3.x的情况下，就会出错<br />
+解决方案就是<strong>切换默认python版本</strong>
+最后</p>
+
+<p>[bash]<br />
+pyuic4 gui.ui -o gui.py<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/5/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/3/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/10/25/hello-world-2/">Hello World_2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/25/hello-world/">Hello World</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/">Linux终端下翻墙</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/21/win8-%E4%B8%8B%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%EF%BC%8C%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95%E6%8D%9F%E5%9D%8F%E4%B8%94%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96/">win8 下无法删除文件，文件或目录损坏且无法读取</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/">git push 错误</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - jasonllinux -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

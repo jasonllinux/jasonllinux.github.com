@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 未分类 | Jasonllinux's Blog]]></title>
+  <link href="http://jasonllinux.github.com/blog/categories/未分类/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.com/"/>
+  <updated>2012-10-25T12:29:04+08:00</updated>
+  <id>http://jasonllinux.github.com/</id>
+  <author>
+    <name><![CDATA[jasonllinux]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[URxvt配置]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/07/30/urxvt%E9%85%8D%E7%BD%AE/"/>
+    <updated>2012-07-30T00:00:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/07/30/urxvt配置</id>
+    <content type="html"><![CDATA[<p>配置文件 .Xdefaults</p>
+
+
+
+
+<p>[bash]<br />
+!!title<br />
+URxvt.title:URxvrt-Jason<br />
+!! 设置 Xftp.dpi(字体分辨率）<br />
+Xft.dpi: 96<br />
+Xft.hinting: 1<br />
+Xft.hintstyle: hintslight<br />
+Xft.antialias: 1<br />
+Xft.rgba: rgb<br />
+!!URxvt.geometry: 90x25+180+200<br />
+!!Rxvt.menu: /etc/X11/rxvt.menu<br />
+!! coding<br />
+Rxvt.multichar_encoding: utf-8<br />
+Rxvt.imLocale: zh_CN.UTF-8<br />
+URxvt.preeditType: Root !!使urxvt启动速度加快<br />
+URxvt.depth: 32 !!透明必须<br />
+URxvt.background: [60]Black !!中括号中为透明度<br />
+URxvt.foreground: White</p>
+
+
+
+
+<p>URxvt.colorBD:Gray95<br />
+URxvt.colorUL:Green<br />
+URxvt.color1:Red2<br />
+URxvt.color4:RoyalBlue<br />
+URxvt.color5:Magenta2<br />
+URxvt.color8:Gray50<br />
+URxvt.color10:Green2<br />
+URxvt.color12:DodgerBlue<br />
+URxvt.color14:Cyan2<br />
+URxvt.color15:Gray95</p>
+
+
+
+
+<p>!!URxvt.font: xft:DejaVu Sans Mono:pixelsize=16<br />
+URxvt.font: xft:Ubuntu Mono:pixelsize=16:antialias=True,\<br />
+xft:WenQuanYi Zen Hei Mono:size=20:antialias=True</p>
+
+
+
+
+<p>!!滚动条设置<br />
+URxvt.scrollBar:True<br />
+URxvt.scrollBar_right:True<br />
+URxvt.scrollBar_floating:False<br />
+URxvt.scrollstyle:plain<br />
+!!滚屏设置<br />
+URxvt.mouseWheelScrollPage:True<br />
+URxvt.scrollTtyOutput: False<br />
+URxvt.scrollWithBuffer: True<br />
+URxvt.scrollTtyKeypress: True<br />
+!!光标闪烁<br />
+URxvt.cursorBlink:True<br />
+URxvt.saveLines:3000<br />
+!!边框<br />
+URxvt.borderLess: False<br />
+!!开启标签功能<br />
+!!URxvt.perl-ext-common: default,tabbed<br />
+!! Tab set<br />
+URxvt.perl-ext-common: default,tabbed<br />
+URxvt.tabbed.tab-fg: 12<br />
+URxvt.tabbed.tab-bg: 0<br />
+URxvt.tabbed.tabbar-fg: 4<br />
+[/bash]</p>
+
+
+
+
+<p><strong>Features:</strong>
+字体设置<br />
+Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Linux下TexLive中文配置]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/07/01/linux%E4%B8%8Btexlive%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE/"/>
+    <updated>2012-07-01T00:00:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/07/01/linux下texlive中文配置</id>
+    <content type="html"><![CDATA[<p><a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/225px-LaTeX_logo.png">
+</a>在Linux环境使用$$\LaTeX$$一般使用TexLive套装，而作为天朝子民，使用中文是件头等大事。</p>
+
+
+
+
+<p>在网上大致浏览到两类方式：<br />
+第一种是盗版windows字体，修改ctex配置文件，要用中文的时候就用ctex宏包；<br />
+第二种方式就是使用XeLatex，直接调用系统中文字体。</p>
+
+
+
+
+<p>下面直接介绍第二种方式，为了方便每次调用，我们把配置做成一个<strong>package</strong>
+在该目录下新建文件</p>
+
+
+
+
+<p>[bash]<br />
+cd /usr/local/texlive/2011/texmf-dist/tex/xelatex/fontspec<br />
+sudo touch zhfontcfg.sty<br />
+[/bash]</p>
+
+
+
+
+<p>在该文件中写入：</p>
+
+
+
+
+<p>[tex]<br />
+% xetex/xelatex 字体设定宏包<br />
+\ProvidesPackage{zhfontcfg}<br />
+%[cm-default]选项主要用来解决使用数学环境时数学符号不能正常显示的问题<br />
+\usepackage[cm-default]{fontspec}<br />
+\usepackage{xunicode,xltxtra}<br />
+\usepackage[BoldFont,SlantFont,CJKnumber,fallback]{xeCJK}%使用TexLive自带的xeCJK宏包，并启用加粗、斜体、CJK数字和备用字体选项<br />
+%如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。<br />
+\defaultfontfeatures{Mapping=tex-text}<br />
+% 中文断行<br />
+%\XeTeXlinebreaklocale &amp;quot;zh&amp;quot;<br />
+%\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt<br />
+%将系统字体名映射为逻辑字体名称，主要是为了维护的方便<br />
+\usepackage{indentfirst}%段落首行缩进<br />
+\setlength{\parindent}{2em}%缩进两个字符<br />
+\newcommand\fontnamehei{文泉驿正黑}<br />
+\newcommand\fontnamesong{SimSun}<br />
+\newcommand\fontnamekai{楷体}<br />
+\newcommand\fontnamemono{FreeMono}<br />
+\newcommand\fontnameroman{Times New Roman}<br />
+%%设置常用中文字号，方便调用<br />
+\newcommand{\erhao}{\fontsize{22pt}{\baselineskip}\selectfont}<br />
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}<br />
+\newcommand{\sanhao}{\fontsize{16pt}{\baselineskip}\selectfont}<br />
+\newcommand{\xiaosanhao}{\fontsize{15pt}{\baselineskip}\selectfont}<br />
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}<br />
+\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}<br />
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}<br />
+\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}<br />
+\newcommand{\liuhao}{\fontsize{7.5pt}{\baselineskip}\selectfont}<br />
+%设置正文<br />
+\setCJKmainfont{WenQuanYi Micro Hei}<br />
+[/tex]</p>
+
+
+
+
+<p>使用命令 生成</p>
+
+
+
+
+<p>[bash]<br />
+sudo mktexlsr<br />
+[/bash]</p>
+
+
+
+
+<p>测试：test.tex</p>
+
+
+
+
+<p>[tex]<br />
+%test.tex<br />
+\documentclass{article}<br />
+\usepackage{zhfontcfg}<br />
+\begin{document}<br />
+Hello, I am jasonllinux.\\<br />
+你好，我是jasonllinux<br />
+\end{document}<br />
+[/tex]</p>
+
+
+
+
+<p>输出结果：
+<a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/latex.png"><img class="alignleft size-medium wp-image-177" title="latex" src="http://www.jasonllinux.com/wp-content/uploads/2012/07/latex-300x113.png" alt="" width="300" height="113" /></a></p>
+
+
+
+
+<p>&nbsp;</p>
+
+
+
+
+<p>&nbsp;</p>
+
+
+
+
+<p>&nbsp;</p>
+
+
+
+
+<p>&nbsp;</p>
+
+
+
+
+<p>参考：</p>
+
+]]></content>
+  </entry>
+  
+</feed>

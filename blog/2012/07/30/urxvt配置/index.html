@@ -5,12 +5,18 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello World - Jasonllinux's Blog</title>
+  <title>URxvt配置 - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="配置文件 .Xdefaults [bash]
+!!title
+URxvt.title:URxvrt-Jason
+!! 设置 Xftp.dpi(字体分辨率）
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.hintstyle: hintslight
+Xft.antialias: 1 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +25,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/10/25/hello-world/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/07/30/urxvt%E9%85%8D%E7%BD%AE/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +74,7 @@
   
   <header>
     
-      <h1 class="entry-title">Hello World</h1>
+      <h1 class="entry-title">URxvt配置</h1>
     
     
       <p class="meta">
@@ -84,14 +90,76 @@
   
 
 
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2012-07-30T00:00:00+08:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content">
+<div class="entry-content"><p>配置文件 .Xdefaults</p>
+
+<p>[bash]<br />
+!!title<br />
+URxvt.title:URxvrt-Jason<br />
+!! 设置 Xftp.dpi(字体分辨率）<br />
+Xft.dpi: 96<br />
+Xft.hinting: 1<br />
+Xft.hintstyle: hintslight<br />
+Xft.antialias: 1<br />
+Xft.rgba: rgb<br />
+!!URxvt.geometry: 90x25+180+200<br />
+!!Rxvt.menu: /etc/X11/rxvt.menu<br />
+!! coding<br />
+Rxvt.multichar_encoding: utf-8<br />
+Rxvt.imLocale: zh_CN.UTF-8<br />
+URxvt.preeditType: Root !!使urxvt启动速度加快<br />
+URxvt.depth: 32 !!透明必须<br />
+URxvt.background: [60]Black !!中括号中为透明度<br />
+URxvt.foreground: White</p>
+
+<p>URxvt.colorBD:Gray95<br />
+URxvt.colorUL:Green<br />
+URxvt.color1:Red2<br />
+URxvt.color4:RoyalBlue<br />
+URxvt.color5:Magenta2<br />
+URxvt.color8:Gray50<br />
+URxvt.color10:Green2<br />
+URxvt.color12:DodgerBlue<br />
+URxvt.color14:Cyan2<br />
+URxvt.color15:Gray95</p>
+
+<p>!!URxvt.font: xft:DejaVu Sans Mono:pixelsize=16<br />
+URxvt.font: xft:Ubuntu Mono:pixelsize=16:antialias=True,\<br />
+xft:WenQuanYi Zen Hei Mono:size=20:antialias=True</p>
+
+<p>!!滚动条设置<br />
+URxvt.scrollBar:True<br />
+URxvt.scrollBar_right:True<br />
+URxvt.scrollBar_floating:False<br />
+URxvt.scrollstyle:plain<br />
+!!滚屏设置<br />
+URxvt.mouseWheelScrollPage:True<br />
+URxvt.scrollTtyOutput: False<br />
+URxvt.scrollWithBuffer: True<br />
+URxvt.scrollTtyKeypress: True<br />
+!!光标闪烁<br />
+URxvt.cursorBlink:True<br />
+URxvt.saveLines:3000<br />
+!!边框<br />
+URxvt.borderLess: False<br />
+!!开启标签功能<br />
+!!URxvt.perl-ext-common: default,tabbed<br />
+!! Tab set<br />
+URxvt.perl-ext-common: default,tabbed<br />
+URxvt.tabbed.tab-fg: 12<br />
+URxvt.tabbed.tab-bg: 0<br />
+URxvt.tabbed.tabbar-fg: 4<br />
+[/bash]</p>
+
+<p><strong>Features:</strong>
+字体设置<br />
+Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>
 </div>
 
 
@@ -114,15 +182,21 @@
   
 
 
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2012-07-30T00:00:00+08:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/未分类/'>未分类</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/10/25/hello-world/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/10/25/hello-world/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/07/30/urxvt%E9%85%8D%E7%BD%AE/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/07/30/urxvt%E9%85%8D%E7%BD%AE/" >Tweet</a>
   
   
   
@@ -131,10 +205,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/" title="Previous Post: Linux终端下翻墙">&laquo; Linux终端下翻墙</a>
+        <a class="basic-alignment left" href="/blog/2012/07/02/archlinux-memo/" title="Previous Post: Archlinux Memo">&laquo; Archlinux Memo</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/10/25/hello-world-2/" title="Next Post: Hello World_2">Hello World_2 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/08/02/archlinux-%E7%BC%96%E8%AF%91-opencv%E6%94%AF%E6%8F%B4python/" title="Next Post: Archlinux 编译 OpenCV支援Python">Archlinux 编译 OpenCV支援Python &raquo;</a>
       
     </p>
   </footer>

@@ -5,12 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello World - Jasonllinux's Blog</title>
+  <title>SVN服务器迁移 - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="前段时间把托管比赛项目的svn服务器从自己的笔记本迁移到台式机上了，可以把所有历史记录版本信息都转走，实在是很方便： [bash]
+#备份
+svnadmin dump path/to/old-repo &gt; dumpfile #在新的服务器上新建svn &#8230;不再赘述
+#还原 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/10/25/hello-world/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/08/26/svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +70,7 @@
   
   <header>
     
-      <h1 class="entry-title">Hello World</h1>
+      <h1 class="entry-title">SVN服务器迁移</h1>
     
     
       <p class="meta">
@@ -84,14 +86,29 @@
   
 
 
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2012-08-26T00:00:00+08:00" pubdate data-updated="true">Aug 26<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content">
+<div class="entry-content"><p>前段时间把托管比赛项目的svn服务器从自己的笔记本迁移到台式机上了，可以把所有历史记录版本信息都转走，实在是很方便：</p>
+
+<p>[bash]<br />
+#备份<br />
+svnadmin dump path/to/old-repo &gt; dumpfile</p>
+
+<p>#在新的服务器上新建svn &#8230;不再赘述<br />
+#还原<br />
+svnadmin load path/to/new-repo &lt; dumpfile<br />
+[/bash]</p>
+
+<p>参考：</p>
+
+<p><a href="http://eastviking.iteye.com/blog/32899" target="_blank">如何做svn迁移</a></p>
+
+<p>&nbsp;</p>
 </div>
 
 
@@ -114,15 +131,21 @@
   
 
 
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2012-08-26T00:00:00+08:00" pubdate data-updated="true">Aug 26<span>th</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/it/'>IT</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/10/25/hello-world/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/10/25/hello-world/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/08/26/svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/08/26/svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/" >Tweet</a>
   
   
   
@@ -131,10 +154,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/" title="Previous Post: Linux终端下翻墙">&laquo; Linux终端下翻墙</a>
+        <a class="basic-alignment left" href="/blog/2012/08/18/archlinux-%E5%AE%89%E8%A3%85-virtualbox/" title="Previous Post: Archlinux 安装 virtualbox">&laquo; Archlinux 安装 virtualbox</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/10/25/hello-world-2/" title="Next Post: Hello World_2">Hello World_2 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/08/26/%E3%80%8A%E6%8E%A7%E5%88%B6%E4%B8%8E%E5%86%B3%E7%AD%96%E3%80%8Blatex%E6%A8%A1%E6%9D%BF%E9%97%AE%E9%A2%98/" title="Next Post: 《控制与决策》Latex模板问题(1)">《控制与决策》Latex模板问题(1) &raquo;</a>
       
     </p>
   </footer>

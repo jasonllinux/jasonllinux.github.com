@@ -5,12 +5,15 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello World - Jasonllinux's Blog</title>
+  <title>archlinux之could not update iceauthority file /var/lib/gdm/.iceauthority解决 - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="早上更新了一些包之后，重启发现： [bash]
+could not update iceauthority file /var/lib/gdm/.ICEauthority
+[/bash] 解决方法： [bash]
+sudo chown -R gdm:gdm /var/lib/gdm
+sudo &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +22,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/10/25/hello-world/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/08/31/archlinux%E4%B9%8Bcould-not-update-iceauthority-file-varlibgdm-iceauthority%E8%A7%A3%E5%86%B3/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +71,7 @@
   
   <header>
     
-      <h1 class="entry-title">Hello World</h1>
+      <h1 class="entry-title">Archlinux之could Not Update Iceauthority File /var/lib/gdm/.iceauthority解决</h1>
     
     
       <p class="meta">
@@ -84,14 +87,25 @@
   
 
 
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2012-08-31T00:00:00+08:00" pubdate data-updated="true">Aug 31<span>st</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content">
+<div class="entry-content"><p>早上更新了一些包之后，重启发现：</p>
+
+<p>[bash]<br />
+could not update iceauthority file /var/lib/gdm/.ICEauthority<br />
+[/bash]</p>
+
+<p>解决方法：</p>
+
+<p>[bash]<br />
+sudo chown -R gdm:gdm /var/lib/gdm<br />
+sudo chmod 600 /var/lib/gdm/.ICEauthority<br />
+[/bash]</p>
 </div>
 
 
@@ -114,15 +128,21 @@
   
 
 
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2012-08-31T00:00:00+08:00" pubdate data-updated="true">Aug 31<span>st</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/linux/'>linux</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/10/25/hello-world/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/10/25/hello-world/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/08/31/archlinux%E4%B9%8Bcould-not-update-iceauthority-file-varlibgdm-iceauthority%E8%A7%A3%E5%86%B3/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/08/31/archlinux%E4%B9%8Bcould-not-update-iceauthority-file-varlibgdm-iceauthority%E8%A7%A3%E5%86%B3/" >Tweet</a>
   
   
   
@@ -131,10 +151,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/" title="Previous Post: Linux终端下翻墙">&laquo; Linux终端下翻墙</a>
+        <a class="basic-alignment left" href="/blog/2012/08/26/%E3%80%8A%E6%8E%A7%E5%88%B6%E4%B8%8E%E5%86%B3%E7%AD%96%E3%80%8Blatex%E6%A8%A1%E6%9D%BF%E9%97%AE%E9%A2%98/" title="Previous Post: 《控制与决策》Latex模板问题(1)">&laquo; 《控制与决策》Latex模板问题(1)</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/10/25/hello-world-2/" title="Next Post: Hello World_2">Hello World_2 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/09/03/%E5%85%A5%E6%89%8Bcherry-g80-3000%E7%99%BD%E8%89%B2%E8%8C%B6%E8%BD%B4/" title="Next Post: 入手Cherry G80-3000白色茶轴">入手Cherry G80-3000白色茶轴 &raquo;</a>
       
     </p>
   </footer>

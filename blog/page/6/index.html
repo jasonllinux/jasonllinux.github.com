@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Jasonllinux's Blog</title>
+  <meta name="author" content="jasonllinux">
+
+  
+  <meta name="description" content="在Archlinux下简单配置tomat7： [bash]
+#Install
+sudo pacman -S tomcat7
+#cofigure
+#修改/etc/tomcat7/context.xml
+&lt;Context   reloadable=&quot;true&quot;&gt;
+#修改 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/page/6/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Jasonllinux's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jasonllinux's Blog</a></h1>
+  
+    <h2>Happy Hacking!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:jasonllinux.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/22/tomcat%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/">Tomcat简单配置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-22T00:00:00+08:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>在Archlinux下简单配置tomat7：</p>
+
+<p>[bash]<br />
+#Install<br />
+sudo pacman -S tomcat7<br />
+#cofigure<br />
+#修改/etc/tomcat7/context.xml<br />
+&lt;Context   reloadable=&quot;true&quot;&gt;<br />
+#修改/etc/tomcat7/tomcat-users.xml</p>
+
+<p>&lt;!&#8211; Tomcat运行必备的角色 &#8211;&gt;<br />
+ &lt;role rolename=&quot;tomcat&quot;/&gt;</p>
+
+<p>&lt;!&#8211; 进行Tomcat管理的角色 &#8211;&gt;<br />
+ &lt;role rolename=&quot;manager-gui&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-script&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-jmx&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-status&quot;/&gt;<br />
+ &lt;role rolename=&quot;admin-gui&quot;/&gt;<br />
+ &lt;role rolename=&quot;admin-script&quot;/&gt;</p>
+
+<p>&lt;!&#8211; 进行Tomcat管理的用户，具有Tomcat管理的全部角色 &#8211;&gt;<br />
+ &lt;user username=&quot;admin&quot; password=&quot;apollo&quot; roles=&quot;tomcat, manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script&quot;/&gt;<br />
+[/bash]</p>
+
+<p><strong>查看：</strong>
+<strong><a href="http://localhost:8080" target="_blank">http://localhost:8080</a> </strong></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/20/archlinux%E4%B9%8Bsvn%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/">Archlinux之SVN服务器搭建</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-20T00:00:00+08:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>最近把电脑<strong>arch</strong>化了，所以原来在Ubuntu上搭建的SVN服务也要重新安装了，貌似和Ubuntu下有些不同，参考Wiki贴上教程</p>
+
+<p><strong>1.安装Subversion和Apache</strong></p>
+
+<p>[bash]<br />
+sudo pacman -S subversion<br />
+sudo pacman -S apache<br />
+[/bash]</p>
+
+<p><strong>2.新建SVN仓库目录</strong></p>
+
+<p>[bash]<br />
+sudo mkdir -p /home/svn/repositories<br />
+[/bash]</p>
+
+<p><strong>3.修改配置文件</strong>
+在/etc/httpd/conf/httpd.conf中添加<br />
+#LoadModule dav_module modules/mod_dav.so<br />
+#LoadModule dav_fs_module modules/mod_dav_fs.so<br />
+LoadModule dav_svn_module modules/mod_dav_svn.so<br />
+LoadModule authz_svn_module modules/mod_authz_svn.so<br />
+前两行不用，原配置文件中就有</p>
+
+<p>SSL</p>
+
+<p>[bash]<br />
+cd /etc/httpd/conf/<br />
+sudo openssl req -new -x509 -keyout server.key -out server.crt -days 365 -nodes<br />
+[/bash]</p>
+
+<p>按照提示输入就成</p>
+
+<p>修改/etc/httpd/conf/extra/httpd-vhosts.conf<br />
+追加<br />
+&lt;Location /svn&gt;<br />
+DAV svn<br />
+SVNParentPath /home/svn/repositories</p>
+
+<p>AuthzSVNAccessFile /home/svn/.svn-policy-file<br />
+AuthName &#8220;SVN Repositories&#8221;<br />
+AuthType Basic<br />
+AuthUserFile /home/svn/.svn-auth-file<br />
+Satisfy Any<br />
+Require valid-user<br />
+&lt;/Location&gt;<br />
+注意路径要一致</p>
+
+<p>在/etc/httpd/conf/httpd.conf文件中加入 Include /etc/httpd/conf/extra/httpd-ssl.conf</p>
+
+<p><strong>svn-policy-file &amp;&amp; svn-auth-file</strong></p>
+
+<p>[bash]<br />
+sudo touch /home/svn/.svn-policy-file<br />
+[/bash]</p>
+
+<p>在其中添加</p>
+
+<p>[/] * = r<br />
+[REPO_NAME:/] USER_NAME = rw<br />
+用你的真是仓库名替换REPO_NAME，用你的真实用户名替换USER_NAME，如果多个仓库，同理</p>
+
+<p>[bash]<br />
+sudo htpasswd -cs /home/svn/.svn-auth-file USER_NAME<br />
+[/bash]</p>
+
+<p>生成相应用户的密码</p>
+
+<p><strong>4.生成SVN仓库</strong></p>
+
+<p>[bash]<br />
+sudo svnadmin create /home/svn/repositories/REPO_NAME<br />
+[/bash]</p>
+
+<p>设置访问权限</p>
+
+<p>[bash]<br />
+chown -R http.http /home/svn/repositories/REPO_NAME<br />
+[/bash]</p>
+
+<p><strong>5.Done
+</strong>大功告成，这样就可以访问了，比如 <em>http://localhost/svn/REPO_NAME </em></p>
+
+<p><strong>Reference:</strong><em>
+</em><a href="https://wiki.archlinux.org/index.php/Subversion_Setup" target="_blank">Archlinux Wiki</a>
+<a href="http://blog.csdn.net/jallin2001/article/details/7335801" target="_blank">在ubuntu11.10上面安装svn服务器的过程</a>
+<pre><em> </em></pre></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/02/ubuntu12-04-memo/">Ubuntu12.04 Memo</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-02T00:00:00+08:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.jasonllinux.com/wp-content/uploads/2012/05/precise-pangolin.jpg"><img class="aligncenter size-medium wp-image-19" title="precise-pangolin" src="http://www.jasonllinux.com/wp-content/uploads/2012/05/precise-pangolin-300x153.jpg" alt="" width="300" height="153" /></a></p>
+
+<p>从Beta开始用的12.04,从刚开始的Bug丛生到正式发布，终于等到头了.</p>
+
+<p><em>基础版：</em>
+nautilus-open-terminal<br />
+build-essential
+<strong>pdf中文</strong> poppler-data
+<strong>网页浏览器 </strong>Chromium
+<strong>桌面环境</strong> gnome-shell<strong>
+</strong> <strong>输入法</strong> fctix
+<strong>文字排版</strong> TexLive 2011
+<strong>Editor</strong> Vim-gnome
+<strong>Code</strong> eclipse ant subclipse
+<strong>E-mail</strong> thunderbird</p>
+
+<p><em>加强版</em>
+<strong>1.Dropbox</strong>
+源里有，但是部分被墙，自己动手，丰衣足食</p>
+
+<p><strong>2.goagent</strong>
+关于这个网上教程一坨，但是发现两个问题，首先是开机让它自动启动，其二就是PAC，系统全局代理</p>
+
+<p><strong>3.思维导图 xmind
+</strong>这是一个好东西，可以破解成Pro。。邪恶的笑。。。</p>
+
+<p><strong>4.Wine Dr.com</strong>
+在教学区上网就逃不过这个东西，以前由于版本问题，一直没有Wine成功过，直至最近，Ubuntu12.04+ Dr.com3.46,完美运行，无乱码哦
+<a href="http://www.jasonllinux.com/wp-content/uploads/2012/05/2012-05-04-190150的屏幕截图.png"><img class="alignleft size-medium wp-image-105" title="2012-05-04 19:01:50的屏幕截图" src="http://www.jasonllinux.com/wp-content/uploads/2012/05/2012-05-04-190150的屏幕截图-300x185.png" alt="" width="300" height="185" /></a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>待续&#8230;&#8230;</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/5/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/10/25/hello-world-2/">Hello World_2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/25/hello-world/">Hello World</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/">Linux终端下翻墙</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/21/win8-%E4%B8%8B%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%EF%BC%8C%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95%E6%8D%9F%E5%9D%8F%E4%B8%94%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96/">win8 下无法删除文件，文件或目录损坏且无法读取</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/">git push 错误</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - jasonllinux -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
