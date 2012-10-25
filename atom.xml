@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Jasonllinux's Blog]]></title>
+  <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.com/"/>
+  <updated>2012-10-25T11:33:01+08:00</updated>
+  <id>http://jasonllinux.github.com/</id>
+  <author>
+    <name><![CDATA[jasonllinux]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>
