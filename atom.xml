@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-10-25T20:36:27+08:00</updated>
+  <updated>2012-10-27T22:06:32+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Linux下Eclipse中编译OpenCV相关工程问题]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/"/>
+    <updated>2012-10-27T21:53:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment</id>
+    <content type="html"><![CDATA[<p>最近小研究了下使用OpenCV进行人脸检测</p>
+
+<p>老早用Python实现过</p>
+
+<p>最近回归C++</p>
+
+<p>当然，还是用Eclipse了</p>
+
+<p>刚开始只是惯性的设置了include路径，所以头文件什么的都没有问题</p>
+
+<p>但是，最后Build的时候出现了N多 undefined reference to xxx</p>
+
+<p>网上搜了一把，原来是要设置Lib路径</p>
+
+<p>但是简单的把/usr/local/lib add进去也是没用</p>
+
+<p>要一个一个add 注意去掉前面的 lib 以及后面的 .so</p>
+
+<p>这样就OK了</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[有一次给64bit跪了]]></title>
@@ -479,26 +506,6 @@ F区比较远<br />
 
 <p>最后，上图：<br />
 [gallery link=&#8221;file&#8221;]</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[archlinux之could not update iceauthority file /var/lib/gdm/.iceauthority解决]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/08/31/archlinux%E4%B9%8Bcould-not-update-iceauthority-file-varlibgdm-iceauthority%E8%A7%A3%E5%86%B3/"/>
-    <updated>2012-08-31T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/08/31/archlinux之could-not-update-iceauthority-file-varlibgdm-iceauthority解决</id>
-    <content type="html"><![CDATA[<p>早上更新了一些包之后，重启发现：</p>
-
-<p>[bash]<br />
-could not update iceauthority file /var/lib/gdm/.ICEauthority<br />
-[/bash]</p>
-
-<p>解决方法：</p>
-
-<p>[bash]<br />
-sudo chown -R gdm:gdm /var/lib/gdm<br />
-sudo chmod 600 /var/lib/gdm/.ICEauthority<br />
-[/bash]</p>
 ]]></content>
   </entry>
   

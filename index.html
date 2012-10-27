@@ -9,7 +9,7 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="最近几天在Windows平台搭建 OpenCV 的python开发平台 但是，当横子横子编译完OpenCV后 把相应的pyd导入到python的site-packages中 import cv2居然说不是32位应用程序 于是之，我知道又是64bit的缘故 果断的 换32位的python，一切OK &hellip;">
+  <meta name="description" content="最近小研究了下使用OpenCV进行人脸检测 老早用Python实现过 最近回归C++ 当然，还是用Eclipse了 刚开始只是惯性的设置了include路径，所以头文件什么的都没有问题 但是，最后Build的时候出现了N多 undefined reference to xxx 网上搜了一把， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,62 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/">Linux下Eclipse中编译OpenCV相关工程问题</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-27T21:53:00+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>最近小研究了下使用OpenCV进行人脸检测</p>
+
+<p>老早用Python实现过</p>
+
+<p>最近回归C++</p>
+
+<p>当然，还是用Eclipse了</p>
+
+<p>刚开始只是惯性的设置了include路径，所以头文件什么的都没有问题</p>
+
+<p>但是，最后Build的时候出现了N多 undefined reference to xxx</p>
+
+<p>网上搜了一把，原来是要设置Lib路径</p>
+
+<p>但是简单的把/usr/local/lib add进去也是没用</p>
+
+<p>要一个一个add 注意去掉前面的 lib 以及后面的 .so</p>
+
+<p>这样就OK了</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -290,57 +346,6 @@ CHKDSK C:/F<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/">Git Push 错误</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-18T00:00:00+08:00" pubdate data-updated="true">Oct 18<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>今天，上传代码到github上的时候 莫名其妙出现：</p>
-
-<p>[bash]<br />
-Unable to rewind rpc post data - try increasing http.postBuffer<br />
-error: RPC failed; result=65, HTTP code = 401<br />
-fatal: The remote end hung up unexpectedly<br />
-fatal: The remote end hung up unexpectedly<br />
-[/bash]</p>
-
-<p>解决方案：</p>
-
-<p>[bash]<br />
-git config http.postBuffer 209715200<br />
-[/bash]</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -356,6 +361,10 @@ git config http.postBuffer 209715200<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/">Linux下Eclipse中编译OpenCV相关工程问题</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/10/25/64Bit-Again/">有一次给64bit跪了</a>
       </li>
     
@@ -369,10 +378,6 @@ git config http.postBuffer 209715200<br />
     
       <li class="post">
         <a href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/">Linux终端下翻墙</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/21/win8-%E4%B8%8B%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%EF%BC%8C%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95%E6%8D%9F%E5%9D%8F%E4%B8%94%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96/">win8 下无法删除文件，文件或目录损坏且无法读取</a>
       </li>
     
   </ul>

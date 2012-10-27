@@ -5,14 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>git push 错误 - Jasonllinux's Blog</title>
+  <title>Linux下Eclipse中编译OpenCV相关工程问题 - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="今天，上传代码到github上的时候 莫名其妙出现： [bash]
-Unable to rewind rpc post data - try increasing http.postBuffer
-error: RPC failed; result=65, HTTP code = 401
-fatal &hellip;">
+  <meta name="description" content="最近小研究了下使用OpenCV进行人脸检测 老早用Python实现过 最近回归C++ 当然，还是用Eclipse了 刚开始只是惯性的设置了include路径，所以头文件什么的都没有问题 但是，最后Build的时候出现了N多 undefined reference to xxx 网上搜了一把， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +18,7 @@ fatal &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -71,7 +68,7 @@ fatal &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Git Push 错误</h1>
+      <h1 class="entry-title">Linux下Eclipse中编译OpenCV相关工程问题</h1>
     
     
       <p class="meta">
@@ -87,7 +84,7 @@ fatal &hellip;">
   
 
 
-<time datetime="2012-10-18T00:00:00+08:00" pubdate data-updated="true">Oct 18<span>th</span>, 2012</time>
+<time datetime="2012-10-27T21:53:00+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -96,20 +93,25 @@ fatal &hellip;">
   </header>
 
 
-<div class="entry-content"><p>今天，上传代码到github上的时候 莫名其妙出现：</p>
+<div class="entry-content"><p>最近小研究了下使用OpenCV进行人脸检测</p>
 
-<p>[bash]<br />
-Unable to rewind rpc post data - try increasing http.postBuffer<br />
-error: RPC failed; result=65, HTTP code = 401<br />
-fatal: The remote end hung up unexpectedly<br />
-fatal: The remote end hung up unexpectedly<br />
-[/bash]</p>
+<p>老早用Python实现过</p>
 
-<p>解决方案：</p>
+<p>最近回归C++</p>
 
-<p>[bash]<br />
-git config http.postBuffer 209715200<br />
-[/bash]</p>
+<p>当然，还是用Eclipse了</p>
+
+<p>刚开始只是惯性的设置了include路径，所以头文件什么的都没有问题</p>
+
+<p>但是，最后Build的时候出现了N多 undefined reference to xxx</p>
+
+<p>网上搜了一把，原来是要设置Lib路径</p>
+
+<p>但是简单的把/usr/local/lib add进去也是没用</p>
+
+<p>要一个一个add 注意去掉前面的 lib 以及后面的 .so</p>
+
+<p>这样就OK了</p>
 </div>
 
 
@@ -132,12 +134,12 @@ git config http.postBuffer 209715200<br />
   
 
 
-<time datetime="2012-10-18T00:00:00+08:00" pubdate data-updated="true">Oct 18<span>th</span>, 2012</time>
+<time datetime="2012-10-27T21:53:00+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/it/'>IT</a>
+    <a class='category' href='/blog/categories/opencv/'>OpenCV</a>
   
 </span>
 
@@ -146,7 +148,7 @@ git config http.postBuffer 209715200<br />
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/" >Tweet</a>
   
   
   
@@ -155,10 +157,8 @@ git config http.postBuffer 209715200<br />
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/10/17/goagent%E4%BB%8E1-x%E5%8D%87%E7%BA%A7%E5%88%B02-x/" title="Previous Post: GoAgent从1.x升级到2.x">&laquo; GoAgent从1.x升级到2.x</a>
+        <a class="basic-alignment left" href="/blog/2012/10/25/64Bit-Again/" title="Previous Post: 有一次给64bit跪了">&laquo; 有一次给64bit跪了</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/10/21/win8-%E4%B8%8B%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%EF%BC%8C%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95%E6%8D%9F%E5%9D%8F%E4%B8%94%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96/" title="Next Post: win8 下无法删除文件，文件或目录损坏且无法读取">win8 下无法删除文件，文件或目录损坏且无法读取 &raquo;</a>
       
     </p>
   </footer>
@@ -239,8 +239,8 @@ git config http.postBuffer 209715200<br />
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jasonllinux.github.com/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/';
-        var disqus_url = 'http://jasonllinux.github.com/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/';
+        var disqus_identifier = 'http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/';
+        var disqus_url = 'http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/';
         var disqus_script = 'embed.js';
       
     (function () {
