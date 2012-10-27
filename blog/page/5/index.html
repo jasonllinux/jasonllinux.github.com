@@ -9,11 +9,10 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="受不了Gentoo的诱惑，前端时间花了大概三天时间折腾了下Gentoo，简单记录下安装过程 [bash]
-分区&amp;&amp;格式化
-mkfs.ext4 /dev/sdaXX
-mkswap /dev/sdaXX 挂载分区
-sudo mount /dev/sdaXX /mnt/gentoo &hellip;">
+  <meta name="description" content="当用Qt Designer设计Qt 界面之后，如果想使用pyqt code，就会用到 pyuic4这个命令
+要使用这个命令需要先安装 [bash]
+sudo pacman -S pyqt
+[/bash] 装完之后，如果在你系统中有python 3.x 和python2.x共存且默认3.x的情况下， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,119 +68,6 @@ sudo mount /dev/sdaXX /mnt/gentoo &hellip;">
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/16/gentoo%E5%AE%89%E8%A3%85/">Gentoo安装</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-16T00:00:00+08:00" pubdate data-updated="true">Aug 16<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/08/16/gentoo%E5%AE%89%E8%A3%85/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>受不了Gentoo的诱惑，前端时间花了大概三天时间折腾了下Gentoo，简单记录下安装过程</p>
-
-<p>[bash]<br />
-分区&amp;&amp;格式化<br />
-mkfs.ext4 /dev/sdaXX<br />
-mkswap /dev/sdaXX</p>
-
-<p>挂载分区<br />
-sudo mount /dev/sdaXX /mnt/gentoo<br />
-mkdir /mnt/gentoo/boot<br />
-mkdir /mnt/gentoo/home<br />
-swapon /dev/sdaXX</p>
-
-<p>把下载好的stageXX和portageXX解压<br />
-tar xvjpf stagexx /mnt/gentoo/<br />
-tar xvjf portageX -C /mnt/gentoo/usr</p>
-
-<p>cp -L /etc/resolve.conf /mnt/gentoo/etc/</p>
-
-<p>mount -t proc none /mnt/gentoo/proc<br />
-mount -o rbind /dev /mnt/gentoo/dev</p>
-
-<p>chroot /mnt/gentoo /bin/bash</p>
-
-<p>env-update<br />
-source /etc/profile<br />
-export PS1=&quot;(chroot)$PS1&quot;<br />
-编辑 /etc/make.conf<br />
-+MAKEOPTS=&quot;-j5&quot;<br />
-ACCEPT_KEYWORDS=&quot;amd64&quot;<br />
-GENTOO_MIRRORS=&quot;http://mirrors.xmu.edu.cn/gentoo&quot;<br />
-SYNC=&quot;rsync://mirrors.xmu.edu.cn/gentoo-portage&quot;<br />
-VIDEO_CARDS=&quot;nvidia&quot;<br />
-INPUT_DEVICES=&quot;evdev synapitcs&quot;<br />
-emerge &#8211;sync<br />
-emerge gentoo-sources<br />
-emerge genkernel<br />
-zcat /proc/config.gz &gt; /usr/share/genkernel/arch/x86_64/kernel-config<br />
-genkernel &#8211;menuconfig all</p>
-
-<p>修改 /etc/fstab</p>
-
-<p>修改 /etc/hostname</p>
-
-<p>passwd</p>
-
-<p>安装一些程序<br />
-syslog-ng mlocate dhcpcd dbus openssh alsa-utils twm xclock xterm<br />
-增加开机启动<br />
-rc-update add net.eth0 default<br />
-rc-update add syslog-ng default<br />
-rc-update add dbus default<br />
-rc-update add sshd default</p>
-
-<p>安装Grub并配置<br />
-emerge grub</p>
-
-<p>grep -v rootfs /proc/mounts &gt; /etc/mtab</p>
-
-<p>umount xxx &amp;&amp; xxx &amp;&amp; xxx</p>
-
-<p>重启 应该OK了</p>
-
-<p>配置桌面环境<br />
-emerge xorg-server<br />
-emerge nvidia-drivers<br />
-modprobe nvidia<br />
-update-modules<br />
-安装gdm gnome。。。。。。</p>
-
-<p>添加用户<br />
-useradd -m -G uers,wheel,audio -s /bin/bash XXX<br />
-(-d /home/XX)</p>
-
-<p>[/bash]
-<strong>写在最后：</strong>多看Wiki，编译的想吐！！！！！！！！！！！！！！！</p>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -537,6 +423,64 @@ Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/02/archlinux-memo/">Archlinux Memo</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-02T00:00:00+08:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2012</time>
+        
+         | <a href="/blog/2012/07/02/archlinux-memo/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>中文及渲染<br />
+采用Ubunut的LCD补丁，避免字体发虚</p>
+
+<p>[bash]<br />
+yaourt -S cairo-ubuntu<br />
+[/bash]</p>
+
+<p>中文字体配置</p>
+
+<p>[bash]<br />
+yaourt -S fontconfig-ubuntu-zh-cn<br />
+[/bash]</p>
+
+<p>最后一步</p>
+
+<p>[bash]<br />
+gnome-tweak-tool<br />
+[/bash]</p>
+
+<p>调整如下：
+<a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/gtt.png"><img class="aligncenter size-medium wp-image-211" title="gtt" src="http://www.jasonllinux.com/wp-content/uploads/2012/07/gtt-300x239.png" alt="" width="300" height="239" /></a>OK 收工！</p>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -562,15 +506,15 @@ Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/10/25/hello-world-2/">Hello World_2</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2012/10/25/hello-world/">Hello World</a>
       </li>
     
       <li class="post">
         <a href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/">Linux终端下翻墙</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/21/win8-%E4%B8%8B%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%EF%BC%8C%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95%E6%8D%9F%E5%9D%8F%E4%B8%94%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96/">win8 下无法删除文件，文件或目录损坏且无法读取</a>
       </li>
     
   </ul>

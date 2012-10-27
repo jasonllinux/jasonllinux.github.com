@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-10-27T22:06:32+08:00</updated>
+  <updated>2012-10-27T22:08:57+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -60,15 +60,6 @@
 <p>换32位的python，一切OK</p>
 
 <p>eclipse中pydev一切OK</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hello World_2]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/10/25/hello-world-2/"/>
-    <updated>2012-10-25T11:37:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/10/25/hello-world-2</id>
-    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
@@ -506,6 +497,26 @@ F区比较远<br />
 
 <p>最后，上图：<br />
 [gallery link=&#8221;file&#8221;]</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[archlinux之could not update iceauthority file /var/lib/gdm/.iceauthority解决]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/08/31/archlinux%E4%B9%8Bcould-not-update-iceauthority-file-varlibgdm-iceauthority%E8%A7%A3%E5%86%B3/"/>
+    <updated>2012-08-31T00:00:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/08/31/archlinux之could-not-update-iceauthority-file-varlibgdm-iceauthority解决</id>
+    <content type="html"><![CDATA[<p>早上更新了一些包之后，重启发现：</p>
+
+<p>[bash]<br />
+could not update iceauthority file /var/lib/gdm/.ICEauthority<br />
+[/bash]</p>
+
+<p>解决方法：</p>
+
+<p>[bash]<br />
+sudo chown -R gdm:gdm /var/lib/gdm<br />
+sudo chmod 600 /var/lib/gdm/.ICEauthority<br />
+[/bash]</p>
 ]]></content>
   </entry>
   
