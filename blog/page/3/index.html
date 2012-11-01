@@ -9,7 +9,10 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="昨天晚上，跟师兄他们奔赴南大仙林校区 参加了创新工厂的宣讲会 现场人很多 本来开复说要来的，但是最终xxx，没来成 不过听的依然很nice 负责主持的可能是创新工厂的HR吧，很有范 主讲的是豌豆夹的COO——《爱与速度引领的创业新思想》 大致讲讲了讲她个人的一些经历，对互联网行业一些人和事的看法 &hellip;">
+  <meta name="description" content="Archer都知道的 配置Grub不像Ubuntu那么Easy，可以自动检测到其他盘符的系统 但是神器来了 os-prober 在安装玩Grub2之后iou [bash]
+pacman -S os-prober
+grub-mkconfig -o /boot/grub/grub.cfg
+[/bash &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +68,57 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/23/archlinux-%E9%85%8D%E7%BD%AEgrub2%E7%AE%80%E4%BE%BF%E6%96%B9%E6%B3%95/">Archlinux 配置Grub2简便方法</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-23T00:00:00+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2012</time>
+        
+         | <a href="/blog/2012/09/23/archlinux-%E9%85%8D%E7%BD%AEgrub2%E7%AE%80%E4%BE%BF%E6%96%B9%E6%B3%95/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Archer都知道的</p>
+
+<p>配置Grub不像Ubuntu那么Easy，可以自动检测到其他盘符的系统</p>
+
+<p>但是神器来了</p>
+
+<p><strong>os-prober</strong></p>
+
+<p>在安装玩Grub2之后iou</p>
+
+<p>[bash]<br />
+pacman -S os-prober<br />
+grub-mkconfig -o /boot/grub/grub.cfg<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -323,86 +377,6 @@ android:screenOrientation=&quot;portrait&quot;<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/05/hadoop%E7%A2%8E%E7%A2%8E%E5%BF%B5/">Hadoop碎碎念</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-05T00:00:00+08:00" pubdate data-updated="true">Sep 5<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/09/05/hadoop%E7%A2%8E%E7%A2%8E%E5%BF%B5/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>Hadoop configure 碎碎念，非教程！！！</strong></p>
-
-<p>1. SSH配置<br />
-免密钥</p>
-
-<p>2. Host配置<br />
-User和HostName匹配</p>
-
-<p>3. x.xml相关<br />
-dir配置<br />
-端口配置<br />
-java路径设置 hadoop-env.sh</p>
-
-<p>4.常用操作</p>
-
-<p>[bash]<br />
-#格式化<br />
-hadoop namenode -format<br />
-#启动<br />
-start-all.sh<br />
-#终止<br />
-stop-all.sh<br />
-#进程<br />
-jps<br />
-hadoop dfsadmin -report<br />
-#离开安全模式<br />
-hadoop dfsadmin -safemode leave<br />
-[/bash]</p>
-
-<p><strong>测试</strong>
-启动Hadoop，<br />
-cd Hadoop目录，输入以下命令执行Pi Estimator程序：</p>
-
-<p>[bash]hadoop jar hadoop-examples.jar pi 2 10<br />
-[/bash]</p>
-
-<p><strong>运行结果：</strong></p>
-
-<p><strong>Hadoop Eclipse插件设置</strong>
-Location name（取个名字）<br />
-Map/Reduce Master（Job Tracker的IP和端口，根据mapred-site.xml中配置的mapred.job.tracker来填写）<br />
-DFS Master（Name Node的IP和端口，根据core-site.xml中配置的fs.default.name来填写）<br />
-最后，切换到Project 视图，就可以看到文件目录了</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -420,6 +394,10 @@ DFS Master（Name Node的IP和端口，根据core-site.xml中配置的fs.default
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/01/solve-subclipse-javahl-problem-in-ubuntu12-dot-10/">Solve Subclipse Javahl Problem in Ubuntu12.10</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/">Linux下Eclipse中编译OpenCV相关工程问题</a>
       </li>
     
@@ -433,10 +411,6 @@ DFS Master（Name Node的IP和端口，根据core-site.xml中配置的fs.default
     
       <li class="post">
         <a href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/">Linux终端下翻墙</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/21/win8-%E4%B8%8B%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%EF%BC%8C%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95%E6%8D%9F%E5%9D%8F%E4%B8%94%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96/">win8 下无法删除文件，文件或目录损坏且无法读取</a>
       </li>
     
   </ul>
