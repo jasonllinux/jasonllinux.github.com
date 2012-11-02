@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-01T20:55:06+08:00</updated>
+  <updated>2012-11-02T21:10:06+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ibus In Gnome3.6]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/02/ibus-in-gnome3-dot-6/"/>
+    <updated>2012-11-02T11:38:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/02/ibus-in-gnome3-dot-6</id>
+    <content type="html"><![CDATA[<p>昨天Arch滚到Gnome3.6</p>
+
+<p>但是发现fcitx不能用</p>
+
+<p>据说原生支持ibus了</p>
+
+<p>so 切换到ibus</p>
+
+<p>但是发现无法用快捷键切换中英文</p>
+
+<p>解决方法：</p>
+
+<p>在</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Solve Subclipse Javahl Problem in Ubuntu12.10]]></title>

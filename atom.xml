@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-01T20:55:06+08:00</updated>
+  <updated>2012-11-02T21:10:06+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ibus In Gnome3.6]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/02/ibus-in-gnome3-dot-6/"/>
+    <updated>2012-11-02T11:38:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/02/ibus-in-gnome3-dot-6</id>
+    <content type="html"><![CDATA[<p>昨天Arch滚到Gnome3.6</p>
+
+<p>但是发现fcitx不能用</p>
+
+<p>据说原生支持ibus了</p>
+
+<p>so 切换到ibus</p>
+
+<p>但是发现无法用快捷键切换中英文</p>
+
+<p>解决方法：</p>
+
+<p>在</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Solve Subclipse Javahl Problem in Ubuntu12.10]]></title>
@@ -492,33 +513,6 @@ Location name（取个名字）<br />
 Map/Reduce Master（Job Tracker的IP和端口，根据mapred-site.xml中配置的mapred.job.tracker来填写）<br />
 DFS Master（Name Node的IP和端口，根据core-site.xml中配置的fs.default.name来填写）<br />
 最后，切换到Project 视图，就可以看到文件目录了</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[入手Cherry G80-3000白色茶轴]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/09/03/%E5%85%A5%E6%89%8Bcherry-g80-3000%E7%99%BD%E8%89%B2%E8%8C%B6%E8%BD%B4/"/>
-    <updated>2012-09-03T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/09/03/入手cherry-g80-3000白色茶轴</id>
-    <content type="html"><![CDATA[<p>新学期，觉得有必要给自己一个刺激点，顺便犒劳下自己最近的辛勤劳动<br />
-于是从X宝上面入了梦寐以求的<strong>Cheryy G80-3000</strong> 白色茶轴
-<strong>初印象：</strong>
-第一次使用机械键盘 还是很激动<br />
-一片奶白色，世界纯净了<br />
-手感果然很正，这颜色，这feeling感觉回到了小霸王的时代<br />
-再用回薄膜键盘，感觉很不习惯,应该不会再用回薄膜键盘了</p>
-
-<p><strong>缺点：</strong>
-F区比较远<br />
-做工不细致，两侧按下的时候会下陷,等等<br />
-外壳貌似容易粘灰</p>
-
-<p><strong>优点：</strong>
-原厂，外形复古大气,个人很喜欢<br />
-茶轴的feeling还不错，声音也不是很大（主要是我手重，薄膜键盘也能敲出机械键盘的声音）</p>
-
-<p>最后，上图：<br />
-[gallery link=&#8221;file&#8221;]</p>
 ]]></content>
   </entry>
   

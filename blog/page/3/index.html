@@ -9,10 +9,11 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="Archer都知道的 配置Grub不像Ubuntu那么Easy，可以自动检测到其他盘符的系统 但是神器来了 os-prober 在安装玩Grub2之后iou [bash]
-pacman -S os-prober
-grub-mkconfig -o /boot/grub/grub.cfg
-[/bash &hellip;">
+  <meta name="description" content="入了VPS之后的第一件事情就是安装一个PPTP服务 1.安装pptpd [bash]
+sudo apt-get install pptpd
+[/bash] 2.配置/etc/pptpd.conf [bash]
+##设置服务器 IP 地址与客服端 DHCP 分配地址范围
+localip 192. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +69,96 @@ grub-mkconfig -o /boot/grub/grub.cfg
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/26/debian-squeeze-%E5%AE%89%E8%A3%85pptp%E6%9C%8D%E5%8A%A1/">Debian Squeeze 安装PPTP服务</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-26T00:00:00+08:00" pubdate data-updated="true">Sep 26<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/09/26/debian-squeeze-%E5%AE%89%E8%A3%85pptp%E6%9C%8D%E5%8A%A1/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>入了VPS之后的第一件事情就是安装一个PPTP服务</p>
+
+<p>1.安装pptpd</p>
+
+<p>[bash]<br />
+sudo apt-get install pptpd<br />
+[/bash]</p>
+
+<p>2.配置/etc/pptpd.conf</p>
+
+<p>[bash]<br />
+##设置服务器 IP 地址与客服端 DHCP 分配地址范围<br />
+localip 192.168.0.1<br />
+remoteip 192.168.0.2-245<br />
+[/bash]</p>
+
+<p>3.编辑 /etc/ppp/pptpd-options</p>
+
+<p>[bash]<br />
+#为客户端提供DNS<br />
+ms-dns 8.8.8.8<br />
+ms-dns 8.8.4.4<br />
+[/bash]</p>
+
+<p>4.编辑 /etc/ppp/chap-secrets</p>
+
+<p>[bash]<br />
+#添加用户和密码<br />
+username   servername   password    *<br />
+[/bash]</p>
+
+<p>5.编辑 /etc/sysctl.conf</p>
+
+<p>[bash]<br />
+#开启IPV4转发<br />
+uncomment net.ipv4.ip_forward=1<br />
+sysctl -p<br />
+[/bash]</p>
+
+<p>6.设置Iptables</p>
+
+<p>[bash]iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE</p>
+
+<p>#设置MTU大小，解决部分网站无法访问的情况（MTU=MSS+20+20)<br />
+iptables -A FORWARD -p tcp &#8211;syn -s 192.168.0.0/24 -j TCPMSS &#8211;set-mss 1356<br />
+[/bash]</p>
+
+<p>7.启动服务<br />
+[bash]<br />
+/etc/init.d/pptpd restart<br />
+[/bash]</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -323,60 +414,6 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/10/cocos2d-x-2-x%E8%AE%BE%E7%BD%AE%E7%AB%96%E5%B1%8F%E6%96%B9%E6%B3%95/">Cocos2d-x 2.x设置竖屏方法</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-10T00:00:00+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/09/10/cocos2d-x-2-x%E8%AE%BE%E7%BD%AE%E7%AB%96%E5%B1%8F%E6%96%B9%E6%B3%95/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>cocos2d-x从1.x到2.x的api转变还是有点大的，<br />
-找了半天没找到orientation的方法；<br />
-于是放狗<br />
-找到的方法貌似也不是很OK，先凑合着用<br />
-如果是ios平台<br />
-修改RootViewController.mm<br />
-[c]<br />
-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {<br />
-    return UIInterfaceOrientationIsPortrait(interfaceOrientation);</p>
-
-<p>}<br />
-[/c]<br />
-如果是android平台<br />
-在AndroidManifest.xml中设置<br />
-[bash]<br />
-android:screenOrientation=&quot;portrait&quot;<br />
-[/bash]</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -394,6 +431,10 @@ android:screenOrientation=&quot;portrait&quot;<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/02/ibus-in-gnome3-dot-6/">Ibus In Gnome3.6</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/01/solve-subclipse-javahl-problem-in-ubuntu12-dot-10/">Solve Subclipse Javahl Problem in Ubuntu12.10</a>
       </li>
     
@@ -407,10 +448,6 @@ android:screenOrientation=&quot;portrait&quot;<br />
     
       <li class="post">
         <a href="/blog/2012/10/25/hello-world/">Hello World</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/">Linux终端下翻墙</a>
       </li>
     
   </ul>
