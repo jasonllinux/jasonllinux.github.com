@@ -8,12 +8,12 @@ categories: Linux
 
 eclipse中安装完subclipse插件之后往往会报如下错误：
 
-Failed to load JavaHL Library.
-These are the errors that were encountered:
-no libsvnjavahl-1 in java.library.path
-no svnjavahl-1 in java.library.path
-no svnjavahl in java.library.path
-java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib
+>Failed to load JavaHL Library.
+>These are the errors that were encountered:
+>no libsvnjavahl-1 in java.library.path
+>no svnjavahl-1 in java.library.path
+>no svnjavahl in java.library.path
+>java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib
 
 解决方法：
 
