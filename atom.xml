@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-04T13:02:04+08:00</updated>
+  <updated>2012-11-04T13:21:37+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -30,6 +30,15 @@ git clone git@github.com:username/username.github.com.git _deploy
 <pre><code>gem install bundler
 bundle install
 rake install # 可以省略？
+</code></pre>
+
+<p>pull最新的</p>
+
+<pre><code>cd xxx
+cd _deploy
+git pull origin master
+cd ..
+git pull origin source
 </code></pre>
 ]]></content>
   </entry>
