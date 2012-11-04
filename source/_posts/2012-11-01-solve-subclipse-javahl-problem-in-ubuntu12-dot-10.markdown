@@ -19,4 +19,4 @@ eclipse中安装完subclipse插件之后往往会报如下错误：
 
 在eclipse安装目录中的文件eclipse.ini中设置
 
--Djava.library.path=/usr/lib/x86_64-linux-gnu/jni/
+    -Djava.library.path=/usr/lib/x86_64-linux-gnu/jni/
