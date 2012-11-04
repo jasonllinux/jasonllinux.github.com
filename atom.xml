@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-04T11:06:35+08:00</updated>
+  <updated>2012-11-04T11:10:46+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -54,7 +54,8 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p><
 
 <p>在eclipse安装目录中的文件eclipse.ini中设置</p>
 
-<p>-Djava.library.path=/usr/lib/x86_64-linux-gnu/jni/</p>
+<pre><code>-Djava.library.path=/usr/lib/x86_64-linux-gnu/jni/
+</code></pre>
 ]]></content>
   </entry>
   
