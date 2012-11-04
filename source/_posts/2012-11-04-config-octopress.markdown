@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Config Octopress"
+date: 2012-11-04 12:58
+comments: true
+categories: Octopress
+---
+首先从github checkout两个分支  
+    git clone -b source git@github.com:username/username.github.com.git octopress
+    cd octopress
+    git clone git@github.com:username/username.github.com.git _deploy
+    
+安装依赖gems
+    gem install bundler
+    bundle install
+    rake install # 可以省略？
+    
