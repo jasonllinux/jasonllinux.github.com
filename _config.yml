@@ -6,7 +6,8 @@ url: http://jasonllinux.github.com
 title: Jasonllinux's Blog
 subtitle: Happy Hacking!
 author: jasonllinux
-simple_search: http://google.com/search
+#simple_search: http://google.com/search
+simple_search: http://www.google.com/
 description: For Linux, For Life
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
