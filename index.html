@@ -9,8 +9,9 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="昨天Arch滚到Gnome3.6 但是发现fcitx不能用 据说原生支持ibus了 so 切换到ibus 但是发现无法用快捷键切换中英文 解决方法: 如上图所示在”区域和语言设置“中修改“切换下一个源”的键盘快捷方式
-">
+  <meta name="description" content="首先从github checkout两个分支 git clone -b source git@github.com:username/username.github.com.git octopress
+cd octopress
+git clone git@github.com:username/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +67,56 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/04/config-octopress/">Config Octopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-04T12:58:00+08:00" pubdate data-updated="true">Nov 4<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/11/04/config-octopress/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>首先从github checkout两个分支</p>
+
+<pre><code>git clone -b source git@github.com:username/username.github.com.git octopress
+cd octopress
+git clone git@github.com:username/username.github.com.git _deploy
+</code></pre>
+
+<p>安装依赖gems</p>
+
+<pre><code>gem install bundler
+bundle install
+rake install # 可以省略？
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -317,52 +368,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p><
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/">Linux终端下翻墙</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-24T00:00:00+08:00" pubdate data-updated="true">Oct 24<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>在Arch下有时候更新dropbox软件是件很DT的事情</p>
-
-<p>下载不动</p>
-
-<p>在启用了goagent的情况下</p>
-
-<p>[bash]<br />
-export http_proxy=&quot;http://127.0.0.1:8087&quot;<br />
-[/bash]</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -379,6 +384,7 @@ export http_proxy=&quot;http://127.0.0.1:8087&quot;<br />
     <li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>Linux (2)</a></li>
+<li class='category'><a href='/blog/categories/octopress/'>Octopress (1)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (1)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (15)</a></li>
@@ -390,6 +396,10 @@ export http_proxy=&quot;http://127.0.0.1:8087&quot;<br />
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/04/config-octopress/">Config Octopress</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/11/02/ibus-in-gnome3-dot-6/">Ibus In Gnome3.6</a>
@@ -405,10 +415,6 @@ export http_proxy=&quot;http://127.0.0.1:8087&quot;<br />
     
       <li class="post">
         <a href="/blog/2012/10/25/64Bit-Again/">有一次给64bit跪了</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/25/hello-world/">Hello World</a>
       </li>
     
   </ul>

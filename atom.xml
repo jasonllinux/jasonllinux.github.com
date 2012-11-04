@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-04T12:55:05+08:00</updated>
+  <updated>2012-11-04T13:02:04+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Config Octopress]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/04/config-octopress/"/>
+    <updated>2012-11-04T12:58:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/04/config-octopress</id>
+    <content type="html"><![CDATA[<p>首先从github checkout两个分支</p>
+
+<pre><code>git clone -b source git@github.com:username/username.github.com.git octopress
+cd octopress
+git clone git@github.com:username/username.github.com.git _deploy
+</code></pre>
+
+<p>安装依赖gems</p>
+
+<pre><code>gem install bundler
+bundle install
+rake install # 可以省略？
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ibus In Gnome3.6]]></title>
@@ -465,57 +486,6 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
 [bash]<br />
 android:screenOrientation=&quot;portrait&quot;<br />
 [/bash]</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hadoop碎碎念]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/09/05/hadoop%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
-    <updated>2012-09-05T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/09/05/hadoop碎碎念</id>
-    <content type="html"><![CDATA[<p><strong>Hadoop configure 碎碎念，非教程！！！</strong></p>
-
-<p>1. SSH配置<br />
-免密钥</p>
-
-<p>2. Host配置<br />
-User和HostName匹配</p>
-
-<p>3. x.xml相关<br />
-dir配置<br />
-端口配置<br />
-java路径设置 hadoop-env.sh</p>
-
-<p>4.常用操作</p>
-
-<p>[bash]<br />
-#格式化<br />
-hadoop namenode -format<br />
-#启动<br />
-start-all.sh<br />
-#终止<br />
-stop-all.sh<br />
-#进程<br />
-jps<br />
-hadoop dfsadmin -report<br />
-#离开安全模式<br />
-hadoop dfsadmin -safemode leave<br />
-[/bash]</p>
-
-<p><strong>测试</strong>
-启动Hadoop，<br />
-cd Hadoop目录，输入以下命令执行Pi Estimator程序：</p>
-
-<p>[bash]hadoop jar hadoop-examples.jar pi 2 10<br />
-[/bash]</p>
-
-<p><strong>运行结果：</strong></p>
-
-<p><strong>Hadoop Eclipse插件设置</strong>
-Location name（取个名字）<br />
-Map/Reduce Master（Job Tracker的IP和端口，根据mapred-site.xml中配置的mapred.job.tracker来填写）<br />
-DFS Master（Name Node的IP和端口，根据core-site.xml中配置的fs.default.name来填写）<br />
-最后，切换到Project 视图，就可以看到文件目录了</p>
 ]]></content>
   </entry>
   

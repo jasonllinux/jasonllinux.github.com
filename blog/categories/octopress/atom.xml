@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress | Jasonllinux's Blog]]></title>
+  <link href="http://jasonllinux.github.com/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.com/"/>
+  <updated>2012-11-04T13:02:04+08:00</updated>
+  <id>http://jasonllinux.github.com/</id>
+  <author>
+    <name><![CDATA[jasonllinux]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Config Octopress]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/04/config-octopress/"/>
+    <updated>2012-11-04T12:58:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/04/config-octopress</id>
+    <content type="html"><![CDATA[<p>首先从github checkout两个分支</p>
+
+<pre><code>git clone -b source git@github.com:username/username.github.com.git octopress
+cd octopress
+git clone git@github.com:username/username.github.com.git _deploy
+</code></pre>
+
+<p>安装依赖gems</p>
+
+<pre><code>gem install bundler
+bundle install
+rake install # 可以省略？
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
