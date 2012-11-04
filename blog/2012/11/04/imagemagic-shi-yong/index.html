@@ -5,15 +5,15 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Debian Squeeze 安装PPTP服务 - Jasonllinux's Blog</title>
+  <title>ImageMagic 使用 - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="入了VPS之后的第一件事情就是安装一个PPTP服务 1.安装pptpd [bash]
-sudo apt-get install pptpd
-[/bash] 2.配置/etc/pptpd.conf [bash]
-##设置服务器 IP 地址与客服端 DHCP 分配地址范围
-localip 192. &hellip;">
+  <meta name="description" content="在Linux环境下ImageMagic可以用来简单的对图片作一些处理
+简直就是神器 用法举例 1
+2
+#改变图片大小
+convert -resize 50x50 heart.png heart1.png ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +22,7 @@ localip 192. &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/09/26/debian-squeeze-%E5%AE%89%E8%A3%85pptp%E6%9C%8D%E5%8A%A1/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/11/04/imagemagic-shi-yong/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -72,7 +72,7 @@ localip 192. &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Debian Squeeze 安装PPTP服务</h1>
+      <h1 class="entry-title">ImageMagic 使用</h1>
     
     
       <p class="meta">
@@ -88,7 +88,7 @@ localip 192. &hellip;">
   
 
 
-<time datetime="2012-09-26T00:00:00+08:00" pubdate data-updated="true">Sep 26<span>th</span>, 2012</time>
+<time datetime="2012-11-04T18:11:00+08:00" pubdate data-updated="true">Nov 4<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -97,59 +97,17 @@ localip 192. &hellip;">
   </header>
 
 
-<div class="entry-content"><p>入了VPS之后的第一件事情就是安装一个PPTP服务</p>
+<div class="entry-content"><p>在Linux环境下ImageMagic可以用来简单的对图片作一些处理
+简直就是神器</p>
 
-<p>1.安装pptpd</p>
+<p>用法举例</p>
 
-<p>[bash]<br />
-sudo apt-get install pptpd<br />
-[/bash]</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#改变图片大小</span>
+</span><span class='line'>convert -resize 50x50 heart.png heart1.png
+</span></code></pre></td></tr></table></div></figure>
 
-<p>2.配置/etc/pptpd.conf</p>
-
-<p>[bash]<br />
-##设置服务器 IP 地址与客服端 DHCP 分配地址范围<br />
-localip 192.168.0.1<br />
-remoteip 192.168.0.2-245<br />
-[/bash]</p>
-
-<p>3.编辑 /etc/ppp/pptpd-options</p>
-
-<p>[bash]<br />
-#为客户端提供DNS<br />
-ms-dns 8.8.8.8<br />
-ms-dns 8.8.4.4<br />
-[/bash]</p>
-
-<p>4.编辑 /etc/ppp/chap-secrets</p>
-
-<p>[bash]<br />
-#添加用户和密码<br />
-username   servername   password    *<br />
-[/bash]</p>
-
-<p>5.编辑 /etc/sysctl.conf</p>
-
-<p>[bash]<br />
-#开启IPV4转发<br />
-uncomment net.ipv4.ip_forward=1<br />
-sysctl -p<br />
-[/bash]</p>
-
-<p>6.设置Iptables</p>
-
-<p>[bash]iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE</p>
-
-<p>#设置MTU大小，解决部分网站无法访问的情况（MTU=MSS+20+20)<br />
-iptables -A FORWARD -p tcp &#8211;syn -s 192.168.0.0/24 -j TCPMSS &#8211;set-mss 1356<br />
-[/bash]</p>
-
-<p>7.启动服务<br />
-[bash]<br />
-/etc/init.d/pptpd restart<br />
-[/bash]</p>
-
-<p>&nbsp;</p>
 </div>
 
 
@@ -172,12 +130,12 @@ iptables -A FORWARD -p tcp &#8211;syn -s 192.168.0.0/24 -j TCPMSS &#8211;set-mss
   
 
 
-<time datetime="2012-09-26T00:00:00+08:00" pubdate data-updated="true">Sep 26<span>th</span>, 2012</time>
+<time datetime="2012-11-04T18:11:00+08:00" pubdate data-updated="true">Nov 4<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/it/'>IT</a>
+    <a class='category' href='/blog/categories/linux/'>Linux</a>
   
 </span>
 
@@ -186,7 +144,7 @@ iptables -A FORWARD -p tcp &#8211;syn -s 192.168.0.0/24 -j TCPMSS &#8211;set-mss
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/09/26/debian-squeeze-%E5%AE%89%E8%A3%85pptp%E6%9C%8D%E5%8A%A1/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/09/26/debian-squeeze-%E5%AE%89%E8%A3%85pptp%E6%9C%8D%E5%8A%A1/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/11/04/imagemagic-shi-yong/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/11/04/imagemagic-shi-yong/" >Tweet</a>
   
   
   
@@ -195,10 +153,8 @@ iptables -A FORWARD -p tcp &#8211;syn -s 192.168.0.0/24 -j TCPMSS &#8211;set-mss
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/09/23/archlinux-%E9%85%8D%E7%BD%AEgrub2%E7%AE%80%E4%BE%BF%E6%96%B9%E6%B3%95/" title="Previous Post: Archlinux 配置Grub2简便方法">&laquo; Archlinux 配置Grub2简便方法</a>
+        <a class="basic-alignment left" href="/blog/2012/11/04/do-sth-after-install-ubuntu12-dot-xx/" title="Previous Post: 在安装完Ubuntu12.xx后需要做的一些xx事情">&laquo; 在安装完Ubuntu12.xx后需要做的一些xx事情</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/09/26/win7%E5%92%8Clinux%E8%AE%BF%E9%97%AEvpn%E8%AE%BE%E7%BD%AE/" title="Next Post: win7和Linux访问VPN设置">win7和Linux访问VPN设置 &raquo;</a>
       
     </p>
   </footer>
@@ -303,8 +259,8 @@ iptables -A FORWARD -p tcp &#8211;syn -s 192.168.0.0/24 -j TCPMSS &#8211;set-mss
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jasonllinux.github.com/blog/2012/09/26/debian-squeeze-%E5%AE%89%E8%A3%85pptp%E6%9C%8D%E5%8A%A1/';
-        var disqus_url = 'http://jasonllinux.github.com/blog/2012/09/26/debian-squeeze-%E5%AE%89%E8%A3%85pptp%E6%9C%8D%E5%8A%A1/';
+        var disqus_identifier = 'http://jasonllinux.github.com/blog/2012/11/04/imagemagic-shi-yong/';
+        var disqus_url = 'http://jasonllinux.github.com/blog/2012/11/04/imagemagic-shi-yong/';
         var disqus_script = 'embed.js';
       
     (function () {

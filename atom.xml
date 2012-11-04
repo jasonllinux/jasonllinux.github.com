@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-04T15:53:51+08:00</updated>
+  <updated>2012-11-04T18:17:42+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ImageMagic 使用]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/04/imagemagic-shi-yong/"/>
+    <updated>2012-11-04T18:11:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/04/imagemagic-shi-yong</id>
+    <content type="html"><![CDATA[<p>在Linux环境下ImageMagic可以用来简单的对图片作一些处理
+简直就是神器</p>
+
+<p>用法举例</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#改变图片大小</span>
+</span><span class='line'>convert -resize 50x50 heart.png heart1.png
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在安装完Ubuntu12.xx后需要做的一些xx事情]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/04/do-sth-after-install-ubuntu12-dot-xx/"/>
+    <updated>2012-11-04T16:01:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/04/do-sth-after-install-ubuntu12-dot-xx</id>
+    <content type="html"><![CDATA[<p>1.修改软件源，推荐163</p>
+
+<p>2.禁用报错</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>vim /etc/default/apport
+</span><span class='line'><span class="c">#将1改成0</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Config Octopress]]></title>
@@ -465,52 +502,6 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
     <updated>2012-09-17T00:00:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/09/17/test</id>
     <content type="html"><![CDATA[<p>test</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Cherry G80-3000 换键帽]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/09/12/cherry-g80-3000-%E6%8D%A2%E9%94%AE%E5%B8%BD/"/>
-    <updated>2012-09-12T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/09/12/cherry-g80-3000-换键帽</id>
-    <content type="html"><![CDATA[<p>X宝上如了RGB键帽<br />
-拆键帽的时候，差点把Shift搞坏了，好惊心</p>
-
-<p>白色的键盘上终于有了点色彩<br />
-唯一的缺陷是比原厂的键帽高了一些<br />
-不过还好，只是几个功能键，不影响使用<br />
-最后，上图：</p>
-
-<p>[gallery link=&#8221;file&#8221;]</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Cocos2d-x 2.x设置竖屏方法]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/09/10/cocos2d-x-2-x%E8%AE%BE%E7%BD%AE%E7%AB%96%E5%B1%8F%E6%96%B9%E6%B3%95/"/>
-    <updated>2012-09-10T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/09/10/cocos2d-x-2-x设置竖屏方法</id>
-    <content type="html"><![CDATA[<p>cocos2d-x从1.x到2.x的api转变还是有点大的，<br />
-找了半天没找到orientation的方法；<br />
-于是放狗<br />
-找到的方法貌似也不是很OK，先凑合着用<br />
-如果是ios平台<br />
-修改RootViewController.mm<br />
-[c]<br />
-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {<br />
-    return UIInterfaceOrientationIsPortrait(interfaceOrientation);</p>
-
-<p>}<br />
-[/c]<br />
-如果是android平台<br />
-在AndroidManifest.xml中设置<br />
-[bash]<br />
-android:screenOrientation=&quot;portrait&quot;<br />
-[/bash]</p>
 ]]></content>
   </entry>
   
