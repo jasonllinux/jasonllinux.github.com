@@ -9,8 +9,11 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="型号: thinkpad X61 OS : win7 &amp;&amp; mac &amp;&amp;lion archlinux 装完mac x lion之后，linux引导是一个问题
-引导程序由Grub2变成了bootthink，让我这个长期的linuxer很不适应，头可断血可流， &hellip;">
+  <meta name="description" content="Mac上的OpenCV安装和Linux平台下略有不同，在这里我们不采用下载源码包手动编译的方式，因为可能有些依赖问题，我们使用Port包管理，自动安装。 Step1
+安装MacPort
+安装完成之后 [bash]
+sudo port selfupdate
+[/bash] Step2 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +69,66 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/04/mac-%E5%AE%89%E8%A3%85opencv%E6%94%AF%E6%8F%B4python/">Mac 安装OpenCV支援Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-04T00:00:00+08:00" pubdate data-updated="true">Aug 4<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Mac上的OpenCV安装和Linux平台下略有不同，在这里我们不采用下载源码包手动编译的方式，因为可能有些依赖问题，我们使用Port包管理，自动安装。</p>
+
+<p><strong>Step1</strong>
+安装MacPort<br />
+安装完成之后</p>
+
+<p>[bash]<br />
+sudo port selfupdate<br />
+[/bash]</p>
+
+<p><strong>Step2</strong>
+安装OpenCv，并且支援Python</p>
+
+<p>[bash]<br />
+sudo port install py27-numpy<br />
+sudo port install opencv +python27<br />
+[/bash]</p>
+
+<p><strong>Step3</strong>
+至此可能会发现python下还是不能用opencv,import 会出现错误<br />
+解决方案<br />
+切换Pyhon版本，默认使用/opt/local/bin/python27</p>
+
+<p><strong>Result</strong>
+至此，应该大功告成了</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -474,68 +537,6 @@ Hello, I am jasonllinux.&#92;<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/22/tomcat%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/">Tomcat简单配置</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-22T00:00:00+08:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>在Archlinux下简单配置tomat7：</p>
-
-<p>[bash]<br />
-#Install<br />
-sudo pacman -S tomcat7<br />
-#cofigure<br />
-#修改/etc/tomcat7/context.xml<br />
-&lt;Context   reloadable=&quot;true&quot;&gt;<br />
-#修改/etc/tomcat7/tomcat-users.xml</p>
-
-<p>&lt;!&#8211; Tomcat运行必备的角色 &#8211;&gt;<br />
- &lt;role rolename=&quot;tomcat&quot;/&gt;</p>
-
-<p>&lt;!&#8211; 进行Tomcat管理的角色 &#8211;&gt;<br />
- &lt;role rolename=&quot;manager-gui&quot;/&gt;<br />
- &lt;role rolename=&quot;manager-script&quot;/&gt;<br />
- &lt;role rolename=&quot;manager-jmx&quot;/&gt;<br />
- &lt;role rolename=&quot;manager-status&quot;/&gt;<br />
- &lt;role rolename=&quot;admin-gui&quot;/&gt;<br />
- &lt;role rolename=&quot;admin-script&quot;/&gt;</p>
-
-<p>&lt;!&#8211; 进行Tomcat管理的用户，具有Tomcat管理的全部角色 &#8211;&gt;<br />
- &lt;user username=&quot;admin&quot; password=&quot;apollo&quot; roles=&quot;tomcat, manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script&quot;/&gt;<br />
-[/bash]</p>
-
-<p><strong>查看：</strong>
-<strong><a href="http://localhost:8080" target="_blank">http://localhost:8080</a> </strong></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -553,7 +554,7 @@ sudo pacman -S tomcat7<br />
   <ul id="categories">
     <li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (4)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (5)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (1)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (1)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
