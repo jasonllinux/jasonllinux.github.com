@@ -167,12 +167,6 @@
         <lastmod>2012-11-02T21:09:47+08:00</lastmod>
     </url>
     <url>
-        <loc>
-            http://jasonllinux.github.com/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/
-        </loc>
-        <lastmod>2012-11-05T14:43:03+08:00</lastmod>
-    </url>
-    <url>
         <loc>http://jasonllinux.github.com/blog/2012/10/25/hello-world/</loc>
         <lastmod>2012-11-02T21:09:47+08:00</lastmod>
     </url>
@@ -212,7 +206,7 @@
     </url>
     <url>
         <loc>http://jasonllinux.github.com/blog/archives/</loc>
-        <lastmod>2012-11-05T14:43:03+08:00</lastmod>
+        <lastmod>2012-11-04T18:16:46+08:00</lastmod>
     </url>
     <url>
         <loc>http://jasonllinux.github.com/about/</loc>
@@ -220,6 +214,6 @@
     </url>
     <url>
         <loc>http://jasonllinux.github.com/</loc>
-        <lastmod>2012-11-05T14:43:03+08:00</lastmod>
+        <lastmod>2012-11-04T18:16:46+08:00</lastmod>
     </url>
 </urlset>

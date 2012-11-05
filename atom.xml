@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-05T14:43:20+08:00</updated>
+  <updated>2012-11-05T14:44:20+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -198,26 +198,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p><
     <updated>2012-10-25T11:35:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/10/25/hello-world</id>
     <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Linux终端下翻墙]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/"/>
-    <updated>2012-10-24T18:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/10/24/linux终端下翻墙</id>
-    <content type="html"><![CDATA[<p>在Arch下有时候更新dropbox软件是件很DT的事情</p>
-
-<p>下载不动</p>
-
-<p>在启用了goagent的情况下</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:8087
-</span></code></pre></td></tr></table></div></figure>
-
-
-
 ]]></content>
   </entry>
   
@@ -505,6 +485,27 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
     <updated>2012-09-17T00:00:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/09/17/test</id>
     <content type="html"><![CDATA[<p>test</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cherry G80-3000 换键帽]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/09/12/cherry-g80-3000-%E6%8D%A2%E9%94%AE%E5%B8%BD/"/>
+    <updated>2012-09-12T00:00:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/09/12/cherry-g80-3000-换键帽</id>
+    <content type="html"><![CDATA[<p>X宝上如了RGB键帽<br />
+拆键帽的时候，差点把Shift搞坏了，好惊心</p>
+
+<p>白色的键盘上终于有了点色彩<br />
+唯一的缺陷是比原厂的键帽高了一些<br />
+不过还好，只是几个功能键，不影响使用<br />
+最后，上图：</p>
+
+<p>[gallery link=&#8221;file&#8221;]</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
 ]]></content>
   </entry>
   

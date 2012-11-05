@@ -9,11 +9,11 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="早上更新了一些包之后，重启发现： [bash]
-could not update iceauthority file /var/lib/gdm/.ICEauthority
-[/bash] 解决方法： [bash]
-sudo chown -R gdm:gdm /var/lib/gdm
-sudo &hellip;">
+  <meta name="description" content="拿到《控制于决策》的模板，第一次编译的时候出现如下错误：
+[latex]
+! LaTeX Error: \bibname undefined.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H &lt;return& &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,53 +69,6 @@ sudo &hellip;">
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/31/archlinux%E4%B9%8Bcould-not-update-iceauthority-file-varlibgdm-iceauthority%E8%A7%A3%E5%86%B3/">Archlinux之could Not Update Iceauthority File /var/lib/gdm/.iceauthority解决</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-31T00:00:00+08:00" pubdate data-updated="true">Aug 31<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>早上更新了一些包之后，重启发现：</p>
-
-<p>[bash]<br />
-could not update iceauthority file /var/lib/gdm/.ICEauthority<br />
-[/bash]</p>
-
-<p>解决方法：</p>
-
-<p>[bash]<br />
-sudo chown -R gdm:gdm /var/lib/gdm<br />
-sudo chmod 600 /var/lib/gdm/.ICEauthority<br />
-[/bash]</p>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -426,6 +379,66 @@ pyuic4 gui.ui -o gui.py<br />
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/04/mac-%E5%AE%89%E8%A3%85opencv%E6%94%AF%E6%8F%B4python/">Mac 安装OpenCV支援Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-04T00:00:00+08:00" pubdate data-updated="true">Aug 4<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Mac上的OpenCV安装和Linux平台下略有不同，在这里我们不采用下载源码包手动编译的方式，因为可能有些依赖问题，我们使用Port包管理，自动安装。</p>
+
+<p><strong>Step1</strong>
+安装MacPort<br />
+安装完成之后</p>
+
+<p>[bash]<br />
+sudo port selfupdate<br />
+[/bash]</p>
+
+<p><strong>Step2</strong>
+安装OpenCv，并且支援Python</p>
+
+<p>[bash]<br />
+sudo port install py27-numpy<br />
+sudo port install opencv +python27<br />
+[/bash]</p>
+
+<p><strong>Step3</strong>
+至此可能会发现python下还是不能用opencv,import 会出现错误<br />
+解决方案<br />
+切换Pyhon版本，默认使用/opt/local/bin/python27</p>
+
+<p><strong>Result</strong>
+至此，应该大功告成了</p>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -443,7 +456,7 @@ pyuic4 gui.ui -o gui.py<br />
   <ul id="categories">
     <li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (5)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (4)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (1)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (1)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
