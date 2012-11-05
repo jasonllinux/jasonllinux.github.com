@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-04T21:56:16+08:00</updated>
+  <updated>2012-11-05T14:43:20+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,33 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Linux终端下翻墙]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/"/>
-    <updated>2012-10-24T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/10/24/linux终端下翻墙</id>
-    <content type="html"><![CDATA[<p>在Arch下有时候更新dropbox软件是件很DT的事情</p>
-
-
-
-
-<p>下载不动</p>
-
-
-
-
-<p>在启用了goagent的情况下</p>
-
-
-
-
-<p>[bash]<br />
-export http_proxy=&quot;http://127.0.0.1:8087&quot;<br />
-[/bash]</p>
-
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[GoAgent从1.x升级到2.x]]></title>
@@ -228,6 +201,35 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
 
 <p><strong>备份</strong>和<strong>安全</strong>是要重点考虑的事情<br />
 以后慢慢折腾吧!</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cocos2d-x 2.x设置竖屏方法]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/09/10/cocos2d-x-2-x%E8%AE%BE%E7%BD%AE%E7%AB%96%E5%B1%8F%E6%96%B9%E6%B3%95/"/>
+    <updated>2012-09-10T00:00:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/09/10/cocos2d-x-2-x设置竖屏方法</id>
+    <content type="html"><![CDATA[<p>cocos2d-x从1.x到2.x的api转变还是有点大的，<br />
+找了半天没找到orientation的方法；<br />
+于是放狗<br />
+找到的方法貌似也不是很OK，先凑合着用<br />
+如果是ios平台<br />
+修改RootViewController.mm<br />
+[c]<br />
+(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {<br />
+    return UIInterfaceOrientationIsPortrait(interfaceOrientation);</p>
+
+
+
+
+<p>}<br />
+[/c]<br />
+如果是android平台<br />
+在AndroidManifest.xml中设置<br />
+[bash]<br />
+android:screenOrientation=&quot;portrait&quot;<br />
+[/bash]</p>
 
 ]]></content>
   </entry>

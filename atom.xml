@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-04T21:56:16+08:00</updated>
+  <updated>2012-11-05T14:43:20+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -204,7 +204,7 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p><
   <entry>
     <title type="html"><![CDATA[Linux终端下翻墙]]></title>
     <link href="http://jasonllinux.github.com/blog/2012/10/24/linux%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%BF%BB%E5%A2%99/"/>
-    <updated>2012-10-24T00:00:00+08:00</updated>
+    <updated>2012-10-24T18:00:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/10/24/linux终端下翻墙</id>
     <content type="html"><![CDATA[<p>在Arch下有时候更新dropbox软件是件很DT的事情</p>
 
@@ -212,9 +212,12 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p><
 
 <p>在启用了goagent的情况下</p>
 
-<p>[bash]<br />
-export http_proxy=&quot;http://127.0.0.1:8087&quot;<br />
-[/bash]</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:8087
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 ]]></content>
   </entry>
   
