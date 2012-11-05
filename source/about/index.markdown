@@ -6,12 +6,18 @@ comments: false
 sharing: false
 footer: true
 ---
-![Alt codeMonkey](http://i.minus.com/ibh9g59Kb3VkDl.png)
-* Personal Intro
-Hi
-I am jasonllinux
+![Alt codeMonkey](http://i.minus.com/iE60n5wTFL4Bf.jpg)  
 
-* Contact
-** E-mail  
+* Personal Intro  
+ID: jasonllinux
+
+* Contact   
 ![Alt gmail](http://i.minus.com/ibh9g59Kb3VkDl.png)
+
+* CoderWall  
+[![endorse](http://api.coderwall.com/jasonllinux/endorsecount.png)](http://coderwall.com/jasonllinux)
+
+* Projects
+
+* Resume
 
