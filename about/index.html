@@ -11,11 +11,11 @@
   
   <meta name="description" content="About Nov 4th, 2012 Personal Intro
 ID: jasonllinux
-Contact My CoderWall Nov 4th, 2012 Categories IT (17)
+Contact CoderWall Projects
+Resume Nov 4th, 2012 Categories IT (17)
 Life (2)
 Linux (5)
-Octopress (1)
-OpenCV (1 &hellip;">
+Octopress ( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,8 +96,10 @@ OpenCV (1 &hellip;">
 ID: jasonllinux</p></li>
 <li><p>Contact <br/>
 <img src="http://i.minus.com/ibh9g59Kb3VkDl.png" alt="Alt gmail" /></p></li>
-<li><p>My CoderWall<br/>
+<li><p>CoderWall<br/>
 <a href="http://coderwall.com/jasonllinux"><img src="http://api.coderwall.com/jasonllinux/endorsecount.png" alt="endorse" /></a></p></li>
+<li><p>Projects</p></li>
+<li><p>Resume</p></li>
 </ul>
 
 
@@ -144,6 +146,28 @@ ID: jasonllinux</p></li>
 
   </ul>
 </section>
+
+<section class="well">
+  <ul class="nav">
+    <li class="nav-header">Coderwall Badges</li>
+  </ul>
+  <div id="coderwall_badges"></div>
+  <a href="http://coderwall.com/jasonllinux">@jasonllinux</a> on coderwall
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $.getJSON("http://coderwall.com/jasonllinux.json?callback=?", function(data){
+        for(var i = 0; i < data.data.badges.length ; i++){
+          var badge = data.data.badges[i];
+          var badge_tag = $("<img />");
+          badge_tag.attr("src",badge.badge);
+          badge_tag.css("width","50%");
+          $("#coderwall_badges").append(badge_tag);
+        }
+      });
+    });
+  </script>
+</section>
+
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
