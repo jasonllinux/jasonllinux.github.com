@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-05T21:13:54+08:00</updated>
+  <updated>2012-11-05T22:43:09+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -14,11 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[算法——算法复杂度]]></title>
+    <title type="html"><![CDATA[[Algorithm]——算法复杂度]]></title>
     <link href="http://jasonllinux.github.com/blog/2012/11/05/algorithm-complexity/"/>
     <updated>2012-11-05T16:44:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/11/05/algorithm-complexity</id>
-    <content type="html"><![CDATA[<p>关于算法复杂度</p>
+    <content type="html"><![CDATA[<p>$\exp(-\frac{x<sup>2}{2})$</sup></p>
 ]]></content>
   </entry>
   
@@ -64,7 +64,9 @@
     <link href="http://jasonllinux.github.com/blog/2012/11/04/config-octopress/"/>
     <updated>2012-11-04T12:58:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/11/04/config-octopress</id>
-    <content type="html"><![CDATA[<p>首先从github checkout两个分支</p>
+    <content type="html"><![CDATA[<h2>如何恢复</h2>
+
+<p>首先从github checkout两个分支</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -101,7 +103,11 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
+<h2>添加robots.txt</h2>
 
+<h2>添加404页面</h2>
+
+<h2>More</h2>
 ]]></content>
   </entry>
   

@@ -33,6 +33,38 @@ convert -resize 50x50 heart.png heart1.png ">
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
   
 
 </head>
@@ -154,7 +186,7 @@ convert -resize 50x50 heart.png heart1.png ">
         <a class="basic-alignment left" href="/blog/2012/11/04/do-sth-after-install-ubuntu12-dot-xx/" title="Previous Post: 在安装完Ubuntu12.xx后需要做的一些xx事情">&laquo; 在安装完Ubuntu12.xx后需要做的一些xx事情</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/11/05/algorithm-complexity/" title="Next Post: 算法——算法复杂度">算法——算法复杂度 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/11/05/algorithm-complexity/" title="Next Post: [Algorithm]——算法复杂度">[Algorithm]——算法复杂度 &raquo;</a>
       
     </p>
   </footer>
@@ -264,7 +296,7 @@ convert -resize 50x50 heart.png heart1.png ">
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/11/05/algorithm-complexity/">算法——算法复杂度</a>
+        <a href="/blog/2012/11/05/algorithm-complexity/">[Algorithm]——算法复杂度</a>
       </li>
     
       <li class="post">

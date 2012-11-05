@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-05T21:13:54+08:00</updated>
+  <updated>2012-11-05T22:43:09+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -18,7 +18,9 @@
     <link href="http://jasonllinux.github.com/blog/2012/11/04/config-octopress/"/>
     <updated>2012-11-04T12:58:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/11/04/config-octopress</id>
-    <content type="html"><![CDATA[<p>首先从github checkout两个分支<br/>
+    <content type="html"><![CDATA[<h2>如何恢复</h2>
+
+<p>首先从github checkout两个分支<br/>
 ```bash</p>
 
 <pre><code>git clone -b source git@github.com:username/username.github.com.git octopress
@@ -49,6 +51,12 @@ git pull origin source
 </code></pre>
 
 <p>```</p>
+
+<h2>添加robots.txt</h2>
+
+<h2>添加404页面</h2>
+
+<h2>More</h2>
 ]]></content>
   </entry>
   
