@@ -41,7 +41,8 @@ category_dir: blog/categories
 #category_sidebar: true
 #category_tag_cloud: true
 #
-markdown: rdiscount
+#markdown: rdiscount
+markdown: kramdown
 pygments: false # default python pygments have been replaced by pygments.rb
 
 paginate: 6          # Posts per page on the blog index

@@ -9,6 +9,7 @@ categories: Linux
 简直就是神器
 
 用法举例
+
 ``` bash
     #改变图片大小
     convert -resize 50x50 heart.png heart1.png

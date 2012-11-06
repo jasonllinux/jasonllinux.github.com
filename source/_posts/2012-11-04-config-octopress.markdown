@@ -7,7 +7,8 @@ categories: Octopress
 ---
 
 ## 如何恢复
-首先从github checkout两个分支  
+首先从github checkout两个分支
+  
 ```bash
     git clone -b source git@github.com:username/username.github.com.git octopress
     cd octopress
@@ -15,6 +16,7 @@ categories: Octopress
 ```
     
 安装依赖gems
+
 ```bash
     gem install bundler
     bundle install
@@ -22,6 +24,7 @@ categories: Octopress
 ```
 
 pull最新的
+
 ```bash 
     cd xxx
     cd _deploy

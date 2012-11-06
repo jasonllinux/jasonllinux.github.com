@@ -10,6 +10,7 @@ categories: Linux
 1.修改软件源，推荐163
 
 2.禁用报错
+
 ``` bash
     vim /etc/default/apport
     #将1改成0
