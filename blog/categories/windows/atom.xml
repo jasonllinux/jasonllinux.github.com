@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Windows | Jasonllinux's Blog]]></title>
+  <link href="http://jasonllinux.github.com/blog/categories/windows/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.com/"/>
+  <updated>2012-11-06T16:45:58+08:00</updated>
+  <id>http://jasonllinux.github.com/</id>
+  <author>
+    <name><![CDATA[jasonllinux]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[win8 下无法删除文件，文件或目录损坏且无法读取]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/10/21/win8-delete-file/"/>
+    <updated>2012-10-21T15:30:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/10/21/win8-delete-file</id>
+    <content type="html"><![CDATA[<p>悲了个剧</p>
+
+<p>从linux下拷贝一个pdf文件到win8中，重启进入win8发现读不了</p>
+
+<p>就知道坏了，删除，发现也删除不掉</p>
+
+<p>下载了一些文件粉碎机 也没用</p>
+
+<p>最后 </p>
+
+<p><code>bash
+CHKDSK C:/F
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

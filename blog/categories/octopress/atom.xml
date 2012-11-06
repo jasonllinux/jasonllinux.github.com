@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-06T16:20:48+08:00</updated>
+  <updated>2012-11-06T16:45:58+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -19,22 +19,25 @@
     <updated>2012-11-04T12:58:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/11/04/config-octopress</id>
     <content type="html"><![CDATA[<h2 id="section">如何恢复</h2>
-<p>首先从github checkout两个分支<br />
-<code>bash
+<p>首先从github checkout两个分支</p>
+
+<p><code>bash
     git clone -b source git@github.com:username/username.github.com.git octopress
     cd octopress
     git clone git@github.com:username/username.github.com.git _deploy
 </code></p>
 
-<p>安装依赖gems
-<code>bash
+<p>安装依赖gems</p>
+
+<p><code>bash
     gem install bundler
     bundle install
     rake install # 可以省略？
 </code></p>
 
-<p>pull最新的
-<code>bash 
+<p>pull最新的</p>
+
+<p><code>bash 
     cd xxx
     cd _deploy
     git pull origin master
