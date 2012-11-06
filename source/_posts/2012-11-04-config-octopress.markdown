@@ -5,6 +5,8 @@ date: 2012-11-04 12:58
 comments: true
 categories: Octopress
 ---
+
+## 如何恢复
 首先从github checkout两个分支  
 ```bash
     git clone -b source git@github.com:username/username.github.com.git octopress
@@ -27,4 +29,11 @@ pull最新的
     cd ..
     git pull origin source
 ```
+
+## 添加robots.txt
+
+## 添加404页面 
+
+## More
+excerpt_link: "Read on &rarr;"  # 在文章中使用<!-- more -->,列表页将不再显示全文，而是显示“Read on”的链接，指向全文  
     
