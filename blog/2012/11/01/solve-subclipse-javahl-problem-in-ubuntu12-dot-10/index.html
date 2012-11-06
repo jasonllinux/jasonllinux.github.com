@@ -31,11 +31,26 @@ no libsvnjavahl-1 in java.library.path &hellip;">
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
-
-
   
 
 </head>
+
+
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 
 <body   >
   <header role="banner"><hgroup>
@@ -97,12 +112,14 @@ no libsvnjavahl-1 in java.library.path &hellip;">
 
 <div class="entry-content"><p>eclipse中安装完subclipse插件之后往往会报如下错误：</p>
 
-<blockquote><p>Failed to load JavaHL Library.
+<blockquote>
+  <p>Failed to load JavaHL Library.
 These are the errors that were encountered:
 no libsvnjavahl-1 in java.library.path
 no svnjavahl-1 in java.library.path
 no svnjavahl in java.library.path
-java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p></blockquote>
+java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
+</blockquote>
 
 <p>解决方法：</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Study | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/study/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-06T08:53:07+08:00</updated>
+  <updated>2012-11-06T16:20:48+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -20,61 +20,27 @@
     <id>http://jasonllinux.github.com/blog/2012/09/28/eclipse中windowsbuilder使用问题</id>
     <content type="html"><![CDATA[<p>以前偶然用过windowsbuilder，觉得特方便</p>
 
-
-
-
 <p>最近想hack一个Monitor</p>
-
-
-
 
 <p>于是安装，使用。。。</p>
 
-
-
-
 <p>但是中间出现了一个问题</p>
-
-
-
 
 <p>就是windowsbuilder的GUI界面没法显示</p>
 
-
-
-
 <p>纠结来纠结去</p>
-
-
-
 
 <p>原来是一个小小的设置问题</p>
 
-
-
-
 <p>见下图</p>
-
-
-
 
 <p><a href="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/wb.png"><img class="size-medium wp-image-408 alignnone" title="wb" src="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/wb-300x86.png" alt="" width="300" height="86" /></a></p>
 
-
-
-
 <p>修改Window&gt;&gt;Preferences&gt;&gt;WindowsBuilder</p>
-
-
-
 
 <p>修改EditorLayout，如图所示，</p>
 
-
-
-
 <p>OK</p>
-
 ]]></content>
   </entry>
   
@@ -93,9 +59,6 @@
 (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {<br />
     return UIInterfaceOrientationIsPortrait(interfaceOrientation);</p>
 
-
-
-
 <p>}<br />
 [/c]<br />
 如果是android平台<br />
@@ -103,7 +66,6 @@
 [bash]<br />
 android:screenOrientation=&quot;portrait&quot;<br />
 [/bash]</p>
-
 ]]></content>
   </entry>
   
@@ -114,33 +76,18 @@ android:screenOrientation=&quot;portrait&quot;<br />
     <id>http://jasonllinux.github.com/blog/2012/09/05/hadoop碎碎念</id>
     <content type="html"><![CDATA[<p><strong>Hadoop configure 碎碎念，非教程！！！</strong></p>
 
-
-
-
 <p>1. SSH配置<br />
 免密钥</p>
 
-
-
-
 <p>2. Host配置<br />
 User和HostName匹配</p>
-
-
-
 
 <p>3. x.xml相关<br />
 dir配置<br />
 端口配置<br />
 java路径设置 hadoop-env.sh</p>
 
-
-
-
 <p>4.常用操作</p>
-
-
-
 
 <p>[bash]<br />
 #格式化<br />
@@ -156,33 +103,20 @@ hadoop dfsadmin -report<br />
 hadoop dfsadmin -safemode leave<br />
 [/bash]</p>
 
-
-
-
 <p><strong>测试</strong>
 启动Hadoop，<br />
 cd Hadoop目录，输入以下命令执行Pi Estimator程序：</p>
 
-
-
-
 <p>[bash]hadoop jar hadoop-examples.jar pi 2 10<br />
 [/bash]</p>
 
-
-
-
 <p><strong>运行结果：</strong></p>
-
-
-
 
 <p><strong>Hadoop Eclipse插件设置</strong>
 Location name（取个名字）<br />
 Map/Reduce Master（Job Tracker的IP和端口，根据mapred-site.xml中配置的mapred.job.tracker来填写）<br />
 DFS Master（Name Node的IP和端口，根据core-site.xml中配置的fs.default.name来填写）<br />
 最后，切换到Project 视图，就可以看到文件目录了</p>
-
 ]]></content>
   </entry>
   
@@ -195,24 +129,17 @@ DFS Master（Name Node的IP和端口，根据core-site.xml中配置的fs.default
 [latex]<br />
 ! LaTeX Error: \bibname undefined.<br />
 See the LaTeX manual or LaTeX Companion for explanation.<br />
-Type <wbr> H &lt;return&gt; <wbr> for immediate help.
-<wbr> <wbr> <wbr> ...
-<wbr> <wbr> l.43 <wbr> <wbr> {\renewcommand\bibname{?196?215}}
-<wbr> <wbr> ?<br />
-[/latex]</wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></p>
-
-
-
+Type <wbr /> H &lt;return&gt; <wbr /> for immediate help.
+<wbr /> <wbr /> <wbr /> ...
+<wbr /> <wbr /> l.43 <wbr /> <wbr /> {\renewcommand\bibname{?196?215}}
+<wbr /> <wbr /> ?<br />
+[/latex]</p>
 
 <p>解决方法：<br />
 由于GB.cpx乱码造成，因此重新下载这个<a href="https://bitbucket.org/aloft/ctex-faq/src/ba3f763c9380/GB.cpx" target="_blank">文件</a></p>
 
-
-
-
 <p>然后复制到文章目录，<br />
 compile。。。。done。。。。</p>
-
 ]]></content>
   </entry>
   
@@ -223,48 +150,29 @@ compile。。。。done。。。。</p>
     <id>http://jasonllinux.github.com/blog/2012/08/04/mac-安装opencv支援python</id>
     <content type="html"><![CDATA[<p>Mac上的OpenCV安装和Linux平台下略有不同，在这里我们不采用下载源码包手动编译的方式，因为可能有些依赖问题，我们使用Port包管理，自动安装。</p>
 
-
-
-
 <p><strong>Step1</strong>
 安装MacPort<br />
 安装完成之后</p>
-
-
-
 
 <p>[bash]<br />
 sudo port selfupdate<br />
 [/bash]</p>
 
-
-
-
 <p><strong>Step2</strong>
 安装OpenCv，并且支援Python</p>
-
-
-
 
 <p>[bash]<br />
 sudo port install py27-numpy<br />
 sudo port install opencv +python27<br />
 [/bash]</p>
 
-
-
-
 <p><strong>Step3</strong>
 至此可能会发现python下还是不能用opencv,import 会出现错误<br />
 解决方案<br />
 切换Pyhon版本，默认使用/opt/local/bin/python27</p>
 
-
-
-
 <p><strong>Result</strong>
 至此，应该大功告成了</p>
-
 ]]></content>
   </entry>
   

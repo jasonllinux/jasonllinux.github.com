@@ -9,10 +9,8 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="1.修改软件源，推荐163 2.禁用报错 1
-2
-vim /etc/default/apport
-#将1改成0 ">
+  <meta name="description" content="1.修改软件源，推荐163 2.禁用报错
+&lt;div class=&#8217;bogus-wrapper&#8217;&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;div class=&#8221;highlight&#8221;&gt;&lt; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -32,11 +30,26 @@ vim /etc/default/apport
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
-
-
   
 
 </head>
+
+
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
 
 <body   >
   <header role="banner"><hgroup>
@@ -98,14 +111,12 @@ vim /etc/default/apport
 
 <div class="entry-content"><p>1.修改软件源，推荐163</p>
 
-<p>2.禁用报错</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>vim /etc/default/apport
-</span><span class='line'><span class="c">#将1改成0</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<p>2.禁用报错
+&lt;div class=&#8217;bogus-wrapper&#8217;&gt;<notextile><figure class="code">&lt;figcaption&gt;<span></span>&lt;/figcaption&gt;&lt;div class=&#8221;highlight&#8221;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#8221;gutter&#8221;&gt;&lt;pre class=&#8221;line-numbers&#8221;&gt;<span class="line-number">1</span>
+<span class="line-number">2</span>
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;<code class="bash"><span class="line">vim /etc/default/apport
+</span><span class="line"><span class="c">#将1改成0</span>
+</span></code>&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</figure></notextile>&lt;/div&gt;</p>
 </div>
 
 

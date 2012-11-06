@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-06T08:53:07+08:00</updated>
+  <updated>2012-11-06T16:20:48+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -20,44 +20,22 @@
     <id>http://jasonllinux.github.com/blog/2012/10/17/goagent从1-x升级到2-x</id>
     <content type="html"><![CDATA[<p>好久没升级goagent了</p>
 
-
-
-
 <p>从google code上下载了最新稳定版</p>
 
-
-
-
 <p>shit</p>
-
-
-
 
 <p>居然要安装些其他东西<br />
 [bash]<br />
 sudo curl -k -L http://git.io/I9B7RQ|sh<br />
 [/bash]</p>
 
-
-
-
 <p>装完之后，还是不行，出现 error</p>
-
-
-
 
 <p>原来还得重新upload一下</p>
 
-
-
-
 <p>虽然曲折了一些，但是还是要感谢goagent，让生活更加美好！</p>
 
-
-
-
 <p>&nbsp;</p>
-
 ]]></content>
   </entry>
   
@@ -68,61 +46,27 @@ sudo curl -k -L http://git.io/I9B7RQ|sh<br />
     <id>http://jasonllinux.github.com/blog/2012/09/28/eclipse中windowsbuilder使用问题</id>
     <content type="html"><![CDATA[<p>以前偶然用过windowsbuilder，觉得特方便</p>
 
-
-
-
 <p>最近想hack一个Monitor</p>
-
-
-
 
 <p>于是安装，使用。。。</p>
 
-
-
-
 <p>但是中间出现了一个问题</p>
-
-
-
 
 <p>就是windowsbuilder的GUI界面没法显示</p>
 
-
-
-
 <p>纠结来纠结去</p>
-
-
-
 
 <p>原来是一个小小的设置问题</p>
 
-
-
-
 <p>见下图</p>
-
-
-
 
 <p><a href="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/wb.png"><img class="size-medium wp-image-408 alignnone" title="wb" src="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/wb-300x86.png" alt="" width="300" height="86" /></a></p>
 
-
-
-
 <p>修改Window&gt;&gt;Preferences&gt;&gt;WindowsBuilder</p>
-
-
-
 
 <p>修改EditorLayout，如图所示，</p>
 
-
-
-
 <p>OK</p>
-
 ]]></content>
   </entry>
   
@@ -133,34 +77,18 @@ sudo curl -k -L http://git.io/I9B7RQ|sh<br />
     <id>http://jasonllinux.github.com/blog/2012/09/23/archlinux-配置grub2简便方法</id>
     <content type="html"><![CDATA[<p>Archer都知道的</p>
 
-
-
-
 <p>配置Grub不像Ubuntu那么Easy，可以自动检测到其他盘符的系统</p>
-
-
-
 
 <p>但是神器来了</p>
 
-
-
-
 <p><strong>os-prober</strong></p>
 
-
-
-
 <p>在安装玩Grub2之后iou</p>
-
-
-
 
 <p>[bash]<br />
 pacman -S os-prober<br />
 grub-mkconfig -o /boot/grub/grub.cfg<br />
 [/bash]</p>
-
 ]]></content>
   </entry>
   
@@ -177,31 +105,18 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
 配置如下：
 <a href="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/vps.png"><img class="size-full wp-image-346 alignnone" title="vps" src="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/vps.png" alt="" width="309" height="670" /></a></p>
 
-
-
-
 <p>搬家是件痛苦的事情</p>
-
-
-
 
 <p>从老薛那边把空间上的数据库还有网站内容 搬到Vps上<br />
 中间很多曲折，不赘述了</p>
-
-
-
 
 <p>最近在想如何利用这Vps<br />
 现在只是在上面搭了个PPTP，测试了下访问速度还算理想<br />
 装了tomcat，写点web app？<br />
 搭个SVN Git服务器？</p>
 
-
-
-
 <p><strong>备份</strong>和<strong>安全</strong>是要重点考虑的事情<br />
 以后慢慢折腾吧!</p>
-
 ]]></content>
   </entry>
   
@@ -220,9 +135,6 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
 (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {<br />
     return UIInterfaceOrientationIsPortrait(interfaceOrientation);</p>
 
-
-
-
 <p>}<br />
 [/c]<br />
 如果是android平台<br />
@@ -230,7 +142,6 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
 [bash]<br />
 android:screenOrientation=&quot;portrait&quot;<br />
 [/bash]</p>
-
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: IT | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/it/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-06T08:53:07+08:00</updated>
+  <updated>2012-11-06T16:20:48+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -20,33 +20,17 @@
     <id>http://jasonllinux.github.com/blog/2012/10/21/win8-下无法删除文件，文件或目录损坏且无法读取</id>
     <content type="html"><![CDATA[<p>悲了个剧</p>
 
-
-
-
 <p>从linux下拷贝一个pdf文件到win8中，重启进入win8发现读不了</p>
-
-
-
 
 <p>就知道坏了，删除，发现也删除不掉</p>
 
-
-
-
 <p>下载了一些文件粉碎机 也没用</p>
 
-
-
-
 <p>最后</p>
-
-
-
 
 <p>[bash]<br />
 CHKDSK C:/F<br />
 [/bash]</p>
-
 ]]></content>
   </entry>
   
@@ -57,9 +41,6 @@ CHKDSK C:/F<br />
     <id>http://jasonllinux.github.com/blog/2012/10/18/git-push-错误</id>
     <content type="html"><![CDATA[<p>今天，上传代码到github上的时候 莫名其妙出现：</p>
 
-
-
-
 <p>[bash]<br />
 Unable to rewind rpc post data - try increasing http.postBuffer<br />
 error: RPC failed; result=65, HTTP code = 401<br />
@@ -67,18 +48,11 @@ fatal: The remote end hung up unexpectedly<br />
 fatal: The remote end hung up unexpectedly<br />
 [/bash]</p>
 
-
-
-
 <p>解决方案：</p>
-
-
-
 
 <p>[bash]<br />
 git config http.postBuffer 209715200<br />
 [/bash]</p>
-
 ]]></content>
   </entry>
   
@@ -89,44 +63,22 @@ git config http.postBuffer 209715200<br />
     <id>http://jasonllinux.github.com/blog/2012/10/17/goagent从1-x升级到2-x</id>
     <content type="html"><![CDATA[<p>好久没升级goagent了</p>
 
-
-
-
 <p>从google code上下载了最新稳定版</p>
 
-
-
-
 <p>shit</p>
-
-
-
 
 <p>居然要安装些其他东西<br />
 [bash]<br />
 sudo curl -k -L http://git.io/I9B7RQ|sh<br />
 [/bash]</p>
 
-
-
-
 <p>装完之后，还是不行，出现 error</p>
-
-
-
 
 <p>原来还得重新upload一下</p>
 
-
-
-
 <p>虽然曲折了一些，但是还是要感谢goagent，让生活更加美好！</p>
 
-
-
-
 <p>&nbsp;</p>
-
 ]]></content>
   </entry>
   
@@ -136,9 +88,6 @@ sudo curl -k -L http://git.io/I9B7RQ|sh<br />
     <updated>2012-10-17T00:00:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/10/17/debian-apache中添加路径</id>
     <content type="html"><![CDATA[<p>在 /etc/apache2/con.d/目录中添加配置文件: resume.conf</p>
-
-
-
 
 <p>内容如下：<br />
 [bash]<br />
@@ -152,16 +101,9 @@ DirectoryIndex index.html<br />
 &lt;/Directory&gt;<br />
 [/bash]</p>
 
-
-
-
 <p>用浏览器就可以访问了 http://www.xxx.com/resume</p>
 
-
-
-
 <p>Done!</p>
-
 ]]></content>
   </entry>
   
@@ -172,16 +114,9 @@ DirectoryIndex index.html<br />
     <id>http://jasonllinux.github.com/blog/2012/09/26/win7和linux访问vpn设置</id>
     <content type="html"><![CDATA[<p>Step By Step</p>
 
-
-
-
 <p>在Win7和Linux环境下非客户端访问VPN设置</p>
 
-
-
-
 <p>&nbsp;</p>
-
 ]]></content>
   </entry>
   

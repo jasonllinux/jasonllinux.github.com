@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-06T08:53:07+08:00</updated>
+  <updated>2012-11-06T16:20:48+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -18,47 +18,37 @@
     <link href="http://jasonllinux.github.com/blog/2012/11/04/config-octopress/"/>
     <updated>2012-11-04T12:58:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/11/04/config-octopress</id>
-    <content type="html"><![CDATA[<h2>如何恢复</h2>
-
-<p>首先从github checkout两个分支<br/>
-```bash</p>
-
-<pre><code>git clone -b source git@github.com:username/username.github.com.git octopress
-cd octopress
-git clone git@github.com:username/username.github.com.git _deploy
-</code></pre>
-
-<p>```</p>
+    <content type="html"><![CDATA[<h2 id="section">如何恢复</h2>
+<p>首先从github checkout两个分支<br />
+<code>bash
+    git clone -b source git@github.com:username/username.github.com.git octopress
+    cd octopress
+    git clone git@github.com:username/username.github.com.git _deploy
+</code></p>
 
 <p>安装依赖gems
-```bash</p>
-
-<pre><code>gem install bundler
-bundle install
-rake install # 可以省略？
-</code></pre>
-
-<p>```</p>
+<code>bash
+    gem install bundler
+    bundle install
+    rake install # 可以省略？
+</code></p>
 
 <p>pull最新的
-```bash</p>
+<code>bash 
+    cd xxx
+    cd _deploy
+    git pull origin master
+    cd ..
+    git pull origin source
+</code></p>
 
-<pre><code>cd xxx
-cd _deploy
-git pull origin master
-cd ..
-git pull origin source
-</code></pre>
+<h2 id="robotstxt">添加robots.txt</h2>
 
-<p>```</p>
+<h2 id="section-1">添加404页面</h2>
 
-<h2>添加robots.txt</h2>
+<h2 id="more">More</h2>
+<p>excerpt_link: “Read on →”  # 在文章中使用<!-- more -->,列表页将不再显示全文，而是显示“Read on”的链接，指向全文  </p>
 
-<h2>添加404页面</h2>
-
-<h2>More</h2>
-
-<p>excerpt_link: "Read on &rarr;"  # 在文章中使用<!-- more -->,列表页将不再显示全文，而是显示“Read on”的链接，指向全文</p>
 ]]></content>
   </entry>
   

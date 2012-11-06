@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 未分类 | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/未分类/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-06T08:53:07+08:00</updated>
+  <updated>2012-11-06T16:20:48+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -19,9 +19,6 @@
     <updated>2012-07-30T00:00:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/07/30/urxvt配置</id>
     <content type="html"><![CDATA[<p>配置文件 .Xdefaults</p>
-
-
-
 
 <p>[bash]<br />
 !!title<br />
@@ -42,9 +39,6 @@ URxvt.depth: 32 !!透明必须<br />
 URxvt.background: [60]Black !!中括号中为透明度<br />
 URxvt.foreground: White</p>
 
-
-
-
 <p>URxvt.colorBD:Gray95<br />
 URxvt.colorUL:Green<br />
 URxvt.color1:Red2<br />
@@ -56,15 +50,9 @@ URxvt.color12:DodgerBlue<br />
 URxvt.color14:Cyan2<br />
 URxvt.color15:Gray95</p>
 
-
-
-
 <p>!!URxvt.font: xft:DejaVu Sans Mono:pixelsize=16<br />
 URxvt.font: xft:Ubuntu Mono:pixelsize=16:antialias=True,\<br />
 xft:WenQuanYi Zen Hei Mono:size=20:antialias=True</p>
-
-
-
 
 <p>!!滚动条设置<br />
 URxvt.scrollBar:True<br />
@@ -90,13 +78,9 @@ URxvt.tabbed.tab-bg: 0<br />
 URxvt.tabbed.tabbar-fg: 4<br />
 [/bash]</p>
 
-
-
-
 <p><strong>Features:</strong>
 字体设置<br />
 Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>
-
 ]]></content>
   </entry>
   
@@ -108,34 +92,19 @@ Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>
     <content type="html"><![CDATA[<p><a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/225px-LaTeX_logo.png">
 </a>在Linux环境使用$$\LaTeX$$一般使用TexLive套装，而作为天朝子民，使用中文是件头等大事。</p>
 
-
-
-
 <p>在网上大致浏览到两类方式：<br />
 第一种是盗版windows字体，修改ctex配置文件，要用中文的时候就用ctex宏包；<br />
 第二种方式就是使用XeLatex，直接调用系统中文字体。</p>
 
-
-
-
 <p>下面直接介绍第二种方式，为了方便每次调用，我们把配置做成一个<strong>package</strong>
 在该目录下新建文件</p>
-
-
-
 
 <p>[bash]<br />
 cd /usr/local/texlive/2011/texmf-dist/tex/xelatex/fontspec<br />
 sudo touch zhfontcfg.sty<br />
 [/bash]</p>
 
-
-
-
 <p>在该文件中写入：</p>
-
-
-
 
 <p>[tex]<br />
 % xetex/xelatex 字体设定宏包<br />
@@ -171,25 +140,13 @@ sudo touch zhfontcfg.sty<br />
 \setCJKmainfont{WenQuanYi Micro Hei}<br />
 [/tex]</p>
 
-
-
-
 <p>使用命令 生成</p>
-
-
-
 
 <p>[bash]<br />
 sudo mktexlsr<br />
 [/bash]</p>
 
-
-
-
 <p>测试：test.tex</p>
-
-
-
 
 <p>[tex]<br />
 %test.tex<br />
@@ -201,37 +158,18 @@ Hello, I am jasonllinux.\\<br />
 \end{document}<br />
 [/tex]</p>
 
-
-
-
 <p>输出结果：
 <a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/latex.png"><img class="alignleft size-medium wp-image-177" title="latex" src="http://www.jasonllinux.com/wp-content/uploads/2012/07/latex-300x113.png" alt="" width="300" height="113" /></a></p>
 
-
-
+<p>&nbsp;</p>
 
 <p>&nbsp;</p>
 
-
-
-
 <p>&nbsp;</p>
 
-
-
-
 <p>&nbsp;</p>
-
-
-
-
-<p>&nbsp;</p>
-
-
-
 
 <p>参考：</p>
-
 ]]></content>
   </entry>
   

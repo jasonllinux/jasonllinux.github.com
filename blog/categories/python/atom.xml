@@ -4,7 +4,7 @@
   <title><![CDATA[Category: python | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-06T08:53:07+08:00</updated>
+  <updated>2012-11-06T16:20:48+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -26,7 +26,7 @@
 
 <p>import cv2居然说不是32位应用程序</p>
 
-<p>于是之，我知道又是64bit的缘故</p>
+<p>于是之，我知道又是64bit的缘故 </p>
 
 <p>果断的</p>
 
