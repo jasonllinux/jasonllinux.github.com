@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-06T16:45:58+08:00</updated>
+  <updated>2012-11-06T20:21:09+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,82 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[在Octopress中使用Latex公式]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/06/write-latex-in-octopress/"/>
+    <updated>2012-11-06T18:17:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/06/write-latex-in-octopress</id>
+    <content type="html"><![CDATA[<p>对于我等diaosi，偶尔还是会需要在blog中输入一些符号、公式之类</p>
+
+<p>But How？</p>
+
+<ul>
+  <li>In the first, Use kramdown instead of rdiscount</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">gem install kramdown
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>然后在配置文件_config.yml中替换设置</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">markdown: kramdown
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>设置样式<br />
+Modify source/_layouts/defaults.html  </li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+</pre></td><td class="code"><pre><code class="html"><span class="line"><span class="c">&lt;!-- mathjax config similar to math.stackexchange --&gt;</span>
+</span><span class="line"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/x-mathjax-config&quot;</span><span class="nt">&gt;</span>
+</span><span class="line"><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
+</span><span class="line">  <span class="nx">jax</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;input/TeX&quot;</span><span class="p">,</span> <span class="s2">&quot;output/HTML-CSS&quot;</span><span class="p">],</span>
+</span><span class="line">  <span class="nx">tex2jax</span><span class="o">:</span> <span class="p">{</span>
+</span><span class="line">    <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="s1">&#39;$&#39;</span><span class="p">]</span> <span class="p">],</span>
+</span><span class="line">    <span class="nx">displayMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;$$&#39;</span><span class="p">,</span> <span class="s1">&#39;$$&#39;</span><span class="p">]],</span>
+</span><span class="line">    <span class="nx">processEscapes</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class="line">    <span class="nx">skipTags</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;script&#39;</span><span class="p">,</span> <span class="s1">&#39;noscript&#39;</span><span class="p">,</span> <span class="s1">&#39;style&#39;</span><span class="p">,</span> <span class="s1">&#39;textarea&#39;</span><span class="p">,</span> <span class="s1">&#39;pre&#39;</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">]</span>
+</span><span class="line">  <span class="p">},</span>
+</span><span class="line">  <span class="nx">messageStyle</span><span class="o">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+</span><span class="line">  <span class="s2">&quot;HTML-CSS&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="nx">preferredFont</span><span class="o">:</span> <span class="s2">&quot;TeX&quot;</span><span class="p">,</span> <span class="nx">availableFonts</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;STIX&quot;</span><span class="p">,</span><span class="s2">&quot;TeX&quot;</span><span class="p">]</span> <span class="p">}</span>
+</span><span class="line"><span class="p">});</span>
+</span><span class="line"><span class="nt">&lt;/script&gt;</span>
+</span><span class="line"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>解决右击公式全屏空白问题</li>
+</ul>
+
+<p>Modify sass/base_theme.scss</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="html"><span class="line">body {
+</span><span class="line">  &gt; div#main {
+</span><span class="line">    background: $sidebar-bg $noise-bg;
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[Algorithm]——算法复杂度]]></title>
@@ -495,34 +571,6 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
 <p>比照自己，还是得多修炼啊！！！</p>
 
 <p>[gallery link=&#8221;file&#8221;]</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[搬家了]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/09/20/%E6%90%AC%E5%AE%B6%E4%BA%86/"/>
-    <updated>2012-09-20T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/09/20/搬家了</id>
-    <content type="html"><![CDATA[<p>最近琢磨着入手VPS<br />
-偶然间看到了YardVPS打折的消息，对于穷学生，价格才是王道啊，如果能够稳定一点就更完美了<br />
-终身七折<br />
-价格还是非常给力<br />
-选择了<strong>Tree1</strong>
-配置如下：
-<a href="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/vps.png"><img class="size-full wp-image-346 alignnone" title="vps" src="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/vps.png" alt="" width="309" height="670" /></a></p>
-
-<p>搬家是件痛苦的事情</p>
-
-<p>从老薛那边把空间上的数据库还有网站内容 搬到Vps上<br />
-中间很多曲折，不赘述了</p>
-
-<p>最近在想如何利用这Vps<br />
-现在只是在上面搭了个PPTP，测试了下访问速度还算理想<br />
-装了tomcat，写点web app？<br />
-搭个SVN Git服务器？</p>
-
-<p><strong>备份</strong>和<strong>安全</strong>是要重点考虑的事情<br />
-以后慢慢折腾吧!</p>
 ]]></content>
   </entry>
   

@@ -5,14 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Archlinux 配置Grub2简便方法 - Jasonllinux's Blog</title>
+  <title>在Octopress中使用Latex公式 - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="Archer都知道的 配置Grub不像Ubuntu那么Easy，可以自动检测到其他盘符的系统 但是神器来了 os-prober 在安装玩Grub2之后iou [bash]
-pacman -S os-prober
-grub-mkconfig -o /boot/grub/grub.cfg
-[/bash &hellip;">
+  <meta name="description" content="对于我等diaosi，偶尔还是会需要在blog中输入一些符号、公式之类 But How？ In the first, Use kramdown instead of rdiscount 1
+gem install kramdown 然后在配置文件_config.yml中替换设置 1 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +19,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/09/23/archlinux-%E9%85%8D%E7%BD%AEgrub2%E7%AE%80%E4%BE%BF%E6%96%B9%E6%B3%95/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/11/06/write-latex-in-octopress/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -88,7 +86,7 @@ MathJax.Hub.Config({
   
   <header>
     
-      <h1 class="entry-title">Archlinux 配置Grub2简便方法</h1>
+      <h1 class="entry-title">在Octopress中使用Latex公式</h1>
     
     
       <p class="meta">
@@ -104,27 +102,81 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2012-09-23T00:00:00+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2012</time>
+<time datetime="2012-11-06T18:17:00+08:00" pubdate data-updated="true">Nov 6<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Archer都知道的</p>
+<div class="entry-content"><p>对于我等diaosi，偶尔还是会需要在blog中输入一些符号、公式之类</p>
 
-<p>配置Grub不像Ubuntu那么Easy，可以自动检测到其他盘符的系统</p>
+<p>But How？</p>
 
-<p>但是神器来了</p>
+<ul>
+  <li>In the first, Use kramdown instead of rdiscount</li>
+</ul>
 
-<p><strong>os-prober</strong></p>
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">gem install kramdown
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p>在安装玩Grub2之后iou</p>
+<p>然后在配置文件_config.yml中替换设置</p>
 
-<p>[bash]<br />
-pacman -S os-prober<br />
-grub-mkconfig -o /boot/grub/grub.cfg<br />
-[/bash]</p>
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">markdown: kramdown
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>设置样式<br />
+Modify source/_layouts/defaults.html  </li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+</pre></td><td class="code"><pre><code class="html"><span class="line"><span class="c">&lt;!-- mathjax config similar to math.stackexchange --&gt;</span>
+</span><span class="line"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/x-mathjax-config&quot;</span><span class="nt">&gt;</span>
+</span><span class="line"><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
+</span><span class="line">  <span class="nx">jax</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;input/TeX&quot;</span><span class="p">,</span> <span class="s2">&quot;output/HTML-CSS&quot;</span><span class="p">],</span>
+</span><span class="line">  <span class="nx">tex2jax</span><span class="o">:</span> <span class="p">{</span>
+</span><span class="line">    <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="s1">&#39;$&#39;</span><span class="p">]</span> <span class="p">],</span>
+</span><span class="line">    <span class="nx">displayMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;$$&#39;</span><span class="p">,</span> <span class="s1">&#39;$$&#39;</span><span class="p">]],</span>
+</span><span class="line">    <span class="nx">processEscapes</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class="line">    <span class="nx">skipTags</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;script&#39;</span><span class="p">,</span> <span class="s1">&#39;noscript&#39;</span><span class="p">,</span> <span class="s1">&#39;style&#39;</span><span class="p">,</span> <span class="s1">&#39;textarea&#39;</span><span class="p">,</span> <span class="s1">&#39;pre&#39;</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">]</span>
+</span><span class="line">  <span class="p">},</span>
+</span><span class="line">  <span class="nx">messageStyle</span><span class="o">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+</span><span class="line">  <span class="s2">&quot;HTML-CSS&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="nx">preferredFont</span><span class="o">:</span> <span class="s2">&quot;TeX&quot;</span><span class="p">,</span> <span class="nx">availableFonts</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;STIX&quot;</span><span class="p">,</span><span class="s2">&quot;TeX&quot;</span><span class="p">]</span> <span class="p">}</span>
+</span><span class="line"><span class="p">});</span>
+</span><span class="line"><span class="nt">&lt;/script&gt;</span>
+</span><span class="line"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>解决右击公式全屏空白问题</li>
+</ul>
+
+<p>Modify sass/base_theme.scss</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="html"><span class="line">body {
+</span><span class="line">  &gt; div#main {
+</span><span class="line">    background: $sidebar-bg $noise-bg;
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 </div>
 
 
@@ -147,12 +199,12 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
   
 
 
-<time datetime="2012-09-23T00:00:00+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2012</time>
+<time datetime="2012-11-06T18:17:00+08:00" pubdate data-updated="true">Nov 6<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/linux/'>linux</a>
+    <a class='category' href='/blog/categories/octopress/'>Octopress</a>
   
 </span>
 
@@ -161,7 +213,7 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/09/23/archlinux-%E9%85%8D%E7%BD%AEgrub2%E7%AE%80%E4%BE%BF%E6%96%B9%E6%B3%95/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/09/23/archlinux-%E9%85%8D%E7%BD%AEgrub2%E7%AE%80%E4%BE%BF%E6%96%B9%E6%B3%95/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/11/06/write-latex-in-octopress/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/11/06/write-latex-in-octopress/" >Tweet</a>
   
   
   
@@ -170,10 +222,8 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/09/21/%E8%AE%B02013%E5%88%9B%E6%96%B0%E5%B7%A5%E5%8E%82%E5%8D%97%E5%A4%A7%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98%E5%AE%A3%E8%AE%B2%E4%BC%9A/" title="Previous Post: 记2013创新工厂南大校园招聘宣讲会">&laquo; 记2013创新工厂南大校园招聘宣讲会</a>
+        <a class="basic-alignment left" href="/blog/2012/11/05/algorithm-complexity/" title="Previous Post: [Algorithm]——算法复杂度">&laquo; [Algorithm]——算法复杂度</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/09/26/debian-squeeze-%E5%AE%89%E8%A3%85pptp%E6%9C%8D%E5%8A%A1/" title="Next Post: Debian Squeeze 安装PPTP服务">Debian Squeeze 安装PPTP服务 &raquo;</a>
       
     </p>
   </footer>
