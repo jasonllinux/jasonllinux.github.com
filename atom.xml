@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-05T22:43:09+08:00</updated>
+  <updated>2012-11-06T08:49:18+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -108,6 +108,8 @@
 <h2>添加404页面</h2>
 
 <h2>More</h2>
+
+<p>excerpt_link: &#8220;Read on &rarr;&#8221;  # 在文章中使用<!-- more -->,列表页将不再显示全文，而是显示“Read on”的链接，指向全文</p>
 ]]></content>
   </entry>
   
