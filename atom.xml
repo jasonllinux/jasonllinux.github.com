@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-06T08:49:18+08:00</updated>
+  <updated>2012-11-06T08:53:07+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -18,7 +18,7 @@
     <link href="http://jasonllinux.github.com/blog/2012/11/05/algorithm-complexity/"/>
     <updated>2012-11-05T16:44:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/11/05/algorithm-complexity</id>
-    <content type="html"><![CDATA[<p>$\exp(-\frac{x<sup>2}{2})$</sup></p>
+    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
