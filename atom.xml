@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-07T16:43:50+08:00</updated>
+  <updated>2012-11-07T19:43:03+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -75,6 +75,7 @@
 </span><span class="line">    tar azxvf data.tar.gz -C <span class="s2">&quot;${pkgdir}&quot;</span>
 </span><span class="line"><span class="o">}</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
+<!-- more -->
 
 <ul>
   <li>wps-office.install</li>
