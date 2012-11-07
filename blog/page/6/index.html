@@ -9,11 +9,10 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="受不了Gentoo的诱惑，前端时间花了大概三天时间折腾了下Gentoo，简单记录下安装过程 [bash]
-分区&amp;&amp;格式化
-mkfs.ext4 /dev/sdaXX
-mkswap /dev/sdaXX 挂载分区
-sudo mount /dev/sdaXX /mnt/gentoo &hellip;">
+  <meta name="description" content="前段时间把托管比赛项目的svn服务器从自己的笔记本迁移到台式机上了，可以把所有历史记录版本信息都转走，实在是很方便： [bash]
+#备份
+svnadmin dump path/to/old-repo &gt; dumpfile #在新的服务器上新建svn &#8230;不再赘述
+#还原 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,6 +85,105 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/26/svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/">SVN服务器迁移</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-26T00:00:00+08:00" pubdate data-updated="true">Aug 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前段时间把托管比赛项目的svn服务器从自己的笔记本迁移到台式机上了，可以把所有历史记录版本信息都转走，实在是很方便：</p>
+
+<p>[bash]<br />
+#备份<br />
+svnadmin dump path/to/old-repo &gt; dumpfile</p>
+
+<p>#在新的服务器上新建svn &#8230;不再赘述<br />
+#还原<br />
+svnadmin load path/to/new-repo &lt; dumpfile<br />
+[/bash]</p>
+
+<p>参考：</p>
+
+<p><a href="http://eastviking.iteye.com/blog/32899" target="_blank">如何做svn迁移</a></p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/18/archlinux-%E5%AE%89%E8%A3%85-virtualbox/">Archlinux 安装 Virtualbox</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-18T00:00:00+08:00" pubdate data-updated="true">Aug 18<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>通过源安装完virtualbox之后，如果立马新建虚拟机的话会报错，</p>
+
+<p>解决的方法呢？</p>
+
+<p>[bash]<br />
+#查看内核版本<br />
+uname -a<br />
+#然后<br />
+sudo dkms install vboxhost/4.1.18 -k  3.4.7-1-ARCH/x86_64<br />
+modprobe vboxdrv<br />
+[/bash]</p>
+
+<p><strong>注意:</strong>根据实际情况替换版本号</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -376,172 +474,6 @@ chainloader +1<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/02/archlinux-%E7%BC%96%E8%AF%91-opencv%E6%94%AF%E6%8F%B4python/">Archlinux 编译 OpenCV支援Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-02T00:00:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>
-Step1</strong>
-DownLoad <em>OpenCV-2.4.2.tar.bz2</em></p>
-
-<p><strong>Step2</strong></p>
-
-<p>[bash]<br />
- cd OpenCV-2.4.2/<br />
- mkdir release<br />
- cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_PYTHON_SUPPORT=ON ..<br />
- sudo make<br />
- sudo make install<br />
-[/bash]</p>
-
-<p><strong>Step3</strong>
-安装完成之后会把cv的库安装到/usr/local/lib/python2.7/site-packages目录中<br />
-复制到你的python2.7所在的路径，或者加个.pth文件</p>
-
-<p>或者直接修改环境变量</p>
-
-<p>[bash]<br />
-export PYTHONPATH=&quot;/usr/local/lib/python2.7/site-packages/:$PYTHONPATH&quot;<br />
-vim /etc/ld.so.conf<br />
-add &quot;/usr/local/lib&quot;<br />
-[/bash]</p>
-
-<p><strong>Result</strong>
-进入OpenCV目录</p>
-
-<p>[bash]<br />
- cd OpenCV-2.4.2/samples/python<br />
- python2.7  delaunay.py<br />
-[/bash]</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/30/urxvt%E9%85%8D%E7%BD%AE/">URxvt配置</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-30T00:00:00+08:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>配置文件 .Xdefaults</p>
-
-<p>[bash]<br />
-!!title<br />
-URxvt.title:URxvrt-Jason<br />
-!! 设置 Xftp.dpi(字体分辨率）<br />
-Xft.dpi: 96<br />
-Xft.hinting: 1<br />
-Xft.hintstyle: hintslight<br />
-Xft.antialias: 1<br />
-Xft.rgba: rgb<br />
-!!URxvt.geometry: 90x25+180+200<br />
-!!Rxvt.menu: /etc/X11/rxvt.menu<br />
-!! coding<br />
-Rxvt.multichar_encoding: utf-8<br />
-Rxvt.imLocale: zh_CN.UTF-8<br />
-URxvt.preeditType: Root !!使urxvt启动速度加快<br />
-URxvt.depth: 32 !!透明必须<br />
-URxvt.background: [60]Black !!中括号中为透明度<br />
-URxvt.foreground: White</p>
-
-<p>URxvt.colorBD:Gray95<br />
-URxvt.colorUL:Green<br />
-URxvt.color1:Red2<br />
-URxvt.color4:RoyalBlue<br />
-URxvt.color5:Magenta2<br />
-URxvt.color8:Gray50<br />
-URxvt.color10:Green2<br />
-URxvt.color12:DodgerBlue<br />
-URxvt.color14:Cyan2<br />
-URxvt.color15:Gray95</p>
-
-<p>!!URxvt.font: xft:DejaVu Sans Mono:pixelsize=16<br />
-URxvt.font: xft:Ubuntu Mono:pixelsize=16:antialias=True,\<br />
-xft:WenQuanYi Zen Hei Mono:size=20:antialias=True</p>
-
-<p>!!滚动条设置<br />
-URxvt.scrollBar:True<br />
-URxvt.scrollBar_right:True<br />
-URxvt.scrollBar_floating:False<br />
-URxvt.scrollstyle:plain<br />
-!!滚屏设置<br />
-URxvt.mouseWheelScrollPage:True<br />
-URxvt.scrollTtyOutput: False<br />
-URxvt.scrollWithBuffer: True<br />
-URxvt.scrollTtyKeypress: True<br />
-!!光标闪烁<br />
-URxvt.cursorBlink:True<br />
-URxvt.saveLines:3000<br />
-!!边框<br />
-URxvt.borderLess: False<br />
-!!开启标签功能<br />
-!!URxvt.perl-ext-common: default,tabbed<br />
-!! Tab set<br />
-URxvt.perl-ext-common: default,tabbed<br />
-URxvt.tabbed.tab-fg: 12<br />
-URxvt.tabbed.tab-bg: 0<br />
-URxvt.tabbed.tabbar-fg: 4<br />
-[/bash]</p>
-
-<p><strong>Features:</strong>
-字体设置<br />
-Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -559,9 +491,10 @@ Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>
   <ul id="categories">
     <li class='category'><a href='/blog/categories/it/'>IT (16)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (5)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (6)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (2)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (1)</a></li>
+<li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
 <li class='category'><a href='/blog/categories/windows/'>Windows (1)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (14)</a></li>
@@ -646,6 +579,14 @@ Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/07/leave-gnome3/">离开Gnome3.6,奔向Xfce4</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/07/re-in-python-1/">[Python]-RE</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/06/write-latex-in-octopress/">在Octopress中使用Latex公式</a>
       </li>
     
@@ -655,14 +596,6 @@ Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>
     
       <li class="post">
         <a href="/blog/2012/11/04/imagemagic-shi-yong/">ImageMagic 使用</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/04/do-sth-after-install-ubuntu12-dot-xx/">在安装完Ubuntu12.xx后需要做的一些xx事情</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/04/config-octopress/">Config Octopress</a>
       </li>
     
   </ul>

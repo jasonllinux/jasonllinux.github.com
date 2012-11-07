@@ -9,13 +9,8 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="中文及渲染
-采用Ubunut的LCD补丁，避免字体发虚 [bash]
-yaourt -S cairo-ubuntu
-[/bash] 中文字体配置 [bash]
-yaourt -S fontconfig-ubuntu-zh-cn
-[/bash] 最后一步 [bash]
-gnome-tweak- &hellip;">
+  <meta name="description" content="Step1
+DownLoad OpenCV-2.4.2.tar.bz2 Step2 [bash] cd OpenCV-2.4.2/ mkdir release cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +83,172 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/02/archlinux-%E7%BC%96%E8%AF%91-opencv%E6%94%AF%E6%8F%B4python/">Archlinux 编译 OpenCV支援Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-02T00:00:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>
+Step1</strong>
+DownLoad <em>OpenCV-2.4.2.tar.bz2</em></p>
+
+<p><strong>Step2</strong></p>
+
+<p>[bash]<br />
+ cd OpenCV-2.4.2/<br />
+ mkdir release<br />
+ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_PYTHON_SUPPORT=ON ..<br />
+ sudo make<br />
+ sudo make install<br />
+[/bash]</p>
+
+<p><strong>Step3</strong>
+安装完成之后会把cv的库安装到/usr/local/lib/python2.7/site-packages目录中<br />
+复制到你的python2.7所在的路径，或者加个.pth文件</p>
+
+<p>或者直接修改环境变量</p>
+
+<p>[bash]<br />
+export PYTHONPATH=&quot;/usr/local/lib/python2.7/site-packages/:$PYTHONPATH&quot;<br />
+vim /etc/ld.so.conf<br />
+add &quot;/usr/local/lib&quot;<br />
+[/bash]</p>
+
+<p><strong>Result</strong>
+进入OpenCV目录</p>
+
+<p>[bash]<br />
+ cd OpenCV-2.4.2/samples/python<br />
+ python2.7  delaunay.py<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/30/urxvt%E9%85%8D%E7%BD%AE/">URxvt配置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-30T00:00:00+08:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>配置文件 .Xdefaults</p>
+
+<p>[bash]<br />
+!!title<br />
+URxvt.title:URxvrt-Jason<br />
+!! 设置 Xftp.dpi(字体分辨率）<br />
+Xft.dpi: 96<br />
+Xft.hinting: 1<br />
+Xft.hintstyle: hintslight<br />
+Xft.antialias: 1<br />
+Xft.rgba: rgb<br />
+!!URxvt.geometry: 90x25+180+200<br />
+!!Rxvt.menu: /etc/X11/rxvt.menu<br />
+!! coding<br />
+Rxvt.multichar_encoding: utf-8<br />
+Rxvt.imLocale: zh_CN.UTF-8<br />
+URxvt.preeditType: Root !!使urxvt启动速度加快<br />
+URxvt.depth: 32 !!透明必须<br />
+URxvt.background: [60]Black !!中括号中为透明度<br />
+URxvt.foreground: White</p>
+
+<p>URxvt.colorBD:Gray95<br />
+URxvt.colorUL:Green<br />
+URxvt.color1:Red2<br />
+URxvt.color4:RoyalBlue<br />
+URxvt.color5:Magenta2<br />
+URxvt.color8:Gray50<br />
+URxvt.color10:Green2<br />
+URxvt.color12:DodgerBlue<br />
+URxvt.color14:Cyan2<br />
+URxvt.color15:Gray95</p>
+
+<p>!!URxvt.font: xft:DejaVu Sans Mono:pixelsize=16<br />
+URxvt.font: xft:Ubuntu Mono:pixelsize=16:antialias=True,\<br />
+xft:WenQuanYi Zen Hei Mono:size=20:antialias=True</p>
+
+<p>!!滚动条设置<br />
+URxvt.scrollBar:True<br />
+URxvt.scrollBar_right:True<br />
+URxvt.scrollBar_floating:False<br />
+URxvt.scrollstyle:plain<br />
+!!滚屏设置<br />
+URxvt.mouseWheelScrollPage:True<br />
+URxvt.scrollTtyOutput: False<br />
+URxvt.scrollWithBuffer: True<br />
+URxvt.scrollTtyKeypress: True<br />
+!!光标闪烁<br />
+URxvt.cursorBlink:True<br />
+URxvt.saveLines:3000<br />
+!!边框<br />
+URxvt.borderLess: False<br />
+!!开启标签功能<br />
+!!URxvt.perl-ext-common: default,tabbed<br />
+!! Tab set<br />
+URxvt.perl-ext-common: default,tabbed<br />
+URxvt.tabbed.tab-fg: 12<br />
+URxvt.tabbed.tab-bg: 0<br />
+URxvt.tabbed.tabbar-fg: 4<br />
+[/bash]</p>
+
+<p><strong>Features:</strong>
+字体设置<br />
+Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -444,87 +605,9 @@ chown -R http.http /home/svn/repositories/REPO_NAME<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/02/ubuntu12-04-memo/">Ubuntu12.04 Memo</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-02T00:00:00+08:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.jasonllinux.com/wp-content/uploads/2012/05/precise-pangolin.jpg"><img class="aligncenter size-medium wp-image-19" title="precise-pangolin" src="http://www.jasonllinux.com/wp-content/uploads/2012/05/precise-pangolin-300x153.jpg" alt="" width="300" height="153" /></a></p>
-
-<p>从Beta开始用的12.04,从刚开始的Bug丛生到正式发布，终于等到头了.</p>
-
-<p><em>基础版：</em>
-nautilus-open-terminal<br />
-build-essential
-<strong>pdf中文</strong> poppler-data
-<strong>网页浏览器 </strong>Chromium
-<strong>桌面环境</strong> gnome-shell<strong>
-</strong> <strong>输入法</strong> fctix
-<strong>文字排版</strong> TexLive 2011
-<strong>Editor</strong> Vim-gnome
-<strong>Code</strong> eclipse ant subclipse
-<strong>E-mail</strong> thunderbird</p>
-
-<p><em>加强版</em>
-<strong>1.Dropbox</strong>
-源里有，但是部分被墙，自己动手，丰衣足食</p>
-
-<p><strong>2.goagent</strong>
-关于这个网上教程一坨，但是发现两个问题，首先是开机让它自动启动，其二就是PAC，系统全局代理</p>
-
-<p><strong>3.思维导图 xmind
-</strong>这是一个好东西，可以破解成Pro。。邪恶的笑。。。</p>
-
-<p><strong>4.Wine Dr.com</strong>
-在教学区上网就逃不过这个东西，以前由于版本问题，一直没有Wine成功过，直至最近，Ubuntu12.04+ Dr.com3.46,完美运行，无乱码哦
-<a href="http://www.jasonllinux.com/wp-content/uploads/2012/05/2012-05-04-190150的屏幕截图.png"><img class="alignleft size-medium wp-image-105" title="2012-05-04 19:01:50的屏幕截图" src="http://www.jasonllinux.com/wp-content/uploads/2012/05/2012-05-04-190150的屏幕截图-300x185.png" alt="" width="300" height="185" /></a></p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>待续&#8230;&#8230;</p>
-
-<p>&nbsp;</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/8/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -539,9 +622,10 @@ build-essential
   <ul id="categories">
     <li class='category'><a href='/blog/categories/it/'>IT (16)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (5)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (6)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (2)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (1)</a></li>
+<li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
 <li class='category'><a href='/blog/categories/windows/'>Windows (1)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (14)</a></li>
@@ -626,6 +710,14 @@ build-essential
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/07/leave-gnome3/">离开Gnome3.6,奔向Xfce4</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/07/re-in-python-1/">[Python]-RE</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/06/write-latex-in-octopress/">在Octopress中使用Latex公式</a>
       </li>
     
@@ -635,14 +727,6 @@ build-essential
     
       <li class="post">
         <a href="/blog/2012/11/04/imagemagic-shi-yong/">ImageMagic 使用</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/04/do-sth-after-install-ubuntu12-dot-xx/">在安装完Ubuntu12.xx后需要做的一些xx事情</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/04/config-octopress/">Config Octopress</a>
       </li>
     
   </ul>

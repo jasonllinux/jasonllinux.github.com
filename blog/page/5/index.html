@@ -9,14 +9,12 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="Hadoop configure 碎碎念，非教程！！！ 1. SSH配置
-免密钥 2. Host配置
-User和HostName匹配 3. x.xml相关
-dir配置
-端口配置
-java路径设置 hadoop-env.sh 4.常用操作 [bash]
-#格式化
-hadoop namenode - &hellip;">
+  <meta name="description" content="X宝上如了RGB键帽
+拆键帽的时候，差点把Shift搞坏了，好惊心 白色的键盘上终于有了点色彩
+唯一的缺陷是比原厂的键帽高了一些
+不过还好，只是几个功能键，不影响使用
+最后，上图： [gallery link=&#8221;file&#8221;] &nbsp; &nbsp;
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +87,106 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/12/cherry-g80-3000-%E6%8D%A2%E9%94%AE%E5%B8%BD/">Cherry G80-3000 换键帽</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-12T00:00:00+08:00" pubdate data-updated="true">Sep 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>X宝上如了RGB键帽<br />
+拆键帽的时候，差点把Shift搞坏了，好惊心</p>
+
+<p>白色的键盘上终于有了点色彩<br />
+唯一的缺陷是比原厂的键帽高了一些<br />
+不过还好，只是几个功能键，不影响使用<br />
+最后，上图：</p>
+
+<p>[gallery link=&#8221;file&#8221;]</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/10/cocos2d-x-2-x%E8%AE%BE%E7%BD%AE%E7%AB%96%E5%B1%8F%E6%96%B9%E6%B3%95/">Cocos2d-x 2.x设置竖屏方法</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-10T00:00:00+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>cocos2d-x从1.x到2.x的api转变还是有点大的，<br />
+找了半天没找到orientation的方法；<br />
+于是放狗<br />
+找到的方法貌似也不是很OK，先凑合着用<br />
+如果是ios平台<br />
+修改RootViewController.mm<br />
+[c]<br />
+(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {<br />
+    return UIInterfaceOrientationIsPortrait(interfaceOrientation);</p>
+
+<p>}<br />
+[/c]<br />
+如果是android平台<br />
+在AndroidManifest.xml中设置<br />
+[bash]<br />
+android:screenOrientation=&quot;portrait&quot;<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -319,105 +417,6 @@ compile。。。。done。。。。</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/26/svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/">SVN服务器迁移</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-26T00:00:00+08:00" pubdate data-updated="true">Aug 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>前段时间把托管比赛项目的svn服务器从自己的笔记本迁移到台式机上了，可以把所有历史记录版本信息都转走，实在是很方便：</p>
-
-<p>[bash]<br />
-#备份<br />
-svnadmin dump path/to/old-repo &gt; dumpfile</p>
-
-<p>#在新的服务器上新建svn &#8230;不再赘述<br />
-#还原<br />
-svnadmin load path/to/new-repo &lt; dumpfile<br />
-[/bash]</p>
-
-<p>参考：</p>
-
-<p><a href="http://eastviking.iteye.com/blog/32899" target="_blank">如何做svn迁移</a></p>
-
-<p>&nbsp;</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/18/archlinux-%E5%AE%89%E8%A3%85-virtualbox/">Archlinux 安装 Virtualbox</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-18T00:00:00+08:00" pubdate data-updated="true">Aug 18<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>通过源安装完virtualbox之后，如果立马新建虚拟机的话会报错，</p>
-
-<p>解决的方法呢？</p>
-
-<p>[bash]<br />
-#查看内核版本<br />
-uname -a<br />
-#然后<br />
-sudo dkms install vboxhost/4.1.18 -k  3.4.7-1-ARCH/x86_64<br />
-modprobe vboxdrv<br />
-[/bash]</p>
-
-<p><strong>注意:</strong>根据实际情况替换版本号</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -435,9 +434,10 @@ modprobe vboxdrv<br />
   <ul id="categories">
     <li class='category'><a href='/blog/categories/it/'>IT (16)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (5)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (6)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (2)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (1)</a></li>
+<li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
 <li class='category'><a href='/blog/categories/windows/'>Windows (1)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (14)</a></li>
@@ -522,6 +522,14 @@ modprobe vboxdrv<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/07/leave-gnome3/">离开Gnome3.6,奔向Xfce4</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/07/re-in-python-1/">[Python]-RE</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/06/write-latex-in-octopress/">在Octopress中使用Latex公式</a>
       </li>
     
@@ -531,14 +539,6 @@ modprobe vboxdrv<br />
     
       <li class="post">
         <a href="/blog/2012/11/04/imagemagic-shi-yong/">ImageMagic 使用</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/04/do-sth-after-install-ubuntu12-dot-xx/">在安装完Ubuntu12.xx后需要做的一些xx事情</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/04/config-octopress/">Config Octopress</a>
       </li>
     
   </ul>

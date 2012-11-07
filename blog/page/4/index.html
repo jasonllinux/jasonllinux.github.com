@@ -9,10 +9,8 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="Archer都知道的 配置Grub不像Ubuntu那么Easy，可以自动检测到其他盘符的系统 但是神器来了 os-prober 在安装玩Grub2之后iou [bash]
-pacman -S os-prober
-grub-mkconfig -o /boot/grub/grub.cfg
-[/bash &hellip;">
+  <meta name="description" content="Step By Step 在Win7和Linux环境下非客户端访问VPN设置 &nbsp;
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +83,134 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/26/win7%E5%92%8Clinux%E8%AE%BF%E9%97%AEvpn%E8%AE%BE%E7%BD%AE/">win7和Linux访问VPN设置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-26T00:00:00+08:00" pubdate data-updated="true">Sep 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Step By Step</p>
+
+<p>在Win7和Linux环境下非客户端访问VPN设置</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/26/debian-squeeze-%E5%AE%89%E8%A3%85pptp%E6%9C%8D%E5%8A%A1/">Debian Squeeze 安装PPTP服务</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-26T00:00:00+08:00" pubdate data-updated="true">Sep 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>入了VPS之后的第一件事情就是安装一个PPTP服务</p>
+
+<p>1.安装pptpd</p>
+
+<p>[bash]<br />
+sudo apt-get install pptpd<br />
+[/bash]</p>
+
+<p>2.配置/etc/pptpd.conf</p>
+
+<p>[bash]<br />
+##设置服务器 IP 地址与客服端 DHCP 分配地址范围<br />
+localip 192.168.0.1<br />
+remoteip 192.168.0.2-245<br />
+[/bash]</p>
+
+<p>3.编辑 /etc/ppp/pptpd-options</p>
+
+<p>[bash]<br />
+#为客户端提供DNS<br />
+ms-dns 8.8.8.8<br />
+ms-dns 8.8.4.4<br />
+[/bash]</p>
+
+<p>4.编辑 /etc/ppp/chap-secrets</p>
+
+<p>[bash]<br />
+#添加用户和密码<br />
+username   servername   password    *<br />
+[/bash]</p>
+
+<p>5.编辑 /etc/sysctl.conf</p>
+
+<p>[bash]<br />
+#开启IPV4转发<br />
+uncomment net.ipv4.ip_forward=1<br />
+sysctl -p<br />
+[/bash]</p>
+
+<p>6.设置Iptables</p>
+
+<p>[bash]iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE</p>
+
+<p>#设置MTU大小，解决部分网站无法访问的情况（MTU=MSS+20+20)<br />
+iptables -A FORWARD -p tcp &#8211;syn -s 192.168.0.0/24 -j TCPMSS &#8211;set-mss 1356<br />
+[/bash]</p>
+
+<p>7.启动服务<br />
+[bash]<br />
+/etc/init.d/pptpd restart<br />
+[/bash]</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -282,106 +408,6 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/12/cherry-g80-3000-%E6%8D%A2%E9%94%AE%E5%B8%BD/">Cherry G80-3000 换键帽</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-12T00:00:00+08:00" pubdate data-updated="true">Sep 12<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>X宝上如了RGB键帽<br />
-拆键帽的时候，差点把Shift搞坏了，好惊心</p>
-
-<p>白色的键盘上终于有了点色彩<br />
-唯一的缺陷是比原厂的键帽高了一些<br />
-不过还好，只是几个功能键，不影响使用<br />
-最后，上图：</p>
-
-<p>[gallery link=&#8221;file&#8221;]</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/10/cocos2d-x-2-x%E8%AE%BE%E7%BD%AE%E7%AB%96%E5%B1%8F%E6%96%B9%E6%B3%95/">Cocos2d-x 2.x设置竖屏方法</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-10T00:00:00+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>cocos2d-x从1.x到2.x的api转变还是有点大的，<br />
-找了半天没找到orientation的方法；<br />
-于是放狗<br />
-找到的方法貌似也不是很OK，先凑合着用<br />
-如果是ios平台<br />
-修改RootViewController.mm<br />
-[c]<br />
-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {<br />
-    return UIInterfaceOrientationIsPortrait(interfaceOrientation);</p>
-
-<p>}<br />
-[/c]<br />
-如果是android平台<br />
-在AndroidManifest.xml中设置<br />
-[bash]<br />
-android:screenOrientation=&quot;portrait&quot;<br />
-[/bash]</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -399,9 +425,10 @@ android:screenOrientation=&quot;portrait&quot;<br />
   <ul id="categories">
     <li class='category'><a href='/blog/categories/it/'>IT (16)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (5)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (6)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (2)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (1)</a></li>
+<li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
 <li class='category'><a href='/blog/categories/windows/'>Windows (1)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (14)</a></li>
@@ -486,6 +513,14 @@ android:screenOrientation=&quot;portrait&quot;<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/07/leave-gnome3/">离开Gnome3.6,奔向Xfce4</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/07/re-in-python-1/">[Python]-RE</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/06/write-latex-in-octopress/">在Octopress中使用Latex公式</a>
       </li>
     
@@ -495,14 +530,6 @@ android:screenOrientation=&quot;portrait&quot;<br />
     
       <li class="post">
         <a href="/blog/2012/11/04/imagemagic-shi-yong/">ImageMagic 使用</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/04/do-sth-after-install-ubuntu12-dot-xx/">在安装完Ubuntu12.xx后需要做的一些xx事情</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/04/config-octopress/">Config Octopress</a>
       </li>
     
   </ul>
