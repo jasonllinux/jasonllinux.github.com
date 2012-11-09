@@ -38,9 +38,9 @@ package()
 }
 
 ```
+<!-- more -->
 
-
-*wps-office.install
+* wps-office.install
 
 ``` bash
 #!/bin/bash

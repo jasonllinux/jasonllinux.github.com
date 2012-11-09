@@ -12,8 +12,8 @@ categories: Linux
 
 想继续用fcitx，遇到了一堆麻烦
 
-算了，改用xfce吧，貌似也不错
+算了，改用轻量级的桌面环境Xfce吧，貌似也不错
 
 最后
 
-__xx Gnome__ , 不整合ibus会死啊 。。。。。
+__XX Gnome__ , 不整合ibus会死啊 。。。。。
