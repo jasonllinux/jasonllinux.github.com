@@ -4,7 +4,7 @@
   <title><![CDATA[Category: IT | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/it/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-09T20:07:43+08:00</updated>
+  <updated>2012-11-09T20:36:11+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[关于TechMessager，关于王自如，关于ZEALER]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/09/laoda-wangzhan/"/>
+    <updated>2012-11-09T20:17:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/09/laoda-wangzhan</id>
+    <content type="html"><![CDATA[<p>今天一大早刷微博</p>
+
+<p>突然看到TechMessager，也就是王自如的新网站zealer开通的消息</p>
+
+<p>同时，伴随着的也是Ipad mini的 Reviewer</p>
+
+<p>也算比较早的关注他的相关视频评测，那时候的“刘跑跑”还很青涩</p>
+
+<p>在如今神码都讲究快速，快节奏的时代，而他的东西也在逐渐传达着一种精致，一种科技与生活相结合的美感</p>
+
+<p>由衷的为他们感到高兴，从老早开始决定办网站，开始铺牌，从毫无经验的菜鸟到现在至少有一个beta版呈现在大家面前</p>
+
+<p>无论 zealer的未来何去何从</p>
+
+<p>但是当Techmessager们努力的朝着他们的目标迈进的时候，总会留下一些不可磨灭的印记</p>
+
+<p>一个字 ，“ <strong>顶</strong> ”</p>
+
+<p><img src="http://i.minus.com/i3uy9ppgFqTGD.png"></p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[git push 错误]]></title>
@@ -94,67 +122,6 @@ DirectoryIndex index.html<br />
     <content type="html"><![CDATA[<p>Step By Step</p>
 
 <p>在Win7和Linux环境下非客户端访问VPN设置</p>
-
-<p>&nbsp;</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Debian Squeeze 安装PPTP服务]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/09/26/debian-squeeze-%E5%AE%89%E8%A3%85pptp%E6%9C%8D%E5%8A%A1/"/>
-    <updated>2012-09-26T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/09/26/debian-squeeze-安装pptp服务</id>
-    <content type="html"><![CDATA[<p>入了VPS之后的第一件事情就是安装一个PPTP服务</p>
-
-<p>1.安装pptpd</p>
-
-<p>[bash]<br />
-sudo apt-get install pptpd<br />
-[/bash]</p>
-
-<p>2.配置/etc/pptpd.conf</p>
-
-<p>[bash]<br />
-##设置服务器 IP 地址与客服端 DHCP 分配地址范围<br />
-localip 192.168.0.1<br />
-remoteip 192.168.0.2-245<br />
-[/bash]</p>
-
-<p>3.编辑 /etc/ppp/pptpd-options</p>
-
-<p>[bash]<br />
-#为客户端提供DNS<br />
-ms-dns 8.8.8.8<br />
-ms-dns 8.8.4.4<br />
-[/bash]</p>
-
-<p>4.编辑 /etc/ppp/chap-secrets</p>
-
-<p>[bash]<br />
-#添加用户和密码<br />
-username   servername   password    *<br />
-[/bash]</p>
-
-<p>5.编辑 /etc/sysctl.conf</p>
-
-<p>[bash]<br />
-#开启IPV4转发<br />
-uncomment net.ipv4.ip_forward=1<br />
-sysctl -p<br />
-[/bash]</p>
-
-<p>6.设置Iptables</p>
-
-<p>[bash]iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE</p>
-
-<p>#设置MTU大小，解决部分网站无法访问的情况（MTU=MSS+20+20)<br />
-iptables -A FORWARD -p tcp --syn -s 192.168.0.0/24 -j TCPMSS --set-mss 1356<br />
-[/bash]</p>
-
-<p>7.启动服务<br />
-[bash]<br />
-/etc/init.d/pptpd restart<br />
-[/bash]</p>
 
 <p>&nbsp;</p>
 ]]></content>
