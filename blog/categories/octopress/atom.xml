@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-07T19:43:03+08:00</updated>
+  <updated>2012-11-09T20:07:43+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -112,6 +112,73 @@ body {
 
 <h2 id="more">More</h2>
 <p>excerpt_link: “Read on →”  # 在文章中使用<!-- more -->,列表页将不再显示全文，而是显示“Read on”的链接，指向全文  </p>
+
+<h2 id="octopress">在Octopress中使用表格</h2>
+<ul>
+  <li>在 source/stylesheests中添加data-table.css</li>
+</ul>
+
+<p>``` html
+* + table {
+  border-style:solid;
+  border-width:1px;
+  border-color:#e7e3e7;
+}</p>
+
+<ul>
+  <li>
+    <ul>
+      <li>table th, * + table td {
+border-style:dashed;
+border-width:1px;
+border-color:#e7e3e7;
+padding-left: 3px;
+padding-right: 3px;
+}</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>table th {
+border-style:solid;
+font-weight:bold;
+background: url(“/images/noise.png?1330434582”) repeat scroll left top #F7F3F7;
+}</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>table th[align=”left”], * + table td[align=”left”] {
+text-align:left;
+}</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>table th[align=”right”], * + table td[align=”right”] {
+text-align:right;
+}</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>table th[align=”center”], * + table td[align=”center”] {
+text-align:center;
+}</li>
+    </ul>
+  </li>
+</ul>
+
+<p>```
+修改 source/_includes/head.html</p>
+
+<p>``` html
+<link href="http://jasonllinux.github.com/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<link href="http://jasonllinux.github.com/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" /></p>
+
+<p>```</p>
+
+<p>表格示例:</p>
 
 ]]></content>
   </entry>

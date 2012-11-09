@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-07T19:43:03+08:00</updated>
+  <updated>2012-11-09T20:07:43+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -18,7 +18,29 @@
     <link href="http://jasonllinux.github.com/blog/2012/11/07/re-in-python-1/"/>
     <updated>2012-11-07T11:30:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/11/07/re-in-python-1</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>正则表达式是个牛叉的东东，如果运用的好，能够在平时的开发中事半功倍！</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Header</th>
+      <th>Second Header</th>
+      <th>Third Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+    </tr>
+    <tr>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+    </tr>
+  </tbody>
+</table>
 ]]></content>
   </entry>
   

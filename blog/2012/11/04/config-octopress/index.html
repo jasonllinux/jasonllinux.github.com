@@ -37,6 +37,11 @@ git clone git@github.com &hellip;">
 
   
 
+  
+  
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <!-- mathjax config similar to math.stackexchange -->
@@ -155,6 +160,84 @@ MathJax.Hub.Config({
 
 <h2 id="more">More</h2>
 <p>excerpt_link: “Read on →”  # 在文章中使用<!-- more -->,列表页将不再显示全文，而是显示“Read on”的链接，指向全文  </p>
+
+<h2 id="octopress">在Octopress中使用表格</h2>
+<ul>
+  <li>在 source/stylesheests中添加data-table.css</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+</pre></td><td class="code"><pre><code class="html"><span class="line">* + table {
+</span><span class="line">  border-style:solid;
+</span><span class="line">  border-width:1px;
+</span><span class="line">  border-color:#e7e3e7;
+</span><span class="line">}
+</span><span class="line">
+</span><span class="line">* + table th, * + table td {
+</span><span class="line">  border-style:dashed;
+</span><span class="line">  border-width:1px;
+</span><span class="line">  border-color:#e7e3e7;
+</span><span class="line">  padding-left: 3px;
+</span><span class="line">  padding-right: 3px;
+</span><span class="line">}
+</span><span class="line">
+</span><span class="line">* + table th {
+</span><span class="line">  border-style:solid;
+</span><span class="line">  font-weight:bold;
+</span><span class="line">  background: url(&quot;/images/noise.png?1330434582&quot;) repeat scroll left top #F7F3F7;
+</span><span class="line">}
+</span><span class="line">
+</span><span class="line">* + table th[align=&quot;left&quot;], * + table td[align=&quot;left&quot;] {
+</span><span class="line">  text-align:left;
+</span><span class="line">}
+</span><span class="line">
+</span><span class="line">* + table th[align=&quot;right&quot;], * + table td[align=&quot;right&quot;] {
+</span><span class="line">  text-align:right;
+</span><span class="line">}
+</span><span class="line">
+</span><span class="line">* + table th[align=&quot;center&quot;], * + table td[align=&quot;center&quot;] {
+</span><span class="line">  text-align:center;
+</span><span class="line">}
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<p>修改 source/_includes/head.html</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="html"><span class="line"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;/stylesheets/screen.css&quot;</span> <span class="na">media=</span><span class="s">&quot;screen, projection&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
+</span><span class="line"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;/stylesheets/data-table.css&quot;</span> <span class="na">media=</span><span class="s">&quot;screen, projection&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>表格示例:</p>
 
 </div>
 
