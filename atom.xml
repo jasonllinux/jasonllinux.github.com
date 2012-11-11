@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-09T20:36:11+08:00</updated>
+  <updated>2012-11-11T14:12:26+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[switch to sublime text2]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/11/switch-to-sublime-text2/"/>
+    <updated>2012-11-11T14:03:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/11/switch-to-sublime-text2</id>
+    <content type="html"><![CDATA[<p>今天是双11光棍节，各大电商硝烟四起</p>
+
+<p>一大早买了个耳塞</p>
+
+<p>好吧，开始sublime</p>
+
+<p>其实老早就在Arch中安装了Subliem Text2, 但是由于种种原因（习惯了Vim，无法输入中文等等）导致使用频率接近于0</p>
+
+<p>今天偶然，又重拾Sublime</p>
+
+<p>最中意的是它的Ctrl+Shift+P模式</p>
+
+<p>感觉类似与Ubuntu现在的HUD模式,Cool</p>
+
+<p>这样就可以少记很多快捷键</p>
+
+<p>分栏 Shift+Alt+2 等</p>
+
+<p>折腾了一早上，撞了一堆插件，改了主题</p>
+
+<p>放图</p>
+
+<p><img src="http://i.minus.com/isBmbp2bXYFtt.png" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[关于TechMessager，关于王自如，关于ZEALER]]></title>
@@ -1234,37 +1265,6 @@ DirectoryIndex index.html<br />
 <p>用浏览器就可以访问了 http://www.xxx.com/resume</p>
 
 <p>Done!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Eclipse中WindowsBuilder使用问题]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/09/28/eclipse%E4%B8%ADwindowsbuilder%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/"/>
-    <updated>2012-09-28T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/09/28/eclipse中windowsbuilder使用问题</id>
-    <content type="html"><![CDATA[<p>以前偶然用过windowsbuilder，觉得特方便</p>
-
-<p>最近想hack一个Monitor</p>
-
-<p>于是安装，使用。。。</p>
-
-<p>但是中间出现了一个问题</p>
-
-<p>就是windowsbuilder的GUI界面没法显示</p>
-
-<p>纠结来纠结去</p>
-
-<p>原来是一个小小的设置问题</p>
-
-<p>见下图</p>
-
-<p><a href="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/wb.png"><img class="size-medium wp-image-408 alignnone" title="wb" src="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/wb-300x86.png" alt="" width="300" height="86" /></a></p>
-
-<p>修改Window&gt;&gt;Preferences&gt;&gt;WindowsBuilder</p>
-
-<p>修改EditorLayout，如图所示，</p>
-
-<p>OK</p>
 ]]></content>
   </entry>
   

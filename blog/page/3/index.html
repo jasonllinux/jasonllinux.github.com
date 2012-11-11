@@ -9,7 +9,7 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="最近几天在Windows平台搭建 OpenCV 的python开发平台 但是，当横子横子编译完OpenCV后 把相应的pyd导入到python的site-packages中 import cv2居然说不是32位应用程序 于是之，我知道又是64bit的缘故 果断的 换32位的python，一切OK &hellip;">
+  <meta name="description" content="最近小研究了下使用OpenCV进行人脸检测 老早用Python实现过 最近回归C++ 当然，还是用Eclipse了 刚开始只是惯性的设置了include路径，所以头文件什么的都没有问题 但是，最后Build的时候出现了N多 undefined reference to xxx 网上搜了一把， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +87,60 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/">Linux下Eclipse中编译OpenCV相关工程问题</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-27T21:53:00+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>最近小研究了下使用OpenCV进行人脸检测</p>
+
+<p>老早用Python实现过</p>
+
+<p>最近回归C++</p>
+
+<p>当然，还是用Eclipse了</p>
+
+<p>刚开始只是惯性的设置了include路径，所以头文件什么的都没有问题</p>
+
+<p>但是，最后Build的时候出现了N多 undefined reference to xxx</p>
+
+<p>网上搜了一把，原来是要设置Lib路径</p>
+
+<p>但是简单的把/usr/local/lib add进去也是没用</p>
+
+<p>要一个一个add 注意去掉前面的 lib 以及后面的 .so</p>
+
+<p>这样就OK了</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -316,59 +370,6 @@ git config http.postBuffer 209715200<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/17/goagent%E4%BB%8E1-x%E5%8D%87%E7%BA%A7%E5%88%B02-x/">GoAgent从1.x升级到2.x</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-17T00:00:00+08:00" pubdate data-updated="true">Oct 17<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>好久没升级goagent了</p>
-
-<p>从google code上下载了最新稳定版</p>
-
-<p>shit</p>
-
-<p>居然要安装些其他东西<br />
-[bash]<br />
-sudo curl -k -L http://git.io/I9B7RQ|sh<br />
-[/bash]</p>
-
-<p>装完之后，还是不行，出现 error</p>
-
-<p>原来还得重新upload一下</p>
-
-<p>虽然曲折了一些，但是还是要感谢goagent，让生活更加美好！</p>
-
-<p>&nbsp;</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -384,7 +385,8 @@ sudo curl -k -L http://git.io/I9B7RQ|sh<br />
     <section>
   <h1>Categories</h1>
   <ul id="categories">
-    <li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
+    <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
+<li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>Linux (7)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (2)</a></li>
@@ -474,6 +476,10 @@ sudo curl -k -L http://git.io/I9B7RQ|sh<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/11/switch-to-sublime-text2/">switch to sublime text2</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/09/laoda-wangzhan/">关于TechMessager，关于王自如，关于ZEALER</a>
       </li>
     
@@ -487,10 +493,6 @@ sudo curl -k -L http://git.io/I9B7RQ|sh<br />
     
       <li class="post">
         <a href="/blog/2012/11/07/re-in-python-1/">[Python]-RE</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/06/write-latex-in-octopress/">在Octopress中使用Latex公式</a>
       </li>
     
   </ul>

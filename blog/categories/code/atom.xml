@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Code | Jasonllinux's Blog]]></title>
+  <link href="http://jasonllinux.github.com/blog/categories/code/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.com/"/>
+  <updated>2012-11-11T14:12:26+08:00</updated>
+  <id>http://jasonllinux.github.com/</id>
+  <author>
+    <name><![CDATA[jasonllinux]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[switch to sublime text2]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/11/switch-to-sublime-text2/"/>
+    <updated>2012-11-11T14:03:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/11/switch-to-sublime-text2</id>
+    <content type="html"><![CDATA[<p>今天是双11光棍节，各大电商硝烟四起</p>
+
+<p>一大早买了个耳塞</p>
+
+<p>好吧，开始sublime</p>
+
+<p>其实老早就在Arch中安装了Subliem Text2, 但是由于种种原因（习惯了Vim，无法输入中文等等）导致使用频率接近于0</p>
+
+<p>今天偶然，又重拾Sublime</p>
+
+<p>最中意的是它的Ctrl+Shift+P模式</p>
+
+<p>感觉类似与Ubuntu现在的HUD模式,Cool</p>
+
+<p>这样就可以少记很多快捷键</p>
+
+<p>分栏 Shift+Alt+2 等</p>
+
+<p>折腾了一早上，撞了一堆插件，改了主题</p>
+
+<p>放图</p>
+
+<p><img src="http://i.minus.com/isBmbp2bXYFtt.png"></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -9,11 +9,7 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="在Linux环境下ImageMagic可以用来简单的对图片作一些处理
-简直就是神器 用法举例 1
-2
-#改变图片大小
-convert -resize 50x50 heart.png heart1.png ">
+  <meta name="description" content="% <![CDATA[ \begin{align*} & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,6 +87,58 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/05/algorithm-complexity/">[Algorithm]——算法复杂度</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-05T16:44:00+08:00" pubdate data-updated="true">Nov 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><script type="math/tex; mode=display">% <![CDATA[
+
+\begin{align*}
+  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+      \vdots & \ddots & \vdots \\
+      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*}
+ %]]></script>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -362,60 +410,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/">Linux下Eclipse中编译OpenCV相关工程问题</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-27T21:53:00+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>最近小研究了下使用OpenCV进行人脸检测</p>
-
-<p>老早用Python实现过</p>
-
-<p>最近回归C++</p>
-
-<p>当然，还是用Eclipse了</p>
-
-<p>刚开始只是惯性的设置了include路径，所以头文件什么的都没有问题</p>
-
-<p>但是，最后Build的时候出现了N多 undefined reference to xxx</p>
-
-<p>网上搜了一把，原来是要设置Lib路径</p>
-
-<p>但是简单的把/usr/local/lib add进去也是没用</p>
-
-<p>要一个一个add 注意去掉前面的 lib 以及后面的 .so</p>
-
-<p>这样就OK了</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -431,7 +425,8 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
     <section>
   <h1>Categories</h1>
   <ul id="categories">
-    <li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
+    <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
+<li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>Linux (7)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (2)</a></li>
@@ -521,6 +516,10 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/11/switch-to-sublime-text2/">switch to sublime text2</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/09/laoda-wangzhan/">关于TechMessager，关于王自如，关于ZEALER</a>
       </li>
     
@@ -534,10 +533,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
     
       <li class="post">
         <a href="/blog/2012/11/07/re-in-python-1/">[Python]-RE</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/06/write-latex-in-octopress/">在Octopress中使用Latex公式</a>
       </li>
     
   </ul>
