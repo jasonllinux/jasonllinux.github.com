@@ -9,10 +9,8 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="好久没升级goagent了 从google code上下载了最新稳定版 shit 居然要安装些其他东西
-[bash]
-sudo curl -k -L http://git.io/I9B7RQ|sh
-[/bash] 装完之后，还是不行，出现 error 原来还得重新upload一下 虽然曲折了一些， &hellip;">
+  <meta name="description" content="悲了个剧 从linux下拷贝一个pdf文件到win8中，重启进入win8发现读不了 就知道坏了，删除，发现也删除不掉 下载了一些文件粉碎机 也没用 最后 1
+CHKDSK C:/F ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,6 +88,103 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/21/win8-delete-file/">Win8 下无法删除文件，文件或目录损坏且无法读取</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-21T15:30:00+08:00" pubdate data-updated="true">Oct 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>悲了个剧</p>
+
+<p>从linux下拷贝一个pdf文件到win8中，重启进入win8发现读不了</p>
+
+<p>就知道坏了，删除，发现也删除不掉</p>
+
+<p>下载了一些文件粉碎机 也没用</p>
+
+<p>最后 </p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">CHKDSK C:/F
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/">Git Push 错误</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-18T00:00:00+08:00" pubdate data-updated="true">Oct 18<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今天，上传代码到github上的时候 莫名其妙出现：</p>
+
+<p>[bash]<br />
+Unable to rewind rpc post data - try increasing http.postBuffer<br />
+error: RPC failed; result=65, HTTP code = 401<br />
+fatal: The remote end hung up unexpectedly<br />
+fatal: The remote end hung up unexpectedly<br />
+[/bash]</p>
+
+<p>解决方案：</p>
+
+<p>[bash]<br />
+git config http.postBuffer 209715200<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -294,143 +389,6 @@ DirectoryIndex index.html<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/26/debian-squeeze-%E5%AE%89%E8%A3%85pptp%E6%9C%8D%E5%8A%A1/">Debian Squeeze 安装PPTP服务</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-26T00:00:00+08:00" pubdate data-updated="true">Sep 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>入了VPS之后的第一件事情就是安装一个PPTP服务</p>
-
-<p>1.安装pptpd</p>
-
-<p>[bash]<br />
-sudo apt-get install pptpd<br />
-[/bash]</p>
-
-<p>2.配置/etc/pptpd.conf</p>
-
-<p>[bash]<br />
-##设置服务器 IP 地址与客服端 DHCP 分配地址范围<br />
-localip 192.168.0.1<br />
-remoteip 192.168.0.2-245<br />
-[/bash]</p>
-
-<p>3.编辑 /etc/ppp/pptpd-options</p>
-
-<p>[bash]<br />
-#为客户端提供DNS<br />
-ms-dns 8.8.8.8<br />
-ms-dns 8.8.4.4<br />
-[/bash]</p>
-
-<p>4.编辑 /etc/ppp/chap-secrets</p>
-
-<p>[bash]<br />
-#添加用户和密码<br />
-username   servername   password    *<br />
-[/bash]</p>
-
-<p>5.编辑 /etc/sysctl.conf</p>
-
-<p>[bash]<br />
-#开启IPV4转发<br />
-uncomment net.ipv4.ip_forward=1<br />
-sysctl -p<br />
-[/bash]</p>
-
-<p>6.设置Iptables</p>
-
-<p>[bash]iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE</p>
-
-<p>#设置MTU大小，解决部分网站无法访问的情况（MTU=MSS+20+20)<br />
-iptables -A FORWARD -p tcp &#8211;syn -s 192.168.0.0/24 -j TCPMSS &#8211;set-mss 1356<br />
-[/bash]</p>
-
-<p>7.启动服务<br />
-[bash]<br />
-/etc/init.d/pptpd restart<br />
-[/bash]</p>
-
-<p>&nbsp;</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/23/archlinux-%E9%85%8D%E7%BD%AEgrub2%E7%AE%80%E4%BE%BF%E6%96%B9%E6%B3%95/">Archlinux 配置Grub2简便方法</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-23T00:00:00+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Archer都知道的</p>
-
-<p>配置Grub不像Ubuntu那么Easy，可以自动检测到其他盘符的系统</p>
-
-<p>但是神器来了</p>
-
-<p><strong>os-prober</strong></p>
-
-<p>在安装玩Grub2之后iou</p>
-
-<p>[bash]<br />
-pacman -S os-prober<br />
-grub-mkconfig -o /boot/grub/grub.cfg<br />
-[/bash]</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -446,10 +404,11 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
     <section>
   <h1>Categories</h1>
   <ul id="categories">
-    <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
+    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (2)</a></li>
+<li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
 <li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (7)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (8)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (2)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (1)</a></li>
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
@@ -537,6 +496,14 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/18/svn-server-in-ubuntu12-dot-10/">Ubuntu12.10 搭建 SVN服务器</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/11/some-distance/">[Algorithm]——几种距离</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/11/switch-to-sublime-text2/">switch to sublime text2</a>
       </li>
     
@@ -546,14 +513,6 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
     
       <li class="post">
         <a href="/blog/2012/11/07/install-wps-in-arch/">Arch中安装WPS A6</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/07/leave-gnome3/">离开Gnome3.6,奔向Xfce4</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/07/re-in-python-1/">[Python]-RE</a>
       </li>
     
   </ul>

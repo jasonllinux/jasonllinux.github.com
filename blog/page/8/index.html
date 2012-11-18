@@ -9,9 +9,14 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="在Linux环境使用$$\LaTeX$$一般使用TexLive套装，而作为天朝子民，使用中文是件头等大事。 在网上大致浏览到两类方式：
-第一种是盗版windows字体，修改ctex配置文件，要用中文的时候就用ctex宏包；
-第二种方式就是使用XeLatex，直接调用系统中文字体。 &hellip;">
+  <meta name="description" content="配置文件 .Xdefaults [bash]
+!!title
+URxvt.title:URxvrt-Jason
+!! 设置 Xftp.dpi(字体分辨率）
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.hintstyle: hintslight
+Xft.antialias: 1 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +94,160 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/30/urxvt%E9%85%8D%E7%BD%AE/">URxvt配置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-30T00:00:00+08:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>配置文件 .Xdefaults</p>
+
+<p>[bash]<br />
+!!title<br />
+URxvt.title:URxvrt-Jason<br />
+!! 设置 Xftp.dpi(字体分辨率）<br />
+Xft.dpi: 96<br />
+Xft.hinting: 1<br />
+Xft.hintstyle: hintslight<br />
+Xft.antialias: 1<br />
+Xft.rgba: rgb<br />
+!!URxvt.geometry: 90x25+180+200<br />
+!!Rxvt.menu: /etc/X11/rxvt.menu<br />
+!! coding<br />
+Rxvt.multichar_encoding: utf-8<br />
+Rxvt.imLocale: zh_CN.UTF-8<br />
+URxvt.preeditType: Root !!使urxvt启动速度加快<br />
+URxvt.depth: 32 !!透明必须<br />
+URxvt.background: [60]Black !!中括号中为透明度<br />
+URxvt.foreground: White</p>
+
+<p>URxvt.colorBD:Gray95<br />
+URxvt.colorUL:Green<br />
+URxvt.color1:Red2<br />
+URxvt.color4:RoyalBlue<br />
+URxvt.color5:Magenta2<br />
+URxvt.color8:Gray50<br />
+URxvt.color10:Green2<br />
+URxvt.color12:DodgerBlue<br />
+URxvt.color14:Cyan2<br />
+URxvt.color15:Gray95</p>
+
+<p>!!URxvt.font: xft:DejaVu Sans Mono:pixelsize=16<br />
+URxvt.font: xft:Ubuntu Mono:pixelsize=16:antialias=True,\<br />
+xft:WenQuanYi Zen Hei Mono:size=20:antialias=True</p>
+
+<p>!!滚动条设置<br />
+URxvt.scrollBar:True<br />
+URxvt.scrollBar_right:True<br />
+URxvt.scrollBar_floating:False<br />
+URxvt.scrollstyle:plain<br />
+!!滚屏设置<br />
+URxvt.mouseWheelScrollPage:True<br />
+URxvt.scrollTtyOutput: False<br />
+URxvt.scrollWithBuffer: True<br />
+URxvt.scrollTtyKeypress: True<br />
+!!光标闪烁<br />
+URxvt.cursorBlink:True<br />
+URxvt.saveLines:3000<br />
+!!边框<br />
+URxvt.borderLess: False<br />
+!!开启标签功能<br />
+!!URxvt.perl-ext-common: default,tabbed<br />
+!! Tab set<br />
+URxvt.perl-ext-common: default,tabbed<br />
+URxvt.tabbed.tab-fg: 12<br />
+URxvt.tabbed.tab-bg: 0<br />
+URxvt.tabbed.tabbar-fg: 4<br />
+[/bash]</p>
+
+<p><strong>Features:</strong>
+字体设置<br />
+Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/02/archlinux-memo/">Archlinux Memo</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-02T00:00:00+08:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>中文及渲染<br />
+采用Ubunut的LCD补丁，避免字体发虚</p>
+
+<p>[bash]<br />
+yaourt -S cairo-ubuntu<br />
+[/bash]</p>
+
+<p>中文字体配置</p>
+
+<p>[bash]<br />
+yaourt -S fontconfig-ubuntu-zh-cn<br />
+[/bash]</p>
+
+<p>最后一步</p>
+
+<p>[bash]<br />
+gnome-tweak-tool<br />
+[/bash]</p>
+
+<p>调整如下：
+<a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/gtt.png"><img class="aligncenter size-medium wp-image-211" title="gtt" src="http://www.jasonllinux.com/wp-content/uploads/2012/07/gtt-300x239.png" alt="" width="300" height="239" /></a>OK 收工！</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -482,10 +641,11 @@ build-essential
     <section>
   <h1>Categories</h1>
   <ul id="categories">
-    <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
+    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (2)</a></li>
+<li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
 <li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (7)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (8)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (2)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (1)</a></li>
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
@@ -573,6 +733,14 @@ build-essential
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/18/svn-server-in-ubuntu12-dot-10/">Ubuntu12.10 搭建 SVN服务器</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/11/some-distance/">[Algorithm]——几种距离</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/11/switch-to-sublime-text2/">switch to sublime text2</a>
       </li>
     
@@ -582,14 +750,6 @@ build-essential
     
       <li class="post">
         <a href="/blog/2012/11/07/install-wps-in-arch/">Arch中安装WPS A6</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/07/leave-gnome3/">离开Gnome3.6,奔向Xfce4</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/07/re-in-python-1/">[Python]-RE</a>
       </li>
     
   </ul>

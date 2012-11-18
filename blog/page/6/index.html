@@ -9,13 +9,14 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="新学期，觉得有必要给自己一个刺激点，顺便犒劳下自己最近的辛勤劳动
-于是从X宝上面入了梦寐以求的Cheryy G80-3000 白色茶轴
-初印象：
-第一次使用机械键盘 还是很激动
-一片奶白色，世界纯净了
-手感果然很正，这颜色，这feeling感觉回到了小霸王的时代
-再用回薄膜键盘，感觉很不习惯, &hellip;">
+  <meta name="description" content="cocos2d-x从1.x到2.x的api转变还是有点大的，
+找了半天没找到orientation的方法；
+于是放狗
+找到的方法貌似也不是很OK，先凑合着用
+如果是ios平台
+修改RootViewController.mm
+[c]
+(BOOL) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +94,136 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/10/cocos2d-x-2-x%E8%AE%BE%E7%BD%AE%E7%AB%96%E5%B1%8F%E6%96%B9%E6%B3%95/">Cocos2d-x 2.x设置竖屏方法</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-10T00:00:00+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>cocos2d-x从1.x到2.x的api转变还是有点大的，<br />
+找了半天没找到orientation的方法；<br />
+于是放狗<br />
+找到的方法貌似也不是很OK，先凑合着用<br />
+如果是ios平台<br />
+修改RootViewController.mm<br />
+[c]<br />
+(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {<br />
+    return UIInterfaceOrientationIsPortrait(interfaceOrientation);</p>
+
+<p>}<br />
+[/c]<br />
+如果是android平台<br />
+在AndroidManifest.xml中设置<br />
+[bash]<br />
+android:screenOrientation=&quot;portrait&quot;<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/05/hadoop%E7%A2%8E%E7%A2%8E%E5%BF%B5/">Hadoop碎碎念</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-05T00:00:00+08:00" pubdate data-updated="true">Sep 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>Hadoop configure 碎碎念，非教程！！！</strong></p>
+
+<p>1. SSH配置<br />
+免密钥</p>
+
+<p>2. Host配置<br />
+User和HostName匹配</p>
+
+<p>3. x.xml相关<br />
+dir配置<br />
+端口配置<br />
+java路径设置 hadoop-env.sh</p>
+
+<p>4.常用操作</p>
+
+<p>[bash]<br />
+#格式化<br />
+hadoop namenode -format<br />
+#启动<br />
+start-all.sh<br />
+#终止<br />
+stop-all.sh<br />
+#进程<br />
+jps<br />
+hadoop dfsadmin -report<br />
+#离开安全模式<br />
+hadoop dfsadmin -safemode leave<br />
+[/bash]</p>
+
+<p><strong>测试</strong>
+启动Hadoop，<br />
+cd Hadoop目录，输入以下命令执行Pi Estimator程序：</p>
+
+<p>[bash]hadoop jar hadoop-examples.jar pi 2 10<br />
+[/bash]</p>
+
+<p><strong>运行结果：</strong></p>
+
+<p><strong>Hadoop Eclipse插件设置</strong>
+Location name（取个名字）<br />
+Map/Reduce Master（Job Tracker的IP和端口，根据mapred-site.xml中配置的mapred.job.tracker来填写）<br />
+DFS Master（Name Node的IP和端口，根据core-site.xml中配置的fs.default.name来填写）<br />
+最后，切换到Project 视图，就可以看到文件目录了</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -296,165 +427,6 @@ svnadmin load path/to/new-repo &lt; dumpfile<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/18/archlinux-%E5%AE%89%E8%A3%85-virtualbox/">Archlinux 安装 Virtualbox</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-18T00:00:00+08:00" pubdate data-updated="true">Aug 18<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>通过源安装完virtualbox之后，如果立马新建虚拟机的话会报错，</p>
-
-<p>解决的方法呢？</p>
-
-<p>[bash]<br />
-#查看内核版本<br />
-uname -a<br />
-#然后<br />
-sudo dkms install vboxhost/4.1.18 -k  3.4.7-1-ARCH/x86_64<br />
-modprobe vboxdrv<br />
-[/bash]</p>
-
-<p><strong>注意:</strong>根据实际情况替换版本号</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/16/gentoo%E5%AE%89%E8%A3%85/">Gentoo安装</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-16T00:00:00+08:00" pubdate data-updated="true">Aug 16<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>受不了Gentoo的诱惑，前端时间花了大概三天时间折腾了下Gentoo，简单记录下安装过程</p>
-
-<p>[bash]<br />
-分区&amp;&amp;格式化<br />
-mkfs.ext4 /dev/sdaXX<br />
-mkswap /dev/sdaXX</p>
-
-<p>挂载分区<br />
-sudo mount /dev/sdaXX /mnt/gentoo<br />
-mkdir /mnt/gentoo/boot<br />
-mkdir /mnt/gentoo/home<br />
-swapon /dev/sdaXX</p>
-
-<p>把下载好的stageXX和portageXX解压<br />
-tar xvjpf stagexx /mnt/gentoo/<br />
-tar xvjf portageX -C /mnt/gentoo/usr</p>
-
-<p>cp -L /etc/resolve.conf /mnt/gentoo/etc/</p>
-
-<p>mount -t proc none /mnt/gentoo/proc<br />
-mount -o rbind /dev /mnt/gentoo/dev</p>
-
-<p>chroot /mnt/gentoo /bin/bash</p>
-
-<p>env-update<br />
-source /etc/profile<br />
-export PS1=&quot;(chroot)$PS1&quot;<br />
-编辑 /etc/make.conf<br />
-+MAKEOPTS=&quot;-j5&quot;<br />
-ACCEPT_KEYWORDS=&quot;amd64&quot;<br />
-GENTOO_MIRRORS=&quot;http://mirrors.xmu.edu.cn/gentoo&quot;<br />
-SYNC=&quot;rsync://mirrors.xmu.edu.cn/gentoo-portage&quot;<br />
-VIDEO_CARDS=&quot;nvidia&quot;<br />
-INPUT_DEVICES=&quot;evdev synapitcs&quot;<br />
-emerge &#8211;sync<br />
-emerge gentoo-sources<br />
-emerge genkernel<br />
-zcat /proc/config.gz &gt; /usr/share/genkernel/arch/x86_64/kernel-config<br />
-genkernel &#8211;menuconfig all</p>
-
-<p>修改 /etc/fstab</p>
-
-<p>修改 /etc/hostname</p>
-
-<p>passwd</p>
-
-<p>安装一些程序<br />
-syslog-ng mlocate dhcpcd dbus openssh alsa-utils twm xclock xterm<br />
-增加开机启动<br />
-rc-update add net.eth0 default<br />
-rc-update add syslog-ng default<br />
-rc-update add dbus default<br />
-rc-update add sshd default</p>
-
-<p>安装Grub并配置<br />
-emerge grub</p>
-
-<p>grep -v rootfs /proc/mounts &gt; /etc/mtab</p>
-
-<p>umount xxx &amp;&amp; xxx &amp;&amp; xxx</p>
-
-<p>重启 应该OK了</p>
-
-<p>配置桌面环境<br />
-emerge xorg-server<br />
-emerge nvidia-drivers<br />
-modprobe nvidia<br />
-update-modules<br />
-安装gdm gnome。。。。。。</p>
-
-<p>添加用户<br />
-useradd -m -G uers,wheel,audio -s /bin/bash XXX<br />
-(-d /home/XX)</p>
-
-<p>[/bash]
-<strong>写在最后：</strong>多看Wiki，编译的想吐！！！！！！！！！！！！！！！</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -470,10 +442,11 @@ useradd -m -G uers,wheel,audio -s /bin/bash XXX<br />
     <section>
   <h1>Categories</h1>
   <ul id="categories">
-    <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
+    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (2)</a></li>
+<li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
 <li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (7)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (8)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (2)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (1)</a></li>
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
@@ -561,6 +534,14 @@ useradd -m -G uers,wheel,audio -s /bin/bash XXX<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/18/svn-server-in-ubuntu12-dot-10/">Ubuntu12.10 搭建 SVN服务器</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/11/some-distance/">[Algorithm]——几种距离</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/11/switch-to-sublime-text2/">switch to sublime text2</a>
       </li>
     
@@ -570,14 +551,6 @@ useradd -m -G uers,wheel,audio -s /bin/bash XXX<br />
     
       <li class="post">
         <a href="/blog/2012/11/07/install-wps-in-arch/">Arch中安装WPS A6</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/07/leave-gnome3/">离开Gnome3.6,奔向Xfce4</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/07/re-in-python-1/">[Python]-RE</a>
       </li>
     
   </ul>

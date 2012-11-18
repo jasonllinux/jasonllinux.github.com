@@ -9,7 +9,7 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="% <![CDATA[ \begin{align*} & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, &hellip;">
+  <meta name="description" content="正则表达式是个牛叉的东东，如果运用的好，能够在平时的开发中事半功倍！ First Header Second Header Third Header Content Cell Content Cell Content Cell Content Cell Content Cell Content &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +87,167 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/07/re-in-python-1/">[Python]-RE</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-07T11:30:00+08:00" pubdate data-updated="true">Nov 7<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>正则表达式是个牛叉的东东，如果运用的好，能够在平时的开发中事半功倍！</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Header</th>
+      <th>Second Header</th>
+      <th>Third Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+    </tr>
+    <tr>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/06/write-latex-in-octopress/">在Octopress中使用Latex公式</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-06T18:17:00+08:00" pubdate data-updated="true">Nov 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>对于我等diaosi，偶尔还是会需要在blog中输入一些符号、公式之类</p>
+
+<p>But How？</p>
+
+<ul>
+  <li>In the first, Use kramdown instead of rdiscount</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">gem install kramdown
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>然后在配置文件_config.yml中替换设置</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">markdown: kramdown
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>设置样式<br />
+Modify source/_layouts/defaults.html  </li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+</pre></td><td class="code"><pre><code class="html"><span class="line"><span class="c">&lt;!-- mathjax config similar to math.stackexchange --&gt;</span>
+</span><span class="line"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/x-mathjax-config&quot;</span><span class="nt">&gt;</span>
+</span><span class="line"><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
+</span><span class="line">  <span class="nx">jax</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;input/TeX&quot;</span><span class="p">,</span> <span class="s2">&quot;output/HTML-CSS&quot;</span><span class="p">],</span>
+</span><span class="line">  <span class="nx">tex2jax</span><span class="o">:</span> <span class="p">{</span>
+</span><span class="line">    <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="s1">&#39;$&#39;</span><span class="p">]</span> <span class="p">],</span>
+</span><span class="line">    <span class="nx">displayMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;$$&#39;</span><span class="p">,</span> <span class="s1">&#39;$$&#39;</span><span class="p">]],</span>
+</span><span class="line">    <span class="nx">processEscapes</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class="line">    <span class="nx">skipTags</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;script&#39;</span><span class="p">,</span> <span class="s1">&#39;noscript&#39;</span><span class="p">,</span> <span class="s1">&#39;style&#39;</span><span class="p">,</span> <span class="s1">&#39;textarea&#39;</span><span class="p">,</span> <span class="s1">&#39;pre&#39;</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">]</span>
+</span><span class="line">  <span class="p">},</span>
+</span><span class="line">  <span class="nx">messageStyle</span><span class="o">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
+</span><span class="line">  <span class="s2">&quot;HTML-CSS&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="nx">preferredFont</span><span class="o">:</span> <span class="s2">&quot;TeX&quot;</span><span class="p">,</span> <span class="nx">availableFonts</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;STIX&quot;</span><span class="p">,</span><span class="s2">&quot;TeX&quot;</span><span class="p">]</span> <span class="p">}</span>
+</span><span class="line"><span class="p">});</span>
+</span><span class="line"><span class="nt">&lt;/script&gt;</span>
+</span><span class="line"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>解决右击公式全屏空白问题</li>
+</ul>
+
+<p>Modify sass/base_theme.scss</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="html"><span class="line">body {
+</span><span class="line">  &gt; div#main {
+</span><span class="line">    background: $sidebar-bg $noise-bg;
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -308,108 +469,6 @@ MathJax.Hub.Config({
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/02/ibus-in-gnome3-dot-6/">Ibus in Gnome3.6</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-02T11:38:00+08:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>昨天Arch滚到Gnome3.6</p>
-
-<p>但是发现fcitx不能用</p>
-
-<p>据说原生支持ibus了</p>
-
-<p>so 切换到ibus</p>
-
-<p>但是发现无法用快捷键切换中英文</p>
-
-<p>解决方法:</p>
-
-<p><img src="http://i.minus.com/i1qT5Q9K9sKOA.png" alt="Alt ibus" /></p>
-
-<p>如上图所示在”区域和语言设置“中修改“切换下一个源”的键盘快捷方式</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/01/solve-subclipse-javahl-problem-in-ubuntu12-dot-10/">Solve Subclipse Javahl Problem in Ubuntu12.10</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-01T20:29:00+08:00" pubdate data-updated="true">Nov 1<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>eclipse中安装完subclipse插件之后往往会报如下错误：</p>
-
-<blockquote>
-  <p>Failed to load JavaHL Library.
-These are the errors that were encountered:
-no libsvnjavahl-1 in java.library.path
-no svnjavahl-1 in java.library.path
-no svnjavahl in java.library.path
-java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
-</blockquote>
-
-<p>解决方法：</p>
-
-<p>在eclipse安装目录中的文件eclipse.ini中设置</p>
-
-<pre><code>-Djava.library.path=/usr/lib/x86_64-linux-gnu/jni/
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -425,10 +484,11 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
     <section>
   <h1>Categories</h1>
   <ul id="categories">
-    <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
+    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (2)</a></li>
+<li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
 <li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (7)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (8)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (2)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (1)</a></li>
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
@@ -516,6 +576,14 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/18/svn-server-in-ubuntu12-dot-10/">Ubuntu12.10 搭建 SVN服务器</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/11/some-distance/">[Algorithm]——几种距离</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/11/switch-to-sublime-text2/">switch to sublime text2</a>
       </li>
     
@@ -525,14 +593,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
     
       <li class="post">
         <a href="/blog/2012/11/07/install-wps-in-arch/">Arch中安装WPS A6</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/07/leave-gnome3/">离开Gnome3.6,奔向Xfce4</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/07/re-in-python-1/">[Python]-RE</a>
       </li>
     
   </ul>

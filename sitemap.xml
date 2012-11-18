@@ -208,7 +208,7 @@
     </url>
     <url>
         <loc>http://jasonllinux.github.com/blog/2012/11/05/algorithm-complexity/</loc>
-        <lastmod>2012-11-06T16:29:14+08:00</lastmod>
+        <lastmod>2012-11-13T17:57:30+08:00</lastmod>
     </url>
     <url>
         <loc>http://jasonllinux.github.com/blog/2012/11/06/write-latex-in-octopress/</loc>
@@ -235,8 +235,16 @@
         <lastmod>2012-11-11T14:15:48+08:00</lastmod>
     </url>
     <url>
+        <loc>http://jasonllinux.github.com/blog/2012/11/11/some-distance/</loc>
+        <lastmod>2012-11-11T17:28:03+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jasonllinux.github.com/blog/2012/11/18/svn-server-in-ubuntu12-dot-10/</loc>
+        <lastmod>2012-11-18T13:54:05+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://jasonllinux.github.com/blog/archives/</loc>
-        <lastmod>2012-11-11T14:15:48+08:00</lastmod>
+        <lastmod>2012-11-18T13:54:05+08:00</lastmod>
     </url>
     <url>
         <loc>http://jasonllinux.github.com/about/</loc>
@@ -244,7 +252,7 @@
     </url>
     <url>
         <loc>http://jasonllinux.github.com/</loc>
-        <lastmod>2012-11-11T14:15:48+08:00</lastmod>
+        <lastmod>2012-11-18T13:54:05+08:00</lastmod>
     </url>
     <url>
         <loc>http://jasonllinux.github.com/404.html</loc>
