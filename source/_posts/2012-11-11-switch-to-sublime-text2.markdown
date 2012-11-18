@@ -29,3 +29,10 @@ categories: Code
 放图
 
 {% img http://i.minus.com/isBmbp2bXYFtt.png %}
+
+打算以后就用sublime做前端了，大一点的项目还是Eclipse 搞定吧！
+
+* TODO  
+
+__中文支持__  
+__编译支持__
