@@ -9,14 +9,8 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="配置文件 .Xdefaults [bash]
-!!title
-URxvt.title:URxvrt-Jason
-!! 设置 Xftp.dpi(字体分辨率）
-Xft.dpi: 96
-Xft.hinting: 1
-Xft.hintstyle: hintslight
-Xft.antialias: 1 &hellip;">
+  <meta name="description" content="Step1
+DownLoad OpenCV-2.4.2.tar.bz2 Step2 [bash] cd OpenCV-2.4.2/ mkdir release cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +88,74 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/02/archlinux-%E7%BC%96%E8%AF%91-opencv%E6%94%AF%E6%8F%B4python/">Archlinux 编译 OpenCV支援Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-02T00:00:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>
+Step1</strong>
+DownLoad <em>OpenCV-2.4.2.tar.bz2</em></p>
+
+<p><strong>Step2</strong></p>
+
+<p>[bash]<br />
+ cd OpenCV-2.4.2/<br />
+ mkdir release<br />
+ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_PYTHON_SUPPORT=ON ..<br />
+ sudo make<br />
+ sudo make install<br />
+[/bash]</p>
+
+<p><strong>Step3</strong>
+安装完成之后会把cv的库安装到/usr/local/lib/python2.7/site-packages目录中<br />
+复制到你的python2.7所在的路径，或者加个.pth文件</p>
+
+<p>或者直接修改环境变量</p>
+
+<p>[bash]<br />
+export PYTHONPATH=&quot;/usr/local/lib/python2.7/site-packages/:$PYTHONPATH&quot;<br />
+vim /etc/ld.so.conf<br />
+add &quot;/usr/local/lib&quot;<br />
+[/bash]</p>
+
+<p><strong>Result</strong>
+进入OpenCV目录</p>
+
+<p>[bash]<br />
+ cd OpenCV-2.4.2/samples/python<br />
+ python2.7  delaunay.py<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -548,87 +610,9 @@ chown -R http.http /home/svn/repositories/REPO_NAME<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/02/ubuntu12-04-memo/">Ubuntu12.04 Memo</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-02T00:00:00+08:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.jasonllinux.com/wp-content/uploads/2012/05/precise-pangolin.jpg"><img class="aligncenter size-medium wp-image-19" title="precise-pangolin" src="http://www.jasonllinux.com/wp-content/uploads/2012/05/precise-pangolin-300x153.jpg" alt="" width="300" height="153" /></a></p>
-
-<p>从Beta开始用的12.04,从刚开始的Bug丛生到正式发布，终于等到头了.</p>
-
-<p><em>基础版：</em>
-nautilus-open-terminal<br />
-build-essential
-<strong>pdf中文</strong> poppler-data
-<strong>网页浏览器 </strong>Chromium
-<strong>桌面环境</strong> gnome-shell<strong>
-</strong> <strong>输入法</strong> fctix
-<strong>文字排版</strong> TexLive 2011
-<strong>Editor</strong> Vim-gnome
-<strong>Code</strong> eclipse ant subclipse
-<strong>E-mail</strong> thunderbird</p>
-
-<p><em>加强版</em>
-<strong>1.Dropbox</strong>
-源里有，但是部分被墙，自己动手，丰衣足食</p>
-
-<p><strong>2.goagent</strong>
-关于这个网上教程一坨，但是发现两个问题，首先是开机让它自动启动，其二就是PAC，系统全局代理</p>
-
-<p><strong>3.思维导图 xmind
-</strong>这是一个好东西，可以破解成Pro。。邪恶的笑。。。</p>
-
-<p><strong>4.Wine Dr.com</strong>
-在教学区上网就逃不过这个东西，以前由于版本问题，一直没有Wine成功过，直至最近，Ubuntu12.04+ Dr.com3.46,完美运行，无乱码哦
-<a href="http://www.jasonllinux.com/wp-content/uploads/2012/05/2012-05-04-190150的屏幕截图.png"><img class="alignleft size-medium wp-image-105" title="2012-05-04 19:01:50的屏幕截图" src="http://www.jasonllinux.com/wp-content/uploads/2012/05/2012-05-04-190150的屏幕截图-300x185.png" alt="" width="300" height="185" /></a></p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>待续&#8230;&#8230;</p>
-
-<p>&nbsp;</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/9/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -646,7 +630,7 @@ build-essential
 <li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>Linux (8)</a></li>
-<li class='category'><a href='/blog/categories/octopress/'>Octopress (2)</a></li>
+<li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (1)</a></li>
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
@@ -733,6 +717,10 @@ build-essential
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/18/octopress-move/">迁移Octopress</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/18/svn-server-in-ubuntu12-dot-10/">Ubuntu12.10 搭建 SVN服务器</a>
       </li>
     
@@ -746,10 +734,6 @@ build-essential
     
       <li class="post">
         <a href="/blog/2012/11/09/laoda-wangzhan/">关于TechMessager，关于王自如，关于ZEALER</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/07/install-wps-in-arch/">Arch中安装WPS A6</a>
       </li>
     
   </ul>

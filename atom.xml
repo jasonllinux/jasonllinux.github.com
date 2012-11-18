@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-18T13:54:12+08:00</updated>
+  <updated>2012-11-18T15:25:49+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[迁移Octopress]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/18/octopress-move/"/>
+    <updated>2012-11-18T15:19:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/18/octopress-move</id>
+    <content type="html"><![CDATA[<p>最近实在受不了Arch的种种问题</p>
+
+<p>于是，痛定思痛，准备把开发平台陆续迁移到Ubuntu上来</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#Step1 先checkout出Octopress的源码</span>
+</span><span class="line">git clone -b <span class="nb">source </span>git@github.com:username/username.github.com.git octopress
+</span><span class="line"><span class="nb">cd </span>octopress
+</span><span class="line">git clone git@github.com:username/username.github.com.git _deploy
+</span><span class="line">
+</span><span class="line"><span class="c">#Step2然后安装一些插件吧</span>
+</span><span class="line">
+</span><span class="line">sudo gem install bundler
+</span><span class="line">
+</span><span class="line"><span class="c">#出现Error</span>
+</span><span class="line">ERROR:  Error installing RedCloth:
+</span><span class="line">ERROR: Failed to build gem native extension.
+</span><span class="line"><span class="c">#解决方案</span>
+</span><span class="line">sudo apt-get install ruby1.9.1-dev
+</span><span class="line">
+</span><span class="line">sudo bundle install
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ubuntu12.10 搭建 SVN服务器]]></title>
@@ -1286,28 +1331,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
 <div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 </pre></td><td class="code"><pre><code class="bash"><span class="line">CHKDSK C:/F
 </span></code></pre></td></tr></table></div></figure></notextile></div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[git push 错误]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/"/>
-    <updated>2012-10-18T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/10/18/git-push-错误</id>
-    <content type="html"><![CDATA[<p>今天，上传代码到github上的时候 莫名其妙出现：</p>
-
-<p>[bash]<br />
-Unable to rewind rpc post data - try increasing http.postBuffer<br />
-error: RPC failed; result=65, HTTP code = 401<br />
-fatal: The remote end hung up unexpectedly<br />
-fatal: The remote end hung up unexpectedly<br />
-[/bash]</p>
-
-<p>解决方案：</p>
-
-<p>[bash]<br />
-git config http.postBuffer 209715200<br />
-[/bash]</p>
 ]]></content>
   </entry>
   

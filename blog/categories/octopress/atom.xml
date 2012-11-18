@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-18T13:54:12+08:00</updated>
+  <updated>2012-11-18T15:25:49+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[迁移Octopress]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/18/octopress-move/"/>
+    <updated>2012-11-18T15:19:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/18/octopress-move</id>
+    <content type="html"><![CDATA[<p>最近实在受不了Arch的种种问题</p>
+
+<p>于是，痛定思痛，准备把开发平台陆续迁移到Ubuntu上来</p>
+
+<p>``` bash
+#Step1 先checkout出Octopress的源码
+git clone -b source git@github.com:username/username.github.com.git octopress
+cd octopress
+git clone git@github.com:username/username.github.com.git _deploy</p>
+
+<h1 id="step2">Step2然后安装一些插件吧</h1>
+
+<p>sudo gem install bundler</p>
+
+<h1 id="error">出现Error</h1>
+<p>ERROR:  Error installing RedCloth:
+ERROR: Failed to build gem native extension.
+#解决方案
+sudo apt-get install ruby1.9.1-dev</p>
+
+<p>sudo bundle install</p>
+
+<p>```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[在Octopress中使用Latex公式]]></title>

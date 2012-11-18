@@ -5,11 +5,17 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Linux下Eclipse中编译OpenCV相关工程问题 - Jasonllinux's Blog</title>
+  <title>Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="最近小研究了下使用OpenCV进行人脸检测 老早用Python实现过 最近回归C++ 当然，还是用Eclipse了 刚开始只是惯性的设置了include路径，所以头文件什么的都没有问题 但是，最后Build的时候出现了N多 undefined reference to xxx 网上搜了一把， &hellip;">
+  <meta name="description" content="从Beta开始用的12.04,从刚开始的Bug丛生到正式发布，终于等到头了. 基础版：
+nautilus-open-terminal
+build-essential
+pdf中文 poppler-data
+网页浏览器 Chromium
+桌面环境 gnome-shell 输入法 fctix
+文字排版 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/page/9/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -85,12 +91,15 @@ MathJax.Hub.Config({
 </nav>
   <div id="main">
     <div id="content">
-      <div>
-<article class="hentry" role="article">
+      <div class="blog-index">
   
+  
+  
+    <article>
+      
   <header>
     
-      <h1 class="entry-title">Linux下Eclipse中编译OpenCV相关工程问题</h1>
+      <h1 class="entry-title"><a href="/blog/2012/05/02/ubuntu12-04-memo/">Ubuntu12.04 Memo</a></h1>
     
     
       <p class="meta">
@@ -106,97 +115,73 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2012-10-27T21:53:00+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2012</time>
+<time datetime="2012-05-02T00:00:00+08:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>最近小研究了下使用OpenCV进行人脸检测</p>
+  <div class="entry-content"><p><a href="http://www.jasonllinux.com/wp-content/uploads/2012/05/precise-pangolin.jpg"><img class="aligncenter size-medium wp-image-19" title="precise-pangolin" src="http://www.jasonllinux.com/wp-content/uploads/2012/05/precise-pangolin-300x153.jpg" alt="" width="300" height="153" /></a></p>
 
-<p>老早用Python实现过</p>
+<p>从Beta开始用的12.04,从刚开始的Bug丛生到正式发布，终于等到头了.</p>
 
-<p>最近回归C++</p>
+<p><em>基础版：</em>
+nautilus-open-terminal<br />
+build-essential
+<strong>pdf中文</strong> poppler-data
+<strong>网页浏览器 </strong>Chromium
+<strong>桌面环境</strong> gnome-shell<strong>
+</strong> <strong>输入法</strong> fctix
+<strong>文字排版</strong> TexLive 2011
+<strong>Editor</strong> Vim-gnome
+<strong>Code</strong> eclipse ant subclipse
+<strong>E-mail</strong> thunderbird</p>
 
-<p>当然，还是用Eclipse了</p>
+<p><em>加强版</em>
+<strong>1.Dropbox</strong>
+源里有，但是部分被墙，自己动手，丰衣足食</p>
 
-<p>刚开始只是惯性的设置了include路径，所以头文件什么的都没有问题</p>
+<p><strong>2.goagent</strong>
+关于这个网上教程一坨，但是发现两个问题，首先是开机让它自动启动，其二就是PAC，系统全局代理</p>
 
-<p>但是，最后Build的时候出现了N多 undefined reference to xxx</p>
+<p><strong>3.思维导图 xmind
+</strong>这是一个好东西，可以破解成Pro。。邪恶的笑。。。</p>
 
-<p>网上搜了一把，原来是要设置Lib路径</p>
+<p><strong>4.Wine Dr.com</strong>
+在教学区上网就逃不过这个东西，以前由于版本问题，一直没有Wine成功过，直至最近，Ubuntu12.04+ Dr.com3.46,完美运行，无乱码哦
+<a href="http://www.jasonllinux.com/wp-content/uploads/2012/05/2012-05-04-190150的屏幕截图.png"><img class="alignleft size-medium wp-image-105" title="2012-05-04 19:01:50的屏幕截图" src="http://www.jasonllinux.com/wp-content/uploads/2012/05/2012-05-04-190150的屏幕截图-300x185.png" alt="" width="300" height="185" /></a></p>
 
-<p>但是简单的把/usr/local/lib add进去也是没用</p>
+<p>&nbsp;</p>
 
-<p>要一个一个add 注意去掉前面的 lib 以及后面的 .so</p>
+<p>&nbsp;</p>
 
-<p>这样就OK了</p>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>待续&#8230;&#8230;</p>
+
+<p>&nbsp;</p>
 </div>
-
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">jasonllinux</span></span>
-
-      
-
-
-
-
-
-
-
-
   
 
 
-<time datetime="2012-10-27T21:53:00+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2012</time>
-      
-
-<span class="categories">
+    </article>
   
-    <a class='category' href='/blog/categories/opencv/'>OpenCV</a>
-  
-</span>
-
-
-    </p>
+  <div class="pagination">
     
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/" >Tweet</a>
-  
-  
-  
-</div>
-
+    <a href="/blog/archives">Blog Archives</a>
     
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2012/10/25/64Bit-Again/" title="Previous Post: 有一次给64bit跪了">&laquo; 有一次给64bit跪了</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2012/11/01/solve-subclipse-javahl-problem-in-ubuntu12-dot-10/" title="Next Post: Solve Subclipse Javahl Problem in Ubuntu12.10">Solve Subclipse Javahl Problem in Ubuntu12.10 &raquo;</a>
-      
-    </p>
-  </footer>
-</article>
-<!--
-
--->
-<section>
-    <h1>评论</h1>
-        <!-- UY BEGIN -->
-        <div id="uyan_frame"></div>
-        <script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1612569" async=""></script>
-        <!-- UY END -->
-</section>
+    <a class="next" href="/blog/page/8/">Newer &rarr;</a>
+    
+  </div>
 </div>
-
 <aside class="sidebar">
   
     <section>
@@ -222,7 +207,7 @@ MathJax.Hub.Config({
 <section>
   <h1>Coderwall</h1>
   <ul id="cw_badges">
-    <li class="loading">Status updating...</li>
+    <li class="loading">Status updating&#8230;</li>
   </ul>
 
   <script type="text/javascript">
@@ -323,7 +308,6 @@ MathJax.Hub.Config({
 
   
 </aside>
-
 
     </div>
   </div>
