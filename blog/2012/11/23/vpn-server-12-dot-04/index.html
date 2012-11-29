@@ -138,6 +138,11 @@ komy pptpd password *  </p>
 iptables -t nat -A POSTROUTING -o eth0 -s 192.168.0.0/24 -j MASQUERADE<br />
 iptables -I FORWARD -p tcp –syn -i ppp+ -j TCPMSS –set-mss 1356  </p>
 
+<p>Step4 开机自动生效<br />
+iptables-save &gt; /etc/iptables.up.rules<br />
+然后修改脚本/etc/network/interfaces<br />
+pre-up iptables-restore &lt; /etc/iptables.up.rules  </p>
+
 </div>
 
 

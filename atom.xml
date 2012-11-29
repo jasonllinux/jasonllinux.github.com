@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-23T09:01:00+08:00</updated>
+  <updated>2012-11-29T21:47:25+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -37,6 +37,11 @@ komy pptpd password *  </p>
 <p>Step3 配置Iptables<br />
 iptables -t nat -A POSTROUTING -o eth0 -s 192.168.0.0/24 -j MASQUERADE<br />
 iptables -I FORWARD -p tcp –syn -i ppp+ -j TCPMSS –set-mss 1356  </p>
+
+<p>Step4 开机自动生效<br />
+iptables-save &gt; /etc/iptables.up.rules<br />
+然后修改脚本/etc/network/interfaces<br />
+pre-up iptables-restore &lt; /etc/iptables.up.rules  </p>
 
 ]]></content>
   </entry>
