@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Ubuntu12.04 配置VPN Server"
+date: 2012-11-23 08:57
+comments: true
+categories: Linux
+---
+
+Step1  
+sudo apt-get   install pptpd
+
+Step2  
+修改配置文件/etc/sysctl.conf中的相应内容如下，打开ipv4转发功能  
+net.ipv4.ip_forward = 1  
+执行sysctl -p，使其马上生效。  
+编辑配置文件 /etc/ppp/pptpd-options，修改里面的 ms-dns 这个项为 8.8.8.8 。也就是Google的DNS服务器。  
+编辑配置文件 /etc/pptpd.conf .修改成如下：  
+option /etc/ppp/pptpd-options  
+localip 192.168.0.1  
+remoteip 192.168.0.11-150  
+编辑配置文件 /etc/ppp/chap-secrets 。此文件定义登录的用户名和密码  
+添加一行  
+komy pptpd password *  
+
+Step3 配置Iptables  
+iptables -t nat -A POSTROUTING -o eth0 -s 192.168.0.0/24 -j MASQUERADE  
+iptables -I FORWARD -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1356  
+
+Step4 开机自动生效  
+iptables-save > /etc/iptables.up.rules  
+然后修改脚本/etc/network/interfaces  
+pre-up iptables-restore < /etc/iptables.up.rules  
+
+
+
+
+
+
