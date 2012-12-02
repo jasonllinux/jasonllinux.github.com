@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-11-29T21:47:25+08:00</updated>
+  <updated>2012-12-02T22:56:39+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ChinaOpen 2012——（1）]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/12/02/last-chinaopen/"/>
+    <updated>2012-12-02T22:53:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/12/02/last-chinaopen</id>
+    <content type="html"><![CDATA[<p><strong>RoboCup ChinaOpen 2012 Rescue</strong>  来的那么突然</p>
+
+<p>这几天改代码，调整。。。地焦头烂额</p>
+
+<p>通信有问题，智能体死在那。。。。</p>
+
+<p>问题一大堆，还是平时做的不够</p>
+
+<p>希望不要去丢人啊。。。。</p>
+
+<p>可能是参加的最后一次国赛了，享受过程吧</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ubuntu12.04 配置VPN Server]]></title>
@@ -1325,24 +1344,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
     <updated>2012-10-25T11:35:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/10/25/hello-world</id>
     <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Linux终端下翻墙]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/10/24/fanqiang-in-linux-terminal/"/>
-    <updated>2012-10-24T18:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/10/24/fanqiang-in-linux-terminal</id>
-    <content type="html"><![CDATA[<p>在Arch下有时候更新dropbox软件是件很DT的事情</p>
-
-<p>下载不动</p>
-
-<p>在启用了goagent的情况下</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nb">export </span><span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:8087
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
 ]]></content>
   </entry>
   
