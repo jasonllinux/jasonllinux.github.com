@@ -9,10 +9,10 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="好久没升级goagent了 从google code上下载了最新稳定版 shit 居然要安装些其他东西
-[bash]
-sudo curl -k -L http://git.io/I9B7RQ|sh
-[/bash] 装完之后，还是不行，出现 error 原来还得重新upload一下 虽然曲折了一些， &hellip;">
+  <meta name="description" content="今天，上传代码到github上的时候 莫名其妙出现： [bash]
+Unable to rewind rpc post data - try increasing http.postBuffer
+error: RPC failed; result=65, HTTP code = 401
+fatal &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,6 +90,55 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/">Git Push 错误</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-18T00:00:00+08:00" pubdate data-updated="true">Oct 18<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今天，上传代码到github上的时候 莫名其妙出现：</p>
+
+<p>[bash]<br />
+Unable to rewind rpc post data - try increasing http.postBuffer<br />
+error: RPC failed; result=65, HTTP code = 401<br />
+fatal: The remote end hung up unexpectedly<br />
+fatal: The remote end hung up unexpectedly<br />
+[/bash]</p>
+
+<p>解决方案：</p>
+
+<p>[bash]<br />
+git config http.postBuffer 209715200<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -382,55 +431,6 @@ iptables -A FORWARD -p tcp &#8211;syn -s 192.168.0.0/24 -j TCPMSS &#8211;set-mss
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/23/archlinux-%E9%85%8D%E7%BD%AEgrub2%E7%AE%80%E4%BE%BF%E6%96%B9%E6%B3%95/">Archlinux 配置Grub2简便方法</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-23T00:00:00+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Archer都知道的</p>
-
-<p>配置Grub不像Ubuntu那么Easy，可以自动检测到其他盘符的系统</p>
-
-<p>但是神器来了</p>
-
-<p><strong>os-prober</strong></p>
-
-<p>在安装玩Grub2之后iou</p>
-
-<p>[bash]<br />
-pacman -S os-prober<br />
-grub-mkconfig -o /boot/grub/grub.cfg<br />
-[/bash]</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -454,7 +454,7 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (1)</a></li>
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
-<li class='category'><a href='/blog/categories/robocup/'>RoboCup (2)</a></li>
+<li class='category'><a href='/blog/categories/robocup/'>RoboCup (3)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
 <li class='category'><a href='/blog/categories/windows/'>Windows (1)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (14)</a></li>
@@ -539,6 +539,10 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/19/china-open-3/">ChinaOpen 2012——（3）</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/11/china-open-2/">ChinaOpen 2012——（2）</a>
       </li>
     
@@ -552,10 +556,6 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
     
       <li class="post">
         <a href="/blog/2012/11/18/octopress-move/">迁移Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/18/svn-server-in-ubuntu12-dot-10/">Ubuntu12.10 搭建 SVN服务器</a>
       </li>
     
   </ul>

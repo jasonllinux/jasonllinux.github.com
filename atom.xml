@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-12-11T20:14:45+08:00</updated>
+  <updated>2012-12-19T19:02:51+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ChinaOpen 2012——（3）]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/12/19/china-open-3/"/>
+    <updated>2012-12-19T15:06:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/12/19/china-open-3</id>
+    <content type="html"><![CDATA[<p>从合肥回来也好几天了</p>
+
+<p>一直忙着开题</p>
+
+<p>今天终于把开题答辩搞定了，终于解脱了。。。</p>
+
+<p>从长沙回来休息了一天立马转场去了合肥，准备科大的2D比赛</p>
+
+<p>心里其实很不是滋味，其实还是希望有一天2D能够重新做起来，重现昔日的辉煌</p>
+
+<p>小组赛上是和科大、合工一组</p>
+
+<p>也许是宿命吧</p>
+
+<p>Apollo3D也是惊险的1:0，拿了冠军</p>
+
+<p>其实，我只是去打酱油的。。。</p>
+
+<p><img src="http://i.minus.com/ibfZGx4xpxQJ78.jpg" /></p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ChinaOpen 2012——（2）]]></title>
@@ -1338,29 +1366,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
 <p>要一个一个add 注意去掉前面的 lib 以及后面的 .so</p>
 
 <p>这样就OK了</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[有一次给64bit跪了]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/10/25/64Bit-Again/"/>
-    <updated>2012-10-25T20:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/10/25/64Bit-Again</id>
-    <content type="html"><![CDATA[<p>最近几天在Windows平台搭建 OpenCV 的python开发平台</p>
-
-<p>但是，当横子横子编译完OpenCV后</p>
-
-<p>把相应的pyd导入到python的site-packages中</p>
-
-<p>import cv2居然说不是32位应用程序</p>
-
-<p>于是之，我知道又是64bit的缘故 </p>
-
-<p>果断的</p>
-
-<p>换32位的python，一切OK</p>
-
-<p>eclipse中pydev一切OK</p>
 ]]></content>
   </entry>
   
