@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-12-19T19:02:51+08:00</updated>
+  <updated>2012-12-22T16:55:17+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -91,30 +91,55 @@
     <link href="http://jasonllinux.github.com/blog/2012/11/23/vpn-server-12-dot-04/"/>
     <updated>2012-11-23T08:57:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/11/23/vpn-server-12-dot-04</id>
-    <content type="html"><![CDATA[<p>Step1<br />
-sudo apt-get   install pptpd</p>
+    <content type="html"><![CDATA[<p>Step1</p>
 
-<p>Step2<br />
-修改配置文件/etc/sysctl.conf中的相应内容如下，打开ipv4转发功能<br />
-net.ipv4.ip_forward = 1<br />
-执行sysctl -p，使其马上生效。<br />
-编辑配置文件 /etc/ppp/pptpd-options，修改里面的 ms-dns 这个项为 8.8.8.8 。也就是Google的DNS服务器。<br />
-编辑配置文件 /etc/pptpd.conf .修改成如下：<br />
-option /etc/ppp/pptpd-options<br />
-localip 192.168.0.1<br />
-remoteip 192.168.0.11-150<br />
-编辑配置文件 /etc/ppp/chap-secrets 。此文件定义登录的用户名和密码<br />
-添加一行<br />
-komy pptpd password *  </p>
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">sudo apt-get   install pptpd
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p>Step3 配置Iptables<br />
-iptables -t nat -A POSTROUTING -o eth0 -s 192.168.0.0/24 -j MASQUERADE<br />
-iptables -I FORWARD -p tcp –syn -i ppp+ -j TCPMSS –set-mss 1356  </p>
+<p>Step2</p>
 
-<p>Step4 开机自动生效<br />
-iptables-save &gt; /etc/iptables.up.rules<br />
-然后修改脚本/etc/network/interfaces<br />
-pre-up iptables-restore &lt; /etc/iptables.up.rules  </p>
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#修改配置文件/etc/sysctl.conf中的相应内容如下，打开ipv4转发功能  </span>
+</span><span class="line">net.ipv4.ip_forward <span class="o">=</span> 1
+</span><span class="line"><span class="c">#执行sysctl -p，使其马上生效。  </span>
+</span><span class="line"><span class="c">#编辑配置文件 /etc/ppp/pptpd-options，修改里面的 ms-dns 这个项为 8.8.8.8 。也就是Google的DNS服务器。  </span>
+</span><span class="line"><span class="c">#编辑配置文件 /etc/pptpd.conf .修改成如下：  </span>
+</span><span class="line">option /etc/ppp/pptpd-options
+</span><span class="line">localip 192.168.0.1
+</span><span class="line">remoteip 192.168.0.11-150
+</span><span class="line"><span class="c">#编辑配置文件 /etc/ppp/chap-secrets 。此文件定义登录的用户名和密码  </span>
+</span><span class="line"><span class="c">#添加一行  </span>
+</span><span class="line">komy pptpd password *
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Step3 配置Iptables</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">iptables -t nat -A POSTROUTING -o eth0 -s 192.168.0.0/24 -j MASQUERADE
+</span><span class="line">iptables -I FORWARD -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1356
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Step4 开机自动生效</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">iptables-save &gt; /etc/iptables.up.rules
+</span><span class="line"><span class="c">#然后修改脚本/etc/network/interfaces  </span>
+</span><span class="line">pre-up iptables-restore &lt; /etc/iptables.up.rules
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 ]]></content>
   </entry>
