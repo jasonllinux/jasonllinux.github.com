@@ -5,13 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Linux下TexLive中文配置 - Jasonllinux's Blog</title>
+  <title>OpenCV——[1 环境搭建] - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="在Linux环境使用$$\LaTeX$$一般使用TexLive套装，而作为天朝子民，使用中文是件头等大事。 在网上大致浏览到两类方式：
-第一种是盗版windows字体，修改ctex配置文件，要用中文的时候就用ctex宏包；
-第二种方式就是使用XeLatex，直接调用系统中文字体。 &hellip;">
+  <meta name="description" content="断断续续学习一些OpenCV相关的东西 记录下来 首先是环境搭建 Linux Step 1 编译
+参考 1 和 2 Step 2 开发环境配置
+参考 3 ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/07/01/linux%E4%B8%8Btexlive%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/12/22/opencv-build/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -92,7 +92,7 @@ MathJax.Hub.Config({
   
   <header>
     
-      <h1 class="entry-title">Linux下TexLive中文配置</h1>
+      <h1 class="entry-title">OpenCV——[1 环境搭建]</h1>
     
     
       <p class="meta">
@@ -108,94 +108,24 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2012-07-01T00:00:00+08:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
+<time datetime="2012-12-22T20:47:00+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p><a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/225px-LaTeX_logo.png">
-</a>在Linux环境使用$$\LaTeX$$一般使用TexLive套装，而作为天朝子民，使用中文是件头等大事。</p>
+<div class="entry-content"><p>断断续续学习一些OpenCV相关的东西</p>
 
-<p>在网上大致浏览到两类方式：<br />
-第一种是盗版windows字体，修改ctex配置文件，要用中文的时候就用ctex宏包；<br />
-第二种方式就是使用XeLatex，直接调用系统中文字体。</p>
+<p>记录下来</p>
 
-<p>下面直接介绍第二种方式，为了方便每次调用，我们把配置做成一个<strong>package</strong>
-在该目录下新建文件</p>
+<p>首先是环境搭建  Linux</p>
 
-<p>[bash]<br />
-cd /usr/local/texlive/2011/texmf-dist/tex/xelatex/fontspec<br />
-sudo touch zhfontcfg.sty<br />
-[/bash]</p>
+<p>Step 1 编译
+参考 <a href="http://jasonllinux.github.com/blog/2012/08/02/archlinux-%E7%BC%96%E8%AF%91-opencv%E6%94%AF%E6%8F%B4python/" title="Reference1">1</a> 和 <a href="http://jasonllinux.github.com/blog/2012/08/04/mac-%E5%AE%89%E8%A3%85opencv%E6%94%AF%E6%8F%B4python/">2</a> </p>
 
-<p>在该文件中写入：</p>
-
-<p>[tex]<br />
-% xetex/xelatex 字体设定宏包<br />
-\ProvidesPackage{zhfontcfg}<br />
-%[cm-default]选项主要用来解决使用数学环境时数学符号不能正常显示的问题<br />
-\usepackage[cm-default]{fontspec}<br />
-\usepackage{xunicode,xltxtra}<br />
-\usepackage[BoldFont,SlantFont,CJKnumber,fallback]{xeCJK}%使用TexLive自带的xeCJK宏包，并启用加粗、斜体、CJK数字和备用字体选项<br />
-%如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。<br />
-\defaultfontfeatures{Mapping=tex-text}<br />
-% 中文断行<br />
-%\XeTeXlinebreaklocale &amp;quot;zh&amp;quot;<br />
-%\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt<br />
-%将系统字体名映射为逻辑字体名称，主要是为了维护的方便<br />
-\usepackage{indentfirst}%段落首行缩进<br />
-\setlength{\parindent}{2em}%缩进两个字符<br />
-\newcommand\fontnamehei{文泉驿正黑}<br />
-\newcommand\fontnamesong{SimSun}<br />
-\newcommand\fontnamekai{楷体}<br />
-\newcommand\fontnamemono{FreeMono}<br />
-\newcommand\fontnameroman{Times New Roman}<br />
-%%设置常用中文字号，方便调用<br />
-\newcommand{\erhao}{\fontsize{22pt}{\baselineskip}\selectfont}<br />
-\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}<br />
-\newcommand{\sanhao}{\fontsize{16pt}{\baselineskip}\selectfont}<br />
-\newcommand{\xiaosanhao}{\fontsize{15pt}{\baselineskip}\selectfont}<br />
-\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}<br />
-\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}<br />
-\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}<br />
-\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}<br />
-\newcommand{\liuhao}{\fontsize{7.5pt}{\baselineskip}\selectfont}<br />
-%设置正文<br />
-\setCJKmainfont{WenQuanYi Micro Hei}<br />
-[/tex]</p>
-
-<p>使用命令 生成</p>
-
-<p>[bash]<br />
-sudo mktexlsr<br />
-[/bash]</p>
-
-<p>测试：test.tex</p>
-
-<p>[tex]<br />
-%test.tex<br />
-\documentclass{article}<br />
-\usepackage{zhfontcfg}<br />
-\begin{document}<br />
-Hello, I am jasonllinux.&#92;<br />
-你好，我是jasonllinux<br />
-\end{document}<br />
-[/tex]</p>
-
-<p>输出结果：
-<a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/latex.png"><img class="alignleft size-medium wp-image-177" title="latex" src="http://www.jasonllinux.com/wp-content/uploads/2012/07/latex-300x113.png" alt="" width="300" height="113" /></a></p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>参考：</p>
+<p>Step 2 开发环境配置
+参考 <a href="http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/" title="Reference3">3</a> </p>
 </div>
 
 
@@ -218,12 +148,12 @@ Hello, I am jasonllinux.&#92;<br />
   
 
 
-<time datetime="2012-07-01T00:00:00+08:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
+<time datetime="2012-12-22T20:47:00+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/study/'>Study</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/未分类/'>未分类</a>
+    <a class='category' href='/blog/categories/opencv/'>OpenCV</a>
   
 </span>
 
@@ -232,7 +162,7 @@ Hello, I am jasonllinux.&#92;<br />
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/07/01/linux%E4%B8%8Btexlive%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/07/01/linux%E4%B8%8Btexlive%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/12/22/opencv-build/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/12/22/opencv-build/" >Tweet</a>
   
   
   
@@ -241,10 +171,8 @@ Hello, I am jasonllinux.&#92;<br />
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/06/22/tomcat%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/" title="Previous Post: Tomcat简单配置">&laquo; Tomcat简单配置</a>
+        <a class="basic-alignment left" href="/blog/2012/12/19/china-open-3/" title="Previous Post: ChinaOpen 2012——（3）">&laquo; ChinaOpen 2012——（3）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/07/02/archlinux-memo/" title="Next Post: Archlinux Memo">Archlinux Memo &raquo;</a>
       
     </p>
   </footer>

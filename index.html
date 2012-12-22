@@ -9,7 +9,9 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="从合肥回来也好几天了 一直忙着开题 今天终于把开题答辩搞定了，终于解脱了。。。 从长沙回来休息了一天立马转场去了合肥，准备科大的2D比赛 心里其实很不是滋味，其实还是希望有一天2D能够重新做起来，重现昔日的辉煌 小组赛上是和科大、合工一组 也许是宿命吧 Apollo3D也是惊险的1:0，拿了冠军 &hellip;">
+  <meta name="description" content="断断续续学习一些OpenCV相关的东西 记录下来 首先是环境搭建 Linux Step 1 编译
+参考 1 和 2 Step 2 开发环境配置
+参考 3 ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +89,52 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/22/opencv-build/">OpenCV——[1 环境搭建]</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-22T20:47:00+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>断断续续学习一些OpenCV相关的东西</p>
+
+<p>记录下来</p>
+
+<p>首先是环境搭建  Linux</p>
+
+<p>Step 1 编译
+参考 <a href="http://jasonllinux.github.com/blog/2012/08/02/archlinux-%E7%BC%96%E8%AF%91-opencv%E6%94%AF%E6%8F%B4python/" title="Reference1">1</a> 和 <a href="http://jasonllinux.github.com/blog/2012/08/04/mac-%E5%AE%89%E8%A3%85opencv%E6%94%AF%E6%8F%B4python/">2</a> </p>
+
+<p>Step 2 开发环境配置
+参考 <a href="http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/" title="Reference3">3</a> </p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -399,101 +447,6 @@ MathJax.Hub.Config({
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/18/svn-server-in-ubuntu12-dot-10/">Ubuntu12.10 搭建 SVN服务器</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-18T13:44:00+08:00" pubdate data-updated="true">Nov 18<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>最近把实验室的一台Server升级到了12.10</p>
-
-<p>因为实在受不了Arch的更新强度</p>
-
-<p>经常滚死的Arch不适合做服务器了，So 还是回归Ubuntu吧</p>
-
-<p>搭建起来。。。</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-<span class="line-number">16</span>
-<span class="line-number">17</span>
-<span class="line-number">18</span>
-<span class="line-number">19</span>
-<span class="line-number">20</span>
-<span class="line-number">21</span>
-<span class="line-number">22</span>
-<span class="line-number">23</span>
-<span class="line-number">24</span>
-<span class="line-number">25</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#Step 1 安装一些东西</span>
-</span><span class="line">sudo apt-get install subversion libapache2-svn apache2
-</span><span class="line">
-</span><span class="line"><span class="c">#Step 2 建立SVN仓库目录</span>
-</span><span class="line">sudo mkdir /srv/svn
-</span><span class="line">
-</span><span class="line"><span class="c">#Step 3 修改配置文件</span>
-</span><span class="line">sudo cp /etc/apache2/mods-enabled/dav_svn.conf /etc/apache2/mods-enabled/dav_svn.conf.orig
-</span><span class="line">sudo nano /etc/apache2/mods-enabled/dav_svn.conf
-</span><span class="line">
-</span><span class="line">&lt;Location /svn&gt;
-</span><span class="line">DAV svn
-</span><span class="line">SVNParentPath /srv/svn
-</span><span class="line">AuthType Basic
-</span><span class="line">AuthName <span class="s2">&quot;Subversion Repository&quot;</span>
-</span><span class="line">AuthUserFile /etc/apache2/dav_svn.passwd
-</span><span class="line">Require valid-user
-</span><span class="line">&lt;/Location&gt;
-</span><span class="line">
-</span><span class="line"><span class="c">#Step4 生成用户以及密码</span>
-</span><span class="line">sudo htpasswd -cm /etc/apache2/dav_svn.passwd jasonllinux
-</span><span class="line">
-</span><span class="line"><span class="c">#Last 建代码仓库啦</span>
-</span><span class="line"><span class="nb">cd</span> /srv/svn
-</span><span class="line">sudo svnadmin create repo
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -513,7 +466,7 @@ MathJax.Hub.Config({
 <li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>Linux (9)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
-<li class='category'><a href='/blog/categories/opencv/'>OpenCV (1)</a></li>
+<li class='category'><a href='/blog/categories/opencv/'>OpenCV (2)</a></li>
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
 <li class='category'><a href='/blog/categories/robocup/'>RoboCup (3)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
@@ -600,6 +553,10 @@ MathJax.Hub.Config({
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/22/opencv-build/">OpenCV——[1 环境搭建]</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/19/china-open-3/">ChinaOpen 2012——（3）</a>
       </li>
     
@@ -613,10 +570,6 @@ MathJax.Hub.Config({
     
       <li class="post">
         <a href="/blog/2012/11/23/vpn-server-12-dot-04/">Ubuntu12.04 配置VPN Server</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/18/octopress-move/">迁移Octopress</a>
       </li>
     
   </ul>

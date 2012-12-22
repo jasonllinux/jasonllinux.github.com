@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OpenCV | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/opencv/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-12-22T16:55:17+08:00</updated>
+  <updated>2012-12-22T21:09:43+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[OpenCV——[1 环境搭建]]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/12/22/opencv-build/"/>
+    <updated>2012-12-22T20:47:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/12/22/opencv-build</id>
+    <content type="html"><![CDATA[<p>断断续续学习一些OpenCV相关的东西</p>
+
+<p>记录下来</p>
+
+<p>首先是环境搭建  Linux</p>
+
+<p>Step 1 编译
+参考 <a href="http://jasonllinux.github.com/blog/2012/08/02/archlinux-%E7%BC%96%E8%AF%91-opencv%E6%94%AF%E6%8F%B4python/" title="Reference1">1</a> 和 <a href="http://jasonllinux.github.com/blog/2012/08/04/mac-%E5%AE%89%E8%A3%85opencv%E6%94%AF%E6%8F%B4python/">2</a> </p>
+
+<p>Step 2 开发环境配置
+参考 <a href="http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/" title="Reference3">3</a> </p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Linux下Eclipse中编译OpenCV相关工程问题]]></title>
