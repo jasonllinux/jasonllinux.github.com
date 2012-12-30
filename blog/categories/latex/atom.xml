@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Latex | Jasonllinux's Blog]]></title>
+  <link href="http://jasonllinux.github.com/blog/categories/latex/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.com/"/>
+  <updated>2012-12-30T20:06:02+08:00</updated>
+  <id>http://jasonllinux.github.com/</id>
+  <author>
+    <name><![CDATA[jasonllinux]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Latex中参考文献]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/12/23/latex-bib/"/>
+    <updated>2012-12-23T14:36:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/12/23/latex-bib</id>
+    <content type="html"><![CDATA[<h4 id="section">方法一</h4>
+<p>\begin{thebibliography}
+\bibitem author,article, year, vol,
+\end{thebibliography}</p>
+
+<h4 id="section-1">方法二</h4>
+<p>BibTeX</p>
+
+<ul>
+  <li>bib文件，参考文献所在文件，类似于你的数据库</li>
+</ul>
+
+<p>@文献类型={引用名称,
+各个域,用逗号分割,最后一个后面不需要再后面追加逗号,内容要用双引号括起来
+};
+这里要注意:每条参考文献用@开头，分割的逗号不要用中文逗号，用半角逗号，每条参考文献要以;来结束，类似于C++的类的定义。</p>
+
+<p>例子</p>
+
+<p>book{plain:myBook,
+author =”南燕”,
+editor =”南燕”,
+year =”2006”,
+title =”书籍测试”,
+publisher =”Wiley”
+};</p>
+
+<p>@article{plain:myArticle,
+author =”Houston”,
+title =”Teach you how to use article reference”,
+jounal =”IEEE Trans. on Typeset”,
+year =”2006”
+};</p>
+
+<ul>
+  <li>
+    <p>bst文件，参考文献样式文件</p>
+  </li>
+  <li>
+    <p>tex</p>
+  </li>
+  <li>
+    <p>Compile 
+latex
+bibtex
+latex 
+latex</p>
+  </li>
+  <li>
+    <p>Last
+开始整理起自己的文献库吧</p>
+  </li>
+</ul>
+]]></content>
+  </entry>
+  
+</feed>

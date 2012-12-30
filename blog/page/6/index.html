@@ -9,11 +9,10 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="入了VPS之后的第一件事情就是安装一个PPTP服务 1.安装pptpd [bash]
-sudo apt-get install pptpd
-[/bash] 2.配置/etc/pptpd.conf [bash]
-##设置服务器 IP 地址与客服端 DHCP 分配地址范围
-localip 192. &hellip;">
+  <meta name="description" content="好久没升级goagent了 从google code上下载了最新稳定版 shit 居然要安装些其他东西
+[bash]
+sudo curl -k -L http://git.io/I9B7RQ|sh
+[/bash] 装完之后，还是不行，出现 error 原来还得重新upload一下 虽然曲折了一些， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,6 +90,209 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/17/goagent%E4%BB%8E1-x%E5%8D%87%E7%BA%A7%E5%88%B02-x/">GoAgent从1.x升级到2.x</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-17T00:00:00+08:00" pubdate data-updated="true">Oct 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>好久没升级goagent了</p>
+
+<p>从google code上下载了最新稳定版</p>
+
+<p>shit</p>
+
+<p>居然要安装些其他东西<br />
+[bash]<br />
+sudo curl -k -L http://git.io/I9B7RQ|sh<br />
+[/bash]</p>
+
+<p>装完之后，还是不行，出现 error</p>
+
+<p>原来还得重新upload一下</p>
+
+<p>虽然曲折了一些，但是还是要感谢goagent，让生活更加美好！</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/17/debian-apache%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%B7%AF%E5%BE%84/">Debian Apache中添加路径</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-17T00:00:00+08:00" pubdate data-updated="true">Oct 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>在 /etc/apache2/con.d/目录中添加配置文件: resume.conf</p>
+
+<p>内容如下：<br />
+[bash]<br />
+Alias /resume /opt/web/resume<br />
+&lt;Directory /opt/web/resume&gt;<br />
+Options Indexes FollowSymLinks MultiViews<br />
+AllowOverride None<br />
+Order allow,deny<br />
+allow from all<br />
+DirectoryIndex index.html<br />
+&lt;/Directory&gt;<br />
+[/bash]</p>
+
+<p>用浏览器就可以访问了 http://www.xxx.com/resume</p>
+
+<p>Done!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/28/eclipse%E4%B8%ADwindowsbuilder%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/">Eclipse中WindowsBuilder使用问题</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-28T00:00:00+08:00" pubdate data-updated="true">Sep 28<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>以前偶然用过windowsbuilder，觉得特方便</p>
+
+<p>最近想hack一个Monitor</p>
+
+<p>于是安装，使用。。。</p>
+
+<p>但是中间出现了一个问题</p>
+
+<p>就是windowsbuilder的GUI界面没法显示</p>
+
+<p>纠结来纠结去</p>
+
+<p>原来是一个小小的设置问题</p>
+
+<p>见下图</p>
+
+<p><a href="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/wb.png"><img class="size-medium wp-image-408 alignnone" title="wb" src="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/wb-300x86.png" alt="" width="300" height="86" /></a></p>
+
+<p>修改Window&gt;&gt;Preferences&gt;&gt;WindowsBuilder</p>
+
+<p>修改EditorLayout，如图所示，</p>
+
+<p>OK</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/26/win7%E5%92%8Clinux%E8%AE%BF%E9%97%AEvpn%E8%AE%BE%E7%BD%AE/">win7和Linux访问VPN设置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-26T00:00:00+08:00" pubdate data-updated="true">Sep 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Step By Step</p>
+
+<p>在Win7和Linux环境下非客户端访问VPN设置</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -229,201 +431,6 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/21/%E8%AE%B02013%E5%88%9B%E6%96%B0%E5%B7%A5%E5%8E%82%E5%8D%97%E5%A4%A7%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98%E5%AE%A3%E8%AE%B2%E4%BC%9A/">记2013创新工厂南大校园招聘宣讲会</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-21T00:00:00+08:00" pubdate data-updated="true">Sep 21<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>昨天晚上，跟师兄他们奔赴南大仙林校区</p>
-
-<p>参加了创新工厂的宣讲会</p>
-
-<p>现场人很多</p>
-
-<p>本来开复说要来的，但是最终xxx，没来成</p>
-
-<p>不过听的依然很nice</p>
-
-<p>负责主持的可能是创新工厂的HR吧，很有范</p>
-
-<p>主讲的是豌豆夹的COO——《爱与速度引领的创业新思想》</p>
-
-<p>大致讲讲了讲她个人的一些经历，对互联网行业一些人和事的看法</p>
-
-<p>对创新工厂还是很好奇，不知道是不是传说中的那么有爱，希望有机会能实地参观下</p>
-
-<p>比照自己，还是得多修炼啊！！！</p>
-
-<p>[gallery link=&#8221;file&#8221;]</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/20/%E6%90%AC%E5%AE%B6%E4%BA%86/">搬家了</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-20T00:00:00+08:00" pubdate data-updated="true">Sep 20<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>最近琢磨着入手VPS<br />
-偶然间看到了YardVPS打折的消息，对于穷学生，价格才是王道啊，如果能够稳定一点就更完美了<br />
-终身七折<br />
-价格还是非常给力<br />
-选择了<strong>Tree1</strong>
-配置如下：
-<a href="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/vps.png"><img class="size-full wp-image-346 alignnone" title="vps" src="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/vps.png" alt="" width="309" height="670" /></a></p>
-
-<p>搬家是件痛苦的事情</p>
-
-<p>从老薛那边把空间上的数据库还有网站内容 搬到Vps上<br />
-中间很多曲折，不赘述了</p>
-
-<p>最近在想如何利用这Vps<br />
-现在只是在上面搭了个PPTP，测试了下访问速度还算理想<br />
-装了tomcat，写点web app？<br />
-搭个SVN Git服务器？</p>
-
-<p><strong>备份</strong>和<strong>安全</strong>是要重点考虑的事情<br />
-以后慢慢折腾吧!</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/17/test/">Test</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-17T00:00:00+08:00" pubdate data-updated="true">Sep 17<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>test</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/12/cherry-g80-3000-%E6%8D%A2%E9%94%AE%E5%B8%BD/">Cherry G80-3000 换键帽</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-12T00:00:00+08:00" pubdate data-updated="true">Sep 12<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>X宝上如了RGB键帽<br />
-拆键帽的时候，差点把Shift搞坏了，好惊心</p>
-
-<p>白色的键盘上终于有了点色彩<br />
-唯一的缺陷是比原厂的键帽高了一些<br />
-不过还好，只是几个功能键，不影响使用<br />
-最后，上图：</p>
-
-<p>[gallery link=&#8221;file&#8221;]</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -439,10 +446,12 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
     <section>
   <h1>Categories</h1>
   <ul id="categories">
-    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (2)</a></li>
+    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (3)</a></li>
+<li class='category'><a href='/blog/categories/alogrithm/'>Alogrithm (1)</a></li>
 <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
 <li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
-<li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
+<li class='category'><a href='/blog/categories/latex/'>Latex (1)</a></li>
+<li class='category'><a href='/blog/categories/life/'>Life (3)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>Linux (9)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (2)</a></li>
@@ -532,23 +541,23 @@ grub-mkconfig -o /boot/grub/grub.cfg<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/30/conclusion/">2012年&#8211;总结</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/26/em/">EM</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/26/kalman-filter/">Kalman Filter</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/23/latex-bib/">Latex中参考文献</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/22/opencv-build/">OpenCV——[1 环境搭建]</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/19/china-open-3/">ChinaOpen 2012——（3）</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/11/china-open-2/">ChinaOpen 2012——（2）</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/02/last-chinaopen/">ChinaOpen 2012——（1）</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/23/vpn-server-12-dot-04/">Ubuntu12.04 配置VPN Server</a>
       </li>
     
   </ul>

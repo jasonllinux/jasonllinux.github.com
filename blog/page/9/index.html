@@ -9,14 +9,10 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="配置文件 .Xdefaults [bash]
-!!title
-URxvt.title:URxvrt-Jason
-!! 设置 Xftp.dpi(字体分辨率）
-Xft.dpi: 96
-Xft.hinting: 1
-Xft.hintstyle: hintslight
-Xft.antialias: 1 &hellip;">
+  <meta name="description" content="当用Qt Designer设计Qt 界面之后，如果想使用pyqt code，就会用到 pyuic4这个命令
+要使用这个命令需要先安装 [bash]
+sudo pacman -S pyqt
+[/bash] 装完之后，如果在你系统中有python 3.x 和python2.x共存且默认3.x的情况下， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +90,252 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/05/linux%E4%B8%8Bqtdesigner%E8%BD%AC%E6%8D%A2pyqt%E4%BB%A3%E7%A0%81/">Linux下QtDesigner转换Pyqt代码</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-05T00:00:00+08:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>当用Qt Designer设计Qt 界面之后，如果想使用pyqt code，就会用到 <strong>pyuic4</strong>这个命令<br />
+要使用这个命令需要先安装</p>
+
+<p>[bash]<br />
+sudo pacman -S pyqt<br />
+[/bash]</p>
+
+<p>装完之后，如果在你系统中有python 3.x 和python2.x共存且默认3.x的情况下，就会出错<br />
+解决方案就是<strong>切换默认python版本</strong>
+最后</p>
+
+<p>[bash]<br />
+pyuic4 gui.ui -o gui.py<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/04/mac-%E5%AE%89%E8%A3%85opencv%E6%94%AF%E6%8F%B4python/">Mac 安装OpenCV支援Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-04T00:00:00+08:00" pubdate data-updated="true">Aug 4<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Mac上的OpenCV安装和Linux平台下略有不同，在这里我们不采用下载源码包手动编译的方式，因为可能有些依赖问题，我们使用Port包管理，自动安装。</p>
+
+<p><strong>Step1</strong>
+安装MacPort<br />
+安装完成之后</p>
+
+<p>[bash]<br />
+sudo port selfupdate<br />
+[/bash]</p>
+
+<p><strong>Step2</strong>
+安装OpenCv，并且支援Python</p>
+
+<p>[bash]<br />
+sudo port install py27-numpy<br />
+sudo port install opencv +python27<br />
+[/bash]</p>
+
+<p><strong>Step3</strong>
+至此可能会发现python下还是不能用opencv,import 会出现错误<br />
+解决方案<br />
+切换Pyhon版本，默认使用/opt/local/bin/python27</p>
+
+<p><strong>Result</strong>
+至此，应该大功告成了</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/02/%E9%BB%91%E8%8B%B9%E6%9E%9C%E4%B9%8B%E4%BF%AE%E5%A4%8Dlinux%E5%BC%95%E5%AF%BC/">黑苹果之修复linux引导</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-02T00:00:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>型号: thinkpad X61 </strong>
+<strong>OS : win7 &amp;&amp; mac &amp;&amp;lion archlinux</strong></p>
+
+<p>装完mac x lion之后，linux引导是一个问题<br />
+引导程序由Grub2变成了bootthink，让我这个长期的linuxer很不适应，头可断血可流，Linux不能丢，又不能把好不容装好的99完美的mac给卸载了</p>
+
+<p>天不亡我：
+<strong>step1</strong>
+C盘根目录新建boot_linux 文件夹
+<strong>step2</strong>
+从linux系统的/boot/目录下,把initramfs-linux.img 和vmlinuz-linux拷贝进去
+<strong>step3
+</strong>在C盘根目录下新建<br />
+menu.lst<br />
+内容为:</p>
+
+<p>[bash]<br />
+# general configuration:<br />
+timeout 5<br />
+default 0<br />
+color light-blue/black light-cyan/blue</p>
+
+<p># (0) Arch Linux<br />
+title Arch Linux<br />
+set root=&#8217;(hd0,10)&#8217;<br />
+kernel (hd0,0)/boot_linux/vmlinuz-linux root=/dev/sda10<br />
+initrd (hd0,0)/boot_linux/initramfs-linux.img</p>
+
+<p># (2) Windows<br />
+title Windows<br />
+rootnoverify (hd0,0)<br />
+makeactive<br />
+chainloader +1<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/02/archlinux-%E7%BC%96%E8%AF%91-opencv%E6%94%AF%E6%8F%B4python/">Archlinux 编译 OpenCV支援Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-02T00:00:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>
+Step1</strong>
+DownLoad <em>OpenCV-2.4.2.tar.bz2</em></p>
+
+<p><strong>Step2</strong></p>
+
+<p>[bash]<br />
+ cd OpenCV-2.4.2/<br />
+ mkdir release<br />
+ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_PYTHON_SUPPORT=ON ..<br />
+ sudo make<br />
+ sudo make install<br />
+[/bash]</p>
+
+<p><strong>Step3</strong>
+安装完成之后会把cv的库安装到/usr/local/lib/python2.7/site-packages目录中<br />
+复制到你的python2.7所在的路径，或者加个.pth文件</p>
+
+<p>或者直接修改环境变量</p>
+
+<p>[bash]<br />
+export PYTHONPATH=&quot;/usr/local/lib/python2.7/site-packages/:$PYTHONPATH&quot;<br />
+vim /etc/ld.so.conf<br />
+add &quot;/usr/local/lib&quot;<br />
+[/bash]</p>
+
+<p><strong>Result</strong>
+进入OpenCV目录</p>
+
+<p>[bash]<br />
+ cd OpenCV-2.4.2/samples/python<br />
+ python2.7  delaunay.py<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -249,386 +491,9 @@ gnome-tweak-tool<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/01/linux%E4%B8%8Btexlive%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE/">Linux下TexLive中文配置</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-01T00:00:00+08:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/225px-LaTeX_logo.png">
-</a>在Linux环境使用$$\LaTeX$$一般使用TexLive套装，而作为天朝子民，使用中文是件头等大事。</p>
-
-<p>在网上大致浏览到两类方式：<br />
-第一种是盗版windows字体，修改ctex配置文件，要用中文的时候就用ctex宏包；<br />
-第二种方式就是使用XeLatex，直接调用系统中文字体。</p>
-
-<p>下面直接介绍第二种方式，为了方便每次调用，我们把配置做成一个<strong>package</strong>
-在该目录下新建文件</p>
-
-<p>[bash]<br />
-cd /usr/local/texlive/2011/texmf-dist/tex/xelatex/fontspec<br />
-sudo touch zhfontcfg.sty<br />
-[/bash]</p>
-
-<p>在该文件中写入：</p>
-
-<p>[tex]<br />
-% xetex/xelatex 字体设定宏包<br />
-\ProvidesPackage{zhfontcfg}<br />
-%[cm-default]选项主要用来解决使用数学环境时数学符号不能正常显示的问题<br />
-\usepackage[cm-default]{fontspec}<br />
-\usepackage{xunicode,xltxtra}<br />
-\usepackage[BoldFont,SlantFont,CJKnumber,fallback]{xeCJK}%使用TexLive自带的xeCJK宏包，并启用加粗、斜体、CJK数字和备用字体选项<br />
-%如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。<br />
-\defaultfontfeatures{Mapping=tex-text}<br />
-% 中文断行<br />
-%\XeTeXlinebreaklocale &amp;quot;zh&amp;quot;<br />
-%\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt<br />
-%将系统字体名映射为逻辑字体名称，主要是为了维护的方便<br />
-\usepackage{indentfirst}%段落首行缩进<br />
-\setlength{\parindent}{2em}%缩进两个字符<br />
-\newcommand\fontnamehei{文泉驿正黑}<br />
-\newcommand\fontnamesong{SimSun}<br />
-\newcommand\fontnamekai{楷体}<br />
-\newcommand\fontnamemono{FreeMono}<br />
-\newcommand\fontnameroman{Times New Roman}<br />
-%%设置常用中文字号，方便调用<br />
-\newcommand{\erhao}{\fontsize{22pt}{\baselineskip}\selectfont}<br />
-\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}<br />
-\newcommand{\sanhao}{\fontsize{16pt}{\baselineskip}\selectfont}<br />
-\newcommand{\xiaosanhao}{\fontsize{15pt}{\baselineskip}\selectfont}<br />
-\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}<br />
-\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}<br />
-\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}<br />
-\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}<br />
-\newcommand{\liuhao}{\fontsize{7.5pt}{\baselineskip}\selectfont}<br />
-%设置正文<br />
-\setCJKmainfont{WenQuanYi Micro Hei}<br />
-[/tex]</p>
-
-<p>使用命令 生成</p>
-
-<p>[bash]<br />
-sudo mktexlsr<br />
-[/bash]</p>
-
-<p>测试：test.tex</p>
-
-<p>[tex]<br />
-%test.tex<br />
-\documentclass{article}<br />
-\usepackage{zhfontcfg}<br />
-\begin{document}<br />
-Hello, I am jasonllinux.&#92;<br />
-你好，我是jasonllinux<br />
-\end{document}<br />
-[/tex]</p>
-
-<p>输出结果：
-<a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/latex.png"><img class="alignleft size-medium wp-image-177" title="latex" src="http://www.jasonllinux.com/wp-content/uploads/2012/07/latex-300x113.png" alt="" width="300" height="113" /></a></p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>参考：</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/22/tomcat%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/">Tomcat简单配置</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-22T00:00:00+08:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>在Archlinux下简单配置tomat7：</p>
-
-<p>[bash]<br />
-#Install<br />
-sudo pacman -S tomcat7<br />
-#cofigure<br />
-#修改/etc/tomcat7/context.xml<br />
-&lt;Context   reloadable=&quot;true&quot;&gt;<br />
-#修改/etc/tomcat7/tomcat-users.xml</p>
-
-<p>&lt;!&#8211; Tomcat运行必备的角色 &#8211;&gt;<br />
- &lt;role rolename=&quot;tomcat&quot;/&gt;</p>
-
-<p>&lt;!&#8211; 进行Tomcat管理的角色 &#8211;&gt;<br />
- &lt;role rolename=&quot;manager-gui&quot;/&gt;<br />
- &lt;role rolename=&quot;manager-script&quot;/&gt;<br />
- &lt;role rolename=&quot;manager-jmx&quot;/&gt;<br />
- &lt;role rolename=&quot;manager-status&quot;/&gt;<br />
- &lt;role rolename=&quot;admin-gui&quot;/&gt;<br />
- &lt;role rolename=&quot;admin-script&quot;/&gt;</p>
-
-<p>&lt;!&#8211; 进行Tomcat管理的用户，具有Tomcat管理的全部角色 &#8211;&gt;<br />
- &lt;user username=&quot;admin&quot; password=&quot;apollo&quot; roles=&quot;tomcat, manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script&quot;/&gt;<br />
-[/bash]</p>
-
-<p><strong>查看：</strong>
-<strong><a href="http://localhost:8080" target="_blank">http://localhost:8080</a> </strong></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/20/archlinux%E4%B9%8Bsvn%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/">Archlinux之SVN服务器搭建</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-20T00:00:00+08:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>最近把电脑<strong>arch</strong>化了，所以原来在Ubuntu上搭建的SVN服务也要重新安装了，貌似和Ubuntu下有些不同，参考Wiki贴上教程</p>
-
-<p><strong>1.安装Subversion和Apache</strong></p>
-
-<p>[bash]<br />
-sudo pacman -S subversion<br />
-sudo pacman -S apache<br />
-[/bash]</p>
-
-<p><strong>2.新建SVN仓库目录</strong></p>
-
-<p>[bash]<br />
-sudo mkdir -p /home/svn/repositories<br />
-[/bash]</p>
-
-<p><strong>3.修改配置文件</strong>
-在/etc/httpd/conf/httpd.conf中添加<br />
-#LoadModule dav_module modules/mod_dav.so<br />
-#LoadModule dav_fs_module modules/mod_dav_fs.so<br />
-LoadModule dav_svn_module modules/mod_dav_svn.so<br />
-LoadModule authz_svn_module modules/mod_authz_svn.so<br />
-前两行不用，原配置文件中就有</p>
-
-<p>SSL</p>
-
-<p>[bash]<br />
-cd /etc/httpd/conf/<br />
-sudo openssl req -new -x509 -keyout server.key -out server.crt -days 365 -nodes<br />
-[/bash]</p>
-
-<p>按照提示输入就成</p>
-
-<p>修改/etc/httpd/conf/extra/httpd-vhosts.conf<br />
-追加<br />
-&lt;Location /svn&gt;<br />
-DAV svn<br />
-SVNParentPath /home/svn/repositories</p>
-
-<p>AuthzSVNAccessFile /home/svn/.svn-policy-file<br />
-AuthName &#8220;SVN Repositories&#8221;<br />
-AuthType Basic<br />
-AuthUserFile /home/svn/.svn-auth-file<br />
-Satisfy Any<br />
-Require valid-user<br />
-&lt;/Location&gt;<br />
-注意路径要一致</p>
-
-<p>在/etc/httpd/conf/httpd.conf文件中加入 Include /etc/httpd/conf/extra/httpd-ssl.conf</p>
-
-<p><strong>svn-policy-file &amp;&amp; svn-auth-file</strong></p>
-
-<p>[bash]<br />
-sudo touch /home/svn/.svn-policy-file<br />
-[/bash]</p>
-
-<p>在其中添加</p>
-
-<p>[/] * = r<br />
-[REPO_NAME:/] USER_NAME = rw<br />
-用你的真是仓库名替换REPO_NAME，用你的真实用户名替换USER_NAME，如果多个仓库，同理</p>
-
-<p>[bash]<br />
-sudo htpasswd -cs /home/svn/.svn-auth-file USER_NAME<br />
-[/bash]</p>
-
-<p>生成相应用户的密码</p>
-
-<p><strong>4.生成SVN仓库</strong></p>
-
-<p>[bash]<br />
-sudo svnadmin create /home/svn/repositories/REPO_NAME<br />
-[/bash]</p>
-
-<p>设置访问权限</p>
-
-<p>[bash]<br />
-chown -R http.http /home/svn/repositories/REPO_NAME<br />
-[/bash]</p>
-
-<p><strong>5.Done
-</strong>大功告成，这样就可以访问了，比如 <em>http://localhost/svn/REPO_NAME </em></p>
-
-<p><strong>Reference:</strong><em>
-</em><a href="https://wiki.archlinux.org/index.php/Subversion_Setup" target="_blank">Archlinux Wiki</a>
-<a href="http://blog.csdn.net/jallin2001/article/details/7335801" target="_blank">在ubuntu11.10上面安装svn服务器的过程</a>
-<pre><em> </em></pre></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/02/ubuntu12-04-memo/">Ubuntu12.04 Memo</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-02T00:00:00+08:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.jasonllinux.com/wp-content/uploads/2012/05/precise-pangolin.jpg"><img class="aligncenter size-medium wp-image-19" title="precise-pangolin" src="http://www.jasonllinux.com/wp-content/uploads/2012/05/precise-pangolin-300x153.jpg" alt="" width="300" height="153" /></a></p>
-
-<p>从Beta开始用的12.04,从刚开始的Bug丛生到正式发布，终于等到头了.</p>
-
-<p><em>基础版：</em>
-nautilus-open-terminal<br />
-build-essential
-<strong>pdf中文</strong> poppler-data
-<strong>网页浏览器 </strong>Chromium
-<strong>桌面环境</strong> gnome-shell<strong>
-</strong> <strong>输入法</strong> fctix
-<strong>文字排版</strong> TexLive 2011
-<strong>Editor</strong> Vim-gnome
-<strong>Code</strong> eclipse ant subclipse
-<strong>E-mail</strong> thunderbird</p>
-
-<p><em>加强版</em>
-<strong>1.Dropbox</strong>
-源里有，但是部分被墙，自己动手，丰衣足食</p>
-
-<p><strong>2.goagent</strong>
-关于这个网上教程一坨，但是发现两个问题，首先是开机让它自动启动，其二就是PAC，系统全局代理</p>
-
-<p><strong>3.思维导图 xmind
-</strong>这是一个好东西，可以破解成Pro。。邪恶的笑。。。</p>
-
-<p><strong>4.Wine Dr.com</strong>
-在教学区上网就逃不过这个东西，以前由于版本问题，一直没有Wine成功过，直至最近，Ubuntu12.04+ Dr.com3.46,完美运行，无乱码哦
-<a href="http://www.jasonllinux.com/wp-content/uploads/2012/05/2012-05-04-190150的屏幕截图.png"><img class="alignleft size-medium wp-image-105" title="2012-05-04 19:01:50的屏幕截图" src="http://www.jasonllinux.com/wp-content/uploads/2012/05/2012-05-04-190150的屏幕截图-300x185.png" alt="" width="300" height="185" /></a></p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>待续&#8230;&#8230;</p>
-
-<p>&nbsp;</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/10/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -641,10 +506,12 @@ build-essential
     <section>
   <h1>Categories</h1>
   <ul id="categories">
-    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (2)</a></li>
+    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (3)</a></li>
+<li class='category'><a href='/blog/categories/alogrithm/'>Alogrithm (1)</a></li>
 <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
 <li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
-<li class='category'><a href='/blog/categories/life/'>Life (2)</a></li>
+<li class='category'><a href='/blog/categories/latex/'>Latex (1)</a></li>
+<li class='category'><a href='/blog/categories/life/'>Life (3)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>Linux (9)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (2)</a></li>
@@ -734,23 +601,23 @@ build-essential
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/12/30/conclusion/">2012年&#8211;总结</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/26/em/">EM</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/26/kalman-filter/">Kalman Filter</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/23/latex-bib/">Latex中参考文献</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/22/opencv-build/">OpenCV——[1 环境搭建]</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/19/china-open-3/">ChinaOpen 2012——（3）</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/11/china-open-2/">ChinaOpen 2012——（2）</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/02/last-chinaopen/">ChinaOpen 2012——（1）</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/23/vpn-server-12-dot-04/">Ubuntu12.04 配置VPN Server</a>
       </li>
     
   </ul>

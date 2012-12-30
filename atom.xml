@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-12-22T21:09:43+08:00</updated>
+  <updated>2012-12-30T20:06:02+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,198 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[2012年--总结]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/12/30/conclusion/"/>
+    <updated>2012-12-30T18:22:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/12/30/conclusion</id>
+    <content type="html"><![CDATA[<p>2012，末日没有到来</p>
+
+<p>跨年的气氛来了</p>
+
+<p>像去年的这个时候，总结下这一年的种种。。。</p>
+
+<h3 id="robocup">关于RoboCup</h3>
+
+<p>读研的日子，RoboCup就成了自己的Keyword<br />
+还记得2011 兰州的中国公开赛，开始了征程，身上也打上了Apollo的印记<br />
+在Apollo的日子，是忙碌的，充实的，也是遗憾的  </p>
+
+<ul>
+  <li>
+    <p>2012 IranOpen , April</p>
+  </li>
+  <li>
+    <p>2012 ChinaOpen, Dec</p>
+  </li>
+</ul>
+
+<p>Apollo-Rescue 逐渐有了起色，member也越来越多，感觉自己肩上的担子也轻了些  </p>
+
+<p>建了Apollo-Rescue的主页，希望在接下来的一年中，也是自己在Apollo团队的最后阶段，能把自己团队带好，为今后打下良好的基础  </p>
+
+<h3 id="section">那些书</h3>
+
+<p><img src="http://i.minus.com/icsCAHQ8pzPjT.jpg" />  </p>
+
+<p><img src="http://i.minus.com/i9AJL056hHjgu.jpg" />  </p>
+
+<p><img src="http://i.minus.com/ivUvtMPOYPUBr.jpg" />  </p>
+
+<p><img src="http://i.minus.com/ibe4HjiRn2N4X1.jpg" />  </p>
+
+<p><img src="http://i.minus.com/ibk6qVEheMZhSr.jpg" />  </p>
+
+<p>接触的越多，发现自己差的更多<br />
+过往学习的东西也只是冰山一脚<br />
+内功还欠火候  </p>
+
+<h3 id="section-1">那些人</h3>
+
+<p>在学校的日子，使得自己离那些工作的朋友的距离仿佛远了<br />
+有时，也会想，如果当初直接工作，又会怎样的情景<br />
+怀念一些人。。。   </p>
+
+<h3 id="section-2">期盼</h3>
+
+<ul>
+  <li>
+    <p>Paper<br />
+最近一直被论文压着，早日解放</p>
+  </li>
+  <li>
+    <p>想开一些<br />
+每个人都是不一样的，做好自己</p>
+  </li>
+  <li>
+    <p>戒掉部分坏毛病  </p>
+  </li>
+  <li>
+    <p>坚持锻炼<br />
+身体是Coder的第一要义</p>
+  </li>
+  <li>
+    <p>参加LUG的活动，或者其它的OpenSource相关的活动</p>
+  </li>
+  <li>
+    <p>去趟厦门<br />
+上次厦大的那个小朋友说，他们学校都快成旅游学校了。。。</p>
+  </li>
+  <li>
+    <p>自己的Project能够做完<br />
+拖了很久很久了</p>
+  </li>
+  <li>
+    <p>父母身体健康  </p>
+  </li>
+  <li>
+    <p>找到一个靠谱的人 </p>
+  </li>
+</ul>
+
+<h3 id="at-last">AT LAST</h3>
+<p>新年快乐!</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[EM]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/12/26/em/"/>
+    <updated>2012-12-26T21:00:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/12/26/em</id>
+    <content type="html"><![CDATA[<p>重新翻开那本宝典</p>
+
+<h3 id="em">隐变量EM参数学习</h3>
+
+<h4 id="section">隐变量</h4>
+
+<ul>
+  <li>
+    <p>E步骤</p>
+  </li>
+  <li>
+    <p>M步骤</p>
+  </li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Kalman Filter]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/12/26/kalman-filter/"/>
+    <updated>2012-12-26T20:30:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/12/26/kalman-filter</id>
+    <content type="html"><![CDATA[<p>一直觉得滤波之流是个很玄乎的东西</p>
+
+<p>前几日看了一篇文章，霎那间有所顿悟</p>
+
+<p>因此，记录一番</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Latex中参考文献]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/12/23/latex-bib/"/>
+    <updated>2012-12-23T14:36:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/12/23/latex-bib</id>
+    <content type="html"><![CDATA[<h4 id="section">方法一</h4>
+<p>\begin{thebibliography}
+\bibitem author,article, year, vol,
+\end{thebibliography}</p>
+
+<h4 id="section-1">方法二</h4>
+<p>BibTeX</p>
+
+<ul>
+  <li>bib文件，参考文献所在文件，类似于你的数据库</li>
+</ul>
+
+<p>@文献类型={引用名称,
+各个域,用逗号分割,最后一个后面不需要再后面追加逗号,内容要用双引号括起来
+};
+这里要注意:每条参考文献用@开头，分割的逗号不要用中文逗号，用半角逗号，每条参考文献要以;来结束，类似于C++的类的定义。</p>
+
+<p>例子</p>
+
+<p>book{plain:myBook,
+author =”南燕”,
+editor =”南燕”,
+year =”2006”,
+title =”书籍测试”,
+publisher =”Wiley”
+};</p>
+
+<p>@article{plain:myArticle,
+author =”Houston”,
+title =”Teach you how to use article reference”,
+jounal =”IEEE Trans. on Typeset”,
+year =”2006”
+};</p>
+
+<ul>
+  <li>
+    <p>bst文件，参考文献样式文件</p>
+  </li>
+  <li>
+    <p>tex</p>
+  </li>
+  <li>
+    <p>Compile 
+latex
+bibtex
+latex 
+latex</p>
+  </li>
+  <li>
+    <p>Last
+开始整理起自己的文献库吧</p>
+  </li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[OpenCV——[1 环境搭建]]]></title>
@@ -273,6 +465,14 @@
 </span><span class="line">sudo svnadmin create repo
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 
+<h6 id="update">Update</h6>
+<ul>
+  <li>Error: svn attempt to write a readonly database, commit failed</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">chmod -R g+w /srv/svn</span></code></pre></td></tr></table></div></figure></notextile></div>
+
 ]]></content>
   </entry>
   
@@ -283,13 +483,16 @@
     <id>http://jasonllinux.github.com/blog/2012/11/11/some-distance</id>
     <content type="html"><![CDATA[<p>记录一些平时看到的“距离”。  </p>
 
-<h4 id="section">距离</h4>
+<h4 id="section">欧几里得距离</h4>
 <p><script type="math/tex">distance =  \sqrt { ({ x }_{ 1 }-{ x }_{ 2 })^{ 2 } + ({ y }_{ 1 }-{ y }_{ 2 })^{ 2 }} </script></p>
 
-<h4 id="section-1">曼哈顿距离</h4>
-<p><script type="math/tex">distance = \left| { x }_{ 1 }-{ x }_{ 2 } \right| +\left| { y }_{ 1 }-{ y }_{ 2 } \right| </script></p>
+<h4 id="manhatan">曼哈顿距离(Manhatan)</h4>
+<p>也叫xx距离，<br />
+<script type="math/tex">distance = \left| { x }_{ 1 }-{ x }_{ 2 } \right| +\left| { y }_{ 1 }-{ y }_{ 2 } \right| </script></p>
 
-<h4 id="xx">xx距离</h4>
+<h4 id="section-1">马氏距离</h4>
+
+<h3 id="p566">海明距离 P566</h3>
 ]]></content>
   </entry>
   
@@ -1190,199 +1393,6 @@ Modify source/_layouts/defaults.html  </li>
 </pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#改变图片大小</span>
 </span><span class="line">convert -resize 50x50 heart.png heart1.png
 </span></code></pre></td></tr></table></div></figure></notextile></div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[在安装完Ubuntu12.xx后需要做的一些xx事情]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/04/do-sth-after-install-ubuntu12-dot-xx/"/>
-    <updated>2012-11-04T16:01:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/04/do-sth-after-install-ubuntu12-dot-xx</id>
-    <content type="html"><![CDATA[<p>1.修改软件源，推荐163</p>
-
-<p>2.禁用报错</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line">vim /etc/default/apport
-</span><span class="line"><span class="c">#将1改成0</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Config Octopress]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/04/config-octopress/"/>
-    <updated>2012-11-04T12:58:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/04/config-octopress</id>
-    <content type="html"><![CDATA[<h2 id="section">如何恢复</h2>
-<p>首先从github checkout两个分支</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line">git clone -b <span class="nb">source </span>git@github.com:username/username.github.com.git octopress
-</span><span class="line"><span class="nb">cd </span>octopress
-</span><span class="line">git clone git@github.com:username/username.github.com.git _deploy
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>安装依赖gems</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line">gem install bundler
-</span><span class="line">bundle install
-</span><span class="line">rake install <span class="c"># 可以省略？</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>pull最新的</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nb">cd </span>xxx
-</span><span class="line"><span class="nb">cd </span>_deploy
-</span><span class="line">git pull origin master
-</span><span class="line"><span class="nb">cd</span> ..
-</span><span class="line">git pull origin <span class="nb">source</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<h2 id="robotstxt">添加robots.txt</h2>
-
-<h2 id="section-1">添加404页面</h2>
-
-<h2 id="more">More</h2>
-<p>excerpt_link: “Read on →”  # 在文章中使用<!-- more -->,列表页将不再显示全文，而是显示“Read on”的链接，指向全文  </p>
-
-<h2 id="octopress">在Octopress中使用表格</h2>
-<ul>
-  <li>在 source/stylesheests中添加data-table.css</li>
-</ul>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-<span class="line-number">16</span>
-<span class="line-number">17</span>
-<span class="line-number">18</span>
-<span class="line-number">19</span>
-<span class="line-number">20</span>
-<span class="line-number">21</span>
-<span class="line-number">22</span>
-<span class="line-number">23</span>
-<span class="line-number">24</span>
-<span class="line-number">25</span>
-<span class="line-number">26</span>
-<span class="line-number">27</span>
-<span class="line-number">28</span>
-<span class="line-number">29</span>
-<span class="line-number">30</span>
-<span class="line-number">31</span>
-</pre></td><td class="code"><pre><code class="html"><span class="line">* + table {
-</span><span class="line">  border-style:solid;
-</span><span class="line">  border-width:1px;
-</span><span class="line">  border-color:#e7e3e7;
-</span><span class="line">}
-</span><span class="line">
-</span><span class="line">* + table th, * + table td {
-</span><span class="line">  border-style:dashed;
-</span><span class="line">  border-width:1px;
-</span><span class="line">  border-color:#e7e3e7;
-</span><span class="line">  padding-left: 3px;
-</span><span class="line">  padding-right: 3px;
-</span><span class="line">}
-</span><span class="line">
-</span><span class="line">* + table th {
-</span><span class="line">  border-style:solid;
-</span><span class="line">  font-weight:bold;
-</span><span class="line">  background: url(&quot;/images/noise.png?1330434582&quot;) repeat scroll left top #F7F3F7;
-</span><span class="line">}
-</span><span class="line">
-</span><span class="line">* + table th[align=&quot;left&quot;], * + table td[align=&quot;left&quot;] {
-</span><span class="line">  text-align:left;
-</span><span class="line">}
-</span><span class="line">
-</span><span class="line">* + table th[align=&quot;right&quot;], * + table td[align=&quot;right&quot;] {
-</span><span class="line">  text-align:right;
-</span><span class="line">}
-</span><span class="line">
-</span><span class="line">* + table th[align=&quot;center&quot;], * + table td[align=&quot;center&quot;] {
-</span><span class="line">  text-align:center;
-</span><span class="line">}
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>修改 source/_includes/head.html</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class="html"><span class="line"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;/stylesheets/screen.css&quot;</span> <span class="na">media=</span><span class="s">&quot;screen, projection&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
-</span><span class="line"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;/stylesheets/data-table.css&quot;</span> <span class="na">media=</span><span class="s">&quot;screen, projection&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="nt">/&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>表格示例:</p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ibus In Gnome3.6]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/02/ibus-in-gnome3-dot-6/"/>
-    <updated>2012-11-02T11:38:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/02/ibus-in-gnome3-dot-6</id>
-    <content type="html"><![CDATA[<p>昨天Arch滚到Gnome3.6</p>
-
-<p>但是发现fcitx不能用</p>
-
-<p>据说原生支持ibus了</p>
-
-<p>so 切换到ibus</p>
-
-<p>但是发现无法用快捷键切换中英文</p>
-
-<p>解决方法:</p>
-
-<p><img src="http://i.minus.com/i1qT5Q9K9sKOA.png" alt="Alt ibus" /></p>
-
-<p>如上图所示在”区域和语言设置“中修改“切换下一个源”的键盘快捷方式</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Solve Subclipse Javahl Problem in Ubuntu12.10]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/01/solve-subclipse-javahl-problem-in-ubuntu12-dot-10/"/>
-    <updated>2012-11-01T20:29:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/01/solve-subclipse-javahl-problem-in-ubuntu12-dot-10</id>
-    <content type="html"><![CDATA[<p>eclipse中安装完subclipse插件之后往往会报如下错误：</p>
-
-<blockquote>
-  <p>Failed to load JavaHL Library.
-These are the errors that were encountered:
-no libsvnjavahl-1 in java.library.path
-no svnjavahl-1 in java.library.path
-no svnjavahl in java.library.path
-java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
-</blockquote>
-
-<p>解决方法：</p>
-
-<p>在eclipse安装目录中的文件eclipse.ini中设置</p>
-
-<pre><code>-Djava.library.path=/usr/lib/x86_64-linux-gnu/jni/
-</code></pre>
 ]]></content>
   </entry>
   

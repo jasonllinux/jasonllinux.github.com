@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Algorithm | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/algorithm/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-12-22T21:09:43+08:00</updated>
+  <updated>2012-12-30T20:06:02+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -14,19 +14,44 @@
 
   
   <entry>
+    <title type="html"><![CDATA[EM]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/12/26/em/"/>
+    <updated>2012-12-26T21:00:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/12/26/em</id>
+    <content type="html"><![CDATA[<p>重新翻开那本宝典</p>
+
+<h3 id="em">隐变量EM参数学习</h3>
+
+<h4 id="section">隐变量</h4>
+
+<ul>
+  <li>
+    <p>E步骤</p>
+  </li>
+  <li>
+    <p>M步骤</p>
+  </li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[[Algorithm]——几种距离]]></title>
     <link href="http://jasonllinux.github.com/blog/2012/11/11/some-distance/"/>
     <updated>2012-11-11T16:45:00+08:00</updated>
     <id>http://jasonllinux.github.com/blog/2012/11/11/some-distance</id>
     <content type="html"><![CDATA[<p>记录一些平时看到的“距离”。  </p>
 
-<h4 id="section">距离</h4>
+<h4 id="section">欧几里得距离</h4>
 <p><script type="math/tex">distance =  \sqrt { ({ x }_{ 1 }-{ x }_{ 2 })^{ 2 } + ({ y }_{ 1 }-{ y }_{ 2 })^{ 2 }} </script></p>
 
-<h4 id="section-1">曼哈顿距离</h4>
-<p><script type="math/tex">distance = \left| { x }_{ 1 }-{ x }_{ 2 } \right| +\left| { y }_{ 1 }-{ y }_{ 2 } \right| </script></p>
+<h4 id="manhatan">曼哈顿距离(Manhatan)</h4>
+<p>也叫xx距离，<br />
+<script type="math/tex">distance = \left| { x }_{ 1 }-{ x }_{ 2 } \right| +\left| { y }_{ 1 }-{ y }_{ 2 } \right| </script></p>
 
-<h4 id="xx">xx距离</h4>
+<h4 id="section-1">马氏距离</h4>
+
+<h3 id="p566">海明距离 P566</h3>
 ]]></content>
   </entry>
   
