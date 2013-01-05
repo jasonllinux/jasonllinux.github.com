@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Cocos2d-x | Jasonllinux's Blog]]></title>
+  <link href="http://jasonllinux.github.com/blog/categories/cocos2d-x/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.com/"/>
+  <updated>2013-01-05T14:22:04+08:00</updated>
+  <id>http://jasonllinux.github.com/</id>
+  <author>
+    <name><![CDATA[jasonllinux]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cocos2d-x 中的一些问题]]></title>
+    <link href="http://jasonllinux.github.com/blog/2013/01/05/cocos2d-x-some-questions/"/>
+    <updated>2013-01-05T14:18:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2013/01/05/cocos2d-x-some-questions</id>
+    <content type="html"><![CDATA[<h4 id="q1"><strong>Q1</strong></h4>
+<p>Function ‘sharedOpenGLView’ could not be resolved<br />
+A:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#include “platform/android/CCEGLView.h”&lt;br /></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+]]></content>
+  </entry>
+  
+</feed>

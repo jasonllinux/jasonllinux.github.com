@@ -9,7 +9,9 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="最近小研究了下使用OpenCV进行人脸检测 老早用Python实现过 最近回归C++ 当然，还是用Eclipse了 刚开始只是惯性的设置了include路径，所以头文件什么的都没有问题 但是，最后Build的时候出现了N多 undefined reference to xxx 网上搜了一把， &hellip;">
+  <meta name="description" content="eclipse中安装完subclipse插件之后往往会报如下错误： Failed to load JavaHL Library.
+These are the errors that were encountered:
+no libsvnjavahl-1 in java.library.path &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +89,58 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/01/solve-subclipse-javahl-problem-in-ubuntu12-dot-10/">Solve Subclipse Javahl Problem in Ubuntu12.10</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-01T20:29:00+08:00" pubdate data-updated="true">Nov 1<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>eclipse中安装完subclipse插件之后往往会报如下错误：</p>
+
+<blockquote>
+  <p>Failed to load JavaHL Library.
+These are the errors that were encountered:
+no libsvnjavahl-1 in java.library.path
+no svnjavahl-1 in java.library.path
+no svnjavahl in java.library.path
+java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
+</blockquote>
+
+<p>解决方法：</p>
+
+<p>在eclipse安装目录中的文件eclipse.ini中设置</p>
+
+<pre><code>-Djava.library.path=/usr/lib/x86_64-linux-gnu/jni/
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -321,55 +375,6 @@ MathJax.Hub.Config({
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/">Git Push 错误</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-18T00:00:00+08:00" pubdate data-updated="true">Oct 18<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>今天，上传代码到github上的时候 莫名其妙出现：</p>
-
-<p>[bash]<br />
-Unable to rewind rpc post data - try increasing http.postBuffer<br />
-error: RPC failed; result=65, HTTP code = 401<br />
-fatal: The remote end hung up unexpectedly<br />
-fatal: The remote end hung up unexpectedly<br />
-[/bash]</p>
-
-<p>解决方案：</p>
-
-<p>[bash]<br />
-git config http.postBuffer 209715200<br />
-[/bash]</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -387,6 +392,7 @@ git config http.postBuffer 209715200<br />
   <ul id="categories">
     <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (3)</a></li>
 <li class='category'><a href='/blog/categories/alogrithm/'>Alogrithm (1)</a></li>
+<li class='category'><a href='/blog/categories/cocos2d-x/'>Cocos2d-x (1)</a></li>
 <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
 <li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
 <li class='category'><a href='/blog/categories/latex/'>Latex (1)</a></li>
@@ -480,6 +486,10 @@ git config http.postBuffer 209715200<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/01/05/cocos2d-x-some-questions/">Cocos2d-x 中的一些问题</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/30/conclusion/">2012年&#8211;总结</a>
       </li>
     
@@ -493,10 +503,6 @@ git config http.postBuffer 209715200<br />
     
       <li class="post">
         <a href="/blog/2012/12/23/latex-bib/">Latex中参考文献</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/22/opencv-build/">OpenCV——[1 环境搭建]</a>
       </li>
     
   </ul>
@@ -521,7 +527,7 @@ git config http.postBuffer 209715200<br />
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - jasonllinux -
+  Copyright &copy; 2013 - jasonllinux -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

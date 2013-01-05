@@ -9,9 +9,13 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="在Linux环境使用$$\LaTeX$$一般使用TexLive套装，而作为天朝子民，使用中文是件头等大事。 在网上大致浏览到两类方式：
-第一种是盗版windows字体，修改ctex配置文件，要用中文的时候就用ctex宏包；
-第二种方式就是使用XeLatex，直接调用系统中文字体。 &hellip;">
+  <meta name="description" content="中文及渲染
+采用Ubunut的LCD补丁，避免字体发虚 [bash]
+yaourt -S cairo-ubuntu
+[/bash] 中文字体配置 [bash]
+yaourt -S fontconfig-ubuntu-zh-cn
+[/bash] 最后一步 [bash]
+gnome-tweak- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +93,62 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/02/archlinux-memo/">Archlinux Memo</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-02T00:00:00+08:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>中文及渲染<br />
+采用Ubunut的LCD补丁，避免字体发虚</p>
+
+<p>[bash]<br />
+yaourt -S cairo-ubuntu<br />
+[/bash]</p>
+
+<p>中文字体配置</p>
+
+<p>[bash]<br />
+yaourt -S fontconfig-ubuntu-zh-cn<br />
+[/bash]</p>
+
+<p>最后一步</p>
+
+<p>[bash]<br />
+gnome-tweak-tool<br />
+[/bash]</p>
+
+<p>调整如下：
+<a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/gtt.png"><img class="aligncenter size-medium wp-image-211" title="gtt" src="http://www.jasonllinux.com/wp-content/uploads/2012/07/gtt-300x239.png" alt="" width="300" height="239" /></a>OK 收工！</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -484,6 +544,7 @@ build-essential
   <ul id="categories">
     <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (3)</a></li>
 <li class='category'><a href='/blog/categories/alogrithm/'>Alogrithm (1)</a></li>
+<li class='category'><a href='/blog/categories/cocos2d-x/'>Cocos2d-x (1)</a></li>
 <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
 <li class='category'><a href='/blog/categories/it/'>IT (17)</a></li>
 <li class='category'><a href='/blog/categories/latex/'>Latex (1)</a></li>
@@ -577,6 +638,10 @@ build-essential
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/01/05/cocos2d-x-some-questions/">Cocos2d-x 中的一些问题</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/12/30/conclusion/">2012年&#8211;总结</a>
       </li>
     
@@ -590,10 +655,6 @@ build-essential
     
       <li class="post">
         <a href="/blog/2012/12/23/latex-bib/">Latex中参考文献</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/22/opencv-build/">OpenCV——[1 环境搭建]</a>
       </li>
     
   </ul>
@@ -618,7 +679,7 @@ build-essential
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - jasonllinux -
+  Copyright &copy; 2013 - jasonllinux -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

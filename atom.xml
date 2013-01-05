@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2012-12-30T20:33:35+08:00</updated>
+  <updated>2013-01-05T14:22:04+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Cocos2d-x 中的一些问题]]></title>
+    <link href="http://jasonllinux.github.com/blog/2013/01/05/cocos2d-x-some-questions/"/>
+    <updated>2013-01-05T14:18:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2013/01/05/cocos2d-x-some-questions</id>
+    <content type="html"><![CDATA[<h4 id="q1"><strong>Q1</strong></h4>
+<p>Function ‘sharedOpenGLView’ could not be resolved<br />
+A:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">#include "platform/android/CCEGLView.h"</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[2012年--总结]]></title>
@@ -1375,24 +1390,6 @@ Modify source/_layouts/defaults.html  </li>
     \end{array} \right)
 \end{align*}
  %]]&gt;</script>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ImageMagic 使用]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/04/imagemagic-shi-yong/"/>
-    <updated>2012-11-04T18:11:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/04/imagemagic-shi-yong</id>
-    <content type="html"><![CDATA[<p>在Linux环境下ImageMagic可以用来简单的对图片作一些处理
-简直就是神器</p>
-
-<p>用法举例</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#改变图片大小</span>
-</span><span class="line">convert -resize 50x50 heart.png heart1.png
-</span></code></pre></td></tr></table></div></figure></notextile></div>
 ]]></content>
   </entry>
   
