@@ -44,3 +44,11 @@ sudo svnadmin create repo
 ```
 
 
+###### Update
+* Error: svn attempt to write a readonly database, commit failed
+
+{%codeblock %}
+chmod -R g+w /srv/svn
+{%endcodeblock %}
+
+
