@@ -9,9 +9,31 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="记录一些平时看到的“距离”。 欧几里得距离 曼哈顿距离(Manhatan)
-也叫xx距离， 马氏距离 海明距离 P566
-">
+  <meta name="description" content="最近把实验室的一台Server升级到了12.10 因为实在受不了Arch的更新强度 经常滚死的Arch不适合做服务器了，So 还是回归Ubuntu吧 搭建起来。。。 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +111,109 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/18/svn-server-in-ubuntu12-dot-10/">Ubuntu12.10 搭建 SVN服务器</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-18T13:44:00+08:00" pubdate data-updated="true">Nov 18<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>最近把实验室的一台Server升级到了12.10</p>
+
+<p>因为实在受不了Arch的更新强度</p>
+
+<p>经常滚死的Arch不适合做服务器了，So 还是回归Ubuntu吧</p>
+
+<p>搭建起来。。。</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#Step 1 安装一些东西</span>
+</span><span class="line">sudo apt-get install subversion libapache2-svn apache2
+</span><span class="line">
+</span><span class="line"><span class="c">#Step 2 建立SVN仓库目录</span>
+</span><span class="line">sudo mkdir /srv/svn
+</span><span class="line">
+</span><span class="line"><span class="c">#Step 3 修改配置文件</span>
+</span><span class="line">sudo cp /etc/apache2/mods-enabled/dav_svn.conf /etc/apache2/mods-enabled/dav_svn.conf.orig
+</span><span class="line">sudo nano /etc/apache2/mods-enabled/dav_svn.conf
+</span><span class="line">
+</span><span class="line">&lt;Location /svn&gt;
+</span><span class="line">DAV svn
+</span><span class="line">SVNParentPath /srv/svn
+</span><span class="line">AuthType Basic
+</span><span class="line">AuthName <span class="s2">&quot;Subversion Repository&quot;</span>
+</span><span class="line">AuthUserFile /etc/apache2/dav_svn.passwd
+</span><span class="line">Require valid-user
+</span><span class="line">&lt;/Location&gt;
+</span><span class="line">
+</span><span class="line"><span class="c">#Step4 生成用户以及密码</span>
+</span><span class="line">sudo htpasswd -cm /etc/apache2/dav_svn.passwd jasonllinux
+</span><span class="line">
+</span><span class="line"><span class="c">#Last 建代码仓库啦</span>
+</span><span class="line"><span class="nb">cd</span> /srv/svn
+</span><span class="line">sudo svnadmin create repo
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h6 id="update">Update</h6>
+<ul>
+  <li>Error: svn attempt to write a readonly database, commit failed</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">chmod -R g+w /srv/svn</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -401,64 +526,6 @@ MathJax.Hub.Config({
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/07/re-in-python-1/">[Python]-RE</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-07T11:30:00+08:00" pubdate data-updated="true">Nov 7<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>正则表达式是个牛叉的东东，如果运用的好，能够在平时的开发中事半功倍！</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>First Header</th>
-      <th>Second Header</th>
-      <th>Third Header</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Content Cell</td>
-      <td>Content Cell</td>
-      <td>Content Cell</td>
-    </tr>
-    <tr>
-      <td>Content Cell</td>
-      <td>Content Cell</td>
-      <td>Content Cell</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -570,6 +637,10 @@ MathJax.Hub.Config({
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/02/18/xxx/">xxx</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/05/cocos2d-x-some-questions/">Cocos2d-x 中的一些问题</a>
       </li>
     
@@ -583,10 +654,6 @@ MathJax.Hub.Config({
     
       <li class="post">
         <a href="/blog/2012/12/26/kalman-filter/">Kalman Filter</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/23/latex-bib/">Latex中参考文献</a>
       </li>
     
   </ul>

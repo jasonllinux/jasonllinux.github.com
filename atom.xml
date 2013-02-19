@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-01-05T14:22:04+08:00</updated>
+  <updated>2013-02-19T18:40:49+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[xxx]]></title>
+    <link href="http://jasonllinux.github.com/blog/2013/02/18/xxx/"/>
+    <updated>2013-02-18T14:34:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2013/02/18/xxx</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Cocos2d-x 中的一些问题]]></title>
@@ -1365,31 +1374,6 @@ Modify source/_layouts/defaults.html  </li>
 </span><span class="line">  &gt; div#main {
 </span><span class="line">    background: $sidebar-bg $noise-bg;
 </span></code></pre></td></tr></table></div></figure></notextile></div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[Algorithm]——算法复杂度]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/05/algorithm-complexity/"/>
-    <updated>2012-11-05T16:44:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/05/algorithm-complexity</id>
-    <content type="html"><![CDATA[<script type="math/tex; mode=display">% &lt;![CDATA[
-
-\begin{align*}
-  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
-      \vdots & \ddots & \vdots \\
-      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
-\end{align*}
- %]]&gt;</script>
 ]]></content>
   </entry>
   

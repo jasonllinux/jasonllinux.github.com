@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: linux | Jasonllinux's Blog]]></title>
+  <title><![CDATA[Category: Linux | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-01-05T14:22:04+08:00</updated>
+  <updated>2013-02-19T18:40:49+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -14,134 +14,499 @@
 
   
   <entry>
-    <title type="html"><![CDATA[GoAgent从1.x升级到2.x]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/10/17/goagent%E4%BB%8E1-x%E5%8D%87%E7%BA%A7%E5%88%B02-x/"/>
-    <updated>2012-10-17T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/10/17/goagent从1-x升级到2-x</id>
-    <content type="html"><![CDATA[<p>好久没升级goagent了</p>
+    <title type="html"><![CDATA[Ubuntu12.04 配置VPN Server]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/23/vpn-server-12-dot-04/"/>
+    <updated>2012-11-23T08:57:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/23/vpn-server-12-dot-04</id>
+    <content type="html"><![CDATA[<p>Step1
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get   install pptpd
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>从google code上下载了最新稳定版</p>
+<p>Step2
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#修改配置文件/etc/sysctl.conf中的相应内容如下，打开ipv4转发功能&lt;br /&gt;</span>
+</span><span class='line'>net.ipv4.ip_forward <span class="o">=</span> 1&lt;br /&gt;
+</span><span class='line'><span class="c">#执行sysctl -p，使其马上生效。&lt;br /&gt;</span>
+</span><span class='line'><span class="c">#编辑配置文件 /etc/ppp/pptpd-options，修改里面的 ms-dns 这个项为 8.8.8.8 。也就是Google的DNS服务器。&lt;br /&gt;</span>
+</span><span class='line'><span class="c">#编辑配置文件 /etc/pptpd.conf .修改成如下：&lt;br /&gt;</span>
+</span><span class='line'>option /etc/ppp/pptpd-options&lt;br /&gt;
+</span><span class='line'>localip 192.168.0.1&lt;br /&gt;
+</span><span class='line'>remoteip 192.168.0.11-150&lt;br /&gt;
+</span><span class='line'><span class="c">#编辑配置文件 /etc/ppp/chap-secrets 。此文件定义登录的用户名和密码&lt;br /&gt;</span>
+</span><span class='line'><span class="c">#添加一行&lt;br /&gt;</span>
+</span><span class='line'>komy pptpd password *&lt;br /&gt;
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>shit</p>
+<p>Step3 配置Iptables
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>iptables -t nat -A POSTROUTING -o eth0 -s 192.168.0.0/24 -j MASQUERADE&lt;br /&gt;
+</span><span class='line'>iptables -I FORWARD -p tcp –syn -i ppp+ -j TCPMSS –set-mss 1356&lt;br /&gt;
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>居然要安装些其他东西<br />
-[bash]<br />
-sudo curl -k -L http://git.io/I9B7RQ|sh<br />
-[/bash]</p>
+<p>Step4 开机自动生效
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>iptables-save &amp;gt; /etc/iptables.up.rules&lt;br /&gt;
+</span><span class='line'><span class="c">#然后修改脚本/etc/network/interfaces&lt;br /&gt;</span>
+</span><span class='line'>pre-up iptables-restore &amp;lt; /etc/iptables.up.rules&lt;br /&gt;
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>装完之后，还是不行，出现 error</p>
-
-<p>原来还得重新upload一下</p>
-
-<p>虽然曲折了一些，但是还是要感谢goagent，让生活更加美好！</p>
-
-<p>&nbsp;</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Eclipse中WindowsBuilder使用问题]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/09/28/eclipse%E4%B8%ADwindowsbuilder%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/"/>
-    <updated>2012-09-28T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/09/28/eclipse中windowsbuilder使用问题</id>
-    <content type="html"><![CDATA[<p>以前偶然用过windowsbuilder，觉得特方便</p>
+    <title type="html"><![CDATA[Ubuntu12.10 搭建 SVN服务器]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/18/svn-server-in-ubuntu12-dot-10/"/>
+    <updated>2012-11-18T13:44:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/18/svn-server-in-ubuntu12-dot-10</id>
+    <content type="html"><![CDATA[<p>最近把实验室的一台Server升级到了12.10</p>
 
-<p>最近想hack一个Monitor</p>
+<p>因为实在受不了Arch的更新强度</p>
 
-<p>于是安装，使用。。。</p>
+<p>经常滚死的Arch不适合做服务器了，So 还是回归Ubuntu吧</p>
 
-<p>但是中间出现了一个问题</p>
+<p>搭建起来。。。</p>
 
-<p>就是windowsbuilder的GUI界面没法显示</p>
+<p>``` bash
+#Step 1 安装一些东西
+sudo apt-get install subversion libapache2-svn apache2</p>
 
-<p>纠结来纠结去</p>
+<h1 id="step-2-svn">Step 2 建立SVN仓库目录</h1>
+<p>sudo mkdir /srv/svn</p>
 
-<p>原来是一个小小的设置问题</p>
+<h1 id="step-3-">Step 3 修改配置文件</h1>
+<p>sudo cp /etc/apache2/mods-enabled/dav_svn.conf /etc/apache2/mods-enabled/dav_svn.conf.orig
+sudo nano /etc/apache2/mods-enabled/dav_svn.conf</p>
 
-<p>见下图</p>
+<p>&lt;Location /svn&gt;
+DAV svn
+SVNParentPath /srv/svn
+AuthType Basic
+AuthName “Subversion Repository”
+AuthUserFile /etc/apache2/dav_svn.passwd
+Require valid-user
+&lt;/Location&gt;</p>
 
-<p><a href="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/wb.png"><img class="size-medium wp-image-408 alignnone" title="wb" src="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/wb-300x86.png" alt="" width="300" height="86" /></a></p>
+<h1 id="step4-">Step4 生成用户以及密码</h1>
+<p>sudo htpasswd -cm /etc/apache2/dav_svn.passwd jasonllinux</p>
 
-<p>修改Window&gt;&gt;Preferences&gt;&gt;WindowsBuilder</p>
+<h1 id="last-">Last 建代码仓库啦</h1>
+<p>cd /srv/svn
+sudo svnadmin create repo</p>
 
-<p>修改EditorLayout，如图所示，</p>
+<p>```</p>
 
-<p>OK</p>
+<h6 id="update">Update</h6>
+<ul>
+  <li>Error: svn attempt to write a readonly database, commit failed</li>
+</ul>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>chmod -R g+w /srv/svn</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Archlinux 配置Grub2简便方法]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/09/23/archlinux-%E9%85%8D%E7%BD%AEgrub2%E7%AE%80%E4%BE%BF%E6%96%B9%E6%B3%95/"/>
-    <updated>2012-09-23T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/09/23/archlinux-配置grub2简便方法</id>
-    <content type="html"><![CDATA[<p>Archer都知道的</p>
+    <title type="html"><![CDATA[Arch中安装WPS A6]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/07/install-wps-in-arch/"/>
+    <updated>2012-11-07T16:33:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/07/install-wps-in-arch</id>
+    <content type="html"><![CDATA[<p>最近终于申请到了wps a6，立马安装</p>
 
-<p>配置Grub不像Ubuntu那么Easy，可以自动检测到其他盘符的系统</p>
+<ul>
+  <li>PKGBUILD</li>
+</ul>
 
-<p>但是神器来了</p>
+<p>``` bash
+pkgname=wps-office
+pkgver=8.1.0.3431
+<em>pkgver=8.1.0.3431+wps+wpp~a6
+pkgrel=1
+pkgdesc=”Kingsoft Office is an office productivity suite. This is an ALPHA package and provides only Presentation. Use it at your own risk.”
+arch=(‘i686’ ‘x86</em>64’)
+license=(“Custom”)
+url=”http://www.wps.cn/”
+depends=()
+#makedepdends=(‘deb2targz’ ‘tar’)
+source=(“${pkgname}_${_pkgver}_i386.deb”)
+sha1sums=(‘73cb05ef791fcfc46d884ae77015d1ee22bf2fcf’)
+install=${pkgname}.install </p>
 
-<p><strong>os-prober</strong></p>
+<p>if [ “${CARCH}” = ‘x86_64’ ]; then
+  depends=(‘lib32-glib2’ ‘lib32-libxrender’ ‘lib32-libxext’ ‘lib32-libsm’ ‘lib32-fontconfig’ )
+else	
+  depends=(‘glib2’ ‘libxrender’ ‘libxext’ ‘libsm’ ‘fontconfig’ ‘libjpeg6’)
+fi</p>
 
-<p>在安装玩Grub2之后iou</p>
+<p>package()
+{
+    cd “${srcdir}”
+    tar azxvf data.tar.gz -C “${pkgdir}”
+}</p>
 
-<p>[bash]<br />
-pacman -S os-prober<br />
-grub-mkconfig -o /boot/grub/grub.cfg<br />
-[/bash]</p>
+<p>```
+<!-- more --></p>
+
+<ul>
+  <li>wps-office.install</li>
+</ul>
+
+<p>``` bash
+#!/bin/bash</p>
+
+<p>ksv_xdg_dirs=${XDG_DATA_DIRS:-/usr/share}
+ksv_xdg_dir=
+ksv_def_icon_theme=icons/hicolor</p>
+
+<p>ksv_wps_mimes=(‘application-wps-office.wps’ ‘wps-office-wps.png’ ‘application-wps-office.wpt’ ‘wps-office-wpt.png’)
+ksv_word_mimes=(‘application-wps-office.doc’ ‘wps-office-doc.png’ ‘application-wps-office.dot’ ‘wps-office-dot.png’ ‘application-vnd.ms-word’ ‘wps-office-doc.png’ ‘application-msword’ ‘wps-office-doc.png’ ‘application-msword-template’ ‘wps-office-dot.png’)
+ksv_et_mimes=(‘application-wps-office.et’ ‘wps-office-et.png’ ‘application-wps-office.ett’ ‘wps-office-ett.png’)
+ksv_excel_mimes=(‘application-wps-office.xls’ ‘wps-office-xls.png’ ‘application-wps-office.xlt’ ‘wps-office-xlt.png’ ‘application-vnd.ms-excel’ ‘wps-office-xls.png’ ‘application-msexcel’ ‘wps-office-xls.png’)
+ksv_wpp_mimes=(‘application-wps-office.dps’ ‘wps-office-dps.png’ ‘application-wps-office.dpt’ ‘wps-office-dpt.png’)
+ksv_ppt_mimes=(‘application-wps-office.ppt’ ‘wps-office-ppt.png’ ‘application-wps-office.pptx’ ‘wps-office-ppt.png’ ‘application-wps-office.pot’ ‘wps-office-pot.png’ ‘application-vnd.ms-powerpoint’ ‘wps-office-ppt.png’ ‘application-vnd.mspowerpoint’ ‘wps-office-ppt.png’ ‘application-powerpoint’ ‘wps-office-ppt.png’)</p>
+
+<p>function ks_install_icon()
+{
+	local context=$1
+	shift
+	local mode=$1
+	shift</p>
+
+<pre><code>local png=
+local mime=
+local nextIsPng=0
+for item in $@
+do
+	if [ "" = "${item}" ] ; then
+		continue
+	fi
+	if [ ${nextIsPng} -eq 1 ] ; then
+		png=${item}
+		for i in 48 32 22 16; do
+			if [ -e "${ksv_xdg_dir}/${ksv_def_icon_theme}/${i}x${i}/${context}/${png}" ] ; then
+				xdg-icon-resource install --noupdate --mode ${mode} --context ${context} --size ${i} "${ksv_xdg_dir}/${ksv_def_icon_theme}/${i}x${i}/${context}/${png}" ${mime}
+			fi
+		done
+		nextIsPng=0
+	else
+		mime=${item}
+		nextIsPng=1
+	fi
+done }
+</code></pre>
+
+<p>function ks_config_default_mime_open()
+{
+	local desktop=$1
+	shift</p>
+
+<pre><code>local png=
+local mime=
+local nextIsPng=0
+for item in $@
+do
+	if [ "" = "${item}" ] ; then
+		continue
+	fi
+	if [ ${nextIsPng} -eq 1 ] ; then
+		png=${item}
+		nextIsPng=0
+	else
+		mime=${item/application-/application/}
+		nextIsPng=1
+	fi
+done }
+</code></pre>
+
+<p>function ks_init()
+{
+	set -e
+	for i in <code>echo "${ksv_xdg_dirs}" | sed 's/:/ /g'</code>
+	do
+		if [ -w ${i}/${ksv_def_icon_theme} ] ; then
+			ksv_xdg_dir=”${i}”
+		fi
+	done
+}</p>
+
+<p>function ks_config_menu()
+{
+	if [ -f “${ksv_xdg_dir}/applications/wps-office-et.desktop” ] ; then
+		xdg-mime install –novendor –mode system “${ksv_xdg_dir}/mime/packages/wps-office-et.xml”</p>
+
+<pre><code>	xdg-desktop-menu install --noupdate --novendor --mode system "${ksv_xdg_dir}/applications/wps-office-et.desktop"
+	#xdg-desktop-menu install --noupdate --novendor --mode system "${ksv_xdg_dir}/desktop-directories/wps-office.directory" "${ksv_xdg_dir}/applications/wps-office-et.desktop"
+	xdg-desktop-menu forceupdate --mode system
+
+	ks_install_icon "mimetypes" "system" "${ksv_et_mimes[*]}" "${ksv_excel_mimes[*]}"
+	xdg-icon-resource forceupdate --mode system
+
+	ks_config_default_mime_open "${ksv_xdg_dir}/applications/wps-office-et.desktop" "${ksv_et_mimes[*]}" "${ksv_excel_mimes[*]}"
+fi
+
+if [ -f "${ksv_xdg_dir}/applications/wps-office-wpp.desktop" ] ; then
+	xdg-mime install --novendor --mode system "${ksv_xdg_dir}/mime/packages/wps-office-wpp.xml"
+
+	xdg-desktop-menu install --noupdate --novendor --mode system "${ksv_xdg_dir}/applications/wps-office-wpp.desktop"
+	#xdg-desktop-menu install --noupdate --novendor --mode system "${ksv_xdg_dir}/desktop-directories/wps-office.directory" "${ksv_xdg_dir}/applications/wps-office-wpp.desktop"
+	xdg-desktop-menu forceupdate --mode system
+
+	ks_install_icon "mimetypes" "system" "${ksv_wpp_mimes[*]}" "${ksv_ppt_mimes[*]}"
+	xdg-icon-resource forceupdate --mode system
+
+	ks_config_default_mime_open "${ksv_xdg_dir}/applications/wps-office-wpp.desktop" "${ksv_wpp_mimes[*]}" "${ksv_ppt_mimes[*]}"
+fi
+
+if [ -f "${ksv_xdg_dir}/applications/wps-office-wps.desktop" ] ; then
+	xdg-mime install --novendor --mode system "${ksv_xdg_dir}/mime/packages/wps-office-wps.xml"
+
+	xdg-desktop-menu install --noupdate --novendor --mode system "${ksv_xdg_dir}/applications/wps-office-wps.desktop"
+	#xdg-desktop-menu install --noupdate --novendor --mode system "${ksv_xdg_dir}/desktop-directories/wps-office.directory" "${ksv_xdg_dir}/applications/wps-office-wps.desktop"
+	xdg-desktop-menu forceupdate --mode system
+
+	ks_install_icon "mimetypes" "system" "${ksv_wps_mimes[*]}" "${ksv_word_mimes[*]}"
+	xdg-icon-resource forceupdate --mode system
+
+	ks_config_default_mime_open "${ksv_xdg_dir}/applications/wps-office-wps.desktop" "${ksv_wps_mimes[*]}" "${ksv_word_mimes[*]}"
+fi }
+</code></pre>
+
+<p>function ks_config_fonts()
+{
+	if [ -d /usr/share/fonts/wps-office ] ; then
+		cd /usr/share/fonts/wps-office
+		mkfontscale
+		mkfontdir
+		fc-cache -f
+	fi
+}</p>
+
+<p>function ks_config()
+{
+	ks_config_menu	
+	ks_config_fonts
+}</p>
+
+<p>function ks_remove()
+{
+	if [ -e /etc/xdg/menus/applications-merged/wps-office.menu ] ; then
+		rm -rf /etc/xdg/menus/applications-merged/wps-office.menu
+	fi</p>
+
+<pre><code>if [ -x /usr/bin/update-mime-database ] ; then
+	update-mime-database "${ksv_xdg_dir}/mime"
+fi
+
+if [ -x /usr/bin/update-desktop-database ] ; then
+	update-desktop-database -q "${ksv_xdg_dir}/applications"
+fi
+
+if [ -d /usr/share/fonts/wps-office ] ; then
+	cd /usr/share/fonts
+	fc-cache -f
+fi }
+</code></pre>
+
+<p>function ks_purge()
+{
+	if [ -d /usr/share/fonts/wps-office ] ; then
+		rm -rf /usr/share/fonts/wps-office
+	fi
+}</p>
+
+<p>function ks_uninstall_icon()
+{
+	local context=$1
+	shift
+	local mode=$1
+	shift</p>
+
+<pre><code>local png=
+local mime=
+local nextIsPng=0
+for item in $@
+do
+	if [ "" = "${item}" ] ; then
+		continue
+	fi
+	if [ ${nextIsPng} -eq 1 ] ; then
+		png=${item}
+		nextIsPng=0
+	else
+		mime=${item}
+		for i in 48 32 22 16; do
+			if [ -e "${ksv_xdg_dir}/${ksv_def_icon_theme}/${i}x${i}/${context}/${png}" ] ; then
+				xdg-icon-resource uninstall --noupdate --mode ${mode} --context ${context} --size ${i} ${mime}
+			fi
+		done
+
+		nextIsPng=1
+	fi
+done }
+</code></pre>
+
+<p>function ks_prerm_uninstall_menu()
+{
+	if [ -f “${ksv_xdg_dir}/applications/wps-office-et.desktop” ] ; then
+		xdg-mime uninstall –mode system “${ksv_xdg_dir}/mime/packages/wps-office-et.xml”</p>
+
+<pre><code>	#xdg-desktop-menu uninstall --noupdate --mode system "${ksv_xdg_dir}/desktop-directories/wps-office.directory" "${ksv_xdg_dir}/applications/wps-office-et.desktop"
+	xdg-desktop-menu uninstall --noupdate --mode system "${ksv_xdg_dir}/applications/wps-office-et.desktop"
+	xdg-desktop-menu forceupdate --mode system
+
+	ks_uninstall_icon "mimetypes" "system" "${ksv_et_mimes[*]}" "${ksv_excel_mimes[*]}"
+	xdg-icon-resource forceupdate --mode system
+fi
+
+if [ -f "${ksv_xdg_dir}/applications/wps-office-wpp.desktop" ] ; then
+	xdg-mime uninstall --mode system "${ksv_xdg_dir}/mime/packages/wps-office-wpp.xml"
+
+	#xdg-desktop-menu uninstall --noupdate --mode system "${ksv_xdg_dir}/desktop-directories/wps-office.directory" "${ksv_xdg_dir}/applications/wps-office-wpp.desktop"
+	xdg-desktop-menu uninstall --noupdate --mode system "${ksv_xdg_dir}/applications/wps-office-wpp.desktop"
+	xdg-desktop-menu forceupdate --mode system
+
+	ks_uninstall_icon "mimetypes" "system" "${ksv_wpp_mimes[*]}" "${ksv_ppt_mimes[*]}"
+	xdg-icon-resource forceupdate --mode system
+fi
+
+if [ -f "${ksv_xdg_dir}/applications/wps-office-wps.desktop" ] ; then
+	xdg-mime uninstall --mode system "${ksv_xdg_dir}/mime/packages/wps-office-wps.xml"
+
+	#xdg-desktop-menu uninstall --noupdate --mode system "${ksv_xdg_dir}/desktop-directories/wps-office.directory" "${ksv_xdg_dir}/applications/wps-office-wps.desktop"
+	xdg-desktop-menu uninstall --noupdate --mode system "${ksv_xdg_dir}/applications/wps-office-wps.desktop"
+	xdg-desktop-menu forceupdate --mode system
+
+	ks_uninstall_icon "mimetypes" "system" "${ksv_wps_mimes[*]}" "${ksv_word_mimes[*]}"
+	xdg-icon-resource forceupdate --mode system
+fi
+</code></pre>
+
+<p>}</p>
+
+<p>function ks_prerm_upgrade()
+{
+	ks_prerm_uninstall_menu
+}</p>
+
+<p>function ks_prerm_remove()
+{
+	ks_prerm_uninstall_menu
+}</p>
+
+<p>function ks_main()
+{
+	if [ $# -eq 0 ] ; then
+		return;
+	fi</p>
+
+<pre><code>ks_init
+case $1 in
+	configure )
+		shift
+		ks_config $@
+		;;
+	prerm )
+		shift
+		ks_prerm_remove $@
+		;;
+	remove )
+		shift
+		ks_remove $@
+		ks_purge $@
+		;;
+	upgrade )
+		shift
+		ks_prerm_upgrade $@
+		ks_config $@
+		;;
+esac }
+</code></pre>
+
+<p>post_install()
+{
+	ks_main configure
+}</p>
+
+<p>post_upgrade()
+{
+	ks_main upgrade
+}</p>
+
+<p>pre_remove()
+{
+	ks_main prerm
+}</p>
+
+<p>post_remove()
+{
+	ks_main remove
+}
+```</p>
+
+<ul>
+  <li>
+    <p>makepkg</p>
+  </li>
+  <li>
+    <p>install</p>
+  </li>
+</ul>
+
+<p>``` bash</p>
+
+<p>pacman -U *.pkg.tar.xz </p>
+
+<p>```</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[搬家了]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/09/20/%E6%90%AC%E5%AE%B6%E4%BA%86/"/>
-    <updated>2012-09-20T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/09/20/搬家了</id>
-    <content type="html"><![CDATA[<p>最近琢磨着入手VPS<br />
-偶然间看到了YardVPS打折的消息，对于穷学生，价格才是王道啊，如果能够稳定一点就更完美了<br />
-终身七折<br />
-价格还是非常给力<br />
-选择了<strong>Tree1</strong>
-配置如下：
-<a href="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/vps.png"><img class="size-full wp-image-346 alignnone" title="vps" src="http://www.jasonllinux.com/blog/wp-content/uploads/2012/09/vps.png" alt="" width="309" height="670" /></a></p>
+    <title type="html"><![CDATA[离开Gnome3.6,奔向Xfce4]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/07/leave-gnome3/"/>
+    <updated>2012-11-07T15:02:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/07/leave-gnome3</id>
+    <content type="html"><![CDATA[<p>前几天，Arch升级到Gnome3.6</p>
 
-<p>搬家是件痛苦的事情</p>
+<p>谁知道，尽然默认整合ibus，不能卸载（当然也可以Rdd删除）</p>
 
-<p>从老薛那边把空间上的数据库还有网站内容 搬到Vps上<br />
-中间很多曲折，不赘述了</p>
+<p>想继续用fcitx，遇到了一堆麻烦</p>
 
-<p>最近在想如何利用这Vps<br />
-现在只是在上面搭了个PPTP，测试了下访问速度还算理想<br />
-装了tomcat，写点web app？<br />
-搭个SVN Git服务器？</p>
+<p>算了，改用轻量级的桌面环境Xfce吧，貌似也不错</p>
 
-<p><strong>备份</strong>和<strong>安全</strong>是要重点考虑的事情<br />
-以后慢慢折腾吧!</p>
+<p>最后</p>
+
+<p><strong>XX Gnome</strong> , 不整合ibus会死啊 。。。。。</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Cocos2d-x 2.x设置竖屏方法]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/09/10/cocos2d-x-2-x%E8%AE%BE%E7%BD%AE%E7%AB%96%E5%B1%8F%E6%96%B9%E6%B3%95/"/>
-    <updated>2012-09-10T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/09/10/cocos2d-x-2-x设置竖屏方法</id>
-    <content type="html"><![CDATA[<p>cocos2d-x从1.x到2.x的api转变还是有点大的，<br />
-找了半天没找到orientation的方法；<br />
-于是放狗<br />
-找到的方法貌似也不是很OK，先凑合着用<br />
-如果是ios平台<br />
-修改RootViewController.mm<br />
-[c]<br />
-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {<br />
-    return UIInterfaceOrientationIsPortrait(interfaceOrientation);</p>
+    <title type="html"><![CDATA[ImageMagic 使用]]></title>
+    <link href="http://jasonllinux.github.com/blog/2012/11/04/imagemagic-shi-yong/"/>
+    <updated>2012-11-04T18:11:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2012/11/04/imagemagic-shi-yong</id>
+    <content type="html"><![CDATA[<p>在Linux环境下ImageMagic可以用来简单的对图片作一些处理
+简直就是神器</p>
 
-<p>}<br />
-[/c]<br />
-如果是android平台<br />
-在AndroidManifest.xml中设置<br />
-[bash]<br />
-android:screenOrientation=&quot;portrait&quot;<br />
-[/bash]</p>
+<p>用法举例</p>
+
+<p><code>bash
+    #改变图片大小
+    convert -resize 50x50 heart.png heart1.png
+</code></p>
 ]]></content>
   </entry>
   

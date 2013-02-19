@@ -9,10 +9,8 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="今天，上传代码到github上的时候 莫名其妙出现： [bash]
-Unable to rewind rpc post data - try increasing http.postBuffer
-error: RPC failed; result=65, HTTP code = 401
-fatal &hellip;">
+  <meta name="description" content="悲了个剧 从linux下拷贝一个pdf文件到win8中，重启进入win8发现读不了 就知道坏了，删除，发现也删除不掉 下载了一些文件粉碎机 也没用 最后 1
+CHKDSK C:/F ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,6 +88,54 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/21/win8-delete-file/">Win8 下无法删除文件，文件或目录损坏且无法读取</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-21T15:30:00+08:00" pubdate data-updated="true">Oct 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>悲了个剧</p>
+
+<p>从linux下拷贝一个pdf文件到win8中，重启进入win8发现读不了</p>
+
+<p>就知道坏了，删除，发现也删除不掉</p>
+
+<p>下载了一些文件粉碎机 也没用</p>
+
+<p>最后 </p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">CHKDSK C:/F
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -343,94 +389,6 @@ DirectoryIndex index.html<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/09/26/debian-squeeze-%E5%AE%89%E8%A3%85pptp%E6%9C%8D%E5%8A%A1/">Debian Squeeze 安装PPTP服务</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-26T00:00:00+08:00" pubdate data-updated="true">Sep 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>入了VPS之后的第一件事情就是安装一个PPTP服务</p>
-
-<p>1.安装pptpd</p>
-
-<p>[bash]<br />
-sudo apt-get install pptpd<br />
-[/bash]</p>
-
-<p>2.配置/etc/pptpd.conf</p>
-
-<p>[bash]<br />
-##设置服务器 IP 地址与客服端 DHCP 分配地址范围<br />
-localip 192.168.0.1<br />
-remoteip 192.168.0.2-245<br />
-[/bash]</p>
-
-<p>3.编辑 /etc/ppp/pptpd-options</p>
-
-<p>[bash]<br />
-#为客户端提供DNS<br />
-ms-dns 8.8.8.8<br />
-ms-dns 8.8.4.4<br />
-[/bash]</p>
-
-<p>4.编辑 /etc/ppp/chap-secrets</p>
-
-<p>[bash]<br />
-#添加用户和密码<br />
-username   servername   password    *<br />
-[/bash]</p>
-
-<p>5.编辑 /etc/sysctl.conf</p>
-
-<p>[bash]<br />
-#开启IPV4转发<br />
-uncomment net.ipv4.ip_forward=1<br />
-sysctl -p<br />
-[/bash]</p>
-
-<p>6.设置Iptables</p>
-
-<p>[bash]iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE</p>
-
-<p>#设置MTU大小，解决部分网站无法访问的情况（MTU=MSS+20+20)<br />
-iptables -A FORWARD -p tcp &#8211;syn -s 192.168.0.0/24 -j TCPMSS &#8211;set-mss 1356<br />
-[/bash]</p>
-
-<p>7.启动服务<br />
-[bash]<br />
-/etc/init.d/pptpd restart<br />
-[/bash]</p>
-
-<p>&nbsp;</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -542,6 +500,10 @@ iptables -A FORWARD -p tcp &#8211;syn -s 192.168.0.0/24 -j TCPMSS &#8211;set-mss
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/02/18/xxx/">xxx</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/05/cocos2d-x-some-questions/">Cocos2d-x 中的一些问题</a>
       </li>
     
@@ -555,10 +517,6 @@ iptables -A FORWARD -p tcp &#8211;syn -s 192.168.0.0/24 -j TCPMSS &#8211;set-mss
     
       <li class="post">
         <a href="/blog/2012/12/26/kalman-filter/">Kalman Filter</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/23/latex-bib/">Latex中参考文献</a>
       </li>
     
   </ul>
