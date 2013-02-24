@@ -51,4 +51,9 @@ sudo svnadmin create repo
 chmod -R g+w /srv/svn
 {%endcodeblock %}
 
-
+### Q:  
+{%codeblock %}
+Error: svn attempt to write a readonly database, commit failed
+#解决方法
+chmod -R g+w /srv/svn
+{%endcodeblock %}
