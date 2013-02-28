@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-02-24T14:29:49+08:00</updated>
+  <updated>2013-02-28T10:39:44+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -101,6 +101,11 @@ A:</p>
 <div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 </pre></td><td class="code"><pre><code class=""><span class="line">#include "platform/android/CCEGLView.h"</span></code></pre></td></tr></table></div></figure></notextile></div>
 
+<h4 id="q2"><strong>Q2</strong></h4>
+<p>string之流无法解析<br />
+A:<br />
+在Providers标签中勾选 <strong>CDT Builtin Compiler Settings</strong> 选项
+<img src="http://i.minus.com/ibcqMGoEk4m02A.png" title="" /></p>
 ]]></content>
   </entry>
   
