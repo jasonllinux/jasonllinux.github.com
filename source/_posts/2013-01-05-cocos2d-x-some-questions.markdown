@@ -14,3 +14,9 @@ A:
 {% endcodeblock %}
 
 
+
+#### __Q2__  
+string之流无法解析  
+A:  
+在Providers标签中勾选 __CDT Builtin Compiler Settings__ 选项
+{% img http://i.minus.com/ibcqMGoEk4m02A.png  %}
