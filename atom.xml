@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-02-28T10:39:44+08:00</updated>
+  <updated>2013-03-06T11:36:31+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,214 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Linux下使用Aria2c和YAAW打造迅雷下载]]></title>
+    <link href="http://jasonllinux.github.com/blog/2013/03/05/aria2c-and-yaaw/"/>
+    <updated>2013-03-05T11:33:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2013/03/05/aria2c-and-yaaw</id>
+    <content type="html"><![CDATA[<h3 id="section">先来一张图</h3>
+<p><img src="http://i.minus.com/is7Fiw9VMlBT.png" /></p>
+
+<h3 id="aria2">Aria2篇</h3>
+
+<h5 id="section-1">安装和配置</h5>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">sudo apt-get install aria2</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>配置文件</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">#新建配置文件
+</span><span class="line">touch /$HOME/.aria2/aria2.conf</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>内容如下：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+<span class="line-number">43</span>
+<span class="line-number">44</span>
+<span class="line-number">45</span>
+<span class="line-number">46</span>
+<span class="line-number">47</span>
+<span class="line-number">48</span>
+<span class="line-number">49</span>
+<span class="line-number">50</span>
+<span class="line-number">51</span>
+<span class="line-number">52</span>
+<span class="line-number">53</span>
+<span class="line-number">54</span>
+<span class="line-number">55</span>
+<span class="line-number">56</span>
+<span class="line-number">57</span>
+<span class="line-number">58</span>
+<span class="line-number">59</span>
+<span class="line-number">60</span>
+<span class="line-number">61</span>
+<span class="line-number">62</span>
+<span class="line-number">63</span>
+<span class="line-number">64</span>
+<span class="line-number">65</span>
+<span class="line-number">66</span>
+<span class="line-number">67</span>
+<span class="line-number">68</span>
+<span class="line-number">69</span>
+<span class="line-number">70</span>
+<span class="line-number">71</span>
+<span class="line-number">72</span>
+<span class="line-number">73</span>
+<span class="line-number">74</span>
+<span class="line-number">75</span>
+<span class="line-number">76</span>
+<span class="line-number">77</span>
+<span class="line-number">78</span>
+<span class="line-number">79</span>
+<span class="line-number">80</span>
+<span class="line-number">81</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">#允许rpc
+</span><span class="line">enable-rpc=true
+</span><span class="line">#允许所有来源, web界面跨域权限需要
+</span><span class="line">rpc-allow-origin-all=true
+</span><span class="line">#允许非外部访问
+</span><span class="line">rpc-listen-all=true
+</span><span class="line">#RPC端口, 仅当默认端口被占用时修改
+</span><span class="line">#rpc-listen-port=6800
+</span><span class="line">
+</span><span class="line">#最大同时下载数(任务数), 路由建议值: 3
+</span><span class="line">max-concurrent-downloads=10
+</span><span class="line">#断点续传
+</span><span class="line">continue=true
+</span><span class="line">#同服务器连接数
+</span><span class="line">max-connection-per-server=10
+</span><span class="line">#最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要
+</span><span class="line">min-split-size=10M
+</span><span class="line">#单文件最大线程数, 路由建议值: 5
+</span><span class="line">split=10
+</span><span class="line">#下载速度限制
+</span><span class="line">max-overall-download-limit=0
+</span><span class="line">#单文件速度限制
+</span><span class="line">max-download-limit=0
+</span><span class="line">#上传速度限制
+</span><span class="line">max-overall-upload-limit=0
+</span><span class="line">#单文件速度限制
+</span><span class="line">max-upload-limit=0
+</span><span class="line">#断开速度过慢的连接
+</span><span class="line">#lowest-speed-limit=0
+</span><span class="line">#验证用，需要1.16.1之后的release版本
+</span><span class="line">#referer=*
+</span><span class="line">
+</span><span class="line">
+</span><span class="line">input-file=/home/rescue01/Downloads/aria2.session
+</span><span class="line">save-session=/home/rescue01/Downloads/aria2.session
+</span><span class="line">#定时保存会话，需要1.16.1之后的release版
+</span><span class="line">#save-session-interval=60
+</span><span class="line">
+</span><span class="line">
+</span><span class="line">#文件保存路径, 默认为当前启动位置
+</span><span class="line">dir=/home/rescue01/Downloads
+</span><span class="line">#文件缓存, 使用内置的文件缓存, 如果你不相信Linux内核文件缓存和磁盘内置缓存时使用, 需要1.16及以上版本
+</span><span class="line">#disk-cache=0
+</span><span class="line">#另一种Linux文件缓存方式, 使用前确保您使用的内核支持此选项, 需要1.15及以上版本(?)
+</span><span class="line">#enable-mmap=true
+</span><span class="line">#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长
+</span><span class="line">#所需时间 none &lt; falloc ? trunc &lt;&lt; prealloc, falloc和trunc需要文件系统和内核支持
+</span><span class="line">file-allocation=prealloc
+</span><span class="line">
+</span><span class="line">
+</span><span class="line">#启用本地节点查找
+</span><span class="line">bt-enable-lpd=true
+</span><span class="line">#添加额外的tracker
+</span><span class="line">#bt-tracker=&lt;URI&gt;,…
+</span><span class="line">#单种子最大连接数
+</span><span class="line">#bt-max-peers=55
+</span><span class="line">#强制加密, 防迅雷必备
+</span><span class="line">#bt-require-crypto=true
+</span><span class="line">#当下载的文件是一个种子(以.torrent结尾)时, 自动下载BT
+</span><span class="line">follow-torrent=true
+</span><span class="line">#BT监听端口, 当端口屏蔽时使用
+</span><span class="line">#listen-port=6881-6999
+</span><span class="line">
+</span><span class="line">
+</span><span class="line">
+</span><span class="line">#不确定是否需要，为保险起见，need more test
+</span><span class="line">enable-dht=false
+</span><span class="line">bt-enable-lpd=false
+</span><span class="line">enable-peer-exchange=false
+</span><span class="line">#修改特征
+</span><span class="line">user-agent=uTorrent/2210(25130)
+</span><span class="line">peer-id-prefix=-UT2210-
+</span><span class="line">#修改做种设置, 允许做种
+</span><span class="line">seed-ratio=0
+</span><span class="line">#保存会话
+</span><span class="line">force-save=true
+</span><span class="line">bt-hash-check-seed=true
+</span><span class="line">bt-seed-unverified=true
+</span><span class="line">bt-save-metadata=true
+</span><span class="line">#定时保存会话，需要1.16.1之后的某个release版本（比如1.16.2）
+</span><span class="line">#save-session-interval=60</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h3 id="section-2">插件篇</h3>
+
+<h4 id="section-3">迅雷离线助手</h4>
+<p>打开Chrome浏览器，<a href="https://chrome.google.com/webstore/detail/thunderlixianassistant/eehlmkfpnagoieibahhcghphdbjcdmen?hl=zh-CN">链接</a>, 进行安装<br />
+该插件将下载和设置都集成在“迅雷离线下载网页”中了<br />
+主要需要设置”<strong>JSON-RPC Path</strong>”  </p>
+
+<h4 id="yaaw">YAAW</h4>
+<p>打开<a href="https://chrome.google.com/webstore/detail/thunderlixianassistant/eehlmkfpnagoieibahhcghphdbjcdmen">链接</a>
+同样设置”<strong>JSON-RPC Path</strong>” (右上角 扳手处)</p>
+
+<h3 id="section-4">使用篇</h3>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">aria2c --conf-path=/Where your config file/.aria2/aria2.conf</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>然后在迅雷离线下载页面中选择批量下载-》YAAW<br />
+Done！  </p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tweak SSD for Ubuntu and Windows]]></title>
@@ -1379,82 +1587,6 @@ latex</p>
     </tr>
   </tbody>
 </table>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[在Octopress中使用Latex公式]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/06/write-latex-in-octopress/"/>
-    <updated>2012-11-06T18:17:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/06/write-latex-in-octopress</id>
-    <content type="html"><![CDATA[<p>对于我等diaosi，偶尔还是会需要在blog中输入一些符号、公式之类</p>
-
-<p>But How？</p>
-
-<ul>
-  <li>In the first, Use kramdown instead of rdiscount</li>
-</ul>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line">gem install kramdown
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>然后在配置文件_config.yml中替换设置</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line">markdown: kramdown
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<ul>
-  <li>设置样式<br />
-Modify source/_layouts/defaults.html  </li>
-</ul>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-</pre></td><td class="code"><pre><code class="html"><span class="line"><span class="c">&lt;!-- mathjax config similar to math.stackexchange --&gt;</span>
-</span><span class="line"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/x-mathjax-config&quot;</span><span class="nt">&gt;</span>
-</span><span class="line"><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
-</span><span class="line">  <span class="nx">jax</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;input/TeX&quot;</span><span class="p">,</span> <span class="s2">&quot;output/HTML-CSS&quot;</span><span class="p">],</span>
-</span><span class="line">  <span class="nx">tex2jax</span><span class="o">:</span> <span class="p">{</span>
-</span><span class="line">    <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="s1">&#39;$&#39;</span><span class="p">]</span> <span class="p">],</span>
-</span><span class="line">    <span class="nx">displayMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;$$&#39;</span><span class="p">,</span> <span class="s1">&#39;$$&#39;</span><span class="p">]],</span>
-</span><span class="line">    <span class="nx">processEscapes</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class="line">    <span class="nx">skipTags</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;script&#39;</span><span class="p">,</span> <span class="s1">&#39;noscript&#39;</span><span class="p">,</span> <span class="s1">&#39;style&#39;</span><span class="p">,</span> <span class="s1">&#39;textarea&#39;</span><span class="p">,</span> <span class="s1">&#39;pre&#39;</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">]</span>
-</span><span class="line">  <span class="p">},</span>
-</span><span class="line">  <span class="nx">messageStyle</span><span class="o">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span>
-</span><span class="line">  <span class="s2">&quot;HTML-CSS&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="nx">preferredFont</span><span class="o">:</span> <span class="s2">&quot;TeX&quot;</span><span class="p">,</span> <span class="nx">availableFonts</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;STIX&quot;</span><span class="p">,</span><span class="s2">&quot;TeX&quot;</span><span class="p">]</span> <span class="p">}</span>
-</span><span class="line"><span class="p">});</span>
-</span><span class="line"><span class="nt">&lt;/script&gt;</span>
-</span><span class="line"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<ul>
-  <li>解决右击公式全屏空白问题</li>
-</ul>
-
-<p>Modify sass/base_theme.scss</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class="html"><span class="line">body {
-</span><span class="line">  &gt; div#main {
-</span><span class="line">    background: $sidebar-bg $noise-bg;
-</span></code></pre></td></tr></table></div></figure></notextile></div>
 ]]></content>
   </entry>
   

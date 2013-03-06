@@ -5,17 +5,33 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Config Octopress - Jasonllinux's Blog</title>
+  <title>Linux下使用Aria2c和YAAW打造迅雷下载 - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="如何恢复
-首先从github checkout两个分支 1
+  <meta name="description" content="先来一张图 Aria2篇 安装和配置 1
+sudo apt-get install aria2 配置文件 1
+2
+#新建配置文件
+touch /$HOME/.aria2/aria2.conf 内容如下： 1
 2
 3
-git clone -b source git@github.com:username/username.github.com.git octopress
-cd octopress
-git clone git@github.com &hellip;">
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -24,7 +40,7 @@ git clone git@github.com &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/11/04/config-octopress/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2013/03/05/aria2c-and-yaaw/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -96,7 +112,7 @@ MathJax.Hub.Config({
   
   <header>
     
-      <h1 class="entry-title">Config Octopress</h1>
+      <h1 class="entry-title">Linux下使用Aria2c和YAAW打造迅雷下载</h1>
     
     
       <p class="meta">
@@ -112,61 +128,33 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2012-11-04T12:58:00+08:00" pubdate data-updated="true">Nov 4<span>th</span>, 2012</time>
+<time datetime="2013-03-05T11:33:00+08:00" pubdate data-updated="true">Mar 5<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h2 id="section">如何恢复</h2>
-<p>首先从github checkout两个分支</p>
+<div class="entry-content"><h3 id="section">先来一张图</h3>
+<p><img src="http://i.minus.com/is7Fiw9VMlBT.png" /></p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<h3 id="aria2">Aria2篇</h3>
+
+<h5 id="section-1">安装和配置</h5>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">sudo apt-get install aria2</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>配置文件</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line">git clone -b <span class="nb">source </span>git@github.com:username/username.github.com.git octopress
-</span><span class="line"><span class="nb">cd </span>octopress
-</span><span class="line">git clone git@github.com:username/username.github.com.git _deploy
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+</pre></td><td class="code"><pre><code class=""><span class="line">#新建配置文件
+</span><span class="line">touch /$HOME/.aria2/aria2.conf</span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p>安装依赖gems</p>
+<p>内容如下：</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line">gem install bundler
-</span><span class="line">bundle install
-</span><span class="line">rake install <span class="c"># 可以省略？</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>pull最新的</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nb">cd </span>xxx
-</span><span class="line"><span class="nb">cd </span>_deploy
-</span><span class="line">git pull origin master
-</span><span class="line"><span class="nb">cd</span> ..
-</span><span class="line">git pull origin <span class="nb">source</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<h2 id="robotstxt">添加robots.txt</h2>
-
-<h2 id="section-1">添加404页面</h2>
-
-<h2 id="more">More</h2>
-<p>excerpt_link: “Read on →”  # 在文章中使用<!-- more -->,列表页将不再显示全文，而是显示“Read on”的链接，指向全文  </p>
-
-<h2 id="octopress">在Octopress中使用表格</h2>
-<ul>
-  <li>在 source/stylesheests中添加data-table.css</li>
-</ul>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
@@ -197,48 +185,156 @@ MathJax.Hub.Config({
 <span class="line-number">29</span>
 <span class="line-number">30</span>
 <span class="line-number">31</span>
-</pre></td><td class="code"><pre><code class="html"><span class="line">* + table {
-</span><span class="line">  border-style:solid;
-</span><span class="line">  border-width:1px;
-</span><span class="line">  border-color:#e7e3e7;
-</span><span class="line">}
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+<span class="line-number">43</span>
+<span class="line-number">44</span>
+<span class="line-number">45</span>
+<span class="line-number">46</span>
+<span class="line-number">47</span>
+<span class="line-number">48</span>
+<span class="line-number">49</span>
+<span class="line-number">50</span>
+<span class="line-number">51</span>
+<span class="line-number">52</span>
+<span class="line-number">53</span>
+<span class="line-number">54</span>
+<span class="line-number">55</span>
+<span class="line-number">56</span>
+<span class="line-number">57</span>
+<span class="line-number">58</span>
+<span class="line-number">59</span>
+<span class="line-number">60</span>
+<span class="line-number">61</span>
+<span class="line-number">62</span>
+<span class="line-number">63</span>
+<span class="line-number">64</span>
+<span class="line-number">65</span>
+<span class="line-number">66</span>
+<span class="line-number">67</span>
+<span class="line-number">68</span>
+<span class="line-number">69</span>
+<span class="line-number">70</span>
+<span class="line-number">71</span>
+<span class="line-number">72</span>
+<span class="line-number">73</span>
+<span class="line-number">74</span>
+<span class="line-number">75</span>
+<span class="line-number">76</span>
+<span class="line-number">77</span>
+<span class="line-number">78</span>
+<span class="line-number">79</span>
+<span class="line-number">80</span>
+<span class="line-number">81</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">#允许rpc
+</span><span class="line">enable-rpc=true
+</span><span class="line">#允许所有来源, web界面跨域权限需要
+</span><span class="line">rpc-allow-origin-all=true
+</span><span class="line">#允许非外部访问
+</span><span class="line">rpc-listen-all=true
+</span><span class="line">#RPC端口, 仅当默认端口被占用时修改
+</span><span class="line">#rpc-listen-port=6800
 </span><span class="line">
-</span><span class="line">* + table th, * + table td {
-</span><span class="line">  border-style:dashed;
-</span><span class="line">  border-width:1px;
-</span><span class="line">  border-color:#e7e3e7;
-</span><span class="line">  padding-left: 3px;
-</span><span class="line">  padding-right: 3px;
-</span><span class="line">}
+</span><span class="line">#最大同时下载数(任务数), 路由建议值: 3
+</span><span class="line">max-concurrent-downloads=10
+</span><span class="line">#断点续传
+</span><span class="line">continue=true
+</span><span class="line">#同服务器连接数
+</span><span class="line">max-connection-per-server=10
+</span><span class="line">#最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要
+</span><span class="line">min-split-size=10M
+</span><span class="line">#单文件最大线程数, 路由建议值: 5
+</span><span class="line">split=10
+</span><span class="line">#下载速度限制
+</span><span class="line">max-overall-download-limit=0
+</span><span class="line">#单文件速度限制
+</span><span class="line">max-download-limit=0
+</span><span class="line">#上传速度限制
+</span><span class="line">max-overall-upload-limit=0
+</span><span class="line">#单文件速度限制
+</span><span class="line">max-upload-limit=0
+</span><span class="line">#断开速度过慢的连接
+</span><span class="line">#lowest-speed-limit=0
+</span><span class="line">#验证用，需要1.16.1之后的release版本
+</span><span class="line">#referer=*
 </span><span class="line">
-</span><span class="line">* + table th {
-</span><span class="line">  border-style:solid;
-</span><span class="line">  font-weight:bold;
-</span><span class="line">  background: url(&quot;/images/noise.png?1330434582&quot;) repeat scroll left top #F7F3F7;
-</span><span class="line">}
 </span><span class="line">
-</span><span class="line">* + table th[align=&quot;left&quot;], * + table td[align=&quot;left&quot;] {
-</span><span class="line">  text-align:left;
-</span><span class="line">}
+</span><span class="line">input-file=/home/rescue01/Downloads/aria2.session
+</span><span class="line">save-session=/home/rescue01/Downloads/aria2.session
+</span><span class="line">#定时保存会话，需要1.16.1之后的release版
+</span><span class="line">#save-session-interval=60
 </span><span class="line">
-</span><span class="line">* + table th[align=&quot;right&quot;], * + table td[align=&quot;right&quot;] {
-</span><span class="line">  text-align:right;
-</span><span class="line">}
 </span><span class="line">
-</span><span class="line">* + table th[align=&quot;center&quot;], * + table td[align=&quot;center&quot;] {
-</span><span class="line">  text-align:center;
-</span><span class="line">}
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>修改 source/_includes/head.html</p>
+</span><span class="line">#文件保存路径, 默认为当前启动位置
+</span><span class="line">dir=/home/rescue01/Downloads
+</span><span class="line">#文件缓存, 使用内置的文件缓存, 如果你不相信Linux内核文件缓存和磁盘内置缓存时使用, 需要1.16及以上版本
+</span><span class="line">#disk-cache=0
+</span><span class="line">#另一种Linux文件缓存方式, 使用前确保您使用的内核支持此选项, 需要1.15及以上版本(?)
+</span><span class="line">#enable-mmap=true
+</span><span class="line">#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长
+</span><span class="line">#所需时间 none &lt; falloc ? trunc &lt;&lt; prealloc, falloc和trunc需要文件系统和内核支持
+</span><span class="line">file-allocation=prealloc
+</span><span class="line">
+</span><span class="line">
+</span><span class="line">#启用本地节点查找
+</span><span class="line">bt-enable-lpd=true
+</span><span class="line">#添加额外的tracker
+</span><span class="line">#bt-tracker=&lt;URI&gt;,…
+</span><span class="line">#单种子最大连接数
+</span><span class="line">#bt-max-peers=55
+</span><span class="line">#强制加密, 防迅雷必备
+</span><span class="line">#bt-require-crypto=true
+</span><span class="line">#当下载的文件是一个种子(以.torrent结尾)时, 自动下载BT
+</span><span class="line">follow-torrent=true
+</span><span class="line">#BT监听端口, 当端口屏蔽时使用
+</span><span class="line">#listen-port=6881-6999
+</span><span class="line">
+</span><span class="line">
+</span><span class="line">
+</span><span class="line">#不确定是否需要，为保险起见，need more test
+</span><span class="line">enable-dht=false
+</span><span class="line">bt-enable-lpd=false
+</span><span class="line">enable-peer-exchange=false
+</span><span class="line">#修改特征
+</span><span class="line">user-agent=uTorrent/2210(25130)
+</span><span class="line">peer-id-prefix=-UT2210-
+</span><span class="line">#修改做种设置, 允许做种
+</span><span class="line">seed-ratio=0
+</span><span class="line">#保存会话
+</span><span class="line">force-save=true
+</span><span class="line">bt-hash-check-seed=true
+</span><span class="line">bt-seed-unverified=true
+</span><span class="line">bt-save-metadata=true
+</span><span class="line">#定时保存会话，需要1.16.1之后的某个release版本（比如1.16.2）
+</span><span class="line">#save-session-interval=60</span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class="html"><span class="line"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;/stylesheets/screen.css&quot;</span> <span class="na">media=</span><span class="s">&quot;screen, projection&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
-</span><span class="line"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;/stylesheets/data-table.css&quot;</span> <span class="na">media=</span><span class="s">&quot;screen, projection&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="nt">/&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+<h3 id="section-2">插件篇</h3>
 
-<p>表格示例:</p>
+<h4 id="section-3">迅雷离线助手</h4>
+<p>打开Chrome浏览器，<a href="https://chrome.google.com/webstore/detail/thunderlixianassistant/eehlmkfpnagoieibahhcghphdbjcdmen?hl=zh-CN">链接</a>, 进行安装<br />
+该插件将下载和设置都集成在“迅雷离线下载网页”中了<br />
+主要需要设置”<strong>JSON-RPC Path</strong>”  </p>
 
+<h4 id="yaaw">YAAW</h4>
+<p>打开<a href="https://chrome.google.com/webstore/detail/thunderlixianassistant/eehlmkfpnagoieibahhcghphdbjcdmen">链接</a>
+同样设置”<strong>JSON-RPC Path</strong>” (右上角 扳手处)</p>
+
+<h3 id="section-4">使用篇</h3>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">aria2c --conf-path=/Where your config file/.aria2/aria2.conf</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>然后在迅雷离线下载页面中选择批量下载-》YAAW<br />
+Done！  </p>
 </div>
 
 
@@ -261,21 +357,15 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2012-11-04T12:58:00+08:00" pubdate data-updated="true">Nov 4<span>th</span>, 2012</time>
+<time datetime="2013-03-05T11:33:00+08:00" pubdate data-updated="true">Mar 5<span>th</span>, 2013</time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/octopress/'>Octopress</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/11/04/config-octopress/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/11/04/config-octopress/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2013/03/05/aria2c-and-yaaw/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2013/03/05/aria2c-and-yaaw/" >Tweet</a>
   
   
   
@@ -284,10 +374,8 @@ MathJax.Hub.Config({
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/11/02/ibus-in-gnome3-dot-6/" title="Previous Post: Ibus In Gnome3.6">&laquo; Ibus In Gnome3.6</a>
+        <a class="basic-alignment left" href="/blog/2013/02/18/tweak-ssd/" title="Previous Post: Tweak SSD for Ubuntu and Windows">&laquo; Tweak SSD for Ubuntu and Windows</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/11/04/do-sth-after-install-ubuntu12-dot-xx/" title="Next Post: 在安装完Ubuntu12.xx后需要做的一些xx事情">在安装完Ubuntu12.xx后需要做的一些xx事情 &raquo;</a>
       
     </p>
   </footer>
