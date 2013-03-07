@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-03-06T13:25:54+08:00</updated>
+  <updated>2013-03-07T11:24:58+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,202 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Linux下使用Aria2c和YAAW打造迅雷下载]]></title>
+    <link href="http://jasonllinux.github.com/blog/2013/03/05/aria2c-and-yaaw/"/>
+    <updated>2013-03-05T11:33:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2013/03/05/aria2c-and-yaaw</id>
+    <content type="html"><![CDATA[<blockquote>
+  <h3 id="section">先来一张图</h3>
+  <p><img src="http://i.minus.com/is7Fiw9VMlBT.png"></p>
+</blockquote>
+
+<h3 id="aria2">Aria2篇</h3>
+
+<h5 id="section-1">安装和配置</h5>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install aria2</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>配置文件
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#新建配置文件
+</span><span class='line'>touch /$HOME/.aria2/aria2.conf</span></code></pre></td></tr></table></div></figure></notextile></div>
+内容如下：
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#允许rpc
+</span><span class='line'>enable-rpc=true
+</span><span class='line'>#允许所有来源, web界面跨域权限需要
+</span><span class='line'>rpc-allow-origin-all=true
+</span><span class='line'>#允许非外部访问
+</span><span class='line'>rpc-listen-all=true
+</span><span class='line'>#RPC端口, 仅当默认端口被占用时修改
+</span><span class='line'>#rpc-listen-port=6800&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1 id="section-2">最大同时下载数(任务数), 路由建议值: 3&lt;/h1>
+</span><span class='line'>&lt;p>max-concurrent-downloads=10
+</span><span class='line'>#断点续传
+</span><span class='line'>continue=true
+</span><span class='line'>#同服务器连接数
+</span><span class='line'>max-connection-per-server=10
+</span><span class='line'>#最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要
+</span><span class='line'>min-split-size=10M
+</span><span class='line'>#单文件最大线程数, 路由建议值: 5
+</span><span class='line'>split=10
+</span><span class='line'>#下载速度限制
+</span><span class='line'>max-overall-download-limit=0
+</span><span class='line'>#单文件速度限制
+</span><span class='line'>max-download-limit=0
+</span><span class='line'>#上传速度限制
+</span><span class='line'>max-overall-upload-limit=0
+</span><span class='line'>#单文件速度限制
+</span><span class='line'>max-upload-limit=0
+</span><span class='line'>#断开速度过慢的连接
+</span><span class='line'>#lowest-speed-limit=0
+</span><span class='line'>#验证用，需要1.16.1之后的release版本
+</span><span class='line'>#referer=*&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>input-file=/home/rescue01/Downloads/aria2.session
+</span><span class='line'>save-session=/home/rescue01/Downloads/aria2.session
+</span><span class='line'>#定时保存会话，需要1.16.1之后的release版
+</span><span class='line'>#save-session-interval=60&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1 id="section-3">文件保存路径, 默认为当前启动位置&lt;/h1>
+</span><span class='line'>&lt;p>dir=/home/rescue01/Downloads
+</span><span class='line'>#文件缓存, 使用内置的文件缓存, 如果你不相信Linux内核文件缓存和磁盘内置缓存时使用, 需要1.16及以上版本
+</span><span class='line'>#disk-cache=0
+</span><span class='line'>#另一种Linux文件缓存方式, 使用前确保您使用的内核支持此选项, 需要1.15及以上版本(?)
+</span><span class='line'>#enable-mmap=true
+</span><span class='line'>#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长
+</span><span class='line'>#所需时间 none &lt; falloc ? trunc « prealloc, falloc和trunc需要文件系统和内核支持
+</span><span class='line'>file-allocation=prealloc&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1 id="section-4">启用本地节点查找&lt;/h1>
+</span><span class='line'>&lt;p>bt-enable-lpd=true
+</span><span class='line'>#添加额外的tracker
+</span><span class='line'>#bt-tracker=&lt;uri>,…
+</span><span class='line'>#单种子最大连接数
+</span><span class='line'>#bt-max-peers=55
+</span><span class='line'>#强制加密, 防迅雷必备
+</span><span class='line'>#bt-require-crypto=true
+</span><span class='line'>#当下载的文件是一个种子(以.torrent结尾)时, 自动下载BT
+</span><span class='line'>follow-torrent=true
+</span><span class='line'>#BT监听端口, 当端口屏蔽时使用
+</span><span class='line'>#listen-port=6881-6999&lt;/uri>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1 id="need-more-test">不确定是否需要，为保险起见，need more test&lt;/h1>
+</span><span class='line'>&lt;p>enable-dht=false
+</span><span class='line'>bt-enable-lpd=false
+</span><span class='line'>enable-peer-exchange=false
+</span><span class='line'>#修改特征
+</span><span class='line'>user-agent=uTorrent/2210(25130)
+</span><span class='line'>peer-id-prefix=-UT2210-
+</span><span class='line'>#修改做种设置, 允许做种
+</span><span class='line'>seed-ratio=0
+</span><span class='line'>#保存会话
+</span><span class='line'>force-save=true
+</span><span class='line'>bt-hash-check-seed=true
+</span><span class='line'>bt-seed-unverified=true
+</span><span class='line'>bt-save-metadata=true
+</span><span class='line'>#定时保存会话，需要1.16.1之后的某个release版本（比如1.16.2）
+</span><span class='line'>#save-session-interval=60</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3 id="section-5">插件篇</h3>
+
+<h4 id="section-6">迅雷离线助手</h4>
+<p>打开Chrome浏览器，<a href="https://chrome.google.com/webstore/detail/thunderlixianassistant/eehlmkfpnagoieibahhcghphdbjcdmen?hl=zh-CN">链接</a>, 进行安装<br />
+该插件将下载和设置都集成在“迅雷离线下载网页”中了<br />
+主要需要设置”<strong>JSON-RPC Path</strong>”  
+<img src="http://i.minus.com/i03bZUazDoEzC.png">  </p>
+
+<h4 id="yaaw">YAAW</h4>
+<p>打开<a href="https://chrome.google.com/webstore/detail/thunderlixianassistant/eehlmkfpnagoieibahhcghphdbjcdmen">链接</a>
+同样设置”<strong>JSON-RPC Path</strong>” (右上角 扳手处)
+<img src="http://i.minus.com/ibkTzfAf5fm4Ew.png"></p>
+
+<h3 id="section-7">使用篇</h3>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>aria2c –conf-path=/Where your config file/.aria2/aria2.conf</span></code></pre></td></tr></table></div></figure></notextile></div>
+然后在迅雷离线下载页面中选择批量下载-》YAAW<br />
+Done！  </p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ubuntu12.04 配置VPN Server]]></title>
@@ -497,23 +693,6 @@ esac }
 <p>最后</p>
 
 <p><strong>XX Gnome</strong> , 不整合ibus会死啊 。。。。。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ImageMagic 使用]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/04/imagemagic-shi-yong/"/>
-    <updated>2012-11-04T18:11:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/04/imagemagic-shi-yong</id>
-    <content type="html"><![CDATA[<p>在Linux环境下ImageMagic可以用来简单的对图片作一些处理
-简直就是神器</p>
-
-<p>用法举例</p>
-
-<p><code>bash
-    #改变图片大小
-    convert -resize 50x50 heart.png heart1.png
-</code></p>
 ]]></content>
   </entry>
   
