@@ -9,13 +9,10 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="如何恢复
-首先从github checkout两个分支 1
+  <meta name="description" content="1.修改软件源，推荐163 2.禁用报错 1
 2
-3
-git clone -b source git@github.com:username/username.github.com.git octopress
-cd octopress
-git clone git@github.com &hellip;">
+vim /etc/default/apport
+#将1改成0 ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +90,52 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/04/do-sth-after-install-ubuntu12-dot-xx/">在安装完Ubuntu12.xx后需要做的一些xx事情</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-04T16:01:00+08:00" pubdate data-updated="true">Nov 4<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/11/04/do-sth-after-install-ubuntu12-dot-xx/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>1.修改软件源，推荐163</p>
+
+<p>2.禁用报错</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">vim /etc/default/apport
+</span><span class="line"><span class="c">#将1改成0</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -389,44 +432,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/25/hello-world/">Hello World</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-25T11:35:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/10/25/hello-world/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -449,7 +454,7 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
 <li class='category'><a href='/blog/categories/it/'>IT (18)</a></li>
 <li class='category'><a href='/blog/categories/latex/'>Latex (1)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (3)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (10)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (11)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (2)</a></li>
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
@@ -538,6 +543,10 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/03/11/tl-wn725n/">TL-WN725N 折腾记</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/03/05/aria2c-and-yaaw/">Linux下使用Aria2c和YAAW打造迅雷下载</a>
       </li>
     
@@ -551,10 +560,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
     
       <li class="post">
         <a href="/blog/2012/12/30/conclusion/">2012年&#8211;总结</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/26/em/">EM</a>
       </li>
     
   </ul>

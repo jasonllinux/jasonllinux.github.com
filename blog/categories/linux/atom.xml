@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-03-07T14:41:40+08:00</updated>
+  <updated>2013-03-11T12:50:33+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[TL-WN725N 折腾记]]></title>
+    <link href="http://jasonllinux.github.com/blog/2013/03/11/tl-wn725n/"/>
+    <updated>2013-03-11T11:25:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2013/03/11/tl-wn725n</id>
+    <content type="html"><![CDATA[<blockquote>
+  <p>高手在民间</p>
+</blockquote>
+
+<p>最近在某东上买了个USB无线网卡 <strong>TL-WN725N</strong><br />
+想着平时 可以在笔记本和台式机上使用 <br />
+也可以搭建adhoc之类的<br />
+拿到手 ，十分小巧<br />
+<img src="http://i.minus.com/iblYHNm0DeAxca.jpg"><br />
+在windows上顺风顺水<br />
+可是在linux上<br />
+说好的免驱的呢？？？？ <br />
+说好的即插即用呢？？？  </p>
+
+<p>在网上找了半天 <br />
+原来我买到的是V2版本，里面的芯片是 8188eu<br />
+坑爹的是连Realtek官网都没有这芯片的linux驱动  </p>
+
+<p>终于找到一个github上树莓派的一个linux<a href="https://github.com/Red54/linux-shumeipai2">仓库</a>中有它的驱动<br />
+Clone下来 make ＆＆ make install<br />
+搞定!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Linux下使用Aria2c和YAAW打造迅雷下载]]></title>
@@ -674,25 +703,6 @@ esac }
 <p>pacman -U *.pkg.tar.xz </p>
 
 <p>```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[离开Gnome3.6,奔向Xfce4]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/07/leave-gnome3/"/>
-    <updated>2012-11-07T15:02:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/07/leave-gnome3</id>
-    <content type="html"><![CDATA[<p>前几天，Arch升级到Gnome3.6</p>
-
-<p>谁知道，尽然默认整合ibus，不能卸载（当然也可以Rdd删除）</p>
-
-<p>想继续用fcitx，遇到了一堆麻烦</p>
-
-<p>算了，改用轻量级的桌面环境Xfce吧，貌似也不错</p>
-
-<p>最后</p>
-
-<p><strong>XX Gnome</strong> , 不整合ibus会死啊 。。。。。</p>
 ]]></content>
   </entry>
   

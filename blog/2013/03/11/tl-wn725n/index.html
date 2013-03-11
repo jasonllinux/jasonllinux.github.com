@@ -5,14 +5,15 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Linux下QtDesigner转换Pyqt代码 - Jasonllinux's Blog</title>
+  <title>TL-WN725N 折腾记 - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="当用Qt Designer设计Qt 界面之后，如果想使用pyqt code，就会用到 pyuic4这个命令
-要使用这个命令需要先安装 [bash]
-sudo pacman -S pyqt
-[/bash] 装完之后，如果在你系统中有python 3.x 和python2.x共存且默认3.x的情况下， &hellip;">
+  <meta name="description" content="高手在民间 最近在某东上买了个USB无线网卡 TL-WN725N
+想着平时 可以在笔记本和台式机上使用 也可以搭建adhoc之类的
+拿到手 ，十分小巧 在windows上顺风顺水
+可是在linux上
+说好的免驱的呢？？？？ 说好的即插即用呢？？？ 在网上找了半天 原来我买到的是V2版本， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +22,7 @@ sudo pacman -S pyqt
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/08/05/linux%E4%B8%8Bqtdesigner%E8%BD%AC%E6%8D%A2pyqt%E4%BB%A3%E7%A0%81/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2013/03/11/tl-wn725n/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -93,7 +94,7 @@ MathJax.Hub.Config({
   
   <header>
     
-      <h1 class="entry-title">Linux下QtDesigner转换Pyqt代码</h1>
+      <h1 class="entry-title">TL-WN725N 折腾记</h1>
     
     
       <p class="meta">
@@ -109,7 +110,7 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2012-08-05T00:00:00+08:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
+<time datetime="2013-03-11T11:25:00+08:00" pubdate data-updated="true">Mar 11<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -118,20 +119,27 @@ MathJax.Hub.Config({
   </header>
 
 
-<div class="entry-content"><p>当用Qt Designer设计Qt 界面之后，如果想使用pyqt code，就会用到 <strong>pyuic4</strong>这个命令<br />
-要使用这个命令需要先安装</p>
+<div class="entry-content"><blockquote>
+  <p>高手在民间</p>
+</blockquote>
 
-<p>[bash]<br />
-sudo pacman -S pyqt<br />
-[/bash]</p>
+<p>最近在某东上买了个USB无线网卡 <strong>TL-WN725N</strong><br />
+想着平时 可以在笔记本和台式机上使用 <br />
+也可以搭建adhoc之类的<br />
+拿到手 ，十分小巧<br />
+<img src="http://i.minus.com/iblYHNm0DeAxca.jpg" /><br />
+在windows上顺风顺水<br />
+可是在linux上<br />
+说好的免驱的呢？？？？ <br />
+说好的即插即用呢？？？  </p>
 
-<p>装完之后，如果在你系统中有python 3.x 和python2.x共存且默认3.x的情况下，就会出错<br />
-解决方案就是<strong>切换默认python版本</strong>
-最后</p>
+<p>在网上找了半天 <br />
+原来我买到的是V2版本，里面的芯片是 8188eu<br />
+坑爹的是连Realtek官网都没有这芯片的linux驱动  </p>
 
-<p>[bash]<br />
-pyuic4 gui.ui -o gui.py<br />
-[/bash]</p>
+<p>终于找到一个github上树莓派的一个linux<a href="https://github.com/Red54/linux-shumeipai2">仓库</a>中有它的驱动<br />
+Clone下来 make ＆＆ make install<br />
+搞定!</p>
 </div>
 
 
@@ -154,12 +162,12 @@ pyuic4 gui.ui -o gui.py<br />
   
 
 
-<time datetime="2012-08-05T00:00:00+08:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
+<time datetime="2013-03-11T11:25:00+08:00" pubdate data-updated="true">Mar 11<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/it/'>IT</a>
+    <a class='category' href='/blog/categories/linux/'>Linux</a>
   
 </span>
 
@@ -168,7 +176,7 @@ pyuic4 gui.ui -o gui.py<br />
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/08/05/linux%E4%B8%8Bqtdesigner%E8%BD%AC%E6%8D%A2pyqt%E4%BB%A3%E7%A0%81/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/08/05/linux%E4%B8%8Bqtdesigner%E8%BD%AC%E6%8D%A2pyqt%E4%BB%A3%E7%A0%81/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2013/03/11/tl-wn725n/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2013/03/11/tl-wn725n/" >Tweet</a>
   
   
   
@@ -177,10 +185,8 @@ pyuic4 gui.ui -o gui.py<br />
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/08/04/mac-%E5%AE%89%E8%A3%85opencv%E6%94%AF%E6%8F%B4python/" title="Previous Post: Mac 安装OpenCV支援Python">&laquo; Mac 安装OpenCV支援Python</a>
+        <a class="basic-alignment left" href="/blog/2013/03/05/aria2c-and-yaaw/" title="Previous Post: Linux下使用Aria2c和YAAW打造迅雷下载">&laquo; Linux下使用Aria2c和YAAW打造迅雷下载</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/08/16/gentoo%E5%AE%89%E8%A3%85/" title="Next Post: Gentoo安装">Gentoo安装 &raquo;</a>
       
     </p>
   </footer>
@@ -365,8 +371,8 @@ pyuic4 gui.ui -o gui.py<br />
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jasonllinux.github.com/blog/2012/08/05/linux%E4%B8%8Bqtdesigner%E8%BD%AC%E6%8D%A2pyqt%E4%BB%A3%E7%A0%81/';
-        var disqus_url = 'http://jasonllinux.github.com/blog/2012/08/05/linux%E4%B8%8Bqtdesigner%E8%BD%AC%E6%8D%A2pyqt%E4%BB%A3%E7%A0%81/';
+        var disqus_identifier = 'http://jasonllinux.github.com/blog/2013/03/11/tl-wn725n/';
+        var disqus_url = 'http://jasonllinux.github.com/blog/2013/03/11/tl-wn725n/';
         var disqus_script = 'embed.js';
       
     (function () {
