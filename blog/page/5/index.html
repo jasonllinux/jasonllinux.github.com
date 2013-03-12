@@ -9,10 +9,11 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="1.修改软件源，推荐163 2.禁用报错 1
+  <meta name="description" content="在Linux环境下ImageMagic可以用来简单的对图片作一些处理
+简直就是神器 用法举例 1
 2
-vim /etc/default/apport
-#将1改成0 ">
+#改变图片大小
+convert -resize 50x50 heart.png heart1.png ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,6 +91,53 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/04/imagemagic-shi-yong/">ImageMagic 使用</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-04T18:11:00+08:00" pubdate data-updated="true">Nov 4<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/11/04/imagemagic-shi-yong/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>在Linux环境下ImageMagic可以用来简单的对图片作一些处理
+简直就是神器</p>
+
+<p>用法举例</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#改变图片大小</span>
+</span><span class="line">convert -resize 50x50 heart.png heart1.png
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -380,58 +428,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/25/64Bit-Again/">有一次给64bit跪了</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-25T20:00:00+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/10/25/64Bit-Again/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>最近几天在Windows平台搭建 OpenCV 的python开发平台</p>
-
-<p>但是，当横子横子编译完OpenCV后</p>
-
-<p>把相应的pyd导入到python的site-packages中</p>
-
-<p>import cv2居然说不是32位应用程序</p>
-
-<p>于是之，我知道又是64bit的缘故 </p>
-
-<p>果断的</p>
-
-<p>换32位的python，一切OK</p>
-
-<p>eclipse中pydev一切OK</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -460,6 +456,7 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
 <li class='category'><a href='/blog/categories/robocup/'>RoboCup (3)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
+<li class='category'><a href='/blog/categories/tools/'>Tools (1)</a></li>
 <li class='category'><a href='/blog/categories/windows/'>Windows (1)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (14)</a></li>
 <li class='category'><a href='/blog/categories/python/'>python (1)</a></li>
@@ -543,6 +540,10 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/03/12/viplugin/">破解ViPlugin</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/03/11/tl-wn725n/">TL-WN725N 折腾记</a>
       </li>
     
@@ -556,10 +557,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
     
       <li class="post">
         <a href="/blog/2013/01/05/cocos2d-x-some-questions/">Cocos2d-x 中的一些问题</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/30/conclusion/">2012年&#8211;总结</a>
       </li>
     
   </ul>

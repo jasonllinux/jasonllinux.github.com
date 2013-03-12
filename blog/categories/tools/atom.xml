@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tools | Jasonllinux's Blog]]></title>
+  <link href="http://jasonllinux.github.com/blog/categories/tools/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.com/"/>
+  <updated>2013-03-12T21:03:28+08:00</updated>
+  <id>http://jasonllinux.github.com/</id>
+  <author>
+    <name><![CDATA[jasonllinux]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[破解ViPlugin]]></title>
+    <link href="http://jasonllinux.github.com/blog/2013/03/12/viplugin/"/>
+    <updated>2013-03-12T20:59:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2013/03/12/viplugin</id>
+    <content type="html"><![CDATA[<blockquote>
+  <p>不是破解的教程<br />
+有钱的话还是支持正版比较好</p>
+</blockquote>
+
+<p>VIM的心在最近又死恢复燃了<br />
+今天，为了破解这个插件<br />
+了解了一些Java反编译的东西<br />
+感觉Java的安全性好低啊  </p>
+
+]]></content>
+  </entry>
+  
+</feed>

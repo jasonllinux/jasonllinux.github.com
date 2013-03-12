@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-03-11T12:50:33+08:00</updated>
+  <updated>2013-03-12T21:03:28+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[破解ViPlugin]]></title>
+    <link href="http://jasonllinux.github.com/blog/2013/03/12/viplugin/"/>
+    <updated>2013-03-12T20:59:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2013/03/12/viplugin</id>
+    <content type="html"><![CDATA[<blockquote>
+  <p>不是破解的教程<br />
+有钱的话还是支持正版比较好</p>
+</blockquote>
+
+<p>VIM的心在最近又死恢复燃了<br />
+今天，为了破解这个插件<br />
+了解了一些Java反编译的东西<br />
+感觉Java的安全性好低啊  </p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[TL-WN725N 折腾记]]></title>
@@ -1570,25 +1588,6 @@ latex</p>
 <div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 </pre></td><td class="code"><pre><code class="bash"><span class="line">pacman -U *.pkg.tar.xz
 </span></code></pre></td></tr></table></div></figure></notextile></div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[离开Gnome3.6,奔向Xfce4]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/07/leave-gnome3/"/>
-    <updated>2012-11-07T15:02:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/07/leave-gnome3</id>
-    <content type="html"><![CDATA[<p>前几天，Arch升级到Gnome3.6</p>
-
-<p>谁知道，尽然默认整合ibus，不能卸载（当然也可以Rdd删除）</p>
-
-<p>想继续用fcitx，遇到了一堆麻烦</p>
-
-<p>算了，改用轻量级的桌面环境Xfce吧，貌似也不错</p>
-
-<p>最后</p>
-
-<p><strong>XX Gnome</strong> , 不整合ibus会死啊 。。。。。</p>
 ]]></content>
   </entry>
   
