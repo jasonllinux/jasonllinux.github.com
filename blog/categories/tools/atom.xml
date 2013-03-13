@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tools | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-03-12T21:03:28+08:00</updated>
+  <updated>2013-03-13T21:45:47+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -28,6 +28,54 @@
 了解了一些Java反编译的东西<br />
 感觉Java的安全性好低啊  </p>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Work With Eclipse]]></title>
+    <link href="http://jasonllinux.github.com/blog/2013/03/07/with-eclipse/"/>
+    <updated>2013-03-07T14:33:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2013/03/07/with-eclipse</id>
+    <content type="html"><![CDATA[<blockquote>
+  <p>感谢Eclipse 2011-Now<br />
+那些写代码的日子  </p>
+</blockquote>
+
+<h3 id="section">那些插件</h3>
+
+<ul>
+  <li>
+    <p>http://viplugin.com/</p>
+  </li>
+  <li>
+    <p>http://eclipse-color-theme.github.com/update/</p>
+  </li>
+  <li>
+    <p>http://pydev.org/updates</p>
+  </li>
+  <li>
+    <p>http://subclipse.tigris.org/update_1.8.x</p>
+  </li>
+  <li>
+    <p>https://dl-ssl.google.com/android/eclipse/</p>
+  </li>
+</ul>
+
+<h3 id="ubuntu-global-menu">在Ubuntu 中开启Global Menu</h3>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sudo add-apt-repository ppa:absinthesyringe/eclipse
+</span><span class='line'>sudo apt-get update &amp;&amp; sudo apt-get install eclipse-enable.appmenu&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h3 id="section-1">解决代码提示功能失效</h3>
 ]]></content>
   </entry>
   

@@ -5,15 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>archlinux之could not update iceauthority file /var/lib/gdm/.iceauthority解决 - Jasonllinux's Blog</title>
+  <title>Work With Eclipse - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="早上更新了一些包之后，重启发现： [bash]
-could not update iceauthority file /var/lib/gdm/.ICEauthority
-[/bash] 解决方法： [bash]
-sudo chown -R gdm:gdm /var/lib/gdm
-sudo &hellip;">
+  <meta name="description" content="感谢Eclipse 2011-Now
+那些写代码的日子 那些插件 http://viplugin.com/ http://eclipse-color-theme.github.com/update/ http://pydev.org/updates http://subclipse.tigris &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +19,7 @@ sudo &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2012/08/31/archlinux%E4%B9%8Bcould-not-update-iceauthority-file-varlibgdm-iceauthority%E8%A7%A3%E5%86%B3/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2013/03/07/with-eclipse/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -94,7 +91,7 @@ MathJax.Hub.Config({
   
   <header>
     
-      <h1 class="entry-title">Archlinux之could Not Update Iceauthority File /var/lib/gdm/.iceauthority解决</h1>
+      <h1 class="entry-title">Work With Eclipse</h1>
     
     
       <p class="meta">
@@ -110,7 +107,7 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2012-08-31T00:00:00+08:00" pubdate data-updated="true">Aug 31<span>st</span>, 2012</time>
+<time datetime="2013-03-07T14:33:00+08:00" pubdate data-updated="true">Mar 7<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -119,18 +116,39 @@ MathJax.Hub.Config({
   </header>
 
 
-<div class="entry-content"><p>早上更新了一些包之后，重启发现：</p>
+<div class="entry-content"><blockquote>
+  <p>感谢Eclipse 2011-Now<br />
+那些写代码的日子  </p>
+</blockquote>
 
-<p>[bash]<br />
-could not update iceauthority file /var/lib/gdm/.ICEauthority<br />
-[/bash]</p>
+<h3 id="section">那些插件</h3>
 
-<p>解决方法：</p>
+<ul>
+  <li>
+    <p>http://viplugin.com/</p>
+  </li>
+  <li>
+    <p>http://eclipse-color-theme.github.com/update/</p>
+  </li>
+  <li>
+    <p>http://pydev.org/updates</p>
+  </li>
+  <li>
+    <p>http://subclipse.tigris.org/update_1.8.x</p>
+  </li>
+  <li>
+    <p>https://dl-ssl.google.com/android/eclipse/</p>
+  </li>
+</ul>
 
-<p>[bash]<br />
-sudo chown -R gdm:gdm /var/lib/gdm<br />
-sudo chmod 600 /var/lib/gdm/.ICEauthority<br />
-[/bash]</p>
+<h3 id="ubuntu-global-menu">在Ubuntu 中开启Global Menu</h3>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">sudo add-apt-repository ppa:absinthesyringe/eclipse
+</span><span class="line">sudo apt-get update &amp;&amp; sudo apt-get install eclipse-enable.appmenu</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h3 id="section-1">解决代码提示功能失效</h3>
 </div>
 
 
@@ -153,12 +171,12 @@ sudo chmod 600 /var/lib/gdm/.ICEauthority<br />
   
 
 
-<time datetime="2012-08-31T00:00:00+08:00" pubdate data-updated="true">Aug 31<span>st</span>, 2012</time>
+<time datetime="2013-03-07T14:33:00+08:00" pubdate data-updated="true">Mar 7<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/linux/'>linux</a>
+    <a class='category' href='/blog/categories/tools/'>Tools</a>
   
 </span>
 
@@ -167,7 +185,7 @@ sudo chmod 600 /var/lib/gdm/.ICEauthority<br />
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2012/08/31/archlinux%E4%B9%8Bcould-not-update-iceauthority-file-varlibgdm-iceauthority%E8%A7%A3%E5%86%B3/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2012/08/31/archlinux%E4%B9%8Bcould-not-update-iceauthority-file-varlibgdm-iceauthority%E8%A7%A3%E5%86%B3/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2013/03/07/with-eclipse/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2013/03/07/with-eclipse/" >Tweet</a>
   
   
   
@@ -176,10 +194,10 @@ sudo chmod 600 /var/lib/gdm/.ICEauthority<br />
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/08/26/%E3%80%8A%E6%8E%A7%E5%88%B6%E4%B8%8E%E5%86%B3%E7%AD%96%E3%80%8Blatex%E6%A8%A1%E6%9D%BF%E9%97%AE%E9%A2%98/" title="Previous Post: 《控制与决策》Latex模板问题(1)">&laquo; 《控制与决策》Latex模板问题(1)</a>
+        <a class="basic-alignment left" href="/blog/2013/03/05/aria2c-and-yaaw/" title="Previous Post: Linux下使用Aria2c和YAAW打造迅雷下载">&laquo; Linux下使用Aria2c和YAAW打造迅雷下载</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/09/03/%E5%85%A5%E6%89%8Bcherry-g80-3000%E7%99%BD%E8%89%B2%E8%8C%B6%E8%BD%B4/" title="Next Post: 入手Cherry G80-3000白色茶轴">入手Cherry G80-3000白色茶轴 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2013/03/11/tl-wn725n/" title="Next Post: TL-WN725N 折腾记">TL-WN725N 折腾记 &raquo;</a>
       
     </p>
   </footer>
@@ -365,8 +383,8 @@ sudo chmod 600 /var/lib/gdm/.ICEauthority<br />
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jasonllinux.github.com/blog/2012/08/31/archlinux%E4%B9%8Bcould-not-update-iceauthority-file-varlibgdm-iceauthority%E8%A7%A3%E5%86%B3/';
-        var disqus_url = 'http://jasonllinux.github.com/blog/2012/08/31/archlinux%E4%B9%8Bcould-not-update-iceauthority-file-varlibgdm-iceauthority%E8%A7%A3%E5%86%B3/';
+        var disqus_identifier = 'http://jasonllinux.github.com/blog/2013/03/07/with-eclipse/';
+        var disqus_url = 'http://jasonllinux.github.com/blog/2013/03/07/with-eclipse/';
         var disqus_script = 'embed.js';
       
     (function () {

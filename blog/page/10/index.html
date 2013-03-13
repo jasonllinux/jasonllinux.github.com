@@ -9,11 +9,10 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="Mac上的OpenCV安装和Linux平台下略有不同，在这里我们不采用下载源码包手动编译的方式，因为可能有些依赖问题，我们使用Port包管理，自动安装。 Step1
-安装MacPort
-安装完成之后 [bash]
-sudo port selfupdate
-[/bash] Step2 &hellip;">
+  <meta name="description" content="当用Qt Designer设计Qt 界面之后，如果想使用pyqt code，就会用到 pyuic4这个命令
+要使用这个命令需要先安装 [bash]
+sudo pacman -S pyqt
+[/bash] 装完之后，如果在你系统中有python 3.x 和python2.x共存且默认3.x的情况下， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,6 +90,57 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/05/linux%E4%B8%8Bqtdesigner%E8%BD%AC%E6%8D%A2pyqt%E4%BB%A3%E7%A0%81/">Linux下QtDesigner转换Pyqt代码</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-05T00:00:00+08:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/08/05/linux%E4%B8%8Bqtdesigner%E8%BD%AC%E6%8D%A2pyqt%E4%BB%A3%E7%A0%81/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>当用Qt Designer设计Qt 界面之后，如果想使用pyqt code，就会用到 <strong>pyuic4</strong>这个命令<br />
+要使用这个命令需要先安装</p>
+
+<p>[bash]<br />
+sudo pacman -S pyqt<br />
+[/bash]</p>
+
+<p>装完之后，如果在你系统中有python 3.x 和python2.x共存且默认3.x的情况下，就会出错<br />
+解决方案就是<strong>切换默认python版本</strong>
+最后</p>
+
+<p>[bash]<br />
+pyuic4 gui.ui -o gui.py<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -453,124 +503,6 @@ gnome-tweak-tool<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/01/linux%E4%B8%8Btexlive%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE/">Linux下TexLive中文配置</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-01T00:00:00+08:00" pubdate data-updated="true">Jul 1<span>st</span>, 2012</time>
-        
-         | <a href="/blog/2012/07/01/linux%E4%B8%8Btexlive%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/225px-LaTeX_logo.png">
-</a>在Linux环境使用$$\LaTeX$$一般使用TexLive套装，而作为天朝子民，使用中文是件头等大事。</p>
-
-<p>在网上大致浏览到两类方式：<br />
-第一种是盗版windows字体，修改ctex配置文件，要用中文的时候就用ctex宏包；<br />
-第二种方式就是使用XeLatex，直接调用系统中文字体。</p>
-
-<p>下面直接介绍第二种方式，为了方便每次调用，我们把配置做成一个<strong>package</strong>
-在该目录下新建文件</p>
-
-<p>[bash]<br />
-cd /usr/local/texlive/2011/texmf-dist/tex/xelatex/fontspec<br />
-sudo touch zhfontcfg.sty<br />
-[/bash]</p>
-
-<p>在该文件中写入：</p>
-
-<p>[tex]<br />
-% xetex/xelatex 字体设定宏包<br />
-\ProvidesPackage{zhfontcfg}<br />
-%[cm-default]选项主要用来解决使用数学环境时数学符号不能正常显示的问题<br />
-\usepackage[cm-default]{fontspec}<br />
-\usepackage{xunicode,xltxtra}<br />
-\usepackage[BoldFont,SlantFont,CJKnumber,fallback]{xeCJK}%使用TexLive自带的xeCJK宏包，并启用加粗、斜体、CJK数字和备用字体选项<br />
-%如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。<br />
-\defaultfontfeatures{Mapping=tex-text}<br />
-% 中文断行<br />
-%\XeTeXlinebreaklocale &amp;quot;zh&amp;quot;<br />
-%\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt<br />
-%将系统字体名映射为逻辑字体名称，主要是为了维护的方便<br />
-\usepackage{indentfirst}%段落首行缩进<br />
-\setlength{\parindent}{2em}%缩进两个字符<br />
-\newcommand\fontnamehei{文泉驿正黑}<br />
-\newcommand\fontnamesong{SimSun}<br />
-\newcommand\fontnamekai{楷体}<br />
-\newcommand\fontnamemono{FreeMono}<br />
-\newcommand\fontnameroman{Times New Roman}<br />
-%%设置常用中文字号，方便调用<br />
-\newcommand{\erhao}{\fontsize{22pt}{\baselineskip}\selectfont}<br />
-\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}<br />
-\newcommand{\sanhao}{\fontsize{16pt}{\baselineskip}\selectfont}<br />
-\newcommand{\xiaosanhao}{\fontsize{15pt}{\baselineskip}\selectfont}<br />
-\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}<br />
-\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}<br />
-\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}<br />
-\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}<br />
-\newcommand{\liuhao}{\fontsize{7.5pt}{\baselineskip}\selectfont}<br />
-%设置正文<br />
-\setCJKmainfont{WenQuanYi Micro Hei}<br />
-[/tex]</p>
-
-<p>使用命令 生成</p>
-
-<p>[bash]<br />
-sudo mktexlsr<br />
-[/bash]</p>
-
-<p>测试：test.tex</p>
-
-<p>[tex]<br />
-%test.tex<br />
-\documentclass{article}<br />
-\usepackage{zhfontcfg}<br />
-\begin{document}<br />
-Hello, I am jasonllinux.&#92;<br />
-你好，我是jasonllinux<br />
-\end{document}<br />
-[/tex]</p>
-
-<p>输出结果：
-<a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/latex.png"><img class="alignleft size-medium wp-image-177" title="latex" src="http://www.jasonllinux.com/wp-content/uploads/2012/07/latex-300x113.png" alt="" width="300" height="113" /></a></p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>参考：</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/11/">&larr; Older</a>
@@ -599,7 +531,7 @@ Hello, I am jasonllinux.&#92;<br />
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
 <li class='category'><a href='/blog/categories/robocup/'>RoboCup (3)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
-<li class='category'><a href='/blog/categories/tools/'>Tools (1)</a></li>
+<li class='category'><a href='/blog/categories/tools/'>Tools (2)</a></li>
 <li class='category'><a href='/blog/categories/windows/'>Windows (1)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (14)</a></li>
 <li class='category'><a href='/blog/categories/python/'>python (1)</a></li>
@@ -691,15 +623,15 @@ Hello, I am jasonllinux.&#92;<br />
       </li>
     
       <li class="post">
+        <a href="/blog/2013/03/07/with-eclipse/">Work With Eclipse</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/03/05/aria2c-and-yaaw/">Linux下使用Aria2c和YAAW打造迅雷下载</a>
       </li>
     
       <li class="post">
         <a href="/blog/2013/02/18/tweak-ssd/">Tweak SSD for Ubuntu and Windows</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/05/cocos2d-x-some-questions/">Cocos2d-x 中的一些问题</a>
       </li>
     
   </ul>
