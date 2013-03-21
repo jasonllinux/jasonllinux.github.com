@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tools | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-03-13T21:45:47+08:00</updated>
+  <updated>2013-03-21T15:25:15+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -56,9 +56,8 @@
   <li>
     <p>http://subclipse.tigris.org/update_1.8.x</p>
   </li>
-  <li>
-    <p>https://dl-ssl.google.com/android/eclipse/</p>
-  </li>
+  <li>https://dl-ssl.google.com/android/eclipse/</li>
+  <li>http://findbugs.cs.umd.edu/eclipse</li>
 </ul>
 
 <h3 id="ubuntu-global-menu">在Ubuntu 中开启Global Menu</h3>

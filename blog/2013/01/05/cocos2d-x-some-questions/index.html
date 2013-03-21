@@ -133,6 +133,21 @@ A:</p>
 A:<br />
 在Providers标签中勾选 <strong>CDT Builtin Compiler Settings</strong> 选项
 <img src="http://i.minus.com/ibcqMGoEk4m02A.png" title="" /></p>
+
+<h3 id="q3"><strong>Q3</strong></h3>
+<p>Android工程中的src目录下缺少源文件<br />
+A:<br />
+修改<code>copy_files.sh</code>脚本
+添加  </p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">HELLO_WORLD_ROOT=$COCOS2DX_ROOT/samples/Cpp/HelloCpp</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>在<code>copy_src_and_jni()</code>函数中加一行</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">cp -rf $COCOS2DX_ROOT/src/ $APP_DIR/proj.android</span></code></pre></td></tr></table></div></figure></notextile></div>
+
 </div>
 
 
