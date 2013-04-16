@@ -7,7 +7,6 @@ sharing: false
 footer: false
 ---
 
-{% img http://i.minus.com/ikENN3Ho4iiJ.jpg 400 300 %}
 
 * __ID__: jasonllinux
 
@@ -20,5 +19,5 @@ footer: false
 * __Projects__
 
 
-* __Resume__
+* [__Resume__](http://www.jasonllinux.com)
 

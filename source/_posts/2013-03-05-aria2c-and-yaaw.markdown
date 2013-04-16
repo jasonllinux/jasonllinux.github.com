@@ -3,7 +3,7 @@ layout: post
 title: "Linux下使用Aria2c和YAAW打造迅雷下载"
 date: 2013-03-05 11:33
 comments: true
-categories: 
+categories: Linux
 ---
 > ### 先来一张图  
 {% img http://i.minus.com/is7Fiw9VMlBT.png %}
@@ -112,7 +112,8 @@ bt-save-metadata=true
 打开Chrome浏览器，[链接](https://chrome.google.com/webstore/detail/thunderlixianassistant/eehlmkfpnagoieibahhcghphdbjcdmen?hl=zh-CN ), 进行安装  
 该插件将下载和设置都集成在“迅雷离线下载网页”中了  
 主要需要设置"__JSON-RPC Path__"  
-{% img http://i.minus.com/i03bZUazDoEzC.png %}
+{% img http://i.minus.com/i03bZUazDoEzC.png %}  
+
 #### YAAW
 打开[链接](https://chrome.google.com/webstore/detail/thunderlixianassistant/eehlmkfpnagoieibahhcghphdbjcdmen)
 同样设置"__JSON-RPC Path__" (右上角 扳手处)

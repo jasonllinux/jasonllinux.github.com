@@ -1,0 +1,16 @@
+---
+layout: post
+title: "破解ViPlugin"
+date: 2013-03-12 20:59
+comments: true
+categories: Tools
+---
+
+> 不是破解的教程  
+> 有钱的话还是支持正版比较好
+
+VIM的心在最近又死恢复燃了  
+今天，为了破解这个插件  
+了解了一些Java反编译的东西  
+感觉Java的安全性好低啊  
+
