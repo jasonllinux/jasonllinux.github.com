@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-03-21T15:25:15+08:00</updated>
+  <updated>2013-04-16T19:49:37+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,91 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[写在Kindle入华前]]></title>
+    <link href="http://jasonllinux.github.com/blog/2013/04/16/kindle-paper-white/"/>
+    <updated>2013-04-16T18:36:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2013/04/16/kindle-paper-white</id>
+    <content type="html"><![CDATA[<blockquote>
+  <p>单反穷三代<br />
+Kindle富一生</p>
+</blockquote>
+
+<p>老早在网上看到这样的调侃  </p>
+
+<p>年初就听闻Kindle要入华的消息，可是一直以来只是这样的传说<br />
+相信Amazon终会冲破重重阻力，将Kindle带到景德镇<br />
+让更多的人享受月的的乐趣<br />
+Anyway，Kindle是一个超值、伟大的产品  </p>
+
+<h3 id="buy-kpw">Buy KPW</h3>
+<p>在万能的豆瓣上找了家业余的代购<br />
+其实，<br />
+就是在日本的Amazon上购买，然后通过Jshop转运<br />
+大概等了一星期，未被税，690 RMB  </p>
+
+<h3 id="section">它的模样</h3>
+
+<p><img src="http://i.minus.com/iV7rHoC13EhMT.jpg" width="640" height="360" /></p>
+
+<p><img src="http://i.minus.com/iHRMcqDlOY6TP.jpg" width="640" height="360" /></p>
+
+<p><img src="http://i.minus.com/i34D9XViqDjy2.jpg" width="640" height="360" /></p>
+
+<p><img src="http://i.minus.com/iBXkKW2aliQfU.jpg" width="640" height="360" /></p>
+
+<p><img src="http://i.minus.com/ibqEJt2irADP6y.jpg" width="640" height="360" /></p>
+
+<h3 id="section-1">它的内在</h3>
+
+<h4 id="section-2">初体验</h4>
+
+<p>在这之前，也是小白一枚，没有用过Kindle<br />
+上手真的很简单<br />
+注册一个ID（不要用白宫的地址了，自己随便找个把），在设备上通过wifi登陆即可<br />
+Your Account » Digital Content » Manage your kindle<br />
+胡乱一通设置  </p>
+
+<p>到手的时候系统版本是3.5.3<br />
+用了一段时间的原版系统，感觉中文的体验已经相当不错<br />
+遗憾的是在打开较大的pdf文件时偶尔会死机<br />
+很尴尬。。。   </p>
+
+<h4 id="duokan">刷多看–DUOKAN</h4>
+<p>虽然自带的OS很好用，但也逃脱不了被刷机的命运。。。。  </p>
+
+<p><img src="http://i.minus.com/i1OotzXemYPeI.png" width="320" height="180" /></p>
+
+<p>觉得,<br />
+趁着amazon的kindle还没进入中国市场，多看赶紧把电子图书这个市场做起来<br />
+（<strong>豆瓣读书</strong> 也在虎视眈眈啊）<br />
+多看的优势在于本土化，中国的读者会觉得更加亲切<br />
+可是，对于大多数国人的“免费模式”，只能呵呵了  </p>
+
+<p><strong>多看</strong> 里面的 <strong>智能重排</strong> 和 <strong>切边</strong> 是小屏阅读设备的一大杀器, 大爱  </p>
+
+<h4 id="section-3">内容</h4>
+<ul>
+  <li>狗耳朵  </li>
+  <li>Kindle4SS  </li>
+  <li>Send to kindle  </li>
+  <li>……</li>
+</ul>
+
+<p>不得不说，Kindle的“扩展性”和“可玩性”非一般的设备可比  </p>
+
+<p>慢慢，习惯了每天将订阅推送到kindle，睡觉之前消化  </p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p><em>珍爱眼睛，远离pad</em><br />
+<em>Kindle让我们跟多的focus在阅读这个事情上</em><br />
+<em>回归阅读的本质</em><br />
+<em>忘记参数，它只是个用来看书的哥们</em>  </p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[破解ViPlugin]]></title>
@@ -952,34 +1037,6 @@ latex</p>
 
 <p><strong>中文支持</strong><br />
 <strong>编译支持</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[关于TechMessager，关于王自如，关于ZEALER]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/09/laoda-wangzhan/"/>
-    <updated>2012-11-09T20:17:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/09/laoda-wangzhan</id>
-    <content type="html"><![CDATA[<p>今天一大早刷微博</p>
-
-<p>突然看到TechMessager，也就是王自如的新网站zealer开通的消息</p>
-
-<p>同时，伴随着的也是Ipad mini的 Reviewer</p>
-
-<p>也算比较早的关注他的相关视频评测，那时候的“刘跑跑”还很青涩</p>
-
-<p>在如今神码都讲究快速，快节奏的时代，而他的东西也在逐渐传达着一种精致，一种科技与生活相结合的美感</p>
-
-<p>由衷的为他们感到高兴，从老早开始决定办网站，开始铺牌，从毫无经验的菜鸟到现在至少有一个beta版呈现在大家面前</p>
-
-<p>无论 zealer的未来何去何从</p>
-
-<p>但是当Techmessager们努力的朝着他们的目标迈进的时候，总会留下一些不可磨灭的印记</p>
-
-<p>一个字 ，“ <strong>顶</strong> ”</p>
-
-<p><img src="http://i.minus.com/i3uy9ppgFqTGD.png" /></p>
-
 ]]></content>
   </entry>
   

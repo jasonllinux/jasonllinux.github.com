@@ -9,9 +9,13 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="2012，末日没有到来 跨年的气氛来了 像去年的这个时候，总结下这一年的种种。。。 关于RoboCup 读研的日子，RoboCup就成了自己的Keyword
-还记得2011 兰州的中国公开赛，开始了征程，身上也打上了Apollo的印记
-在Apollo的日子，是忙碌的，充实的，也是遗憾的 2012 &hellip;">
+  <meta name="description" content="Q1
+Function ‘sharedOpenGLView’ could not be resolved
+A: 1
+#include "platform/android/CCEGLView.h" Q2
+string之流无法解析
+A:
+在Providers标签中勾选 CDT Builtin &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +93,70 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/01/05/cocos2d-x-some-questions/">Cocos2d-x 中的一些问题</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-05T14:18:00+08:00" pubdate data-updated="true">Jan 5<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/01/05/cocos2d-x-some-questions/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="q1"><strong>Q1</strong></h4>
+<p>Function ‘sharedOpenGLView’ could not be resolved<br />
+A:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">#include "platform/android/CCEGLView.h"</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h4 id="q2"><strong>Q2</strong></h4>
+<p>string之流无法解析<br />
+A:<br />
+在Providers标签中勾选 <strong>CDT Builtin Compiler Settings</strong> 选项
+<img src="http://i.minus.com/ibcqMGoEk4m02A.png" title="" /></p>
+
+<h3 id="q3"><strong>Q3</strong></h3>
+<p>Android工程中的src目录下缺少源文件<br />
+A:<br />
+修改<code>copy_files.sh</code>脚本
+添加  </p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">HELLO_WORLD_ROOT=$COCOS2DX_ROOT/samples/Cpp/HelloCpp</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>在<code>copy_src_and_jni()</code>函数中加一行</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">cp -rf $COCOS2DX_ROOT/src/ $APP_DIR/proj.android</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -446,63 +514,6 @@ latex</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/19/china-open-3/">ChinaOpen 2012——（3）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-19T15:06:00+08:00" pubdate data-updated="true">Dec 19<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/12/19/china-open-3/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>从合肥回来也好几天了</p>
-
-<p>一直忙着开题</p>
-
-<p>今天终于把开题答辩搞定了，终于解脱了。。。</p>
-
-<p>从长沙回来休息了一天立马转场去了合肥，准备科大的2D比赛</p>
-
-<p>心里其实很不是滋味，其实还是希望有一天2D能够重新做起来，重现昔日的辉煌</p>
-
-<p>小组赛上是和科大、合工一组</p>
-
-<p>也许是宿命吧</p>
-
-<p>Apollo3D也是惊险的1:0，拿了冠军</p>
-
-<p>其实，我只是去打酱油的。。。</p>
-
-<p><img src="http://i.minus.com/ibfZGx4xpxQJ78.jpg" /></p>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -522,7 +533,7 @@ latex</p>
 <li class='category'><a href='/blog/categories/alogrithm/'>Alogrithm (1)</a></li>
 <li class='category'><a href='/blog/categories/cocos2d-x/'>Cocos2d-x (1)</a></li>
 <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
-<li class='category'><a href='/blog/categories/it/'>IT (18)</a></li>
+<li class='category'><a href='/blog/categories/it/'>IT (19)</a></li>
 <li class='category'><a href='/blog/categories/latex/'>Latex (1)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (3)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>Linux (11)</a></li>
@@ -615,6 +626,10 @@ latex</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/04/16/kindle-paper-white/">写在Kindle入华前</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/03/12/viplugin/">破解ViPlugin</a>
       </li>
     
@@ -628,10 +643,6 @@ latex</p>
     
       <li class="post">
         <a href="/blog/2013/03/05/aria2c-and-yaaw/">Linux下使用Aria2c和YAAW打造迅雷下载</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/02/18/tweak-ssd/">Tweak SSD for Ubuntu and Windows</a>
       </li>
     
   </ul>
