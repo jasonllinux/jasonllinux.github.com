@@ -8,6 +8,8 @@ categories: Linux
 > ### 先来一张图  
 {% img http://i.minus.com/is7Fiw9VMlBT.png %}
 
+
+<!--more-->
 ### Aria2篇
 
 #####安装和配置

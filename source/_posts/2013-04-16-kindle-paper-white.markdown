@@ -16,26 +16,32 @@ categories: IT
 让更多的人享受月的的乐趣  
 Anyway，Kindle是一个超值、伟大的产品  
 
+<!-- more -->
 
+### Update    
+* 2013-04-19 亚马逊低调在中国推出个人云存储服务Cloud Drive  
+* 2013-04-24 Kindle Paperwhite更新支持亚马逊中国书城  
+* 感觉很近很近了。。。   
+  
 ### Buy KPW
 寒假的时候  
 在万能的豆瓣上找了家业余的代购  
-其实，  
+其实  
 就是在日本的Amazon上购买，然后通过Jshop转运  
 大概等了一星期，未被税，690 RMB  
 
 
 ### 它的模样
 
-{% img http://i.minus.com/iV7rHoC13EhMT.jpg 640 360 %}
+{% img http://i.minus.com/iV7rHoC13EhMT.jpg 400 300 %}
 
-{% img http://i.minus.com/iHRMcqDlOY6TP.jpg 640 360 %}
+{% img http://i.minus.com/iHRMcqDlOY6TP.jpg 400 300 %}
 
-{% img http://i.minus.com/i34D9XViqDjy2.jpg 640 360 %}
+{% img http://i.minus.com/i34D9XViqDjy2.jpg 400 300 %}
 
-{% img http://i.minus.com/iBXkKW2aliQfU.jpg 640 360 %}
+{% img http://i.minus.com/iBXkKW2aliQfU.jpg 400 300 %}
 
-{% img http://i.minus.com/ibqEJt2irADP6y.jpg 640 360 %}
+{% img http://i.minus.com/ibqEJt2irADP6y.jpg 400 300 %}
 
 
 ### 它的内在  
@@ -45,7 +51,7 @@ Anyway，Kindle是一个超值、伟大的产品
 在这之前，也是小白一枚，没有用过Kindle  
 上手真的很简单  
 注册一个ID（不要用白宫的地址了，自己随便找个把），在设备上通过wifi登陆即可  
-Your Account >> Digital Content >> Manage your kindle  
+进入美国亚马逊网站，Your Account >> Digital Content >> Manage your kindle  
 胡乱一通设置  
 
 到手的时候系统版本是3.5.3  
@@ -82,7 +88,7 @@ __多看__ 里面的 __智能重排__ 和 __切边__ 是小屏阅读设备的一
 ### Conclusion
 
 *珍爱眼睛，远离pad*  
-*Kindle让我们跟多的focus在阅读这个事情上*  
+*Kindle让我们更多的focus在阅读这个事情上*  
 *回归阅读的本质*  
 *忘记参数，它只是个用来看书的哥们*  
 
