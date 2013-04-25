@@ -9,14 +9,14 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="Hadoop configure 碎碎念，非教程！！！ 1. SSH配置
-免密钥 2. Host配置
-User和HostName匹配 3. x.xml相关
-dir配置
-端口配置
-java路径设置 hadoop-env.sh 4.常用操作 [bash]
-#格式化
-hadoop namenode - &hellip;">
+  <meta name="description" content="cocos2d-x从1.x到2.x的api转变还是有点大的，
+找了半天没找到orientation的方法；
+于是放狗
+找到的方法貌似也不是很OK，先凑合着用
+如果是ios平台
+修改RootViewController.mm
+[c]
+(BOOL) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +94,60 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/10/cocos2d-x-2-x%E8%AE%BE%E7%BD%AE%E7%AB%96%E5%B1%8F%E6%96%B9%E6%B3%95/">Cocos2d-x 2.x设置竖屏方法</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-10T00:00:00+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/09/10/cocos2d-x-2-x%E8%AE%BE%E7%BD%AE%E7%AB%96%E5%B1%8F%E6%96%B9%E6%B3%95/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>cocos2d-x从1.x到2.x的api转变还是有点大的，<br />
+找了半天没找到orientation的方法；<br />
+于是放狗<br />
+找到的方法貌似也不是很OK，先凑合着用<br />
+如果是ios平台<br />
+修改RootViewController.mm<br />
+[c]<br />
+(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {<br />
+    return UIInterfaceOrientationIsPortrait(interfaceOrientation);</p>
+
+<p>}<br />
+[/c]<br />
+如果是android平台<br />
+在AndroidManifest.xml中设置<br />
+[bash]<br />
+android:screenOrientation=&quot;portrait&quot;<br />
+[/bash]</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -385,56 +439,6 @@ svnadmin load path/to/new-repo &lt; dumpfile<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/18/archlinux-%E5%AE%89%E8%A3%85-virtualbox/">Archlinux 安装 Virtualbox</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-18T00:00:00+08:00" pubdate data-updated="true">Aug 18<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/08/18/archlinux-%E5%AE%89%E8%A3%85-virtualbox/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>通过源安装完virtualbox之后，如果立马新建虚拟机的话会报错，</p>
-
-<p>解决的方法呢？</p>
-
-<p>[bash]<br />
-#查看内核版本<br />
-uname -a<br />
-#然后<br />
-sudo dkms install vboxhost/4.1.18 -k  3.4.7-1-ARCH/x86_64<br />
-modprobe vboxdrv<br />
-[/bash]</p>
-
-<p><strong>注意:</strong>根据实际情况替换版本号</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/10/">&larr; Older</a>
@@ -457,7 +461,7 @@ modprobe vboxdrv<br />
 <li class='category'><a href='/blog/categories/it/'>IT (19)</a></li>
 <li class='category'><a href='/blog/categories/latex/'>Latex (1)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (3)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (11)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (12)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (2)</a></li>
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
@@ -547,6 +551,10 @@ modprobe vboxdrv<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/">Prepare for Ubuntu 13.04</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/04/16/kindle-paper-white/">写在Kindle入华前</a>
       </li>
     
@@ -560,10 +568,6 @@ modprobe vboxdrv<br />
     
       <li class="post">
         <a href="/blog/2013/03/07/with-eclipse/">Work With Eclipse</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/05/aria2c-and-yaaw/">Linux下使用Aria2c和YAAW打造迅雷下载</a>
       </li>
     
   </ul>

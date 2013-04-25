@@ -5,17 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Cocos2d-x 中的一些问题 - Jasonllinux's Blog</title>
+  <title>Prepare for Ubuntu 13.04 - Jasonllinux's Blog</title>
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="Q1
-Function ‘sharedOpenGLView’ could not be resolved
-A: 1
-#include "platform/android/CCEGLView.h" Q2
-string之流无法解析
-A:
-在Providers标签中勾选 CDT Builtin &hellip;">
+  <meta name="description" content="Ubuntu 13.04 如期而至! 记录一下用到的软件: Develop eclipse Gvim sublime Music and Movie Smplayer Audacious Game Steam Web Chrome Tools Tweak Dropbox &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -24,7 +18,7 @@ A:
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.com/blog/2013/01/05/cocos2d-x-some-questions/">
+  <link rel="canonical" href="http://jasonllinux.github.com/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -96,7 +90,7 @@ MathJax.Hub.Config({
   
   <header>
     
-      <h1 class="entry-title">Cocos2d-x 中的一些问题</h1>
+      <h1 class="entry-title">Prepare for Ubuntu 13.04</h1>
     
     
       <p class="meta">
@@ -112,7 +106,7 @@ MathJax.Hub.Config({
   
 
 
-<time datetime="2013-01-05T14:18:00+08:00" pubdate data-updated="true">Jan 5<span>th</span>, 2013</time>
+<time datetime="2013-04-25T21:38:00+08:00" pubdate data-updated="true">Apr 25<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -121,32 +115,45 @@ MathJax.Hub.Config({
   </header>
 
 
-<div class="entry-content"><h4 id="q1"><strong>Q1</strong></h4>
-<p>Function ‘sharedOpenGLView’ could not be resolved<br />
-A:</p>
+<div class="entry-content"><p>Ubuntu 13.04 如期而至!  </p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">#include "platform/android/CCEGLView.h"</span></code></pre></td></tr></table></div></figure></notextile></div>
+<p>记录一下用到的软件:  </p>
 
-<h4 id="q2"><strong>Q2</strong></h4>
-<p>string之流无法解析<br />
-A:<br />
-在Providers标签中勾选 <strong>CDT Builtin Compiler Settings</strong> 选项
-<img src="http://i.minus.com/ibcqMGoEk4m02A.png" title="" /></p>
+<h4 id="develop">Develop</h4>
 
-<h3 id="q3"><strong>Q3</strong></h3>
-<p>Android工程中的src目录下缺少源文件<br />
-A:<br />
-修改<code>copy_files.sh</code>脚本
-添加  </p>
+<ul>
+  <li>eclipse  </li>
+  <li>Gvim</li>
+  <li>sublime</li>
+</ul>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">HELLO_WORLD_ROOT=$COCOS2DX_ROOT/samples/Cpp/HelloCpp</span></code></pre></td></tr></table></div></figure></notextile></div>
+<h4 id="music-and-movie">Music and Movie</h4>
+<ul>
+  <li>Smplayer</li>
+  <li>Audacious</li>
+</ul>
 
-<p>在<code>copy_src_and_jni()</code>函数中加一行</p>
+<h4 id="game">Game</h4>
+<ul>
+  <li>Steam</li>
+</ul>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">cp -rf $COCOS2DX_ROOT/src/ $APP_DIR/proj.android</span></code></pre></td></tr></table></div></figure></notextile></div>
+<h4 id="web">Web</h4>
+<ul>
+  <li>Chrome</li>
+</ul>
+
+<h4 id="tools">Tools</h4>
+<ul>
+  <li>Tweak</li>
+  <li>Dropbox</li>
+  <li>RecordMyDesktop</li>
+  <li>Filezilla</li>
+  <li>ClipGrab</li>
+  <li>Gimp</li>
+</ul>
+
+<h4 id="section">待续。。。</h4>
 
 </div>
 
@@ -170,12 +177,12 @@ A:<br />
   
 
 
-<time datetime="2013-01-05T14:18:00+08:00" pubdate data-updated="true">Jan 5<span>th</span>, 2013</time>
+<time datetime="2013-04-25T21:38:00+08:00" pubdate data-updated="true">Apr 25<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/cocos2d-x/'>Cocos2d-x</a>
+    <a class='category' href='/blog/categories/linux/'>Linux</a>
   
 </span>
 
@@ -184,7 +191,7 @@ A:<br />
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2013/01/05/cocos2d-x-some-questions/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2013/01/05/cocos2d-x-some-questions/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jasonllinux.github.com/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/" data-via="" data-counturl="http://jasonllinux.github.com/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/" >Tweet</a>
   
   
   
@@ -193,10 +200,8 @@ A:<br />
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/12/30/conclusion/" title="Previous Post: 2012年--总结">&laquo; 2012年--总结</a>
+        <a class="basic-alignment left" href="/blog/2013/04/16/kindle-paper-white/" title="Previous Post: 写在Kindle入华前">&laquo; 写在Kindle入华前</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/02/18/tweak-ssd/" title="Next Post: Tweak SSD for Ubuntu and Windows">Tweak SSD for Ubuntu and Windows &raquo;</a>
       
     </p>
   </footer>
@@ -382,8 +387,8 @@ A:<br />
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jasonllinux.github.com/blog/2013/01/05/cocos2d-x-some-questions/';
-        var disqus_url = 'http://jasonllinux.github.com/blog/2013/01/05/cocos2d-x-some-questions/';
+        var disqus_identifier = 'http://jasonllinux.github.com/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/';
+        var disqus_url = 'http://jasonllinux.github.com/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/';
         var disqus_script = 'embed.js';
       
     (function () {

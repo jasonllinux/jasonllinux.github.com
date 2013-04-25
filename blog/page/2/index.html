@@ -9,13 +9,8 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="Q1
-Function ‘sharedOpenGLView’ could not be resolved
-A: 1
-#include "platform/android/CCEGLView.h" Q2
-string之流无法解析
-A:
-在Providers标签中勾选 CDT Builtin &hellip;">
+  <meta name="description" content="啊哈 ， 入手SSD了
+Intel 520 放假前几天，果断从amazon入手一块180G的Intel 520, 关键看重了他家的 质保5年 买回来之后觉得放在自己的X61小本上面太大才小用了（X61破解Sata2之后）,于是果断又从某宝上入了个原装硬盘托架，装入台式机作为第二硬盘 重装系统， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +88,111 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/02/18/tweak-ssd/">Tweak SSD for Ubuntu and Windows</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-18T14:34:00+08:00" pubdate data-updated="true">Feb 18<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/02/18/tweak-ssd/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote>
+  <p>啊哈 ， 入手SSD了<br />
+Intel 520  </p>
+</blockquote>
+
+<p>放假前几天，果断从amazon入手一块180G的Intel 520, 关键看重了他家的 <strong>质保5年</strong>  </p>
+
+<p>买回来之后觉得放在自己的X61小本上面太大才小用了（X61破解Sata2之后）,于是果断又从某宝上入了个原装硬盘托架，装入台式机作为第二硬盘</p>
+
+<p>重装系统，装软件， <strong>4K对齐</strong> 等在此忽略。。。</p>
+
+<p>主要想说下Ubuntu和Windows下的一些优化，延长一下SSD的寿命</p>
+
+<h3 id="for-ubuntu">For Ubuntu</h3>
+<ul>
+  <li>修改/etc/fstab文件</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+</pre></td><td class="code"><pre><code class=""><span class="line"># &lt;file system&gt; &lt;mount point&gt;   &lt;type&gt;  &lt;options&gt;       &lt;dump&gt;  &lt;pass&gt;
+</span><span class="line"># / was on /dev/sdb6 during installation
+</span><span class="line">UUID=bc8a6196-3160-4503-800c-48dcb385887e /               ext4    discard,noatime,errors=remount-ro 0       1
+</span><span class="line"># swap was on /dev/sda7 during installation
+</span><span class="line">UUID=5f772617-a408-4b0a-a125-2007cb96a4d8 none            swap    sw              0       0
+</span><span class="line"># swap was on /dev/sdb5 during installation
+</span><span class="line">UUID=ddfdd878-2f06-428a-97a0-cdbe05b882db none            swap    sw              0       0
+</span><span class="line">
+</span><span class="line"># SSD tweak : temporary directories as tmpfs
+</span><span class="line">tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0
+</span><span class="line">tmpfs /var/spool tmpfs defaults,noatime,mode=1777 0 0
+</span><span class="line">tmpfs /var/tmp  tmpfs defaults,noatime,mode=1777 0 0
+</span><span class="line">
+</span><span class="line"># SSD tweak : log directory as tmpfs
+</span><span class="line">tmpfs /var/log tmpfs defaults,noatime,mode=0755 0 0</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<ul>
+  <li>对Chrome
+在这里我们希望将浏览器Chrome的缓存写到Ramdisk中去，因此</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">mkdir /tmp/chrome
+</span><span class="line">mount -t tmpfs -o size=1024M,mode=0744 tmpfs /tmp/chrome/
+</span><span class="line">chmod 777 /tmp/chrome/ -R</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h3 id="for-windows">For Windows</h3>
+
+<h3 id="reference"><em>Reference</em></h3>
+<p>感谢如下大大们的文章：<br />
+* 1<br />
+* 2 <br />
+* 3  </p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -466,54 +566,6 @@ latex</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/22/opencv-build/">OpenCV——[1 环境搭建]</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-22T20:47:00+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2012</time>
-        
-         | <a href="/blog/2012/12/22/opencv-build/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>断断续续学习一些OpenCV相关的东西</p>
-
-<p>记录下来</p>
-
-<p>首先是环境搭建  Linux</p>
-
-<p>Step 1 编译
-参考 <a href="http://jasonllinux.github.com/blog/2012/08/02/archlinux-%E7%BC%96%E8%AF%91-opencv%E6%94%AF%E6%8F%B4python/" title="Reference1">1</a> 和 <a href="http://jasonllinux.github.com/blog/2012/08/04/mac-%E5%AE%89%E8%A3%85opencv%E6%94%AF%E6%8F%B4python/">2</a> </p>
-
-<p>Step 2 开发环境配置
-参考 <a href="http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/" title="Reference3">3</a> </p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -536,7 +588,7 @@ latex</p>
 <li class='category'><a href='/blog/categories/it/'>IT (19)</a></li>
 <li class='category'><a href='/blog/categories/latex/'>Latex (1)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (3)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (11)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (12)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (2)</a></li>
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
@@ -626,6 +678,10 @@ latex</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/">Prepare for Ubuntu 13.04</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/04/16/kindle-paper-white/">写在Kindle入华前</a>
       </li>
     
@@ -639,10 +695,6 @@ latex</p>
     
       <li class="post">
         <a href="/blog/2013/03/07/with-eclipse/">Work With Eclipse</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/05/aria2c-and-yaaw/">Linux下使用Aria2c和YAAW打造迅雷下载</a>
       </li>
     
   </ul>
