@@ -4,7 +4,7 @@
   <title><![CDATA[Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-04-30T19:36:37+08:00</updated>
+  <updated>2013-04-30T19:45:27+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -935,39 +935,33 @@ latex</p>
 
 <p>于是，痛定思痛，准备把开发平台陆续迁移到Ubuntu上来</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<h3 id="step1-checkoutoctopress">Step1 先checkout出Octopress的源码</h3>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-<span class="line-number">16</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">## Step1 先checkout出Octopress的源码</span>
-</span><span class="line">git clone -b <span class="nb">source </span>git@github.com:username/username.github.com.git octopress
-</span><span class="line"><span class="nb">cd </span>octopress
-</span><span class="line">git clone git@github.com:username/username.github.com.git _deploy
-</span><span class="line">
-</span><span class="line"><span class="c">## Step2然后安装一些插件吧</span>
-</span><span class="line">
-</span><span class="line">sudo gem install bundler
-</span><span class="line">
-</span><span class="line"><span class="c">## 出现Error</span>
-</span><span class="line">ERROR:  Error installing RedCloth:
-</span><span class="line">ERROR: Failed to build gem native extension.
-</span><span class="line"><span class="c">## 解决方案</span>
-</span><span class="line">sudo apt-get install ruby1.9.1-dev
-</span><span class="line">
-</span><span class="line">sudo bundle install
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+</pre></td><td class="code"><pre><code class=""><span class="line">git clone -b source git@github.com:username/username.github.com.git octopress
+</span><span class="line">cd octopress
+</span><span class="line">git clone git@github.com:username/username.github.com.git _deploy</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h3 id="step2">Step2然后安装一些插件吧</h3>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">sudo gem install bundler</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h3 id="error">出现Error</h3>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">ERROR:  Error installing RedCloth:  
+</span><span class="line">ERROR: Failed to build gem native extension.</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>解决方案  </p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">sudo apt-get install ruby1.9.1-dev  
+</span><span class="line">sudo bundle install</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <h1 id="octopress-to-win7">Octopress to Win7</h1>
 
