@@ -13,14 +13,16 @@ categories: IT
 
 年初就听闻Kindle要入华的消息，可是一直以来只是这样的传说  
 相信Amazon终会冲破重重阻力，将Kindle带到景德镇  
-让更多的人享受月的的乐趣  
+让更多的人享受阅读的的乐趣  
 Anyway，Kindle是一个超值、伟大的产品  
 
 <!-- more -->
 
 ### Update    
 * 2013-04-19 亚马逊低调在中国推出个人云存储服务Cloud Drive  
+{% img http://i.minus.com/ibnowQV2WY8y09.png %}  
 * 2013-04-24 Kindle Paperwhite更新支持亚马逊中国书城  
+{% img http://i.minus.com/iBTRu4ImcR9iO.jpg %}  
 * 感觉很近很近了。。。   
   
 ### Buy KPW
@@ -81,8 +83,6 @@ __多看__ 里面的 __智能重排__ 和 __切边__ 是小屏阅读设备的一
 不得不说，Kindle的“扩展性”和“可玩性”非一般的设备可比  
 
 慢慢，习惯了每天将订阅推送到kindle，睡觉之前消化  
-
-
 
 
 ### Conclusion
