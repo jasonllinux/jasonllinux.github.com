@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-04-30T19:45:27+08:00</updated>
+  <updated>2013-05-04T16:20:47+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Shell 使用中遇到的问题]]></title>
+    <link href="http://jasonllinux.github.com/blog/2013/05/01/shell-in-use/"/>
+    <updated>2013-05-01T19:19:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2013/05/01/shell-in-use</id>
+    <content type="html"><![CDATA[<h2 id="section">一些变量</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">变量</th>
+      <th style="text-align: left">含义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">$#</td>
+      <td style="text-align: left">命令行参数的个数</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">$*</td>
+      <td style="text-align: left">以 “arg1 arg2 …argn” 保存的所有参数</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">$@</td>
+      <td style="text-align: left">以 “arg1” “arg2” …“argn” 保存的所有参数</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">$!</td>
+      <td style="text-align: left">上一个命令的PID</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">$n</td>
+      <td style="text-align: left">表示第几个参数（1,2,3,…）</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">$0</td>
+      <td style="text-align: left">当前程序的名称</td>
+    </tr>
+  </tbody>
+</table>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Prepare for Ubuntu 13.04]]></title>
@@ -352,66 +397,6 @@ Done！  </p>
 </span><span class='line'>pre-up iptables-restore &amp;lt; /etc/iptables.up.rules&lt;br /&gt;
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ubuntu12.10 搭建 SVN服务器]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/18/svn-server-in-ubuntu12-dot-10/"/>
-    <updated>2012-11-18T13:44:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/18/svn-server-in-ubuntu12-dot-10</id>
-    <content type="html"><![CDATA[<p>最近把实验室的一台Server升级到了12.10</p>
-
-<p>因为实在受不了Arch的更新强度</p>
-
-<p>经常滚死的Arch不适合做服务器了，So 还是回归Ubuntu吧</p>
-
-<p>搭建起来。。。</p>
-
-<p>``` bash
-#Step 1 安装一些东西
-sudo apt-get install subversion libapache2-svn apache2</p>
-
-<h1 id="step-2-svn">Step 2 建立SVN仓库目录</h1>
-<p>sudo mkdir /srv/svn</p>
-
-<h1 id="step-3-">Step 3 修改配置文件</h1>
-<p>sudo cp /etc/apache2/mods-enabled/dav_svn.conf /etc/apache2/mods-enabled/dav_svn.conf.orig
-sudo nano /etc/apache2/mods-enabled/dav_svn.conf</p>
-
-<p>&lt;Location /svn&gt;
-DAV svn
-SVNParentPath /srv/svn
-AuthType Basic
-AuthName “Subversion Repository”
-AuthUserFile /etc/apache2/dav_svn.passwd
-Require valid-user
-&lt;/Location&gt;</p>
-
-<h1 id="step4-">Step4 生成用户以及密码</h1>
-<p>sudo htpasswd -cm /etc/apache2/dav_svn.passwd jasonllinux</p>
-
-<h1 id="last-">Last 建代码仓库啦</h1>
-<p>cd /srv/svn
-sudo svnadmin create repo</p>
-
-<p>```</p>
-
-<h6 id="update">Update</h6>
-<ul>
-  <li>Error: svn attempt to write a readonly database, commit failed</li>
-</ul>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>chmod -R g+w /srv/svn</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<h3 id="q">Q:</h3>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Error: svn attempt to write a readonly database, commit failed
-</span><span class='line'>#解决方法
-</span><span class='line'>chmod -R g+w /srv/svn</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

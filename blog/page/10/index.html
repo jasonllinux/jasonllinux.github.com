@@ -9,13 +9,10 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="通过源安装完virtualbox之后，如果立马新建虚拟机的话会报错， 解决的方法呢？ [bash]
-#查看内核版本
-uname -a
-#然后
-sudo dkms install vboxhost/4.1.18 -k  3.4.7-1-ARCH/x86_64
-modprobe vboxdrv
-[/ &hellip;">
+  <meta name="description" content="前段时间把托管比赛项目的svn服务器从自己的笔记本迁移到台式机上了，可以把所有历史记录版本信息都转走，实在是很方便： [bash]
+#备份
+svnadmin dump path/to/old-repo &gt; dumpfile #在新的服务器上新建svn &#8230;不再赘述
+#还原 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +90,59 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/26/svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/">SVN服务器迁移</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-26T00:00:00+08:00" pubdate data-updated="true">Aug 26<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/08/26/svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前段时间把托管比赛项目的svn服务器从自己的笔记本迁移到台式机上了，可以把所有历史记录版本信息都转走，实在是很方便：</p>
+
+<p>[bash]<br />
+#备份<br />
+svnadmin dump path/to/old-repo &gt; dumpfile</p>
+
+<p>#在新的服务器上新建svn &#8230;不再赘述<br />
+#还原<br />
+svnadmin load path/to/new-repo &lt; dumpfile<br />
+[/bash]</p>
+
+<p>参考：</p>
+
+<p><a href="http://eastviking.iteye.com/blog/32899" target="_blank">如何做svn迁移</a></p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -441,76 +491,6 @@ chainloader +1<br />
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/02/archlinux-%E7%BC%96%E8%AF%91-opencv%E6%94%AF%E6%8F%B4python/">Archlinux 编译 OpenCV支援Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-02T00:00:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
-        
-         | <a href="/blog/2012/08/02/archlinux-%E7%BC%96%E8%AF%91-opencv%E6%94%AF%E6%8F%B4python/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>
-Step1</strong>
-DownLoad <em>OpenCV-2.4.2.tar.bz2</em></p>
-
-<p><strong>Step2</strong></p>
-
-<p>[bash]<br />
- cd OpenCV-2.4.2/<br />
- mkdir release<br />
- cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_PYTHON_SUPPORT=ON ..<br />
- sudo make<br />
- sudo make install<br />
-[/bash]</p>
-
-<p><strong>Step3</strong>
-安装完成之后会把cv的库安装到/usr/local/lib/python2.7/site-packages目录中<br />
-复制到你的python2.7所在的路径，或者加个.pth文件</p>
-
-<p>或者直接修改环境变量</p>
-
-<p>[bash]<br />
-export PYTHONPATH=&quot;/usr/local/lib/python2.7/site-packages/:$PYTHONPATH&quot;<br />
-vim /etc/ld.so.conf<br />
-add &quot;/usr/local/lib&quot;<br />
-[/bash]</p>
-
-<p><strong>Result</strong>
-进入OpenCV目录</p>
-
-<p>[bash]<br />
- cd OpenCV-2.4.2/samples/python<br />
- python2.7  delaunay.py<br />
-[/bash]</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/11/">&larr; Older</a>
@@ -533,7 +513,7 @@ add &quot;/usr/local/lib&quot;<br />
 <li class='category'><a href='/blog/categories/it/'>IT (19)</a></li>
 <li class='category'><a href='/blog/categories/latex/'>Latex (1)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (3)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (12)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (13)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (2)</a></li>
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
@@ -623,6 +603,10 @@ add &quot;/usr/local/lib&quot;<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/05/01/shell-in-use/">Shell 使用中遇到的问题</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/">Prepare for Ubuntu 13.04</a>
       </li>
     
@@ -636,10 +620,6 @@ add &quot;/usr/local/lib&quot;<br />
     
       <li class="post">
         <a href="/blog/2013/03/11/tl-wn725n/">TL-WN725N 折腾记</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/07/with-eclipse/">Work With Eclipse</a>
       </li>
     
   </ul>

@@ -9,9 +9,12 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="断断续续学习一些OpenCV相关的东西 记录下来 首先是环境搭建 Linux Step 1 编译
-参考 1 和 2 Step 2 开发环境配置
-参考 3 ">
+  <meta name="description" content="方法一
+\begin{thebibliography}
+\bibitem author,article, year, vol,
+\end{thebibliography} 方法二
+BibTeX bib文件，参考文献所在文件，类似于你的数据库 @文献类型={引用名称,
+各个域,用逗号分割, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +92,96 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/23/latex-bib/">Latex中参考文献</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-23T14:36:00+08:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2012</time>
+        
+         | <a href="/blog/2012/12/23/latex-bib/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="section">方法一</h4>
+<p>\begin{thebibliography}
+\bibitem author,article, year, vol,
+\end{thebibliography}</p>
+
+<h4 id="section-1">方法二</h4>
+<p>BibTeX</p>
+
+<ul>
+  <li>bib文件，参考文献所在文件，类似于你的数据库</li>
+</ul>
+
+<p>@文献类型={引用名称,
+各个域,用逗号分割,最后一个后面不需要再后面追加逗号,内容要用双引号括起来
+};
+这里要注意:每条参考文献用@开头，分割的逗号不要用中文逗号，用半角逗号，每条参考文献要以;来结束，类似于C++的类的定义。</p>
+
+<p>例子</p>
+
+<p>book{plain:myBook,
+author =”南燕”,
+editor =”南燕”,
+year =”2006”,
+title =”书籍测试”,
+publisher =”Wiley”
+};</p>
+
+<p>@article{plain:myArticle,
+author =”Houston”,
+title =”Teach you how to use article reference”,
+jounal =”IEEE Trans. on Typeset”,
+year =”2006”
+};</p>
+
+<ul>
+  <li>
+    <p>bst文件，参考文献样式文件</p>
+  </li>
+  <li>
+    <p>tex</p>
+  </li>
+  <li>
+    <p>Compile 
+latex
+bibtex
+latex 
+latex</p>
+  </li>
+  <li>
+    <p>Last
+开始整理起自己的文献库吧</p>
+  </li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -385,105 +478,6 @@ MathJax.Hub.Config({
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/18/octopress-move/">迁移Octopress（Ubuntu 和 Win7）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-18T15:19:00+08:00" pubdate data-updated="true">Nov 18<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/11/18/octopress-move/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h1 id="octopress-to-ubuntu">Octopress to Ubuntu</h1>
-<p>最近实在受不了Arch的种种问题</p>
-
-<p>于是，痛定思痛，准备把开发平台陆续迁移到Ubuntu上来</p>
-
-<h3 id="step1-checkoutoctopress">Step1 先checkout出Octopress的源码</h3>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">git clone -b source git@github.com:username/username.github.com.git octopress
-</span><span class="line">cd octopress
-</span><span class="line">git clone git@github.com:username/username.github.com.git _deploy</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<h3 id="step2">Step2然后安装一些插件吧</h3>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">sudo gem install bundler</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<h3 id="error">出现Error</h3>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">ERROR:  Error installing RedCloth:  
-</span><span class="line">ERROR: Failed to build gem native extension.</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>解决方案  </p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">sudo apt-get install ruby1.9.1-dev  
-</span><span class="line">sudo bundle install</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<h1 id="octopress-to-win7">Octopress to Win7</h1>
-
-<p>最近又在Win7下面折腾Octopress了<br />
-总结下：</p>
-
-<h3 id="ruby">安装Ruby环境</h3>
-<ul>
-  <li>Ruby Installer</li>
-  <li>DevKit</li>
-  <li>修改淘宝的源</li>
-  <li>更新</li>
-</ul>
-
-<h3 id="clone">Clone仓库</h3>
-<ul>
-  <li>和在Ubuntu中类似</li>
-</ul>
-
-<h3 id="section">安装一些东西</h3>
-<ul>
-  <li>gem install bundler</li>
-  <li>bundle install</li>
-</ul>
-
-<h3 id="section-1">问题</h3>
-<ul>
-  <li>编码问题  </li>
-  <li>chcp 65001</li>
-</ul>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -506,7 +500,7 @@ MathJax.Hub.Config({
 <li class='category'><a href='/blog/categories/it/'>IT (19)</a></li>
 <li class='category'><a href='/blog/categories/latex/'>Latex (1)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (3)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (12)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (13)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (2)</a></li>
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
@@ -596,6 +590,10 @@ MathJax.Hub.Config({
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/05/01/shell-in-use/">Shell 使用中遇到的问题</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/">Prepare for Ubuntu 13.04</a>
       </li>
     
@@ -609,10 +607,6 @@ MathJax.Hub.Config({
     
       <li class="post">
         <a href="/blog/2013/03/11/tl-wn725n/">TL-WN725N 折腾记</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/07/with-eclipse/">Work With Eclipse</a>
       </li>
     
   </ul>

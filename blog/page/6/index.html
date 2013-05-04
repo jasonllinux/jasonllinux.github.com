@@ -9,8 +9,13 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="昨天Arch滚到Gnome3.6 但是发现fcitx不能用 据说原生支持ibus了 so 切换到ibus 但是发现无法用快捷键切换中英文 解决方法: 如上图所示在”区域和语言设置“中修改“切换下一个源”的键盘快捷方式
-">
+  <meta name="description" content="如何恢复
+首先从github checkout两个分支 1
+2
+3
+git clone -b source git@github.com:username/username.github.com.git octopress
+cd octopress
+git clone git@github.com &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +93,87 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/04/config-octopress/">Config Octopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-04T12:58:00+08:00" pubdate data-updated="true">Nov 4<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/11/04/config-octopress/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="section">如何恢复</h2>
+<p>首先从github checkout两个分支</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">git clone -b <span class="nb">source </span>git@github.com:username/username.github.com.git octopress
+</span><span class="line"><span class="nb">cd </span>octopress
+</span><span class="line">git clone git@github.com:username/username.github.com.git _deploy
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>安装依赖gems</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">gem install bundler
+</span><span class="line">bundle install
+</span><span class="line">rake install <span class="c"># 可以省略？</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>pull最新的</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nb">cd </span>xxx
+</span><span class="line"><span class="nb">cd </span>_deploy
+</span><span class="line">git pull origin master
+</span><span class="line"><span class="nb">cd</span> ..
+</span><span class="line">git pull origin <span class="nb">source</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h2 id="robotstxt">添加robots.txt</h2>
+
+<h2 id="section-1">添加404页面</h2>
+
+<h2 id="more">More</h2>
+<p>excerpt_link: “Read on →”  # 在文章中使用</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/11/04/config-octopress/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -341,53 +427,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/10/24/fanqiang-in-linux-terminal/">Linux终端下翻墙</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-24T18:00:00+08:00" pubdate data-updated="true">Oct 24<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/10/24/fanqiang-in-linux-terminal/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>在Arch下有时候更新dropbox软件是件很DT的事情</p>
-
-<p>下载不动</p>
-
-<p>在启用了goagent的情况下</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nb">export </span><span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:8087
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -410,7 +449,7 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
 <li class='category'><a href='/blog/categories/it/'>IT (19)</a></li>
 <li class='category'><a href='/blog/categories/latex/'>Latex (1)</a></li>
 <li class='category'><a href='/blog/categories/life/'>Life (3)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>Linux (12)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (13)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (2)</a></li>
 <li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
@@ -500,6 +539,10 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/05/01/shell-in-use/">Shell 使用中遇到的问题</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/">Prepare for Ubuntu 13.04</a>
       </li>
     
@@ -513,10 +556,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
     
       <li class="post">
         <a href="/blog/2013/03/11/tl-wn725n/">TL-WN725N 折腾记</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/07/with-eclipse/">Work With Eclipse</a>
       </li>
     
   </ul>
