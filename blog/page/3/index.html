@@ -9,12 +9,7 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="方法一
-\begin{thebibliography}
-\bibitem author,article, year, vol,
-\end{thebibliography} 方法二
-BibTeX bib文件，参考文献所在文件，类似于你的数据库 @文献类型={引用名称,
-各个域,用逗号分割, &hellip;">
+  <meta name="description" content="重新翻开那本宝典 隐变量EM参数学习 隐变量 E步骤 M步骤 ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +87,100 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/26/em/">EM</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-26T21:00:00+08:00" pubdate data-updated="true">Dec 26<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/12/26/em/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>重新翻开那本宝典</p>
+
+<h3 id="em">隐变量EM参数学习</h3>
+
+<h4 id="section">隐变量</h4>
+
+<ul>
+  <li>
+    <p>E步骤</p>
+  </li>
+  <li>
+    <p>M步骤</p>
+  </li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/26/kalman-filter/">Kalman Filter</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-26T20:30:00+08:00" pubdate data-updated="true">Dec 26<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/12/26/kalman-filter/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>一直觉得滤波之流是个很玄乎的东西</p>
+
+<p>前几日看了一篇文章，霎那间有所顿悟</p>
+
+<p>因此，记录一番</p>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -343,141 +432,6 @@ latex</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/02/last-chinaopen/">ChinaOpen 2012——（1）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-02T22:53:00+08:00" pubdate data-updated="true">Dec 2<span>nd</span>, 2012</time>
-        
-         | <a href="/blog/2012/12/02/last-chinaopen/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>RoboCup ChinaOpen 2012 Rescue</strong>  来的那么突然</p>
-
-<p>这几天改代码，调整。。。地焦头烂额</p>
-
-<p>通信有问题，智能体死在那。。。。</p>
-
-<p>问题一大堆，还是平时做的不够</p>
-
-<p>希望不要去丢人啊。。。。</p>
-
-<p>可能是参加的最后一次国赛了，享受过程吧</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/23/vpn-server-12-dot-04/">Ubuntu12.04 配置VPN Server</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-23T08:57:00+08:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2012</time>
-        
-         | <a href="/blog/2012/11/23/vpn-server-12-dot-04/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Step1</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line">sudo apt-get   install pptpd
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>Step2</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#修改配置文件/etc/sysctl.conf中的相应内容如下，打开ipv4转发功能  </span>
-</span><span class="line">net.ipv4.ip_forward <span class="o">=</span> 1
-</span><span class="line"><span class="c">#执行sysctl -p，使其马上生效。  </span>
-</span><span class="line"><span class="c">#编辑配置文件 /etc/ppp/pptpd-options，修改里面的 ms-dns 这个项为 8.8.8.8 。也就是Google的DNS服务器。  </span>
-</span><span class="line"><span class="c">#编辑配置文件 /etc/pptpd.conf .修改成如下：  </span>
-</span><span class="line">option /etc/ppp/pptpd-options
-</span><span class="line">localip 192.168.0.1
-</span><span class="line">remoteip 192.168.0.11-150
-</span><span class="line"><span class="c">#编辑配置文件 /etc/ppp/chap-secrets 。此文件定义登录的用户名和密码  </span>
-</span><span class="line"><span class="c">#添加一行  </span>
-</span><span class="line">komy pptpd password *
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>Step3 配置Iptables</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line">iptables -t nat -A POSTROUTING -o eth0 -s 192.168.0.0/24 -j MASQUERADE
-</span><span class="line">iptables -I FORWARD -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1356
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>Step4 开机自动生效</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line">iptables-save &gt; /etc/iptables.up.rules
-</span><span class="line"><span class="c">#然后修改脚本/etc/network/interfaces  </span>
-</span><span class="line">pre-up iptables-restore &lt; /etc/iptables.up.rules
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -493,7 +447,7 @@ latex</p>
     <section>
   <h1>Categories</h1>
   <ul id="categories">
-    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (3)</a></li>
+    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (4)</a></li>
 <li class='category'><a href='/blog/categories/alogrithm/'>Alogrithm (1)</a></li>
 <li class='category'><a href='/blog/categories/cocos2d-x/'>Cocos2d-x (1)</a></li>
 <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
@@ -503,7 +457,7 @@ latex</p>
 <li class='category'><a href='/blog/categories/linux/'>Linux (13)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (2)</a></li>
-<li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
+<li class='category'><a href='/blog/categories/python/'>Python (2)</a></li>
 <li class='category'><a href='/blog/categories/robocup/'>RoboCup (3)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
 <li class='category'><a href='/blog/categories/tools/'>Tools (2)</a></li>
@@ -590,6 +544,14 @@ latex</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/05/06/design-pattern/">About 设计模式</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/05/python-setup-tools/">Python包管理小记</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/05/01/shell-in-use/">Shell 使用中遇到的问题</a>
       </li>
     
@@ -599,14 +561,6 @@ latex</p>
     
       <li class="post">
         <a href="/blog/2013/04/16/kindle-paper-white/">写在Kindle入华前</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/12/viplugin/">破解ViPlugin</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/11/tl-wn725n/">TL-WN725N 折腾记</a>
       </li>
     
   </ul>

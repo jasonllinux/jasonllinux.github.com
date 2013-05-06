@@ -9,13 +9,13 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="从Beta开始用的12.04,从刚开始的Bug丛生到正式发布，终于等到头了. 基础版：
-nautilus-open-terminal
-build-essential
-pdf中文 poppler-data
-网页浏览器 Chromium
-桌面环境 gnome-shell 输入法 fctix
-文字排版 &hellip;">
+  <meta name="description" content="在Archlinux下简单配置tomat7： [bash]
+#Install
+sudo pacman -S tomcat7
+#cofigure
+#修改/etc/tomcat7/context.xml
+&lt;Context   reloadable=&quot;true&quot;&gt;
+#修改 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +93,193 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/22/tomcat%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/">Tomcat简单配置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-22T00:00:00+08:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2012</time>
+        
+         | <a href="/blog/2012/06/22/tomcat%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>在Archlinux下简单配置tomat7：</p>
+
+<p>[bash]<br />
+#Install<br />
+sudo pacman -S tomcat7<br />
+#cofigure<br />
+#修改/etc/tomcat7/context.xml<br />
+&lt;Context   reloadable=&quot;true&quot;&gt;<br />
+#修改/etc/tomcat7/tomcat-users.xml</p>
+
+<p>&lt;!&#8211; Tomcat运行必备的角色 &#8211;&gt;<br />
+ &lt;role rolename=&quot;tomcat&quot;/&gt;</p>
+
+<p>&lt;!&#8211; 进行Tomcat管理的角色 &#8211;&gt;<br />
+ &lt;role rolename=&quot;manager-gui&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-script&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-jmx&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-status&quot;/&gt;<br />
+ &lt;role rolename=&quot;admin-gui&quot;/&gt;<br />
+ &lt;role rolename=&quot;admin-script&quot;/&gt;</p>
+
+<p>&lt;!&#8211; 进行Tomcat管理的用户，具有Tomcat管理的全部角色 &#8211;&gt;<br />
+ &lt;user username=&quot;admin&quot; password=&quot;apollo&quot; roles=&quot;tomcat, manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script&quot;/&gt;<br />
+[/bash]</p>
+
+<p><strong>查看：</strong>
+<strong><a href="http://localhost:8080" target="_blank">http://localhost:8080</a> </strong></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/20/archlinux%E4%B9%8Bsvn%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/">Archlinux之SVN服务器搭建</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-20T00:00:00+08:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/06/20/archlinux%E4%B9%8Bsvn%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>最近把电脑<strong>arch</strong>化了，所以原来在Ubuntu上搭建的SVN服务也要重新安装了，貌似和Ubuntu下有些不同，参考Wiki贴上教程</p>
+
+<p><strong>1.安装Subversion和Apache</strong></p>
+
+<p>[bash]<br />
+sudo pacman -S subversion<br />
+sudo pacman -S apache<br />
+[/bash]</p>
+
+<p><strong>2.新建SVN仓库目录</strong></p>
+
+<p>[bash]<br />
+sudo mkdir -p /home/svn/repositories<br />
+[/bash]</p>
+
+<p><strong>3.修改配置文件</strong>
+在/etc/httpd/conf/httpd.conf中添加<br />
+#LoadModule dav_module modules/mod_dav.so<br />
+#LoadModule dav_fs_module modules/mod_dav_fs.so<br />
+LoadModule dav_svn_module modules/mod_dav_svn.so<br />
+LoadModule authz_svn_module modules/mod_authz_svn.so<br />
+前两行不用，原配置文件中就有</p>
+
+<p>SSL</p>
+
+<p>[bash]<br />
+cd /etc/httpd/conf/<br />
+sudo openssl req -new -x509 -keyout server.key -out server.crt -days 365 -nodes<br />
+[/bash]</p>
+
+<p>按照提示输入就成</p>
+
+<p>修改/etc/httpd/conf/extra/httpd-vhosts.conf<br />
+追加<br />
+&lt;Location /svn&gt;<br />
+DAV svn<br />
+SVNParentPath /home/svn/repositories</p>
+
+<p>AuthzSVNAccessFile /home/svn/.svn-policy-file<br />
+AuthName &#8220;SVN Repositories&#8221;<br />
+AuthType Basic<br />
+AuthUserFile /home/svn/.svn-auth-file<br />
+Satisfy Any<br />
+Require valid-user<br />
+&lt;/Location&gt;<br />
+注意路径要一致</p>
+
+<p>在/etc/httpd/conf/httpd.conf文件中加入 Include /etc/httpd/conf/extra/httpd-ssl.conf</p>
+
+<p><strong>svn-policy-file &amp;&amp; svn-auth-file</strong></p>
+
+<p>[bash]<br />
+sudo touch /home/svn/.svn-policy-file<br />
+[/bash]</p>
+
+<p>在其中添加</p>
+
+<p>[/] * = r<br />
+[REPO_NAME:/] USER_NAME = rw<br />
+用你的真是仓库名替换REPO_NAME，用你的真实用户名替换USER_NAME，如果多个仓库，同理</p>
+
+<p>[bash]<br />
+sudo htpasswd -cs /home/svn/.svn-auth-file USER_NAME<br />
+[/bash]</p>
+
+<p>生成相应用户的密码</p>
+
+<p><strong>4.生成SVN仓库</strong></p>
+
+<p>[bash]<br />
+sudo svnadmin create /home/svn/repositories/REPO_NAME<br />
+[/bash]</p>
+
+<p>设置访问权限</p>
+
+<p>[bash]<br />
+chown -R http.http /home/svn/repositories/REPO_NAME<br />
+[/bash]</p>
+
+<p><strong>5.Done
+</strong>大功告成，这样就可以访问了，比如 <em>http://localhost/svn/REPO_NAME </em></p>
+
+<p><strong>Reference:</strong><em>
+</em><a href="https://wiki.archlinux.org/index.php/Subversion_Setup" target="_blank">Archlinux Wiki</a>
+<a href="http://blog.csdn.net/jallin2001/article/details/7335801" target="_blank">在ubuntu11.10上面安装svn服务器的过程</a>
+<pre><em> </em></pre></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -189,7 +376,7 @@ build-essential
     <section>
   <h1>Categories</h1>
   <ul id="categories">
-    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (3)</a></li>
+    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (4)</a></li>
 <li class='category'><a href='/blog/categories/alogrithm/'>Alogrithm (1)</a></li>
 <li class='category'><a href='/blog/categories/cocos2d-x/'>Cocos2d-x (1)</a></li>
 <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
@@ -199,7 +386,7 @@ build-essential
 <li class='category'><a href='/blog/categories/linux/'>Linux (13)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (2)</a></li>
-<li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
+<li class='category'><a href='/blog/categories/python/'>Python (2)</a></li>
 <li class='category'><a href='/blog/categories/robocup/'>RoboCup (3)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
 <li class='category'><a href='/blog/categories/tools/'>Tools (2)</a></li>
@@ -286,6 +473,14 @@ build-essential
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/05/06/design-pattern/">About 设计模式</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/05/python-setup-tools/">Python包管理小记</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/05/01/shell-in-use/">Shell 使用中遇到的问题</a>
       </li>
     
@@ -295,14 +490,6 @@ build-essential
     
       <li class="post">
         <a href="/blog/2013/04/16/kindle-paper-white/">写在Kindle入华前</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/12/viplugin/">破解ViPlugin</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/11/tl-wn725n/">TL-WN725N 折腾记</a>
       </li>
     
   </ul>

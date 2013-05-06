@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-05-04T16:20:47+08:00</updated>
+  <updated>2013-05-06T15:23:52+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Python包管理小记]]></title>
+    <link href="http://jasonllinux.github.com/blog/2013/05/05/python-setup-tools/"/>
+    <updated>2013-05-05T14:28:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2013/05/05/python-setup-tools</id>
+    <content type="html"><![CDATA[<h1 id="setuptools">setuptools</h1>
+
+<h3 id="install">Install</h3>
+<p>Note: 在win7下面最好一水的安装32bit版本<br />
+<a href="https://pypi.python.org/pypi/setuptools#windows">链接</a> </p>
+
+<h3 id="easyinstall">easy_install</h3>
+<ul>
+  <li>
+    <p>安装一个xx包  <br />
+easy_install xx  </p>
+  </li>
+  <li>
+    <p>删除一个xx包<br />
+easy_install -m xx</p>
+  </li>
+  <li>
+    <p>更新一个xx包<br />
+easy_install –upgrade xx </p>
+  </li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[Python]-RE]]></title>

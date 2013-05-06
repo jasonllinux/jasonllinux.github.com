@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-05-04T16:20:47+08:00</updated>
+  <updated>2013-05-06T15:23:52+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -146,6 +146,11 @@
 <p>终于找到一个github上树莓派的一个linux<a href="https://github.com/Red54/linux-shumeipai2">仓库</a>中有它的驱动<br />
 Clone下来 make ＆＆ make install<br />
 搞定!</p>
+
+<h4 id="update">Update</h4>
+<ul>
+  <li>[2013-05-01] 升级Ubuntu13.04后 没法编译</li>
+</ul>
 ]]></content>
   </entry>
   

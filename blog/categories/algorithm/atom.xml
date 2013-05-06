@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Algorithm | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/algorithm/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-05-04T16:20:47+08:00</updated>
+  <updated>2013-05-06T15:23:52+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[About 设计模式]]></title>
+    <link href="http://jasonllinux.github.com/blog/2013/05/06/design-pattern/"/>
+    <updated>2013-05-06T09:19:00+08:00</updated>
+    <id>http://jasonllinux.github.com/blog/2013/05/06/design-pattern</id>
+    <content type="html"><![CDATA[<h2 id="section">分类</h2>
+<ul>
+  <li>Creational Pattern (物件的建立)</li>
+  <li>Structural Pattern （物件之间的静态结构）</li>
+  <li>Behavioral Pattern  （物件之间的合作行为）</li>
+</ul>
+
+<h3 id="creational-pattern">[1]Creational Pattern</h3>
+
+<h5 id="factory-">Factory 工厂模式</h5>
+
+<h5 id="singleton-">Singleton 单例模式</h5>
+<p>单例模式貌似是我接触的最早也是用的最多的设计模式<br />
+说明： 仅在第一次需要该对象时实例化  <br />
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div>
+##### Prototype 模式 </p>
+
+<h5 id="builder-">Builder 模式</h5>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[EM]]></title>

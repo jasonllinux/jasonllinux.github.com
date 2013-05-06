@@ -9,11 +9,8 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="Octopress to Ubuntu
-最近实在受不了Arch的种种问题 于是，痛定思痛，准备把开发平台陆续迁移到Ubuntu上来 Step1 先checkout出Octopress的源码 1
-2
-3
-git clone -b source git@github.com:username/ &hellip;">
+  <meta name="description" content="RoboCup ChinaOpen 2012 Rescue 来的那么突然 这几天改代码，调整。。。地焦头烂额 通信有问题，智能体死在那。。。。 问题一大堆，还是平时做的不够 希望不要去丢人啊。。。。 可能是参加的最后一次国赛了，享受过程吧
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,6 +88,141 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/02/last-chinaopen/">ChinaOpen 2012——（1）</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-02T22:53:00+08:00" pubdate data-updated="true">Dec 2<span>nd</span>, 2012</time>
+        
+         | <a href="/blog/2012/12/02/last-chinaopen/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>RoboCup ChinaOpen 2012 Rescue</strong>  来的那么突然</p>
+
+<p>这几天改代码，调整。。。地焦头烂额</p>
+
+<p>通信有问题，智能体死在那。。。。</p>
+
+<p>问题一大堆，还是平时做的不够</p>
+
+<p>希望不要去丢人啊。。。。</p>
+
+<p>可能是参加的最后一次国赛了，享受过程吧</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/23/vpn-server-12-dot-04/">Ubuntu12.04 配置VPN Server</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-23T08:57:00+08:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2012</time>
+        
+         | <a href="/blog/2012/11/23/vpn-server-12-dot-04/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Step1</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">sudo apt-get   install pptpd
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Step2</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#修改配置文件/etc/sysctl.conf中的相应内容如下，打开ipv4转发功能  </span>
+</span><span class="line">net.ipv4.ip_forward <span class="o">=</span> 1
+</span><span class="line"><span class="c">#执行sysctl -p，使其马上生效。  </span>
+</span><span class="line"><span class="c">#编辑配置文件 /etc/ppp/pptpd-options，修改里面的 ms-dns 这个项为 8.8.8.8 。也就是Google的DNS服务器。  </span>
+</span><span class="line"><span class="c">#编辑配置文件 /etc/pptpd.conf .修改成如下：  </span>
+</span><span class="line">option /etc/ppp/pptpd-options
+</span><span class="line">localip 192.168.0.1
+</span><span class="line">remoteip 192.168.0.11-150
+</span><span class="line"><span class="c">#编辑配置文件 /etc/ppp/chap-secrets 。此文件定义登录的用户名和密码  </span>
+</span><span class="line"><span class="c">#添加一行  </span>
+</span><span class="line">komy pptpd password *
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Step3 配置Iptables</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">iptables -t nat -A POSTROUTING -o eth0 -s 192.168.0.0/24 -j MASQUERADE
+</span><span class="line">iptables -I FORWARD -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1356
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Step4 开机自动生效</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">iptables-save &gt; /etc/iptables.up.rules
+</span><span class="line"><span class="c">#然后修改脚本/etc/network/interfaces  </span>
+</span><span class="line">pre-up iptables-restore &lt; /etc/iptables.up.rules
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -423,161 +555,6 @@ MathJax.Hub.Config({
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/09/laoda-wangzhan/">关于TechMessager，关于王自如，关于ZEALER</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-09T20:17:00+08:00" pubdate data-updated="true">Nov 9<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/11/09/laoda-wangzhan/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>今天一大早刷微博</p>
-
-<p>突然看到TechMessager，也就是王自如的新网站zealer开通的消息</p>
-
-<p>同时，伴随着的也是Ipad mini的 Reviewer</p>
-
-<p>也算比较早的关注他的相关视频评测，那时候的“刘跑跑”还很青涩</p>
-
-<p>在如今神码都讲究快速，快节奏的时代，而他的东西也在逐渐传达着一种精致，一种科技与生活相结合的美感</p>
-
-<p>由衷的为他们感到高兴，从老早开始决定办网站，开始铺牌，从毫无经验的菜鸟到现在至少有一个beta版呈现在大家面前</p>
-
-<p>无论 zealer的未来何去何从</p>
-
-<p>但是当Techmessager们努力的朝着他们的目标迈进的时候，总会留下一些不可磨灭的印记</p>
-
-<p>一个字 ，“ <strong>顶</strong> ”</p>
-
-<p><img src="http://i.minus.com/i3uy9ppgFqTGD.png" /></p>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/07/install-wps-in-arch/">Arch中安装WPS A6</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-07T16:33:00+08:00" pubdate data-updated="true">Nov 7<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/11/07/install-wps-in-arch/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>最近终于申请到了wps a6，立马安装</p>
-
-<ul>
-  <li>PKGBUILD</li>
-</ul>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-<span class="line-number">16</span>
-<span class="line-number">17</span>
-<span class="line-number">18</span>
-<span class="line-number">19</span>
-<span class="line-number">20</span>
-<span class="line-number">21</span>
-<span class="line-number">22</span>
-<span class="line-number">23</span>
-<span class="line-number">24</span>
-<span class="line-number">25</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nv">pkgname</span><span class="o">=</span>wps-office
-</span><span class="line"><span class="nv">pkgver</span><span class="o">=</span>8.1.0.3431
-</span><span class="line"><span class="nv">_pkgver</span><span class="o">=</span>8.1.0.3431+wps+wpp~a6
-</span><span class="line"><span class="nv">pkgrel</span><span class="o">=</span>1
-</span><span class="line"><span class="nv">pkgdesc</span><span class="o">=</span><span class="s2">&quot;Kingsoft Office is an office productivity suite. This is an ALPHA package and provides only Presentation. Use it at your own risk.&quot;</span>
-</span><span class="line"><span class="nv">arch</span><span class="o">=(</span><span class="s1">&#39;i686&#39;</span> <span class="s1">&#39;x86_64&#39;</span><span class="o">)</span>
-</span><span class="line"><span class="nv">license</span><span class="o">=(</span><span class="s2">&quot;Custom&quot;</span><span class="o">)</span>
-</span><span class="line"><span class="nv">url</span><span class="o">=</span><span class="s2">&quot;http://www.wps.cn/&quot;</span>
-</span><span class="line"><span class="nv">depends</span><span class="o">=()</span>
-</span><span class="line"><span class="c">#makedepdends=(&#39;deb2targz&#39; &#39;tar&#39;)</span>
-</span><span class="line"><span class="nb">source</span><span class="o">=(</span><span class="s2">&quot;${pkgname}_${_pkgver}_i386.deb&quot;</span><span class="o">)</span>
-</span><span class="line"><span class="nv">sha1sums</span><span class="o">=(</span><span class="s1">&#39;73cb05ef791fcfc46d884ae77015d1ee22bf2fcf&#39;</span><span class="o">)</span>
-</span><span class="line"><span class="nv">install</span><span class="o">=</span><span class="k">${</span><span class="nv">pkgname</span><span class="k">}</span>.install
-</span><span class="line">
-</span><span class="line"><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;${CARCH}&quot;</span> <span class="o">=</span> <span class="s1">&#39;x86_64&#39;</span> <span class="o">]</span>; <span class="k">then</span>
-</span><span class="line"><span class="k">  </span><span class="nv">depends</span><span class="o">=(</span><span class="s1">&#39;lib32-glib2&#39;</span> <span class="s1">&#39;lib32-libxrender&#39;</span> <span class="s1">&#39;lib32-libxext&#39;</span> <span class="s1">&#39;lib32-libsm&#39;</span> <span class="s1">&#39;lib32-fontconfig&#39;</span> <span class="o">)</span>
-</span><span class="line"><span class="k">else	</span>
-</span><span class="line"><span class="k">  </span><span class="nv">depends</span><span class="o">=(</span><span class="s1">&#39;glib2&#39;</span> <span class="s1">&#39;libxrender&#39;</span> <span class="s1">&#39;libxext&#39;</span> <span class="s1">&#39;libsm&#39;</span> <span class="s1">&#39;fontconfig&#39;</span> <span class="s1">&#39;libjpeg6&#39;</span><span class="o">)</span>
-</span><span class="line"><span class="k">fi</span>
-</span><span class="line">
-</span><span class="line">package<span class="o">()</span>
-</span><span class="line"><span class="o">{</span>
-</span><span class="line">    <span class="nb">cd</span> <span class="s2">&quot;${srcdir}&quot;</span>
-</span><span class="line">    tar azxvf data.tar.gz -C <span class="s2">&quot;${pkgdir}&quot;</span>
-</span><span class="line"><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2012/11/07/install-wps-in-arch/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -593,7 +570,7 @@ MathJax.Hub.Config({
     <section>
   <h1>Categories</h1>
   <ul id="categories">
-    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (3)</a></li>
+    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (4)</a></li>
 <li class='category'><a href='/blog/categories/alogrithm/'>Alogrithm (1)</a></li>
 <li class='category'><a href='/blog/categories/cocos2d-x/'>Cocos2d-x (1)</a></li>
 <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
@@ -603,7 +580,7 @@ MathJax.Hub.Config({
 <li class='category'><a href='/blog/categories/linux/'>Linux (13)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (2)</a></li>
-<li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
+<li class='category'><a href='/blog/categories/python/'>Python (2)</a></li>
 <li class='category'><a href='/blog/categories/robocup/'>RoboCup (3)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
 <li class='category'><a href='/blog/categories/tools/'>Tools (2)</a></li>
@@ -690,6 +667,14 @@ MathJax.Hub.Config({
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/05/06/design-pattern/">About 设计模式</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/05/python-setup-tools/">Python包管理小记</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/05/01/shell-in-use/">Shell 使用中遇到的问题</a>
       </li>
     
@@ -699,14 +684,6 @@ MathJax.Hub.Config({
     
       <li class="post">
         <a href="/blog/2013/04/16/kindle-paper-white/">写在Kindle入华前</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/12/viplugin/">破解ViPlugin</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/11/tl-wn725n/">TL-WN725N 折腾记</a>
       </li>
     
   </ul>

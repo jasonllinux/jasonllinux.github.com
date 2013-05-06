@@ -9,7 +9,7 @@
   <meta name="author" content="jasonllinux">
 
   
-  <meta name="description" content="一些变量 变量 含义 $# 命令行参数的个数 $* 以 “arg1 arg2 …argn” 保存的所有参数 $@ 以 “arg1” “arg2” …“argn” 保存的所有参数 $! 上一个命令的PID $n 表示第几个参数（1,2,3,…） $0 当前程序的名称 ">
+  <meta name="description" content="分类 Creational Pattern (物件的建立) Structural Pattern （物件之间的静态结构） Behavioral Pattern （物件之间的合作行为） [1]Creational Pattern Factory 工厂模式 Singleton 单例模式 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +87,121 @@ MathJax.Hub.Config({
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/05/06/design-pattern/">About 设计模式</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-06T09:19:00+08:00" pubdate data-updated="true">May 6<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/05/06/design-pattern/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="section">分类</h2>
+<ul>
+  <li>Creational Pattern (物件的建立)</li>
+  <li>Structural Pattern （物件之间的静态结构）</li>
+  <li>Behavioral Pattern  （物件之间的合作行为）</li>
+</ul>
+
+<h3 id="creational-pattern">[1]Creational Pattern</h3>
+
+<h5 id="factory-">Factory 工厂模式</h5>
+
+<h5 id="singleton-">Singleton 单例模式</h5>
+<p>单例模式貌似是我接触的最早也是用的最多的设计模式<br />
+说明： 仅在第一次需要该对象时实例化    </p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers" /></td><td class="code"><pre><code class="" /></pre></td></tr></table></div></figure></notextile></div>
+
+<h5 id="prototype-">Prototype 模式</h5>
+
+<h5 id="builder-">Builder 模式</h5>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/05/05/python-setup-tools/">Python包管理小记</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-05T14:28:00+08:00" pubdate data-updated="true">May 5<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/05/05/python-setup-tools/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1 id="setuptools">setuptools</h1>
+
+<h3 id="install">Install</h3>
+<p>Note: 在win7下面最好一水的安装32bit版本<br />
+<a href="https://pypi.python.org/pypi/setuptools#windows">链接</a> </p>
+
+<h3 id="easyinstall">easy_install</h3>
+<ul>
+  <li>
+    <p>安装一个xx包  <br />
+easy_install xx  </p>
+  </li>
+  <li>
+    <p>删除一个xx包<br />
+easy_install -m xx</p>
+  </li>
+  <li>
+    <p>更新一个xx包<br />
+easy_install –upgrade xx </p>
+  </li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -353,133 +468,6 @@ Anyway，Kindle是一个超值、伟大的产品  </p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/03/11/tl-wn725n/">TL-WN725N 折腾记</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-11T11:25:00+08:00" pubdate data-updated="true">Mar 11<span>th</span>, 2013</time>
-        
-         | <a href="/blog/2013/03/11/tl-wn725n/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote>
-  <p>高手在民间</p>
-</blockquote>
-
-<p>最近在某东上买了个USB无线网卡 <strong>TL-WN725N</strong><br />
-想着平时 可以在笔记本和台式机上使用 <br />
-也可以搭建adhoc之类的<br />
-拿到手 ，十分小巧<br />
-<img src="http://i.minus.com/iblYHNm0DeAxca.jpg" /><br />
-在windows上顺风顺水<br />
-可是在linux上<br />
-说好的免驱的呢？？？？ <br />
-说好的即插即用呢？？？  </p>
-
-<p>在网上找了半天 <br />
-原来我买到的是V2版本，里面的芯片是 8188eu<br />
-坑爹的是连Realtek官网都没有这芯片的linux驱动  </p>
-
-<p>终于找到一个github上树莓派的一个linux<a href="https://github.com/Red54/linux-shumeipai2">仓库</a>中有它的驱动<br />
-Clone下来 make ＆＆ make install<br />
-搞定!</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/03/07/with-eclipse/">Work With Eclipse</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-07T14:33:00+08:00" pubdate data-updated="true">Mar 7<span>th</span>, 2013</time>
-        
-         | <a href="/blog/2013/03/07/with-eclipse/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote>
-  <p>感谢Eclipse 2011-Now<br />
-那些写代码的日子  </p>
-</blockquote>
-
-<h3 id="section">那些插件</h3>
-
-<ul>
-  <li>
-    <p>http://viplugin.com/</p>
-  </li>
-  <li>
-    <p>http://eclipse-color-theme.github.com/update/</p>
-  </li>
-  <li>
-    <p>http://pydev.org/updates</p>
-  </li>
-  <li>
-    <p>http://subclipse.tigris.org/update_1.8.x</p>
-  </li>
-  <li>https://dl-ssl.google.com/android/eclipse/</li>
-  <li>http://findbugs.cs.umd.edu/eclipse</li>
-</ul>
-
-<h3 id="ubuntu-global-menu">在Ubuntu 中开启Global Menu</h3>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">sudo add-apt-repository ppa:absinthesyringe/eclipse
-</span><span class="line">sudo apt-get update &amp;&amp; sudo apt-get install eclipse-enable.appmenu</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<h3 id="section-1">解决代码提示功能失效</h3>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -493,7 +481,7 @@ Clone下来 make ＆＆ make install<br />
     <section>
   <h1>Categories</h1>
   <ul id="categories">
-    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (3)</a></li>
+    <li class='category'><a href='/blog/categories/algorithm/'>Algorithm (4)</a></li>
 <li class='category'><a href='/blog/categories/alogrithm/'>Alogrithm (1)</a></li>
 <li class='category'><a href='/blog/categories/cocos2d-x/'>Cocos2d-x (1)</a></li>
 <li class='category'><a href='/blog/categories/code/'>Code (1)</a></li>
@@ -503,7 +491,7 @@ Clone下来 make ＆＆ make install<br />
 <li class='category'><a href='/blog/categories/linux/'>Linux (13)</a></li>
 <li class='category'><a href='/blog/categories/octopress/'>Octopress (3)</a></li>
 <li class='category'><a href='/blog/categories/opencv/'>OpenCV (2)</a></li>
-<li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
+<li class='category'><a href='/blog/categories/python/'>Python (2)</a></li>
 <li class='category'><a href='/blog/categories/robocup/'>RoboCup (3)</a></li>
 <li class='category'><a href='/blog/categories/study/'>Study (8)</a></li>
 <li class='category'><a href='/blog/categories/tools/'>Tools (2)</a></li>
@@ -590,6 +578,14 @@ Clone下来 make ＆＆ make install<br />
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/05/06/design-pattern/">About 设计模式</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/05/python-setup-tools/">Python包管理小记</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/05/01/shell-in-use/">Shell 使用中遇到的问题</a>
       </li>
     
@@ -599,14 +595,6 @@ Clone下来 make ＆＆ make install<br />
     
       <li class="post">
         <a href="/blog/2013/04/16/kindle-paper-white/">写在Kindle入华前</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/12/viplugin/">破解ViPlugin</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/11/tl-wn725n/">TL-WN725N 折腾记</a>
       </li>
     
   </ul>

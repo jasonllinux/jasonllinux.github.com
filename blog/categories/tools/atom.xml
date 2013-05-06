@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tools | Jasonllinux's Blog]]></title>
   <link href="http://jasonllinux.github.com/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-05-04T16:20:47+08:00</updated>
+  <updated>2013-05-06T15:23:52+08:00</updated>
   <id>http://jasonllinux.github.com/</id>
   <author>
     <name><![CDATA[jasonllinux]]></name>
@@ -45,36 +45,33 @@
 
 <ul>
   <li>
-    <p>http://viplugin.com/</p>
+    <p>[VI Plugin] http://viplugin.com/</p>
   </li>
   <li>
-    <p>http://eclipse-color-theme.github.com/update/</p>
+    <p>[Color Theme]http://eclipse-color-theme.github.com/update/</p>
   </li>
   <li>
-    <p>http://pydev.org/updates</p>
+    <p>[PyDev] http://pydev.org/updates</p>
   </li>
   <li>
-    <p>http://subclipse.tigris.org/update_1.8.x</p>
+    <p>[Subclipse] http://subclipse.tigris.org/update_1.8.x</p>
   </li>
-  <li>https://dl-ssl.google.com/android/eclipse/</li>
-  <li>http://findbugs.cs.umd.edu/eclipse</li>
+  <li>
+    <p>[ADT] https://dl-ssl.google.com/android/eclipse/  </p>
+  </li>
+  <li>
+    <p>[FindBugs] http://findbugs.cs.umd.edu/eclipse</p>
+  </li>
 </ul>
 
 <h3 id="ubuntu-global-menu">在Ubuntu 中开启Global Menu</h3>
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>sudo add-apt-repository ppa:absinthesyringe/eclipse
-</span><span class='line'>sudo apt-get update &amp;&amp; sudo apt-get install eclipse-enable.appmenu&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository ppa:absinthesyringe/eclipse
+</span><span class='line'>sudo apt-get update &amp;&amp; sudo apt-get install eclipse-enable.appmenu</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h3 id="section-1">解决代码提示功能失效</h3>
+<p>主要是因为快捷键失效的问题</p>
 ]]></content>
   </entry>
   
