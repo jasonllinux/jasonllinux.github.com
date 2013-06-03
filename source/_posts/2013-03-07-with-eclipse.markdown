@@ -11,24 +11,24 @@ categories: Tools
 
 ### 那些插件
 
-* http://viplugin.com/
+* [VI Plugin] http://viplugin.com/
 
-* http://eclipse-color-theme.github.com/update/
+* [Color Theme]http://eclipse-color-theme.github.com/update/
 
-* http://pydev.org/updates
+* [PyDev] http://pydev.org/updates
 
-* http://subclipse.tigris.org/update_1.8.x
+* [Subclipse] http://subclipse.tigris.org/update_1.8.x
 
-* https://dl-ssl.google.com/android/eclipse/
-* http://findbugs.cs.umd.edu/eclipse
+* [ADT] https://dl-ssl.google.com/android/eclipse/  
+
+* [FindBugs] http://findbugs.cs.umd.edu/eclipse
 
 ### 在Ubuntu 中开启Global Menu
 {% codeblock %}
-
 sudo add-apt-repository ppa:absinthesyringe/eclipse
 sudo apt-get update && sudo apt-get install eclipse-enable.appmenu
-
 {% endcodeblock%}
 
   
 ### 解决代码提示功能失效
+主要是因为快捷键失效的问题

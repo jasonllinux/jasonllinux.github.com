@@ -23,6 +23,8 @@ Anyway，Kindle是一个超值、伟大的产品
 {% img http://i.minus.com/ibnowQV2WY8y09.png %}  
 * 2013-04-24 Kindle Paperwhite更新支持亚马逊中国书城  
 {% img http://i.minus.com/iBTRu4ImcR9iO.jpg %}  
+* 2013-05-04 亚马逊应用商店低调入华  
+{% img http://i.minus.com/iy3tEXa2NwRf4.jpg %}
 * 感觉很近很近了。。。   
   
 ### Buy KPW
