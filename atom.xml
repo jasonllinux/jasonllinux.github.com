@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Jasonllinux's Blog]]></title>
-  <link href="http://jasonllinux.github.com/atom.xml" rel="self"/>
-  <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-06-03T15:50:25+08:00</updated>
-  <id>http://jasonllinux.github.com/</id>
+  <title><![CDATA[JPollo's Blog]]></title>
+  <link href="http://jasonllinux.github.io/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.io/"/>
+  <updated>2013-09-03T16:01:57+08:00</updated>
+  <id>http://jasonllinux.github.io/</id>
   <author>
-    <name><![CDATA[jasonllinux]]></name>
+    <name><![CDATA[Shen Jie]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[About 设计模式]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/05/06/design-pattern/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/05/06/design-pattern/"/>
     <updated>2013-05-06T09:19:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/05/06/design-pattern</id>
+    <id>http://jasonllinux.github.io/blog/2013/05/06/design-pattern</id>
     <content type="html"><![CDATA[<h2 id="section">分类</h2>
 <ul>
   <li>Creational Pattern (物件的建立)</li>
@@ -43,9 +43,9 @@
   
   <entry>
     <title type="html"><![CDATA[Python包管理小记]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/05/05/python-setup-tools/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/05/05/python-setup-tools/"/>
     <updated>2013-05-05T14:28:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/05/05/python-setup-tools</id>
+    <id>http://jasonllinux.github.io/blog/2013/05/05/python-setup-tools</id>
     <content type="html"><![CDATA[<h1 id="setuptools">setuptools</h1>
 
 <h3 id="install">Install</h3>
@@ -72,9 +72,9 @@ easy_install –upgrade xx </p>
   
   <entry>
     <title type="html"><![CDATA[Shell 使用中遇到的问题]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/05/01/shell-in-use/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/05/01/shell-in-use/"/>
     <updated>2013-05-01T19:19:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/05/01/shell-in-use</id>
+    <id>http://jasonllinux.github.io/blog/2013/05/01/shell-in-use</id>
     <content type="html"><![CDATA[<h2 id="section">一些变量</h2>
 
 <table>
@@ -117,9 +117,9 @@ easy_install –upgrade xx </p>
   
   <entry>
     <title type="html"><![CDATA[Prepare for Ubuntu 13.04]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/"/>
     <updated>2013-04-25T21:38:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/04/25/prepare-for-ubuntu-13-dot-04</id>
+    <id>http://jasonllinux.github.io/blog/2013/04/25/prepare-for-ubuntu-13-dot-04</id>
     <content type="html"><![CDATA[<p>Ubuntu 13.04 如期而至!  </p>
 
 <p>记录一下用到的软件:  </p>
@@ -179,9 +179,9 @@ easy_install –upgrade xx </p>
   
   <entry>
     <title type="html"><![CDATA[写在Kindle入华前]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/04/16/kindle-paper-white/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/04/16/kindle-paper-white/"/>
     <updated>2013-04-16T18:36:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/04/16/kindle-paper-white</id>
+    <id>http://jasonllinux.github.io/blog/2013/04/16/kindle-paper-white</id>
     <content type="html"><![CDATA[<blockquote>
   <p>单反穷三代<br />
 Kindle富一生</p>
@@ -278,9 +278,9 @@ Anyway，Kindle是一个超值、伟大的产品  </p>
   
   <entry>
     <title type="html"><![CDATA[破解ViPlugin]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/03/12/viplugin/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/03/12/viplugin/"/>
     <updated>2013-03-12T20:59:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/03/12/viplugin</id>
+    <id>http://jasonllinux.github.io/blog/2013/03/12/viplugin</id>
     <content type="html"><![CDATA[<blockquote>
   <p>不是破解的教程<br />
 有钱的话还是支持正版比较好</p>
@@ -296,9 +296,9 @@ Anyway，Kindle是一个超值、伟大的产品  </p>
   
   <entry>
     <title type="html"><![CDATA[TL-WN725N 折腾记]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/03/11/tl-wn725n/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/03/11/tl-wn725n/"/>
     <updated>2013-03-11T11:25:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/03/11/tl-wn725n</id>
+    <id>http://jasonllinux.github.io/blog/2013/03/11/tl-wn725n</id>
     <content type="html"><![CDATA[<blockquote>
   <p>高手在民间</p>
 </blockquote>
@@ -330,9 +330,9 @@ Clone下来 make ＆＆ make install<br />
   
   <entry>
     <title type="html"><![CDATA[Work With Eclipse]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/03/07/with-eclipse/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/03/07/with-eclipse/"/>
     <updated>2013-03-07T14:33:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/03/07/with-eclipse</id>
+    <id>http://jasonllinux.github.io/blog/2013/03/07/with-eclipse</id>
     <content type="html"><![CDATA[<blockquote>
   <p>感谢Eclipse 2011-Now<br />
 那些写代码的日子  </p>
@@ -375,9 +375,9 @@ Clone下来 make ＆＆ make install<br />
   
   <entry>
     <title type="html"><![CDATA[Linux下使用Aria2c和YAAW打造迅雷下载]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/03/05/aria2c-and-yaaw/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/03/05/aria2c-and-yaaw/"/>
     <updated>2013-03-05T11:33:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/03/05/aria2c-and-yaaw</id>
+    <id>http://jasonllinux.github.io/blog/2013/03/05/aria2c-and-yaaw</id>
     <content type="html"><![CDATA[<blockquote>
   <h3 id="section">先来一张图</h3>
   <p><img src="http://i.minus.com/is7Fiw9VMlBT.png" /></p>
@@ -588,9 +588,9 @@ Done！  </p>
   
   <entry>
     <title type="html"><![CDATA[Tweak SSD for Ubuntu and Windows]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/02/18/tweak-ssd/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/02/18/tweak-ssd/"/>
     <updated>2013-02-18T14:34:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/02/18/tweak-ssd</id>
+    <id>http://jasonllinux.github.io/blog/2013/02/18/tweak-ssd</id>
     <content type="html"><![CDATA[<blockquote>
   <p>啊哈 ， 入手SSD了<br />
 Intel 520  </p>
@@ -664,9 +664,9 @@ Intel 520  </p>
   
   <entry>
     <title type="html"><![CDATA[Cocos2d-x 中的一些问题]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/01/05/cocos2d-x-some-questions/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/01/05/cocos2d-x-some-questions/"/>
     <updated>2013-01-05T14:18:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/01/05/cocos2d-x-some-questions</id>
+    <id>http://jasonllinux.github.io/blog/2013/01/05/cocos2d-x-some-questions</id>
     <content type="html"><![CDATA[<h4 id="q1"><strong>Q1</strong></h4>
 <p>Function ‘sharedOpenGLView’ could not be resolved<br />
 A:</p>
@@ -699,9 +699,9 @@ A:<br />
   
   <entry>
     <title type="html"><![CDATA[2012年--总结]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/12/30/conclusion/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/12/30/conclusion/"/>
     <updated>2012-12-30T18:22:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/12/30/conclusion</id>
+    <id>http://jasonllinux.github.io/blog/2012/12/30/conclusion</id>
     <content type="html"><![CDATA[<p>2012，末日没有到来</p>
 
 <p>跨年的气氛来了</p>
@@ -794,9 +794,9 @@ A:<br />
   
   <entry>
     <title type="html"><![CDATA[EM]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/12/26/em/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/12/26/em/"/>
     <updated>2012-12-26T21:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/12/26/em</id>
+    <id>http://jasonllinux.github.io/blog/2012/12/26/em</id>
     <content type="html"><![CDATA[<p>重新翻开那本宝典</p>
 
 <h3 id="em">隐变量EM参数学习</h3>
@@ -816,9 +816,9 @@ A:<br />
   
   <entry>
     <title type="html"><![CDATA[Kalman Filter]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/12/26/kalman-filter/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/12/26/kalman-filter/"/>
     <updated>2012-12-26T20:30:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/12/26/kalman-filter</id>
+    <id>http://jasonllinux.github.io/blog/2012/12/26/kalman-filter</id>
     <content type="html"><![CDATA[<p>一直觉得滤波之流是个很玄乎的东西</p>
 
 <p>前几日看了一篇文章，霎那间有所顿悟</p>
@@ -830,9 +830,9 @@ A:<br />
   
   <entry>
     <title type="html"><![CDATA[Latex中参考文献]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/12/23/latex-bib/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/12/23/latex-bib/"/>
     <updated>2012-12-23T14:36:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/12/23/latex-bib</id>
+    <id>http://jasonllinux.github.io/blog/2012/12/23/latex-bib</id>
     <content type="html"><![CDATA[<h4 id="section">方法一</h4>
 <p>\begin{thebibliography}
 \bibitem author,article, year, vol,
@@ -891,9 +891,9 @@ latex</p>
   
   <entry>
     <title type="html"><![CDATA[OpenCV——[1 环境搭建]]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/12/22/opencv-build/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/12/22/opencv-build/"/>
     <updated>2012-12-22T20:47:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/12/22/opencv-build</id>
+    <id>http://jasonllinux.github.io/blog/2012/12/22/opencv-build</id>
     <content type="html"><![CDATA[<p>断断续续学习一些OpenCV相关的东西</p>
 
 <p>记录下来</p>
@@ -910,9 +910,9 @@ latex</p>
   
   <entry>
     <title type="html"><![CDATA[ChinaOpen 2012——（3）]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/12/19/china-open-3/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/12/19/china-open-3/"/>
     <updated>2012-12-19T15:06:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/12/19/china-open-3</id>
+    <id>http://jasonllinux.github.io/blog/2012/12/19/china-open-3</id>
     <content type="html"><![CDATA[<p>从合肥回来也好几天了</p>
 
 <p>一直忙着开题</p>
@@ -938,9 +938,9 @@ latex</p>
   
   <entry>
     <title type="html"><![CDATA[ChinaOpen 2012——（2）]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/12/11/china-open-2/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/12/11/china-open-2/"/>
     <updated>2012-12-11T19:52:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/12/11/china-open-2</id>
+    <id>http://jasonllinux.github.io/blog/2012/12/11/china-open-2</id>
     <content type="html"><![CDATA[<p>从长沙回来了</p>
 
 <p>四五天的时间</p>
@@ -964,9 +964,9 @@ latex</p>
   
   <entry>
     <title type="html"><![CDATA[ChinaOpen 2012——（1）]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/12/02/last-chinaopen/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/12/02/last-chinaopen/"/>
     <updated>2012-12-02T22:53:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/12/02/last-chinaopen</id>
+    <id>http://jasonllinux.github.io/blog/2012/12/02/last-chinaopen</id>
     <content type="html"><![CDATA[<p><strong>RoboCup ChinaOpen 2012 Rescue</strong>  来的那么突然</p>
 
 <p>这几天改代码，调整。。。地焦头烂额</p>
@@ -983,9 +983,9 @@ latex</p>
   
   <entry>
     <title type="html"><![CDATA[Ubuntu12.04 配置VPN Server]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/23/vpn-server-12-dot-04/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/11/23/vpn-server-12-dot-04/"/>
     <updated>2012-11-23T08:57:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/23/vpn-server-12-dot-04</id>
+    <id>http://jasonllinux.github.io/blog/2012/11/23/vpn-server-12-dot-04</id>
     <content type="html"><![CDATA[<p>Step1</p>
 
 <div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>

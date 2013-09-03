@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Latex | Jasonllinux's Blog]]></title>
-  <link href="http://jasonllinux.github.com/blog/categories/latex/atom.xml" rel="self"/>
-  <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-06-03T15:50:25+08:00</updated>
-  <id>http://jasonllinux.github.com/</id>
+  <title><![CDATA[Category: Latex | JPollo's Blog]]></title>
+  <link href="http://jasonllinux.github.io/blog/categories/latex/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.io/"/>
+  <updated>2013-09-03T16:01:57+08:00</updated>
+  <id>http://jasonllinux.github.io/</id>
   <author>
-    <name><![CDATA[jasonllinux]]></name>
+    <name><![CDATA[Shen Jie]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Latex中参考文献]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/12/23/latex-bib/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/12/23/latex-bib/"/>
     <updated>2012-12-23T14:36:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/12/23/latex-bib</id>
+    <id>http://jasonllinux.github.io/blog/2012/12/23/latex-bib</id>
     <content type="html"><![CDATA[<h4 id="section">方法一</h4>
 <p>\begin{thebibliography}
 \bibitem author,article, year, vol,

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Windows | Jasonllinux's Blog]]></title>
-  <link href="http://jasonllinux.github.com/blog/categories/windows/atom.xml" rel="self"/>
-  <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-06-03T15:50:25+08:00</updated>
-  <id>http://jasonllinux.github.com/</id>
+  <title><![CDATA[Category: Windows | JPollo's Blog]]></title>
+  <link href="http://jasonllinux.github.io/blog/categories/windows/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.io/"/>
+  <updated>2013-09-03T16:01:57+08:00</updated>
+  <id>http://jasonllinux.github.io/</id>
   <author>
-    <name><![CDATA[jasonllinux]]></name>
+    <name><![CDATA[Shen Jie]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[win8 下无法删除文件，文件或目录损坏且无法读取]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/10/21/win8-delete-file/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/10/21/win8-delete-file/"/>
     <updated>2012-10-21T15:30:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/10/21/win8-delete-file</id>
+    <id>http://jasonllinux.github.io/blog/2012/10/21/win8-delete-file</id>
     <content type="html"><![CDATA[<p>悲了个剧</p>
 
 <p>从linux下拷贝一个pdf文件到win8中，重启进入win8发现读不了</p>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: OpenCV | Jasonllinux's Blog]]></title>
-  <link href="http://jasonllinux.github.com/blog/categories/opencv/atom.xml" rel="self"/>
-  <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-06-03T15:50:25+08:00</updated>
-  <id>http://jasonllinux.github.com/</id>
+  <title><![CDATA[Category: OpenCV | JPollo's Blog]]></title>
+  <link href="http://jasonllinux.github.io/blog/categories/opencv/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.io/"/>
+  <updated>2013-09-03T16:01:57+08:00</updated>
+  <id>http://jasonllinux.github.io/</id>
   <author>
-    <name><![CDATA[jasonllinux]]></name>
+    <name><![CDATA[Shen Jie]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[OpenCV——[1 环境搭建]]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/12/22/opencv-build/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/12/22/opencv-build/"/>
     <updated>2012-12-22T20:47:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/12/22/opencv-build</id>
+    <id>http://jasonllinux.github.io/blog/2012/12/22/opencv-build</id>
     <content type="html"><![CDATA[<p>断断续续学习一些OpenCV相关的东西</p>
 
 <p>记录下来</p>
@@ -34,9 +34,9 @@
   
   <entry>
     <title type="html"><![CDATA[Linux下Eclipse中编译OpenCV相关工程问题]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/10/27/compile-opencv-project-in-linux-enviroment/"/>
     <updated>2012-10-27T21:53:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/10/27/compile-opencv-project-in-linux-enviroment</id>
+    <id>http://jasonllinux.github.io/blog/2012/10/27/compile-opencv-project-in-linux-enviroment</id>
     <content type="html"><![CDATA[<p>最近小研究了下使用OpenCV进行人脸检测</p>
 
 <p>老早用Python实现过</p>

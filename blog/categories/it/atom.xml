@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: IT | Jasonllinux's Blog]]></title>
-  <link href="http://jasonllinux.github.com/blog/categories/it/atom.xml" rel="self"/>
-  <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-06-03T15:50:25+08:00</updated>
-  <id>http://jasonllinux.github.com/</id>
+  <title><![CDATA[Category: IT | JPollo's Blog]]></title>
+  <link href="http://jasonllinux.github.io/blog/categories/it/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.io/"/>
+  <updated>2013-09-03T16:01:57+08:00</updated>
+  <id>http://jasonllinux.github.io/</id>
   <author>
-    <name><![CDATA[jasonllinux]]></name>
+    <name><![CDATA[Shen Jie]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[写在Kindle入华前]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/04/16/kindle-paper-white/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/04/16/kindle-paper-white/"/>
     <updated>2013-04-16T18:36:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/04/16/kindle-paper-white</id>
+    <id>http://jasonllinux.github.io/blog/2013/04/16/kindle-paper-white</id>
     <content type="html"><![CDATA[<blockquote>
   <p>单反穷三代<br />
 Kindle富一生</p>
@@ -114,9 +114,9 @@ Anyway，Kindle是一个超值、伟大的产品  </p>
   
   <entry>
     <title type="html"><![CDATA[Tweak SSD for Ubuntu and Windows]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/02/18/tweak-ssd/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/02/18/tweak-ssd/"/>
     <updated>2013-02-18T14:34:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/02/18/tweak-ssd</id>
+    <id>http://jasonllinux.github.io/blog/2013/02/18/tweak-ssd</id>
     <content type="html"><![CDATA[<blockquote>
   <p>啊哈 ， 入手SSD了<br />
 Intel 520  </p>
@@ -190,9 +190,9 @@ Intel 520  </p>
   
   <entry>
     <title type="html"><![CDATA[关于TechMessager，关于王自如，关于ZEALER]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/09/laoda-wangzhan/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/11/09/laoda-wangzhan/"/>
     <updated>2012-11-09T20:17:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/09/laoda-wangzhan</id>
+    <id>http://jasonllinux.github.io/blog/2012/11/09/laoda-wangzhan</id>
     <content type="html"><![CDATA[<p>今天一大早刷微博</p>
 
 <p>突然看到TechMessager，也就是王自如的新网站zealer开通的消息</p>
@@ -218,9 +218,9 @@ Intel 520  </p>
   
   <entry>
     <title type="html"><![CDATA[git push 错误]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/10/18/git-push-%E9%94%99%E8%AF%AF/"/>
     <updated>2012-10-18T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/10/18/git-push-错误</id>
+    <id>http://jasonllinux.github.io/blog/2012/10/18/git-push-错误</id>
     <content type="html"><![CDATA[<p>今天，上传代码到github上的时候 莫名其妙出现：</p>
 
 <p>[bash]<br />
@@ -240,9 +240,9 @@ git config http.postBuffer 209715200<br />
   
   <entry>
     <title type="html"><![CDATA[GoAgent从1.x升级到2.x]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/10/17/goagent%E4%BB%8E1-x%E5%8D%87%E7%BA%A7%E5%88%B02-x/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/10/17/goagent%E4%BB%8E1-x%E5%8D%87%E7%BA%A7%E5%88%B02-x/"/>
     <updated>2012-10-17T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/10/17/goagent从1-x升级到2-x</id>
+    <id>http://jasonllinux.github.io/blog/2012/10/17/goagent从1-x升级到2-x</id>
     <content type="html"><![CDATA[<p>好久没升级goagent了</p>
 
 <p>从google code上下载了最新稳定版</p>

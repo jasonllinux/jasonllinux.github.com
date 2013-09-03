@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: 未分类 | Jasonllinux's Blog]]></title>
-  <link href="http://jasonllinux.github.com/blog/categories/未分类/atom.xml" rel="self"/>
-  <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-06-03T15:50:25+08:00</updated>
-  <id>http://jasonllinux.github.com/</id>
+  <title><![CDATA[Category: 未分类 | JPollo's Blog]]></title>
+  <link href="http://jasonllinux.github.io/blog/categories/未分类/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.io/"/>
+  <updated>2013-09-03T16:01:57+08:00</updated>
+  <id>http://jasonllinux.github.io/</id>
   <author>
-    <name><![CDATA[jasonllinux]]></name>
+    <name><![CDATA[Shen Jie]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[URxvt配置]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/07/30/urxvt%E9%85%8D%E7%BD%AE/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/07/30/urxvt%E9%85%8D%E7%BD%AE/"/>
     <updated>2012-07-30T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/07/30/urxvt配置</id>
+    <id>http://jasonllinux.github.io/blog/2012/07/30/urxvt配置</id>
     <content type="html"><![CDATA[<p>配置文件 .Xdefaults</p>
 
 <p>[bash]<br />
@@ -86,9 +86,9 @@ Tab标签，Shift+箭头左右切换 Shift+箭头下 新建</p>
   
   <entry>
     <title type="html"><![CDATA[Linux下TexLive中文配置]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/07/01/linux%E4%B8%8Btexlive%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/07/01/linux%E4%B8%8Btexlive%E4%B8%AD%E6%96%87%E9%85%8D%E7%BD%AE/"/>
     <updated>2012-07-01T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/07/01/linux下texlive中文配置</id>
+    <id>http://jasonllinux.github.io/blog/2012/07/01/linux下texlive中文配置</id>
     <content type="html"><![CDATA[<p><a href="http://www.jasonllinux.com/wp-content/uploads/2012/07/225px-LaTeX_logo.png">
 </a>在Linux环境使用$$\LaTeX$$一般使用TexLive套装，而作为天朝子民，使用中文是件头等大事。</p>
 

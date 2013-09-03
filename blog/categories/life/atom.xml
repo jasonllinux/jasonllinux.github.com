@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Life | Jasonllinux's Blog]]></title>
-  <link href="http://jasonllinux.github.com/blog/categories/life/atom.xml" rel="self"/>
-  <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-06-03T15:50:25+08:00</updated>
-  <id>http://jasonllinux.github.com/</id>
+  <title><![CDATA[Category: Life | JPollo's Blog]]></title>
+  <link href="http://jasonllinux.github.io/blog/categories/life/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.io/"/>
+  <updated>2013-09-03T16:01:57+08:00</updated>
+  <id>http://jasonllinux.github.io/</id>
   <author>
-    <name><![CDATA[jasonllinux]]></name>
+    <name><![CDATA[Shen Jie]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[2012年--总结]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/12/30/conclusion/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/12/30/conclusion/"/>
     <updated>2012-12-30T18:22:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/12/30/conclusion</id>
+    <id>http://jasonllinux.github.io/blog/2012/12/30/conclusion</id>
     <content type="html"><![CDATA[<p>2012，末日没有到来</p>
 
 <p>跨年的气氛来了</p>
@@ -110,9 +110,9 @@
   
   <entry>
     <title type="html"><![CDATA[搬家了]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/09/20/%E6%90%AC%E5%AE%B6%E4%BA%86/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/09/20/%E6%90%AC%E5%AE%B6%E4%BA%86/"/>
     <updated>2012-09-20T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/09/20/搬家了</id>
+    <id>http://jasonllinux.github.io/blog/2012/09/20/搬家了</id>
     <content type="html"><![CDATA[<p>最近琢磨着入手VPS<br />
 偶然间看到了YardVPS打折的消息，对于穷学生，价格才是王道啊，如果能够稳定一点就更完美了<br />
 终身七折<br />
@@ -138,9 +138,9 @@
   
   <entry>
     <title type="html"><![CDATA[Cherry G80-3000 换键帽]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/09/12/cherry-g80-3000-%E6%8D%A2%E9%94%AE%E5%B8%BD/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/09/12/cherry-g80-3000-%E6%8D%A2%E9%94%AE%E5%B8%BD/"/>
     <updated>2012-09-12T00:00:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/09/12/cherry-g80-3000-换键帽</id>
+    <id>http://jasonllinux.github.io/blog/2012/09/12/cherry-g80-3000-换键帽</id>
     <content type="html"><![CDATA[<p>X宝上如了RGB键帽<br />
 拆键帽的时候，差点把Shift搞坏了，好惊心</p>
 

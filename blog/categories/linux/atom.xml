@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Linux | Jasonllinux's Blog]]></title>
-  <link href="http://jasonllinux.github.com/blog/categories/linux/atom.xml" rel="self"/>
-  <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-06-03T15:50:25+08:00</updated>
-  <id>http://jasonllinux.github.com/</id>
+  <title><![CDATA[Category: Linux | JPollo's Blog]]></title>
+  <link href="http://jasonllinux.github.io/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.io/"/>
+  <updated>2013-09-03T16:01:57+08:00</updated>
+  <id>http://jasonllinux.github.io/</id>
   <author>
-    <name><![CDATA[jasonllinux]]></name>
+    <name><![CDATA[Shen Jie]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Shell 使用中遇到的问题]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/05/01/shell-in-use/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/05/01/shell-in-use/"/>
     <updated>2013-05-01T19:19:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/05/01/shell-in-use</id>
+    <id>http://jasonllinux.github.io/blog/2013/05/01/shell-in-use</id>
     <content type="html"><![CDATA[<h2 id="section">一些变量</h2>
 
 <table>
@@ -60,9 +60,9 @@
   
   <entry>
     <title type="html"><![CDATA[Prepare for Ubuntu 13.04]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/"/>
     <updated>2013-04-25T21:38:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/04/25/prepare-for-ubuntu-13-dot-04</id>
+    <id>http://jasonllinux.github.io/blog/2013/04/25/prepare-for-ubuntu-13-dot-04</id>
     <content type="html"><![CDATA[<p>Ubuntu 13.04 如期而至!  </p>
 
 <p>记录一下用到的软件:  </p>
@@ -122,9 +122,9 @@
   
   <entry>
     <title type="html"><![CDATA[TL-WN725N 折腾记]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/03/11/tl-wn725n/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/03/11/tl-wn725n/"/>
     <updated>2013-03-11T11:25:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/03/11/tl-wn725n</id>
+    <id>http://jasonllinux.github.io/blog/2013/03/11/tl-wn725n</id>
     <content type="html"><![CDATA[<blockquote>
   <p>高手在民间</p>
 </blockquote>
@@ -156,9 +156,9 @@ Clone下来 make ＆＆ make install<br />
   
   <entry>
     <title type="html"><![CDATA[Linux下使用Aria2c和YAAW打造迅雷下载]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/03/05/aria2c-and-yaaw/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/03/05/aria2c-and-yaaw/"/>
     <updated>2013-03-05T11:33:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/03/05/aria2c-and-yaaw</id>
+    <id>http://jasonllinux.github.io/blog/2013/03/05/aria2c-and-yaaw</id>
     <content type="html"><![CDATA[<blockquote>
   <h3 id="section">先来一张图</h3>
   <p><img src="http://i.minus.com/is7Fiw9VMlBT.png"></p>
@@ -353,9 +353,9 @@ Done！  </p>
   
   <entry>
     <title type="html"><![CDATA[Ubuntu12.04 配置VPN Server]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/23/vpn-server-12-dot-04/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/11/23/vpn-server-12-dot-04/"/>
     <updated>2012-11-23T08:57:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/23/vpn-server-12-dot-04</id>
+    <id>http://jasonllinux.github.io/blog/2012/11/23/vpn-server-12-dot-04</id>
     <content type="html"><![CDATA[<p>Step1
 <div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get   install pptpd

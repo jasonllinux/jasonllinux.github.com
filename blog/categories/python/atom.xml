@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Python | Jasonllinux's Blog]]></title>
-  <link href="http://jasonllinux.github.com/blog/categories/python/atom.xml" rel="self"/>
-  <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-06-03T15:50:25+08:00</updated>
-  <id>http://jasonllinux.github.com/</id>
+  <title><![CDATA[Category: Python | JPollo's Blog]]></title>
+  <link href="http://jasonllinux.github.io/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.io/"/>
+  <updated>2013-09-03T16:01:57+08:00</updated>
+  <id>http://jasonllinux.github.io/</id>
   <author>
-    <name><![CDATA[jasonllinux]]></name>
+    <name><![CDATA[Shen Jie]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Python包管理小记]]></title>
-    <link href="http://jasonllinux.github.com/blog/2013/05/05/python-setup-tools/"/>
+    <link href="http://jasonllinux.github.io/blog/2013/05/05/python-setup-tools/"/>
     <updated>2013-05-05T14:28:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2013/05/05/python-setup-tools</id>
+    <id>http://jasonllinux.github.io/blog/2013/05/05/python-setup-tools</id>
     <content type="html"><![CDATA[<h1 id="setuptools">setuptools</h1>
 
 <h3 id="install">Install</h3>
@@ -44,9 +44,9 @@ easy_install –upgrade xx </p>
   
   <entry>
     <title type="html"><![CDATA[[Python]-RE]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/07/re-in-python-1/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/11/07/re-in-python-1/"/>
     <updated>2012-11-07T11:30:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/07/re-in-python-1</id>
+    <id>http://jasonllinux.github.io/blog/2012/11/07/re-in-python-1</id>
     <content type="html"><![CDATA[<p>正则表达式是个牛叉的东东，如果运用的好，能够在平时的开发中事半功倍！</p>
 
 <table>

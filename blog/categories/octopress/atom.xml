@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Octopress | Jasonllinux's Blog]]></title>
-  <link href="http://jasonllinux.github.com/blog/categories/octopress/atom.xml" rel="self"/>
-  <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-06-03T15:50:25+08:00</updated>
-  <id>http://jasonllinux.github.com/</id>
+  <title><![CDATA[Category: Octopress | JPollo's Blog]]></title>
+  <link href="http://jasonllinux.github.io/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.io/"/>
+  <updated>2013-09-03T16:01:57+08:00</updated>
+  <id>http://jasonllinux.github.io/</id>
   <author>
-    <name><![CDATA[jasonllinux]]></name>
+    <name><![CDATA[Shen Jie]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[迁移Octopress（Ubuntu 和 Win7）]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/18/octopress-move/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/11/18/octopress-move/"/>
     <updated>2012-11-18T15:19:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/18/octopress-move</id>
+    <id>http://jasonllinux.github.io/blog/2012/11/18/octopress-move</id>
     <content type="html"><![CDATA[<h1 id="octopress-to-ubuntu">Octopress to Ubuntu</h1>
 <p>最近实在受不了Arch的种种问题</p>
 
@@ -89,9 +89,9 @@
   
   <entry>
     <title type="html"><![CDATA[在Octopress中使用Latex公式]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/06/write-latex-in-octopress/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/11/06/write-latex-in-octopress/"/>
     <updated>2012-11-06T18:17:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/06/write-latex-in-octopress</id>
+    <id>http://jasonllinux.github.io/blog/2012/11/06/write-latex-in-octopress</id>
     <content type="html"><![CDATA[<p>对于我等diaosi，偶尔还是会需要在blog中输入一些符号、公式之类</p>
 
 <p>But How？</p>
@@ -150,9 +150,9 @@ body {
   
   <entry>
     <title type="html"><![CDATA[Config Octopress]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/11/04/config-octopress/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/11/04/config-octopress/"/>
     <updated>2012-11-04T12:58:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/11/04/config-octopress</id>
+    <id>http://jasonllinux.github.io/blog/2012/11/04/config-octopress</id>
     <content type="html"><![CDATA[<h2 id="section">如何恢复</h2>
 <p>首先从github checkout两个分支</p>
 
@@ -247,8 +247,8 @@ text-align:center;
 修改 source/_includes/head.html</p>
 
 <p>``` html
-<link href="http://jasonllinux.github.com/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-<link href="http://jasonllinux.github.com/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" /></p>
+<link href="http://jasonllinux.github.io/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<link href="http://jasonllinux.github.io/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" /></p>
 
 <p>```</p>
 

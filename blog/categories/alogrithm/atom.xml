@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Alogrithm | Jasonllinux's Blog]]></title>
-  <link href="http://jasonllinux.github.com/blog/categories/alogrithm/atom.xml" rel="self"/>
-  <link href="http://jasonllinux.github.com/"/>
-  <updated>2013-06-03T15:50:25+08:00</updated>
-  <id>http://jasonllinux.github.com/</id>
+  <title><![CDATA[Category: Alogrithm | JPollo's Blog]]></title>
+  <link href="http://jasonllinux.github.io/blog/categories/alogrithm/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.io/"/>
+  <updated>2013-09-03T16:01:57+08:00</updated>
+  <id>http://jasonllinux.github.io/</id>
   <author>
-    <name><![CDATA[jasonllinux]]></name>
+    <name><![CDATA[Shen Jie]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Kalman Filter]]></title>
-    <link href="http://jasonllinux.github.com/blog/2012/12/26/kalman-filter/"/>
+    <link href="http://jasonllinux.github.io/blog/2012/12/26/kalman-filter/"/>
     <updated>2012-12-26T20:30:00+08:00</updated>
-    <id>http://jasonllinux.github.com/blog/2012/12/26/kalman-filter</id>
+    <id>http://jasonllinux.github.io/blog/2012/12/26/kalman-filter</id>
     <content type="html"><![CDATA[<p>一直觉得滤波之流是个很玄乎的东西</p>
 
 <p>前几日看了一篇文章，霎那间有所顿悟</p>
