@@ -4,7 +4,7 @@
   <title><![CDATA[JPollo]]></title>
   <link href="http://jasonllinux.github.io/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.io/"/>
-  <updated>2013-09-03T16:06:30+08:00</updated>
+  <updated>2013-09-08T13:19:28+08:00</updated>
   <id>http://jasonllinux.github.io/</id>
   <author>
     <name><![CDATA[Shen Jie]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[实习，各种荒废]]></title>
+    <link href="http://jasonllinux.github.io/blog/2013/09/08/intern_huawei/"/>
+    <updated>2013-09-08T10:22:00+08:00</updated>
+    <id>http://jasonllinux.github.io/blog/2013/09/08/intern_huawei</id>
+    <content type="html"><![CDATA[<p>在七月的最后一天<br />
+来到HuaWei公司入职<br />
+看到眼前的一切仿佛都那么好奇<br />
+虽然公司安排的职位不是想象中的那样 <br />
+但是真正的去经历一点职场生活<br />
+遇见一些老朋友，认识一些新朋友(xiaoxiao fangzong dizong )<br />
+还是非常开心<br />
+有一个非常好的顺子师父，很耐心耐心的教导我,非常感激<br />
+短短一个多月<br />
+还是有非常多的收获<br />
+上班的时候想到在学校的种种好<br />
+一去不复返了<br />
+看到开学报到的那些大一新生<br />
+N年前，妈妈带我来报到的一幕幕仿佛还在眼前<br />
+感叹，长大了  </p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[About 设计模式]]></title>
@@ -978,64 +1002,6 @@ latex</p>
 <p>希望不要去丢人啊。。。。</p>
 
 <p>可能是参加的最后一次国赛了，享受过程吧</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ubuntu12.04 配置VPN Server]]></title>
-    <link href="http://jasonllinux.github.io/blog/2012/11/23/vpn-server-12-dot-04/"/>
-    <updated>2012-11-23T08:57:00+08:00</updated>
-    <id>http://jasonllinux.github.io/blog/2012/11/23/vpn-server-12-dot-04</id>
-    <content type="html"><![CDATA[<p>Step1</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line">sudo apt-get   install pptpd
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>Step2</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="c">#修改配置文件/etc/sysctl.conf中的相应内容如下，打开ipv4转发功能  </span>
-</span><span class="line">net.ipv4.ip_forward <span class="o">=</span> 1
-</span><span class="line"><span class="c">#执行sysctl -p，使其马上生效。  </span>
-</span><span class="line"><span class="c">#编辑配置文件 /etc/ppp/pptpd-options，修改里面的 ms-dns 这个项为 8.8.8.8 。也就是Google的DNS服务器。  </span>
-</span><span class="line"><span class="c">#编辑配置文件 /etc/pptpd.conf .修改成如下：  </span>
-</span><span class="line">option /etc/ppp/pptpd-options
-</span><span class="line">localip 192.168.0.1
-</span><span class="line">remoteip 192.168.0.11-150
-</span><span class="line"><span class="c">#编辑配置文件 /etc/ppp/chap-secrets 。此文件定义登录的用户名和密码  </span>
-</span><span class="line"><span class="c">#添加一行  </span>
-</span><span class="line">komy pptpd password *
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>Step3 配置Iptables</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line">iptables -t nat -A POSTROUTING -o eth0 -s 192.168.0.0/24 -j MASQUERADE
-</span><span class="line">iptables -I FORWARD -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1356
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>Step4 开机自动生效</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line">iptables-save &gt; /etc/iptables.up.rules
-</span><span class="line"><span class="c">#然后修改脚本/etc/network/interfaces  </span>
-</span><span class="line">pre-up iptables-restore &lt; /etc/iptables.up.rules
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
 ]]></content>
   </entry>
   
