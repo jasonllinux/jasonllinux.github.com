@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Apollo | JPollo]]></title>
+  <link href="http://jasonllinux.github.io/blog/categories/apollo/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.io/"/>
+  <updated>2013-09-08T21:20:03+08:00</updated>
+  <id>http://jasonllinux.github.io/</id>
+  <author>
+    <name><![CDATA[Shen Jie]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[关于团队建设]]></title>
+    <link href="http://jasonllinux.github.io/blog/2013/09/08/team/"/>
+    <updated>2013-09-08T20:56:00+08:00</updated>
+    <id>http://jasonllinux.github.io/blog/2013/09/08/team</id>
+    <content type="html"><![CDATA[<p>从世界杯回来，我就一直很自责<br />
+世界杯之前，仿佛都是我一个人在战斗<br />
+不是嫌累怕苦<br />
+而是对今后这个团队发展的深深担忧<br />
+作为领队，我是失职的<br />
+当所有的开发工作大多都维系在一个人身上的时候<br />
+很明显这是非常危险的<br />
+不知道为什么大家没有前几届那样做比赛的激情<br />
+我对这个队伍是有非常厚重的感情<br />
+因为是当初我从1K多行的Sample代码慢慢累加，一个一个版本的迭代，才发展到如今的状态<br />
+从第一次参加伊朗公开赛的忐忑到最后以世界杯的八强收场<br />
+虽然没有取得瞩目的成绩，但是觉得拼搏过，努力过，对得起自己刷过的夜，对得起自己的种种付出<br />
+不清楚大家有多忙碌<br />
+忙碌到几乎都没有时间去琢磨去研究去码代码<br />
+是没有时间还是没有用心  </p>
+
+<p>希望经过这个混乱的阶段，团队能聚集一批真正做比赛的兄弟姐妹，发扬光大<br />
+感谢那些当初一起和我苦苦挣扎的兄弟们，战友们  </p>
+
+]]></content>
+  </entry>
+  
+</feed>

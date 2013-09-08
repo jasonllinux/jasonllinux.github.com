@@ -103,6 +103,98 @@
   
 
 
+<i class="icon-calendar-empty"></i> <time datetime="2012-09-05T00:00:00+08:00" pubdate data-updated="true">Sep 5<span>th</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://jasonllinux.github.io/blog/2012/09/05/hadoop%E7%A2%8E%E7%A2%8E%E5%BF%B5/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/blog/categories/Study/"><span class="badge">Study</span></a>
+          
+          <a href="/blog/categories/linux/"><span class="badge">linux</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/blog/2012/09/05/hadoop%E7%A2%8E%E7%A2%8E%E5%BF%B5/">Hadoop碎碎念</a></h1>
+      <p><strong>Hadoop configure 碎碎念，非教程！！！</strong></p>
+
+<p>1. SSH配置<br />
+免密钥</p>
+
+<p>2. Host配置<br />
+User和HostName匹配</p>
+
+<p>3. x.xml相关<br />
+dir配置<br />
+端口配置<br />
+java路径设置 hadoop-env.sh</p>
+
+<p>4.常用操作</p>
+
+<p>[bash]<br />
+#格式化<br />
+hadoop namenode -format<br />
+#启动<br />
+start-all.sh<br />
+#终止<br />
+stop-all.sh<br />
+#进程<br />
+jps<br />
+hadoop dfsadmin -report<br />
+#离开安全模式<br />
+hadoop dfsadmin -safemode leave<br />
+[/bash]</p>
+
+<p><strong>测试</strong>
+启动Hadoop，<br />
+cd Hadoop目录，输入以下命令执行Pi Estimator程序：</p>
+
+<p>[bash]hadoop jar hadoop-examples.jar pi 2 10<br />
+[/bash]</p>
+
+<p><strong>运行结果：</strong></p>
+
+<p><strong>Hadoop Eclipse插件设置</strong>
+Location name（取个名字）<br />
+Map/Reduce Master（Job Tracker的IP和端口，根据mapred-site.xml中配置的mapred.job.tracker来填写）<br />
+DFS Master（Name Node的IP和端口，根据core-site.xml中配置的fs.default.name来填写）<br />
+最后，切换到Project 视图，就可以看到文件目录了</p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
+
+
+
+
+
+
+
+
+  
+
+
 <i class="icon-calendar-empty"></i> <time datetime="2012-09-03T00:00:00+08:00" pubdate data-updated="true">Sep 3<span>rd</span>, 2012</time></h5>
           <div class="row-fluid">
           
@@ -382,129 +474,6 @@ modprobe vboxdrv<br />
 [/bash]</p>
 
 <p><strong>注意:</strong>根据实际情况替换版本号</p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2">
-		<h1 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2012-08-16T00:00:00+08:00" pubdate data-updated="true">Aug 16<span>th</span>, 2012</time></h5>
-          <div class="row-fluid">
-          
-          <a href="http://jasonllinux.github.io/blog/2012/08/16/gentoo%E5%AE%89%E8%A3%85/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/linux/"><span class="badge">linux</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10">
-      <h1 class="link"><a href="/blog/2012/08/16/gentoo%E5%AE%89%E8%A3%85/">Gentoo安装</a></h1>
-      <p>受不了Gentoo的诱惑，前端时间花了大概三天时间折腾了下Gentoo，简单记录下安装过程</p>
-
-<p>[bash]<br />
-分区&amp;&amp;格式化<br />
-mkfs.ext4 /dev/sdaXX<br />
-mkswap /dev/sdaXX</p>
-
-<p>挂载分区<br />
-sudo mount /dev/sdaXX /mnt/gentoo<br />
-mkdir /mnt/gentoo/boot<br />
-mkdir /mnt/gentoo/home<br />
-swapon /dev/sdaXX</p>
-
-<p>把下载好的stageXX和portageXX解压<br />
-tar xvjpf stagexx /mnt/gentoo/<br />
-tar xvjf portageX -C /mnt/gentoo/usr</p>
-
-<p>cp -L /etc/resolve.conf /mnt/gentoo/etc/</p>
-
-<p>mount -t proc none /mnt/gentoo/proc<br />
-mount -o rbind /dev /mnt/gentoo/dev</p>
-
-<p>chroot /mnt/gentoo /bin/bash</p>
-
-<p>env-update<br />
-source /etc/profile<br />
-export PS1=&quot;(chroot)$PS1&quot;<br />
-编辑 /etc/make.conf<br />
-+MAKEOPTS=&quot;-j5&quot;<br />
-ACCEPT_KEYWORDS=&quot;amd64&quot;<br />
-GENTOO_MIRRORS=&quot;http://mirrors.xmu.edu.cn/gentoo&quot;<br />
-SYNC=&quot;rsync://mirrors.xmu.edu.cn/gentoo-portage&quot;<br />
-VIDEO_CARDS=&quot;nvidia&quot;<br />
-INPUT_DEVICES=&quot;evdev synapitcs&quot;<br />
-emerge &#8211;sync<br />
-emerge gentoo-sources<br />
-emerge genkernel<br />
-zcat /proc/config.gz &gt; /usr/share/genkernel/arch/x86_64/kernel-config<br />
-genkernel &#8211;menuconfig all</p>
-
-<p>修改 /etc/fstab</p>
-
-<p>修改 /etc/hostname</p>
-
-<p>passwd</p>
-
-<p>安装一些程序<br />
-syslog-ng mlocate dhcpcd dbus openssh alsa-utils twm xclock xterm<br />
-增加开机启动<br />
-rc-update add net.eth0 default<br />
-rc-update add syslog-ng default<br />
-rc-update add dbus default<br />
-rc-update add sshd default</p>
-
-<p>安装Grub并配置<br />
-emerge grub</p>
-
-<p>grep -v rootfs /proc/mounts &gt; /etc/mtab</p>
-
-<p>umount xxx &amp;&amp; xxx &amp;&amp; xxx</p>
-
-<p>重启 应该OK了</p>
-
-<p>配置桌面环境<br />
-emerge xorg-server<br />
-emerge nvidia-drivers<br />
-modprobe nvidia<br />
-update-modules<br />
-安装gdm gnome。。。。。。</p>
-
-<p>添加用户<br />
-useradd -m -G uers,wheel,audio -s /bin/bash XXX<br />
-(-d /home/XX)</p>
-
-<p>[/bash]
-<strong>写在最后：</strong>多看Wiki，编译的想吐！！！！！！！！！！！！！！！</p>
 
       
       

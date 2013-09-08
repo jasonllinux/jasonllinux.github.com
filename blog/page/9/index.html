@@ -103,6 +103,67 @@
   
 
 
+<i class="icon-calendar-empty"></i> <time datetime="2012-09-23T00:00:00+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://jasonllinux.github.io/blog/2012/09/23/archlinux-%E9%85%8D%E7%BD%AEgrub2%E7%AE%80%E4%BE%BF%E6%96%B9%E6%B3%95/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/blog/categories/linux/"><span class="badge">linux</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/blog/2012/09/23/archlinux-%E9%85%8D%E7%BD%AEgrub2%E7%AE%80%E4%BE%BF%E6%96%B9%E6%B3%95/">Archlinux 配置Grub2简便方法</a></h1>
+      <p>Archer都知道的</p>
+
+<p>配置Grub不像Ubuntu那么Easy，可以自动检测到其他盘符的系统</p>
+
+<p>但是神器来了</p>
+
+<p><strong>os-prober</strong></p>
+
+<p>在安装玩Grub2之后iou</p>
+
+<p>[bash]<br />
+pacman -S os-prober<br />
+grub-mkconfig -o /boot/grub/grub.cfg<br />
+[/bash]</p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
+
+
+
+
+
+
+
+
+  
+
+
 <i class="icon-calendar-empty"></i> <time datetime="2012-09-21T00:00:00+08:00" pubdate data-updated="true">Sep 21<span>st</span>, 2012</time></h5>
           <div class="row-fluid">
           
@@ -385,98 +446,6 @@
 [bash]<br />
 android:screenOrientation=&quot;portrait&quot;<br />
 [/bash]</p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2">
-		<h1 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2012-09-05T00:00:00+08:00" pubdate data-updated="true">Sep 5<span>th</span>, 2012</time></h5>
-          <div class="row-fluid">
-          
-          <a href="http://jasonllinux.github.io/blog/2012/09/05/hadoop%E7%A2%8E%E7%A2%8E%E5%BF%B5/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/Study/"><span class="badge">Study</span></a>
-          
-          <a href="/blog/categories/linux/"><span class="badge">linux</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10">
-      <h1 class="link"><a href="/blog/2012/09/05/hadoop%E7%A2%8E%E7%A2%8E%E5%BF%B5/">Hadoop碎碎念</a></h1>
-      <p><strong>Hadoop configure 碎碎念，非教程！！！</strong></p>
-
-<p>1. SSH配置<br />
-免密钥</p>
-
-<p>2. Host配置<br />
-User和HostName匹配</p>
-
-<p>3. x.xml相关<br />
-dir配置<br />
-端口配置<br />
-java路径设置 hadoop-env.sh</p>
-
-<p>4.常用操作</p>
-
-<p>[bash]<br />
-#格式化<br />
-hadoop namenode -format<br />
-#启动<br />
-start-all.sh<br />
-#终止<br />
-stop-all.sh<br />
-#进程<br />
-jps<br />
-hadoop dfsadmin -report<br />
-#离开安全模式<br />
-hadoop dfsadmin -safemode leave<br />
-[/bash]</p>
-
-<p><strong>测试</strong>
-启动Hadoop，<br />
-cd Hadoop目录，输入以下命令执行Pi Estimator程序：</p>
-
-<p>[bash]hadoop jar hadoop-examples.jar pi 2 10<br />
-[/bash]</p>
-
-<p><strong>运行结果：</strong></p>
-
-<p><strong>Hadoop Eclipse插件设置</strong>
-Location name（取个名字）<br />
-Map/Reduce Master（Job Tracker的IP和端口，根据mapred-site.xml中配置的mapred.job.tracker来填写）<br />
-DFS Master（Name Node的IP和端口，根据core-site.xml中配置的fs.default.name来填写）<br />
-最后，切换到Project 视图，就可以看到文件目录了</p>
 
       
       
