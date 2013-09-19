@@ -103,6 +103,107 @@
   
 
 
+<i class="icon-calendar-empty"></i> <time datetime="2013-04-25T21:38:00+08:00" pubdate data-updated="true">Apr 25<span>th</span>, 2013</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://jasonllinux.github.io/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/blog/categories/Linux/"><span class="badge">Linux</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/blog/2013/04/25/prepare-for-ubuntu-13-dot-04/">Prepare for Ubuntu 13.04</a></h1>
+      <p>Ubuntu 13.04 如期而至!  </p>
+
+<p>记录一下用到的软件:  </p>
+
+<h4 id="develop">Develop</h4>
+
+<ul>
+  <li>eclipse  </li>
+  <li>Gvim</li>
+  <li>sublime</li>
+</ul>
+
+<h4 id="music-and-movie">Music and Movie</h4>
+<ul>
+  <li>Smplayer</li>
+  <li>Audacious</li>
+</ul>
+
+<h4 id="game">Game</h4>
+<ul>
+  <li>Steam</li>
+</ul>
+
+<h4 id="web">Web</h4>
+<ul>
+  <li>Chrome</li>
+</ul>
+
+<h4 id="tools">Tools</h4>
+<ul>
+  <li>Tweak</li>
+  <li>Dropbox</li>
+  <li>RecordMyDesktop</li>
+  <li>Filezilla</li>
+  <li>ClipGrab</li>
+  <li>Gimp</li>
+  <li>Virtualbox  </li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">#修复Virtualbox问题
+</span><span class="line">sudo apt-get install build-essential linux-headers-`uname -r`
+</span><span class="line">
+</span><span class="line">sudo dpkg-reconfigure virtualbox-dkms 
+</span><span class="line">
+</span><span class="line">sudo dpkg-reconfigure virtualbox</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h4 id="section">待续。。。</h4>
+
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
+
+
+
+
+
+
+
+
+  
+
+
 <i class="icon-calendar-empty"></i> <time datetime="2013-04-16T18:36:00+08:00" pubdate data-updated="true">Apr 16<span>th</span>, 2013</time></h5>
           <div class="row-fluid">
           
@@ -400,121 +501,6 @@ Clone下来 make ＆＆ make install<br />
 
       
        <a href="/blog/2013/03/05/aria2c-and-yaaw/">Read on &rarr;</a> 
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2">
-		<h1 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2013-02-18T14:34:00+08:00" pubdate data-updated="true">Feb 18<span>th</span>, 2013</time></h5>
-          <div class="row-fluid">
-          
-          <a href="http://jasonllinux.github.io/blog/2013/02/18/tweak-ssd/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/IT/"><span class="badge">IT</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10">
-      <h1 class="link"><a href="/blog/2013/02/18/tweak-ssd/">Tweak SSD for Ubuntu and Windows</a></h1>
-      <blockquote>
-  <p>啊哈 ， 入手SSD了<br />
-Intel 520  </p>
-</blockquote>
-
-<p>放假前几天，果断从amazon入手一块180G的Intel 520, 关键看重了他家的 <strong>质保5年</strong>  </p>
-
-<p>买回来之后觉得放在自己的X61小本上面太大才小用了（X61破解Sata2之后）,于是果断又从某宝上入了个原装硬盘托架，装入台式机作为第二硬盘</p>
-
-<p>重装系统，装软件， <strong>4K对齐</strong> 等在此忽略。。。</p>
-
-<p>主要想说下Ubuntu和Windows下的一些优化，延长一下SSD的寿命</p>
-
-<h3 id="for-ubuntu">For Ubuntu</h3>
-<ul>
-  <li>修改/etc/fstab文件</li>
-</ul>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-</pre></td><td class="code"><pre><code class=""><span class="line"># &lt;file system&gt; &lt;mount point&gt;   &lt;type&gt;  &lt;options&gt;       &lt;dump&gt;  &lt;pass&gt;
-</span><span class="line"># / was on /dev/sdb6 during installation
-</span><span class="line">UUID=bc8a6196-3160-4503-800c-48dcb385887e /               ext4    discard,noatime,errors=remount-ro 0       1
-</span><span class="line"># swap was on /dev/sda7 during installation
-</span><span class="line">UUID=5f772617-a408-4b0a-a125-2007cb96a4d8 none            swap    sw              0       0
-</span><span class="line"># swap was on /dev/sdb5 during installation
-</span><span class="line">UUID=ddfdd878-2f06-428a-97a0-cdbe05b882db none            swap    sw              0       0
-</span><span class="line">
-</span><span class="line"># SSD tweak : temporary directories as tmpfs
-</span><span class="line">tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0
-</span><span class="line">tmpfs /var/spool tmpfs defaults,noatime,mode=1777 0 0
-</span><span class="line">tmpfs /var/tmp  tmpfs defaults,noatime,mode=1777 0 0
-</span><span class="line">
-</span><span class="line"># SSD tweak : log directory as tmpfs
-</span><span class="line">tmpfs /var/log tmpfs defaults,noatime,mode=0755 0 0</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<ul>
-  <li>对Chrome
-在这里我们希望将浏览器Chrome的缓存写到Ramdisk中去，因此</li>
-</ul>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">mkdir /tmp/chrome
-</span><span class="line">mount -t tmpfs -o size=1024M,mode=0744 tmpfs /tmp/chrome/
-</span><span class="line">chmod 777 /tmp/chrome/ -R</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<h3 id="for-windows">For Windows</h3>
-
-<h3 id="reference"><em>Reference</em></h3>
-<p>感谢如下大大们的文章：<br />
-* 1<br />
-* 2 <br />
-* 3  </p>
-
-      
-      
     </div>
   </div>
 
