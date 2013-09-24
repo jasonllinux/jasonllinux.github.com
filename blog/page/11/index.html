@@ -103,6 +103,69 @@
   
 
 
+<i class="icon-calendar-empty"></i> <time datetime="2012-08-26T00:00:00+08:00" pubdate data-updated="true">Aug 26<span>th</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://jasonllinux.github.io/blog/2012/08/26/svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/blog/categories/IT/"><span class="badge">IT</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/blog/2012/08/26/svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/">SVN服务器迁移</a></h1>
+      <p>前段时间把托管比赛项目的svn服务器从自己的笔记本迁移到台式机上了，可以把所有历史记录版本信息都转走，实在是很方便：</p>
+
+<p>[bash]<br />
+#备份<br />
+svnadmin dump path/to/old-repo &gt; dumpfile</p>
+
+<p>#在新的服务器上新建svn &#8230;不再赘述<br />
+#还原<br />
+svnadmin load path/to/new-repo &lt; dumpfile<br />
+[/bash]</p>
+
+<p>参考：</p>
+
+<p><a href="http://eastviking.iteye.com/blog/32899" target="_blank">如何做svn迁移</a></p>
+
+<p>&nbsp;</p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
+
+
+
+
+
+
+
+
+  
+
+
 <i class="icon-calendar-empty"></i> <time datetime="2012-08-18T00:00:00+08:00" pubdate data-updated="true">Aug 18<span>th</span>, 2012</time></h5>
           <div class="row-fluid">
           
@@ -472,88 +535,6 @@ title Windows<br />
 rootnoverify (hd0,0)<br />
 makeactive<br />
 chainloader +1<br />
-[/bash]</p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2">
-		<h1 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2012-08-02T00:00:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time></h5>
-          <div class="row-fluid">
-          
-          <a href="http://jasonllinux.github.io/blog/2012/08/02/archlinux-%E7%BC%96%E8%AF%91-opencv%E6%94%AF%E6%8F%B4python/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/Study/"><span class="badge">Study</span></a>
-          
-          <a href="/blog/categories/linux/"><span class="badge">linux</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10">
-      <h1 class="link"><a href="/blog/2012/08/02/archlinux-%E7%BC%96%E8%AF%91-opencv%E6%94%AF%E6%8F%B4python/">Archlinux 编译 OpenCV支援Python</a></h1>
-      <p><strong>
-Step1</strong>
-DownLoad <em>OpenCV-2.4.2.tar.bz2</em></p>
-
-<p><strong>Step2</strong></p>
-
-<p>[bash]<br />
- cd OpenCV-2.4.2/<br />
- mkdir release<br />
- cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_PYTHON_SUPPORT=ON ..<br />
- sudo make<br />
- sudo make install<br />
-[/bash]</p>
-
-<p><strong>Step3</strong>
-安装完成之后会把cv的库安装到/usr/local/lib/python2.7/site-packages目录中<br />
-复制到你的python2.7所在的路径，或者加个.pth文件</p>
-
-<p>或者直接修改环境变量</p>
-
-<p>[bash]<br />
-export PYTHONPATH=&quot;/usr/local/lib/python2.7/site-packages/:$PYTHONPATH&quot;<br />
-vim /etc/ld.so.conf<br />
-add &quot;/usr/local/lib&quot;<br />
-[/bash]</p>
-
-<p><strong>Result</strong>
-进入OpenCV目录</p>
-
-<p>[bash]<br />
- cd OpenCV-2.4.2/samples/python<br />
- python2.7  delaunay.py<br />
 [/bash]</p>
 
       

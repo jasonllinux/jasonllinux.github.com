@@ -103,6 +103,93 @@
   
 
 
+<i class="icon-calendar-empty"></i> <time datetime="2012-11-04T12:58:00+08:00" pubdate data-updated="true">Nov 4<span>th</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://jasonllinux.github.io/blog/2012/11/04/config-octopress/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/blog/categories/Octopress/"><span class="badge">Octopress</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/blog/2012/11/04/config-octopress/">Config Octopress</a></h1>
+      <h2 id="section">如何恢复</h2>
+<p>首先从github checkout两个分支</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">git clone -b <span class="nb">source </span>git@github.com:username/username.github.com.git octopress
+</span><span class="line"><span class="nb">cd </span>octopress
+</span><span class="line">git clone git@github.com:username/username.github.com.git _deploy
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>安装依赖gems</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line">gem install bundler
+</span><span class="line">bundle install
+</span><span class="line">rake install <span class="c"># 可以省略？</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>pull最新的</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nb">cd </span>xxx
+</span><span class="line"><span class="nb">cd </span>_deploy
+</span><span class="line">git pull origin master
+</span><span class="line"><span class="nb">cd</span> ..
+</span><span class="line">git pull origin <span class="nb">source</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h2 id="robotstxt">添加robots.txt</h2>
+
+<h2 id="section-1">添加404页面</h2>
+
+<h2 id="more">More</h2>
+<p>excerpt_link: “Read on →”  # 在文章中使用
+      
+       <a href="/blog/2012/11/04/config-octopress/">Read on &rarr;</a> 
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
+
+
+
+
+
+
+
+
+  
+
+
 <i class="icon-calendar-empty"></i> <time datetime="2012-11-02T11:38:00+08:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2012</time></h5>
           <div class="row-fluid">
           
@@ -372,63 +459,6 @@ java.library.path = /usr/java/packages/lib/amd64:/usr/lib/jni:/lib:/usr/lib</p>
     <div class="span10">
       <h1 class="link"><a href="/blog/2012/10/25/hello-world/">Hello World</a></h1>
       
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2">
-		<h1 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2012-10-24T18:00:00+08:00" pubdate data-updated="true">Oct 24<span>th</span>, 2012</time></h5>
-          <div class="row-fluid">
-          
-          <a href="http://jasonllinux.github.io/blog/2012/10/24/fanqiang-in-linux-terminal/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/Linux/"><span class="badge">Linux</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10">
-      <h1 class="link"><a href="/blog/2012/10/24/fanqiang-in-linux-terminal/">Linux终端下翻墙</a></h1>
-      <p>在Arch下有时候更新dropbox软件是件很DT的事情</p>
-
-<p>下载不动</p>
-
-<p>在启用了goagent的情况下</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nb">export </span><span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:8087
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
 
       
       
