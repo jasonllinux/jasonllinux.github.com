@@ -103,6 +103,127 @@
   
 
 
+<i class="icon-calendar-empty"></i> <time datetime="2012-08-31T00:00:00+08:00" pubdate data-updated="true">Aug 31<span>st</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://jasonllinux.github.io/blog/2012/08/31/archlinux%E4%B9%8Bcould-not-update-iceauthority-file-varlibgdm-iceauthority%E8%A7%A3%E5%86%B3/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/blog/categories/linux/"><span class="badge">linux</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/blog/2012/08/31/archlinux%E4%B9%8Bcould-not-update-iceauthority-file-varlibgdm-iceauthority%E8%A7%A3%E5%86%B3/">archlinux之could not update iceauthority file /var/lib/gdm/.iceauthority解决</a></h1>
+      <p>早上更新了一些包之后，重启发现：</p>
+
+<p>[bash]<br />
+could not update iceauthority file /var/lib/gdm/.ICEauthority<br />
+[/bash]</p>
+
+<p>解决方法：</p>
+
+<p>[bash]<br />
+sudo chown -R gdm:gdm /var/lib/gdm<br />
+sudo chmod 600 /var/lib/gdm/.ICEauthority<br />
+[/bash]</p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i> <time datetime="2012-08-26T00:00:00+08:00" pubdate data-updated="true">Aug 26<span>th</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://jasonllinux.github.io/blog/2012/08/26/%E3%80%8A%E6%8E%A7%E5%88%B6%E4%B8%8E%E5%86%B3%E7%AD%96%E3%80%8Blatex%E6%A8%A1%E6%9D%BF%E9%97%AE%E9%A2%98/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/blog/categories/Study/"><span class="badge">Study</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/blog/2012/08/26/%E3%80%8A%E6%8E%A7%E5%88%B6%E4%B8%8E%E5%86%B3%E7%AD%96%E3%80%8Blatex%E6%A8%A1%E6%9D%BF%E9%97%AE%E9%A2%98/">《控制与决策》Latex模板问题(1)</a></h1>
+      <p>拿到《控制于决策》的模板，第一次编译的时候出现如下错误：<br />
+[latex]<br />
+! LaTeX Error: \bibname undefined.<br />
+See the LaTeX manual or LaTeX Companion for explanation.<br />
+Type <wbr> H &lt;return&gt; <wbr> for immediate help.
+<wbr> <wbr> <wbr> &#8230;
+<wbr> <wbr> l.43 <wbr> <wbr> {\renewcommand\bibname{?196?215}}
+<wbr> <wbr> ?<br />
+[/latex]</wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></wbr></p>
+
+<p>解决方法：<br />
+由于GB.cpx乱码造成，因此重新下载这个<a href="https://bitbucket.org/aloft/ctex-faq/src/ba3f763c9380/GB.cpx" target="_blank">文件</a></p>
+
+<p>然后复制到文章目录，<br />
+compile。。。。done。。。。</p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
+
+
+
+
+
+
+
+
+  
+
+
 <i class="icon-calendar-empty"></i> <time datetime="2012-08-26T00:00:00+08:00" pubdate data-updated="true">Aug 26<span>th</span>, 2012</time></h5>
           <div class="row-fluid">
           
@@ -378,163 +499,6 @@ sudo pacman -S pyqt<br />
 
 <p>[bash]<br />
 pyuic4 gui.ui -o gui.py<br />
-[/bash]</p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2">
-		<h1 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2012-08-04T00:00:00+08:00" pubdate data-updated="true">Aug 4<span>th</span>, 2012</time></h5>
-          <div class="row-fluid">
-          
-          <a href="http://jasonllinux.github.io/blog/2012/08/04/mac-%E5%AE%89%E8%A3%85opencv%E6%94%AF%E6%8F%B4python/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/IT/"><span class="badge">IT</span></a>
-          
-          <a href="/blog/categories/Study/"><span class="badge">Study</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10">
-      <h1 class="link"><a href="/blog/2012/08/04/mac-%E5%AE%89%E8%A3%85opencv%E6%94%AF%E6%8F%B4python/">Mac 安装OpenCV支援Python</a></h1>
-      <p>Mac上的OpenCV安装和Linux平台下略有不同，在这里我们不采用下载源码包手动编译的方式，因为可能有些依赖问题，我们使用Port包管理，自动安装。</p>
-
-<p><strong>Step1</strong>
-安装MacPort<br />
-安装完成之后</p>
-
-<p>[bash]<br />
-sudo port selfupdate<br />
-[/bash]</p>
-
-<p><strong>Step2</strong>
-安装OpenCv，并且支援Python</p>
-
-<p>[bash]<br />
-sudo port install py27-numpy<br />
-sudo port install opencv +python27<br />
-[/bash]</p>
-
-<p><strong>Step3</strong>
-至此可能会发现python下还是不能用opencv,import 会出现错误<br />
-解决方案<br />
-切换Pyhon版本，默认使用/opt/local/bin/python27</p>
-
-<p><strong>Result</strong>
-至此，应该大功告成了</p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2">
-		<h1 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2012-08-02T00:00:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time></h5>
-          <div class="row-fluid">
-          
-          <a href="http://jasonllinux.github.io/blog/2012/08/02/%E9%BB%91%E8%8B%B9%E6%9E%9C%E4%B9%8B%E4%BF%AE%E5%A4%8Dlinux%E5%BC%95%E5%AF%BC/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/IT/"><span class="badge">IT</span></a>
-          
-          <a href="/blog/categories/linux/"><span class="badge">linux</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10">
-      <h1 class="link"><a href="/blog/2012/08/02/%E9%BB%91%E8%8B%B9%E6%9E%9C%E4%B9%8B%E4%BF%AE%E5%A4%8Dlinux%E5%BC%95%E5%AF%BC/">黑苹果之修复linux引导</a></h1>
-      <p><strong>型号: thinkpad X61 </strong>
-<strong>OS : win7 &amp;&amp; mac &amp;&amp;lion archlinux</strong></p>
-
-<p>装完mac x lion之后，linux引导是一个问题<br />
-引导程序由Grub2变成了bootthink，让我这个长期的linuxer很不适应，头可断血可流，Linux不能丢，又不能把好不容装好的99完美的mac给卸载了</p>
-
-<p>天不亡我：
-<strong>step1</strong>
-C盘根目录新建boot_linux 文件夹
-<strong>step2</strong>
-从linux系统的/boot/目录下,把initramfs-linux.img 和vmlinuz-linux拷贝进去
-<strong>step3
-</strong>在C盘根目录下新建<br />
-menu.lst<br />
-内容为:</p>
-
-<p>[bash]<br />
-# general configuration:<br />
-timeout 5<br />
-default 0<br />
-color light-blue/black light-cyan/blue</p>
-
-<p># (0) Arch Linux<br />
-title Arch Linux<br />
-set root=&#8217;(hd0,10)&#8217;<br />
-kernel (hd0,0)/boot_linux/vmlinuz-linux root=/dev/sda10<br />
-initrd (hd0,0)/boot_linux/initramfs-linux.img</p>
-
-<p># (2) Windows<br />
-title Windows<br />
-rootnoverify (hd0,0)<br />
-makeactive<br />
-chainloader +1<br />
 [/bash]</p>
 
       

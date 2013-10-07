@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>答辩之后 - JPollo</title>
+  <title>RoboCup机器人救援仿真自动化脚本个人总结 - JPollo</title>
   <meta name="author" content="Shen Jie">
 
    
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jasonllinux.github.io/blog/2013/09/24/after-dabian">
+  <link rel="canonical" href="http://jasonllinux.github.io/blog/2013/10/07/auto-comp-rcrss">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -80,7 +80,7 @@
 
   <header>
   <div class="jumbotron">
-    答辩之后
+    RoboCup机器人救援仿真自动化脚本个人总结
 	<h5>
 
 
@@ -93,20 +93,83 @@
   
 
 
-<i class="icon-calendar-empty"></i> <time datetime="2013-09-24T20:40:00+08:00" pubdate data-updated="true">Sep 24<span>th</span>, 2013</time></h5>
+<i class="icon-calendar-empty"></i> <time datetime="2013-10-07T11:47:00+08:00" pubdate data-updated="true">Oct 7<span>th</span>, 2013</time></h5>
   </div>
 </header>
   <div class="row-fluid">
     <div class="span12">
-      <p>今天下午两点半，答辩时间<br />
-还是有点紧张<br />
-感觉对不住师父平时的教诲<br />
-学的太渣啊<br />
-不管结果怎样，总算了了一心事<br />
-要开始好好准备找工作啦<br />
-感觉落后很多了<br />
-老话，有得有失吧  </p>
+      <blockquote>
+  <p>为了平时测试的效率，小小研究了世界杯公布的服务器版本中的脚本，满足平时自动化测试的需要  </p>
+</blockquote>
 
+<h3 id="section">主要步骤</h3>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>[] [Run scripts]</span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="bash"><span class="line"><span class="nb">cd </span>roborescue/scripts/remote-control/
+</span><span class="line">
+</span><span class="line">./run.sh CLUSTER_NO MAP TEAM
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>该脚本中主要流程为：  </p>
+
+<ul>
+  <li>
+    <p>获取配置 config.sh 
+在该脚本中配置  LOCAL_USER REMOTE_USER  本地和远程机器的用户名 一般默认都设置为 <code>rescue</code>
+假设我们有一个集群cluster： c1-1 c1-2 c1-3 c1-4<br />
+其中 c1-1 为kernel Node，其他均为client node  </p>
+  </li>
+  <li>
+    <p>检测Server Node上是不是已经在运行
+判断Kernel Node上是否有正在运行的实例是通过检测boot目录中是否有rsl.lock 文件</p>
+  </li>
+  <li>
+    <p>如果没有，启动pre compute
+主要针对有预计算需求的队伍在每个client node上进行预计算</p>
+  </li>
+  <li>
+    <p>启动Server
+根据获得的的参数：地图，自动获取它相应的配置文件config 目录</p>
+  </li>
+  <li>
+    <p>启动evaluate脚本，记录快照和分数
+evaluate脚本负责和kernel通讯，活的每周期的分数，以及每隔50周期，包括init和end时候的快照</p>
+  </li>
+  <li>
+    <p>启动client智能体<br />
+ssh到各个client node，到code路径根据启动类型 pf at fb执行相应的启动脚本  </p>
+  </li>
+  <li>
+    <p>等待一个回合结束 
+循环检测 kernel 目录中的是否还有lock，有则证明还有任务在running</p>
+  </li>
+  <li>
+    <p>若结束 cancle run
+<code>./cancelRun.sh</code></p>
+  </li>
+  <li>
+    <p>生成 eval html</p>
+  </li>
+</ul>
+
+<h3 id="section-1">杂项</h3>
+
+<ul>
+  <li>设置ssh别名	</li>
+  <li>获取host ip问题pre</li>
+</ul>
+
+<h3 id="server-">修改后Server 仓库地址</h3>
+<p><a href="https://github.com/jasonllinux/rcrss">https://github.com/jasonllinux/rcrss</a>  </p>
+
+<ul>
+  <li>除了脚本的修改之外，添加了对Mac的支持</li>
+</ul>
+
+<h3 id="section-2"><em>未完，待补充</em></h3>
 
     </div>
   </div>
@@ -125,7 +188,7 @@
 
 
 
-  <a href="/blog/categories/Work/"><span class="badge">Work</span></a>
+  <a href="/blog/categories/RoboCup/"><span class="badge">RoboCup</span></a>
 
 
 
@@ -155,10 +218,8 @@
       <div class="span12">
         <p class="meta">
           
-            <a class="basic-alignment left" href="/blog/2013/09/19/dabian/" title="Previous Post: 公司答辩">&laquo; 公司答辩</a>
+            <a class="basic-alignment left" href="/blog/2013/10/07/auto-comp-rcrss/" title="Previous Post: Auto Comp Rcrss">&laquo; Auto Comp Rcrss</a>
           
-          
-            <a class="basic-alignment right" href="/blog/2013/10/07/auto-comp-rcrss/" title="Next Post: Auto Comp Rcrss">Auto Comp Rcrss &raquo;</a>
           
         </p>
       </div>
@@ -197,8 +258,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jasonllinux.github.io/blog/2013/09/24/after-dabian/';
-        var disqus_url = 'http://jasonllinux.github.io/blog/2013/09/24/after-dabian/';
+        var disqus_identifier = 'http://jasonllinux.github.io/blog/2013/10/07/auto-comp-rcrss/';
+        var disqus_url = 'http://jasonllinux.github.io/blog/2013/10/07/auto-comp-rcrss/';
         var disqus_script = 'embed.js';
       
     (function () {
