@@ -103,80 +103,6 @@
   
 
 
-<i class="icon-calendar-empty"></i> <time datetime="2012-08-04T00:00:00+08:00" pubdate data-updated="true">Aug 4<span>th</span>, 2012</time></h5>
-          <div class="row-fluid">
-          
-          <a href="http://jasonllinux.github.io/blog/2012/08/04/mac-%E5%AE%89%E8%A3%85opencv%E6%94%AF%E6%8F%B4python/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/IT/"><span class="badge">IT</span></a>
-          
-          <a href="/blog/categories/Study/"><span class="badge">Study</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10">
-      <h1 class="link"><a href="/blog/2012/08/04/mac-%E5%AE%89%E8%A3%85opencv%E6%94%AF%E6%8F%B4python/">Mac 安装OpenCV支援Python</a></h1>
-      <p>Mac上的OpenCV安装和Linux平台下略有不同，在这里我们不采用下载源码包手动编译的方式，因为可能有些依赖问题，我们使用Port包管理，自动安装。</p>
-
-<p><strong>Step1</strong>
-安装MacPort<br />
-安装完成之后</p>
-
-<p>[bash]<br />
-sudo port selfupdate<br />
-[/bash]</p>
-
-<p><strong>Step2</strong>
-安装OpenCv，并且支援Python</p>
-
-<p>[bash]<br />
-sudo port install py27-numpy<br />
-sudo port install opencv +python27<br />
-[/bash]</p>
-
-<p><strong>Step3</strong>
-至此可能会发现python下还是不能用opencv,import 会出现错误<br />
-解决方案<br />
-切换Pyhon版本，默认使用/opt/local/bin/python27</p>
-
-<p><strong>Result</strong>
-至此，应该大功告成了</p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2">
-		<h1 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
 <i class="icon-calendar-empty"></i> <time datetime="2012-08-02T00:00:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time></h5>
           <div class="row-fluid">
           
@@ -621,6 +547,82 @@ Hello, I am jasonllinux.&#92;<br />
 <p>&nbsp;</p>
 
 <p>参考：</p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i> <time datetime="2012-06-22T00:00:00+08:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://jasonllinux.github.io/blog/2012/06/22/tomcat%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/blog/categories/IT/"><span class="badge">IT</span></a>
+          
+          <a href="/blog/categories/linux/"><span class="badge">linux</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/blog/2012/06/22/tomcat%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/">Tomcat简单配置</a></h1>
+      <p>在Archlinux下简单配置tomat7：</p>
+
+<p>[bash]<br />
+#Install<br />
+sudo pacman -S tomcat7<br />
+#cofigure<br />
+#修改/etc/tomcat7/context.xml<br />
+&lt;Context   reloadable=&quot;true&quot;&gt;<br />
+#修改/etc/tomcat7/tomcat-users.xml</p>
+
+<p>&lt;!&#8211; Tomcat运行必备的角色 &#8211;&gt;<br />
+ &lt;role rolename=&quot;tomcat&quot;/&gt;</p>
+
+<p>&lt;!&#8211; 进行Tomcat管理的角色 &#8211;&gt;<br />
+ &lt;role rolename=&quot;manager-gui&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-script&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-jmx&quot;/&gt;<br />
+ &lt;role rolename=&quot;manager-status&quot;/&gt;<br />
+ &lt;role rolename=&quot;admin-gui&quot;/&gt;<br />
+ &lt;role rolename=&quot;admin-script&quot;/&gt;</p>
+
+<p>&lt;!&#8211; 进行Tomcat管理的用户，具有Tomcat管理的全部角色 &#8211;&gt;<br />
+ &lt;user username=&quot;admin&quot; password=&quot;apollo&quot; roles=&quot;tomcat, manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script&quot;/&gt;<br />
+[/bash]</p>
+
+<p><strong>查看：</strong>
+<strong><a href="http://localhost:8080" target="_blank">http://localhost:8080</a> </strong></p>
 
       
       

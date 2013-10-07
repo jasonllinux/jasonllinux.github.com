@@ -4,7 +4,7 @@
   <title><![CDATA[Category: RoboCup | JPollo]]></title>
   <link href="http://jasonllinux.github.io/blog/categories/robocup/atom.xml" rel="self"/>
   <link href="http://jasonllinux.github.io/"/>
-  <updated>2013-10-07T21:27:28+08:00</updated>
+  <updated>2013-10-07T21:35:43+08:00</updated>
   <id>http://jasonllinux.github.io/</id>
   <author>
     <name><![CDATA[Shen Jie]]></name>
@@ -85,8 +85,12 @@ ssh到各个client node，到code路径根据启动类型 pf at fb执行相应�
 <h3 id="section-1">杂项</h3>
 
 <ul>
-  <li>设置ssh别名	</li>
-  <li>获取host ip问题pre</li>
+  <li>
+    <p>设置ssh别名	</p>
+  </li>
+  <li>
+    <p>获取host ip问题pre</p>
+  </li>
 </ul>
 
 <h3 id="server-">修改后Server 仓库地址</h3>
