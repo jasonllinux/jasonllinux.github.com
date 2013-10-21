@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Web | JPollo]]></title>
+  <link href="http://jasonllinux.github.io/blog/categories/web/atom.xml" rel="self"/>
+  <link href="http://jasonllinux.github.io/"/>
+  <updated>2013-10-21T21:29:03+08:00</updated>
+  <id>http://jasonllinux.github.io/</id>
+  <author>
+    <name><![CDATA[Shen Jie]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Test Node.js on Mac]]></title>
+    <link href="http://jasonllinux.github.io/blog/2013/10/21/nodejs/"/>
+    <updated>2013-10-21T21:18:00+08:00</updated>
+    <id>http://jasonllinux.github.io/blog/2013/10/21/nodejs</id>
+    <content type="html"><![CDATA[<h3 id="section">安装</h3>
+<p>####安装node.js<br />
+<code>brew install node</code>   </p>
+
+<h4 id="npm">安装npm</h4>
+<p><code>curl https://npmjs.org/install.sh | sh</code></p>
+]]></content>
+  </entry>
+  
+</feed>
