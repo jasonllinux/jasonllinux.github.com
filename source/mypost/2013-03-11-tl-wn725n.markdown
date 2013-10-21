@@ -1,0 +1,30 @@
+---
+layout: post
+title: "TL-WN725N 折腾记"
+date: 2013-03-11 11:25
+comments: true
+categories: Linux
+---
+> 高手在民间
+
+最近在某东上买了个USB无线网卡 __TL-WN725N__  
+想着平时 可以在笔记本和台式机上使用   
+也可以搭建adhoc之类的  
+拿到手 ，十分小巧  
+{%img http://i.minus.com/iblYHNm0DeAxca.jpg %}  
+在windows上顺风顺水  
+可是在linux上  
+说好的免驱的呢？？？？   
+说好的即插即用呢？？？  
+
+在网上找了半天   
+原来我买到的是V2版本，里面的芯片是 8188eu  
+坑爹的是连Realtek官网都没有这芯片的linux驱动  
+
+终于找到一个github上树莓派的一个linux[仓库](https://github.com/Red54/linux-shumeipai2)中有它的驱动  
+Clone下来 make ＆＆ make install  
+搞定!
+
+
+#### Update
+* [2013-05-01] 升级Ubuntu13.04后 没法编译

@@ -1,0 +1,56 @@
+---
+layout: post
+title: "Tweak SSD for Ubuntu and Windows"
+date: 2013-02-18 14:34
+comments: true
+categories: IT
+---
+
+>啊哈 ， 入手SSD了  
+>Intel 520  
+
+放假前几天，果断从amazon入手一块180G的Intel 520, 关键看重了他家的 __质保5年__  
+
+买回来之后觉得放在自己的X61小本上面太大才小用了（X61破解Sata2之后）,于是果断又从某宝上入了个原装硬盘托架，装入台式机作为第二硬盘
+
+重装系统，装软件， __4K对齐__ 等在此忽略。。。
+
+主要想说下Ubuntu和Windows下的一些优化，延长一下SSD的寿命
+
+### For Ubuntu
+* 修改/etc/fstab文件
+{%codeblock %}
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sdb6 during installation
+UUID=bc8a6196-3160-4503-800c-48dcb385887e /               ext4    discard,noatime,errors=remount-ro 0       1
+# swap was on /dev/sda7 during installation
+UUID=5f772617-a408-4b0a-a125-2007cb96a4d8 none            swap    sw              0       0
+# swap was on /dev/sdb5 during installation
+UUID=ddfdd878-2f06-428a-97a0-cdbe05b882db none            swap    sw              0       0
+
+# SSD tweak : temporary directories as tmpfs
+tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0
+tmpfs /var/spool tmpfs defaults,noatime,mode=1777 0 0
+tmpfs /var/tmp  tmpfs defaults,noatime,mode=1777 0 0
+
+# SSD tweak : log directory as tmpfs
+tmpfs /var/log tmpfs defaults,noatime,mode=0755 0 0
+{%endcodeblock %}
+
+* 对Chrome
+在这里我们希望将浏览器Chrome的缓存写到Ramdisk中去，因此
+
+{%codeblock %}
+mkdir /tmp/chrome
+mount -t tmpfs -o size=1024M,mode=0744 tmpfs /tmp/chrome/
+chmod 777 /tmp/chrome/ -R
+{%endcodeblock %}
+
+### For Windows
+
+
+### _Reference_   
+感谢如下大大们的文章：  
+* 1  
+* 2   
+* 3

@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Test Node.js on Mac"
+date: 2013-10-21 21:18
+comments: true
+categories: Web
+
+---
+
+### 安装
+####安装node.js  
+`brew install node`   
+
+#### 安装npm
+`curl https://npmjs.org/install.sh | sh`

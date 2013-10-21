@@ -2,14 +2,23 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://jasonllinux.github.com
-title: Jasonllinux's Blog
-subtitle: Happy Hacking!
-author: jasonllinux
+url: http://jasonllinux.github.io
+title: JPollo
+subtitle: 毕业季，怀念在Apollo的日子
+author: Shen Jie
 #simple_search: http://google.com/search
-simple_search: http://www.google.com.hk/
-description: For Linux, For Life
+simple_search: http://www.google.com.hk/search
+description: For Fun, For Life
 
+
+##nava
+navigation: 
+- text: Blog
+  url: /index.html
+- text: Archives
+  url: /blog/archives
+- text: About
+  url: http://www.jasonllinux.com/profile/index.html
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
 # http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
